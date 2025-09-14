@@ -1,0 +1,12 @@
+node_modules/
+.env
+.pm2/
+pids/
+logs/
+*.log
+*.backup
+*.bak
+*.tar.gz
+*.zip
+build/
+.wrangler/
