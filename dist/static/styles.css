@@ -241,6 +241,149 @@ html {
   }
 }
 
+/* Assessment Tool Styles */
+.assessment-question {
+  transition: all 0.5s ease;
+}
+
+.assessment-question label {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.assessment-question label:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.assessment-question input[type="radio"]:checked + span {
+  font-weight: 600;
+  color: #0ea5e9;
+}
+
+.assessment-question input[type="radio"]:checked {
+  accent-color: #0ea5e9;
+}
+
+/* Progress bar animation */
+#progress-bar {
+  transition: width 0.5s ease-in-out;
+}
+
+/* Score display animation */
+#score-display {
+  font-family: 'Inter', sans-serif;
+  font-variant-numeric: tabular-nums;
+  transition: all 0.3s ease;
+}
+
+/* Results section */
+#assessment-results {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smart recommendations */
+#smart-recommendations {
+  animation: slideDown 0.4s ease-out;
+  border-left: 4px solid #0ea5e9;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced counter animations */
+.stat-number {
+  font-variant-numeric: tabular-nums;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.stat-number:hover {
+  transform: scale(1.05);
+}
+
+/* Interactive form enhancements */
+.form-input:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.15);
+  border-color: #0ea5e9;
+}
+
+select.form-input {
+  cursor: pointer;
+}
+
+/* Notification enhancements */
+.notification-enter {
+  animation: slideInRight 0.4s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Mobile optimizations for assessment */
+@media (max-width: 768px) {
+  .assessment-question label {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  #assessment-results .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}
+
+/* Loading states */
+.loading-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Enhanced button interactions */
+button:focus, a:focus {
+  outline: 2px solid #0ea5e9;
+  outline-offset: 2px;
+}
+
+/* Accessibility improvements */
+.assessment-question input[type="radio"]:focus + span {
+  outline: 2px solid #0ea5e9;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
   .bg-white {

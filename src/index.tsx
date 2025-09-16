@@ -126,6 +126,7 @@ app.get('/', (c) => {
                         <a href="#home" class="nav-link">Home</a>
                         <a href="#about" class="nav-link">About</a>
                         <a href="#framework" class="nav-link">LLI Framework™</a>
+                        <a href="#assessment" class="nav-link">Assessment</a>
                         <a href="#services" class="nav-link">Services</a>
                         <a href="#founder" class="nav-link">Founder</a>
                         <a href="#contact" class="nav-link">Contact</a>
@@ -147,6 +148,7 @@ app.get('/', (c) => {
                 <a href="#home" class="mobile-nav-link">Home</a>
                 <a href="#about" class="mobile-nav-link">About</a>
                 <a href="#framework" class="mobile-nav-link">LLI Framework™</a>
+                <a href="#assessment" class="mobile-nav-link">Assessment</a>
                 <a href="#services" class="mobile-nav-link">Services</a>
                 <a href="#founder" class="mobile-nav-link">Founder</a>
                 <a href="#contact" class="mobile-nav-link">Contact</a>
@@ -186,29 +188,33 @@ app.get('/', (c) => {
             </div>
             
             <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" class="space-y-4 sm:space-y-0 sm:space-x-6 sm:flex sm:justify-center">
-                <a href="#contact" class="inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-gold-400 hover:to-gold-500 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                <a href="#assessment" class="inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-gold-400 hover:to-gold-500 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    <i class="fas fa-chart-line mr-2"></i>
+                    Take Free Assessment
+                </a>
+                <a href="#contact" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-300">
                     <i class="fas fa-rocket mr-2"></i>
                     Start Your Transformation
                 </a>
-                <a href="#framework" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-300">
-                    <i class="fas fa-lightbulb mr-2"></i>
-                    Explore LLI Framework™
-                </a>
             </div>
             
-            <!-- Key Stats -->
-            <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000" class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Animated Key Stats -->
+            <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000" class="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="text-center">
-                    <div class="text-4xl font-bold text-gold-400 mb-2">15+</div>
+                    <div class="stat-number text-4xl font-bold text-gold-400 mb-2" data-target="500" data-suffix="+">0+</div>
+                    <div class="text-gray-300">Leaders Transformed</div>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number text-4xl font-bold text-gold-400 mb-2" data-target="95" data-suffix="%">0%</div>
+                    <div class="text-gray-300">Client Satisfaction</div>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number text-4xl font-bold text-gold-400 mb-2" data-target="15" data-suffix="+">0+</div>
                     <div class="text-gray-300">Years Experience</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-4xl font-bold text-gold-400 mb-2">100%</div>
-                    <div class="text-gray-300">Equity Focused</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-gold-400 mb-2">LLI™</div>
-                    <div class="text-gray-300">Proven Framework</div>
+                    <div class="stat-number text-4xl font-bold text-gold-400 mb-2" data-target="3" data-suffix="x">0x</div>
+                    <div class="text-gray-300">Faster Results</div>
                 </div>
             </div>
         </div>
@@ -730,6 +736,209 @@ app.get('/', (c) => {
         </div>
     </section>
 
+    <!-- Interactive Assessment Tool -->
+    <section id="assessment" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 font-playfair">Where Is Your Organization Today?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Take our free 2-minute assessment to discover your organization's equity readiness and get personalized recommendations.
+                </p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-gray-50 to-primary-50 rounded-3xl p-8 shadow-xl">
+                <div id="assessment-container">
+                    <!-- Assessment Questions -->
+                    <div id="assessment-questions" class="space-y-8">
+                        <div class="assessment-question" data-question="1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">1. How would you describe your organization's current approach to equity and inclusion?</h3>
+                            <div class="space-y-3">
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q1" value="1" class="mr-3">
+                                    <span>We haven't started formal equity initiatives yet</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q1" value="2" class="mr-3">
+                                    <span>We have some diversity programs but limited systematic approach</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q1" value="3" class="mr-3">
+                                    <span>We have established programs with some measurement</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q1" value="4" class="mr-3">
+                                    <span>Equity is integrated throughout our organizational systems</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="assessment-question hidden" data-question="2">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">2. How do employees typically respond when discussing workplace equity?</h3>
+                            <div class="space-y-3">
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q2" value="1" class="mr-3">
+                                    <span>Conversations are avoided or met with resistance</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q2" value="2" class="mr-3">
+                                    <span>Some engage, but many remain silent or uncomfortable</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q2" value="3" class="mr-3">
+                                    <span>Most participate, though depth varies</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q2" value="4" class="mr-3">
+                                    <span>Open, honest dialogue is the norm across all levels</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="assessment-question hidden" data-question="3">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">3. How do you currently measure success in equity and inclusion efforts?</h3>
+                            <div class="space-y-3">
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q3" value="1" class="mr-3">
+                                    <span>We don't have formal measurement systems</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q3" value="2" class="mr-3">
+                                    <span>Basic demographic tracking and compliance metrics</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q3" value="3" class="mr-3">
+                                    <span>Regular surveys and some outcome tracking</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q3" value="4" class="mr-3">
+                                    <span>Comprehensive metrics with regular assessment and adjustment</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="assessment-question hidden" data-question="4">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">4. How would you rate psychological safety in your workplace?</h3>
+                            <div class="space-y-3">
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q4" value="1" class="mr-3">
+                                    <span>People often fear speaking up or sharing concerns</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q4" value="2" class="mr-3">
+                                    <span>Some feel safe, but it's inconsistent across teams</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q4" value="3" class="mr-3">
+                                    <span>Most feel comfortable sharing ideas and feedback</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q4" value="4" class="mr-3">
+                                    <span>Strong culture of openness, trust, and authentic dialogue</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="assessment-question hidden" data-question="5">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">5. What's your organization's primary industry?</h3>
+                            <div class="space-y-3">
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q5" value="healthcare" class="mr-3">
+                                    <span>Healthcare & Medical</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q5" value="nonprofit" class="mr-3">
+                                    <span>Nonprofit & Philanthropy</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q5" value="education" class="mr-3">
+                                    <span>Education & Academic</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q5" value="corporate" class="mr-3">
+                                    <span>Corporate & Business</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q5" value="government" class="mr-3">
+                                    <span>Government & Public Sector</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-lg hover:bg-primary-50 cursor-pointer transition-colors">
+                                    <input type="radio" name="q5" value="other" class="mr-3">
+                                    <span>Other</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-between mt-8">
+                        <button id="prev-btn" class="hidden bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                            <i class="fas fa-arrow-left mr-2"></i>Previous
+                        </button>
+                        <div class="ml-auto">
+                            <button id="next-btn" class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                                Next <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            <button id="submit-assessment" class="hidden bg-gold-500 hover:bg-gold-600 text-black px-8 py-3 rounded-lg font-semibold transition-colors">
+                                <i class="fas fa-chart-line mr-2"></i>Get My Results
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Progress Bar -->
+                    <div class="mt-6">
+                        <div class="flex justify-between text-sm text-gray-600 mb-2">
+                            <span>Progress</span>
+                            <span id="progress-text">1 of 5</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-3">
+                            <div id="progress-bar" class="bg-gradient-to-r from-primary-500 to-accent-500 h-3 rounded-full transition-all duration-500" style="width: 20%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Assessment Results -->
+                <div id="assessment-results" class="hidden">
+                    <div class="text-center mb-8">
+                        <div class="inline-block p-6 bg-gradient-to-r from-primary-100 to-accent-100 rounded-full mb-4">
+                            <div id="score-display" class="text-4xl font-bold text-primary-700">85</div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Your Equity Readiness Score</h3>
+                        <p id="score-description" class="text-lg text-gray-600 mb-6">Your organization shows strong foundation with room for strategic growth.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                                <i class="fas fa-lightbulb text-gold-500 mr-2"></i>Recommended Next Steps
+                            </h4>
+                            <ul id="recommendations" class="space-y-2 text-gray-700">
+                                <!-- Populated by JavaScript -->
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                                <i class="fas fa-target text-primary-500 mr-2"></i>Suggested Services
+                            </h4>
+                            <ul id="suggested-services" class="space-y-2 text-gray-700">
+                                <!-- Populated by JavaScript -->
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <a href="#contact" class="inline-block bg-gradient-to-r from-primary-500 to-accent-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 mr-4">
+                            <i class="fas fa-calendar mr-2"></i>Schedule Consultation
+                        </a>
+                        <button id="retake-assessment" class="inline-block bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-full font-semibold transition-colors">
+                            <i class="fas fa-redo mr-2"></i>Retake Assessment
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Call to Action Section -->
     <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -808,7 +1017,23 @@ app.get('/', (c) => {
                             </div>
                             
                             <div>
-                                <label for="service" class="block text-sm font-semibold text-gray-700 mb-2">Service Interest</label>
+                                <label for="industry" class="block text-sm font-semibold text-gray-700 mb-2">Organization Type</label>
+                                <select id="industry" name="industry" class="form-input" onchange="updateServiceRecommendations()">
+                                    <option value="">Select your industry...</option>
+                                    <option value="healthcare">Healthcare & Medical</option>
+                                    <option value="nonprofit">Nonprofit & Philanthropy</option>
+                                    <option value="education">Education & Academic</option>
+                                    <option value="corporate">Corporate & Business</option>
+                                    <option value="government">Government & Public Sector</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Recommended Services 
+                                    <span id="industry-note" class="text-primary-600 text-sm font-normal"></span>
+                                </label>
                                 <select id="service" name="service" class="form-input">
                                     <option value="">Select a service area...</option>
                                     <option value="lli-framework">LLI Framework™ Implementation</option>
@@ -820,6 +1045,16 @@ app.get('/', (c) => {
                                     <option value="strategic-planning">Strategic Planning</option>
                                     <option value="consultation">General Consultation</option>
                                 </select>
+                            </div>
+                            
+                            <div id="smart-recommendations" class="hidden bg-primary-50 p-4 rounded-lg border border-primary-200">
+                                <h4 class="font-semibold text-primary-800 mb-2">
+                                    <i class="fas fa-lightbulb text-primary-600 mr-2"></i>
+                                    Based on your industry, we recommend:
+                                </h4>
+                                <ul id="recommended-services-list" class="text-sm text-primary-700 space-y-1">
+                                    <!-- Populated by JavaScript -->
+                                </ul>
                             </div>
                             
                             <div>

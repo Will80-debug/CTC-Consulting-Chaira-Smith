@@ -336,9 +336,347 @@ function updateParallaxElements() {
 
 window.addEventListener('scroll', throttledScrollHandler);
 
+// Interactive Assessment Tool
+function initializeAssessmentTool() {
+    let currentQuestion = 1;
+    const totalQuestions = 5;
+    let responses = {};
+    
+    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const submitBtn = document.getElementById('submit-assessment');
+    const progressBar = document.getElementById('progress-bar');
+    const progressText = document.getElementById('progress-text');
+    
+    if (!nextBtn) return; // Assessment not on this page
+    
+    // Next button handler
+    nextBtn.addEventListener('click', function() {
+        const currentQ = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+        if (!currentQ) {
+            showNotification('Please select an answer before continuing.', 'error');
+            return;
+        }
+        
+        responses[`q${currentQuestion}`] = {
+            value: currentQ.value,
+            industry: currentQuestion === 5 ? currentQ.value : null
+        };
+        
+        if (currentQuestion < totalQuestions) {
+            showQuestion(currentQuestion + 1);
+        }
+    });
+    
+    // Previous button handler
+    prevBtn.addEventListener('click', function() {
+        if (currentQuestion > 1) {
+            showQuestion(currentQuestion - 1);
+        }
+    });
+    
+    // Submit assessment handler
+    submitBtn.addEventListener('click', function() {
+        const currentQ = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+        if (!currentQ) {
+            showNotification('Please select an answer before submitting.', 'error');
+            return;
+        }
+        
+        responses[`q${currentQuestion}`] = {
+            value: currentQ.value,
+            industry: currentQuestion === 5 ? currentQ.value : null
+        };
+        
+        calculateAndShowResults();
+    });
+    
+    // Retake assessment handler
+    document.getElementById('retake-assessment')?.addEventListener('click', function() {
+        resetAssessment();
+    });
+    
+    function showQuestion(questionNum) {
+        // Hide all questions
+        document.querySelectorAll('.assessment-question').forEach(q => q.classList.add('hidden'));
+        
+        // Show current question
+        document.querySelector(`[data-question="${questionNum}"]`).classList.remove('hidden');
+        
+        currentQuestion = questionNum;
+        updateProgress();
+        updateButtons();
+    }
+    
+    function updateProgress() {
+        const progress = (currentQuestion / totalQuestions) * 100;
+        progressBar.style.width = `${progress}%`;
+        progressText.textContent = `${currentQuestion} of ${totalQuestions}`;
+    }
+    
+    function updateButtons() {
+        prevBtn.classList.toggle('hidden', currentQuestion === 1);
+        
+        if (currentQuestion === totalQuestions) {
+            nextBtn.classList.add('hidden');
+            submitBtn.classList.remove('hidden');
+        } else {
+            nextBtn.classList.remove('hidden');
+            submitBtn.classList.add('hidden');
+        }
+    }
+    
+    function calculateAndShowResults() {
+        // Calculate score (1-4 scale, converted to 0-100)
+        const numericAnswers = Object.values(responses)
+            .map(r => parseInt(r.value))
+            .filter(v => !isNaN(v));
+        
+        const avgScore = numericAnswers.reduce((sum, val) => sum + val, 0) / numericAnswers.length;
+        const finalScore = Math.round(((avgScore - 1) / 3) * 100);
+        
+        // Get industry for recommendations
+        const industry = responses.q5?.value || 'other';
+        
+        // Show results
+        document.getElementById('assessment-questions').classList.add('hidden');
+        document.getElementById('assessment-results').classList.remove('hidden');
+        
+        // Update score display
+        animateScore(finalScore);
+        updateScoreDescription(finalScore);
+        updateRecommendations(finalScore, industry);
+        
+        // Hide navigation
+        document.querySelector('.flex.justify-between').classList.add('hidden');
+        document.querySelector('.mt-6').classList.add('hidden'); // Progress bar
+    }
+    
+    function animateScore(targetScore) {
+        const scoreDisplay = document.getElementById('score-display');
+        let currentScore = 0;
+        const increment = targetScore / 50; // 50 steps
+        
+        const timer = setInterval(() => {
+            currentScore += increment;
+            if (currentScore >= targetScore) {
+                currentScore = targetScore;
+                clearInterval(timer);
+            }
+            scoreDisplay.textContent = Math.round(currentScore);
+        }, 30);
+    }
+    
+    function updateScoreDescription(score) {
+        const description = document.getElementById('score-description');
+        let message = '';
+        
+        if (score <= 25) {
+            message = "Your organization is at the beginning of its equity journey. Great potential for transformative growth!";
+        } else if (score <= 50) {
+            message = "Your organization has started the equity journey with some foundations in place. Ready for strategic development!";
+        } else if (score <= 75) {
+            message = "Your organization shows strong equity foundations with room for strategic advancement and deeper integration.";
+        } else {
+            message = "Your organization demonstrates advanced equity practices! Focus on refinement and sustained excellence.";
+        }
+        
+        description.textContent = message;
+    }
+    
+    function updateRecommendations(score, industry) {
+        const recommendationsList = document.getElementById('recommendations');
+        const servicesList = document.getElementById('suggested-services');
+        
+        // General recommendations based on score
+        let recommendations = [];
+        if (score <= 25) {
+            recommendations = [
+                'Start with organizational culture assessment',
+                'Establish psychological safety foundations',
+                'Begin leadership equity training',
+                'Create listening tour strategy'
+            ];
+        } else if (score <= 50) {
+            recommendations = [
+                'Implement comprehensive LLI Framework™',
+                'Develop systematic measurement tools',
+                'Expand leadership development programs',
+                'Strengthen employee engagement strategies'
+            ];
+        } else if (score <= 75) {
+            recommendations = [
+                'Advanced LLI Framework™ integration',
+                'Peer learning and mentorship programs',
+                'Cross-departmental equity initiatives',
+                'Develop internal change champions'
+            ];
+        } else {
+            recommendations = [
+                'Share your success as a case study',
+                'Mentor other organizations',
+                'Advanced measurement and optimization',
+                'Community partnership development'
+            ];
+        }
+        
+        // Industry-specific services
+        const industryServices = getIndustryServices(industry);
+        
+        // Populate lists
+        recommendationsList.innerHTML = recommendations.map(r => `<li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>${r}</li>`).join('');
+        servicesList.innerHTML = industryServices.map(s => `<li class="flex items-start"><i class="fas fa-star text-gold-500 mr-2 mt-1"></i>${s}</li>`).join('');
+    }
+    
+    function resetAssessment() {
+        currentQuestion = 1;
+        responses = {};
+        
+        // Reset UI
+        document.getElementById('assessment-questions').classList.remove('hidden');
+        document.getElementById('assessment-results').classList.add('hidden');
+        document.querySelector('.flex.justify-between').classList.remove('hidden');
+        document.querySelector('.mt-6').classList.remove('hidden');
+        
+        // Clear selections
+        document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
+        
+        showQuestion(1);
+    }
+}
+
+// Industry-specific service recommendations
+function getIndustryServices(industry) {
+    const services = {
+        healthcare: [
+            'Patient Care Equity Programs',
+            'Healthcare Leadership Development',
+            'BIPOC Healthcare Worker Support',
+            'Community Health Partnerships'
+        ],
+        nonprofit: [
+            'Philanthropic Equity Assessment',
+            'Board Diversity & Inclusion',
+            'Community-Centered Strategy',
+            'Donor Engagement Equity'
+        ],
+        education: [
+            'Student Equity & Inclusion',
+            'Faculty Development Programs',
+            'Campus Climate Assessment',
+            'Educational Leadership Training'
+        ],
+        corporate: [
+            'Workplace Culture Transformation',
+            'Executive Leadership Coaching',
+            'Employee Resource Groups',
+            'Inclusive Recruitment Strategies'
+        ],
+        government: [
+            'Public Service Equity',
+            'Community Engagement Programs',
+            'Policy Development Support',
+            'Civic Leadership Training'
+        ],
+        other: [
+            'Custom LLI Framework™ Implementation',
+            'Organizational Assessment',
+            'Leadership Development',
+            'Strategic Planning Support'
+        ]
+    };
+    
+    return services[industry] || services.other;
+}
+
+// Smart contact form recommendations
+function updateServiceRecommendations() {
+    const industry = document.getElementById('industry').value;
+    const recommendationsDiv = document.getElementById('smart-recommendations');
+    const recommendationsList = document.getElementById('recommended-services-list');
+    const industryNote = document.getElementById('industry-note');
+    
+    if (industry && industry !== '') {
+        const services = getIndustryServices(industry);
+        recommendationsList.innerHTML = services.map(service => 
+            `<li class="flex items-start">
+                <i class="fas fa-arrow-right text-primary-500 mr-2 mt-1 text-xs"></i>
+                ${service}
+             </li>`
+        ).join('');
+        
+        recommendationsDiv.classList.remove('hidden');
+        industryNote.textContent = `(${industry.charAt(0).toUpperCase() + industry.slice(1)} focused)`;
+        
+        // Auto-select relevant service if available
+        const serviceSelect = document.getElementById('service');
+        if (industry === 'healthcare' || industry === 'nonprofit') {
+            serviceSelect.value = 'racial-equity';
+        } else if (industry === 'corporate') {
+            serviceSelect.value = 'psychological-safety';
+        } else {
+            serviceSelect.value = 'lli-framework';
+        }
+    } else {
+        recommendationsDiv.classList.add('hidden');
+        industryNote.textContent = '';
+    }
+}
+
+// Enhanced counter animation with intersection observer
+function initializeEnhancedCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.dataset.target);
+                const suffix = counter.dataset.suffix || '';
+                const duration = 2500; // 2.5 seconds
+                const start = performance.now();
+                
+                const animate = (currentTime) => {
+                    const elapsed = currentTime - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    
+                    // Easing function for smooth animation
+                    const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.floor(target * easeOutCubic);
+                    
+                    counter.innerText = current + suffix;
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        counter.innerText = target + suffix;
+                        // Add a subtle pulse effect when complete
+                        counter.style.transform = 'scale(1.1)';
+                        setTimeout(() => {
+                            counter.style.transform = 'scale(1)';
+                        }, 200);
+                    }
+                };
+                
+                requestAnimationFrame(animate);
+                counterObserver.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.7 });
+    
+    counters.forEach(counter => {
+        counter.style.transition = 'transform 0.3s ease';
+        counterObserver.observe(counter);
+    });
+}
+
 // Add loading state management
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
+    
+    // Initialize new features
+    initializeAssessmentTool();
+    initializeEnhancedCounters();
     
     // Trigger any load-dependent animations
     setTimeout(() => {
