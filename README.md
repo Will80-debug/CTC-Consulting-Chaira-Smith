@@ -116,18 +116,23 @@
 
 ## 🚀 URLs & Access
 
+### GitHub Repository
+- **GitHub**: https://github.com/Will80-debug/CTC-Consulting-Chaira-Smith
+- **Latest Commit**: Fixed image display issues and enhanced visual appeal
+
 ### Development URLs
 - **Local Development**: http://localhost:3000
 - **Public Access**: https://3000-i5xvdgz90z0ll9f6vug8q-6532622b.e2b.dev
 
 ### Visual Assets
-- **Chiara's Professional Photo**: Professional headshot integrated in founder section
-- **Team Collaboration Image**: Diverse team visual in services section
-- **Strategic Planning Visual**: Framework methodology illustration
+- **Chiara's Professional Photo**: Updated with provided professional headshot
+- **Team Collaboration Images**: Diverse leadership representation throughout
+- **Strategic Planning Visuals**: Framework methodology illustrations
+- **Leadership Philosophy Images**: Fixed edge cutting issues for better display
 
-### Future Production URLs
-- **Cloudflare Pages**: (To be deployed)
-- **Custom Domain**: (To be configured)
+### Production Deployment
+- **Status**: ✅ Ready for Cloudflare Pages deployment
+- **Custom Domain**: (To be configured after Cloudflare deployment)
 
 ## 🛠️ Development Guide
 
@@ -225,9 +230,10 @@ webapp/
 
 ## 🔧 Deployment Status
 - **Platform**: Cloudflare Pages compatible
-- **Status**: ✅ Active Development Build
+- **GitHub**: ✅ Successfully deployed to repository
+- **Status**: ✅ Active Development Build with Latest Fixes
 - **Tech Stack**: Hono + TypeScript + Tailwind CSS
-- **Last Updated**: December 14, 2024
+- **Last Updated**: September 16, 2025 - Image fixes and GitHub deployment
 
 ## 📞 Contact Information
 - **Website**: https://3000-i5xvdgz90z0ll9f6vug8q-6532622b.e2b.dev
