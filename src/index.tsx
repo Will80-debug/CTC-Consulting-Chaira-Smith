@@ -310,6 +310,25 @@ app.get('/', (c) => {
     <!-- We Help You Section -->
     <section class="py-20 bg-gradient-to-br from-gray-50 to-primary-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Hero Image -->
+            <div class="text-center mb-12" data-aos="fade-up">
+                <div class="max-w-4xl mx-auto mb-12">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img 
+                            src="https://thediversitymovement.com/wp-content/uploads/2024/01/iStock-1481369283-scaled.jpg" 
+                            alt="Diverse team collaboration representing inclusive workplace culture"
+                            class="w-full h-64 sm:h-80 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <p class="text-lg font-semibold">Building Inclusive, Thriving Teams</p>
+                            <p class="text-sm opacity-90">Real collaboration. Real outcomes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 font-playfair">We Help You...</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -463,6 +482,18 @@ app.get('/', (c) => {
                 </div>
             </div>
             
+            <!-- Framework Visual -->
+            <div class="text-center mt-16 mb-12" data-aos="fade-up" data-aos-delay="350">
+                <div class="max-w-2xl mx-auto">
+                    <img 
+                        src="https://digitalleadership.com/wp-content/uploads/2022/11/Strategic-Planning-Process.webp" 
+                        alt="Strategic planning process visualization representing the LLI Framework methodology"
+                        class="w-full h-48 object-contain opacity-80 rounded-lg"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+            
             <!-- Framework CTA -->
             <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="400">
                 <p class="text-xl text-gray-200 mb-8">
@@ -601,13 +632,12 @@ app.get('/', (c) => {
                 <div class="order-2 lg:order-1" data-aos="fade-right" data-aos-duration="1000">
                     <div class="image-hover relative">
                         <div class="aspect-w-4 aspect-h-5 bg-gradient-to-br from-primary-200 to-accent-200 rounded-2xl overflow-hidden shadow-2xl">
-                            <div class="flex items-center justify-center bg-gradient-to-br from-primary-500 to-accent-500">
-                                <div class="text-center text-white p-8">
-                                    <i class="fas fa-user-circle text-6xl mb-4"></i>
-                                    <p class="text-lg font-semibold">Chiara Smith, Masters</p>
-                                    <p class="text-sm">Professional Photo Coming Soon</p>
-                                </div>
-                            </div>
+                            <img 
+                                src="https://page.gensparksite.com/v1/base64_upload/d2587015bf5f776d9212e72f6427e4d6" 
+                                alt="Chiara Smith, Masters - Founder and CEO of CTS Consulting" 
+                                class="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                                loading="lazy"
+                            />
                         </div>
                         
                         <!-- Achievement badges -->
