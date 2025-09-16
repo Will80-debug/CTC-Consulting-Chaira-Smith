@@ -1,4 +1,4 @@
-var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in e?kt(e,t,{enumerable:!0,configurable:!0,writable:!0,value:a}):e[t]=a;var f=(e,t,a)=>Ct(e,typeof t!="symbol"?t+"":t,a),Pe=(e,t,a)=>t.has(e)||He("Cannot "+a);var o=(e,t,a)=>(Pe(e,t,"read from private field"),a?a.call(e):t.get(e)),g=(e,t,a)=>t.has(e)?He("Cannot add the same private member more than once"):t instanceof WeakSet?t.add(e):t.set(e,a),p=(e,t,a,s)=>(Pe(e,t,"write to private field"),s?s.call(e,a):t.set(e,a),a),x=(e,t,a)=>(Pe(e,t,"access private method"),a);var Ne=(e,t,a,s)=>({set _(i){p(e,t,i,a)},get _(){return o(e,t,s)}});var Me=(e,t,a)=>(s,i)=>{let r=-1;return l(0);async function l(c){if(c<=r)throw new Error("next() called multiple times");r=c;let n,d=!1,m;if(e[c]?(m=e[c][0][0],s.req.routeIndex=c):m=c===e.length&&i||void 0,m)try{n=await m(s,()=>l(c+1))}catch(h){if(h instanceof Error&&t)s.error=h,n=await t(h,s),d=!0;else throw h}else s.finalized===!1&&a&&(n=await a(s));return n&&(s.finalized===!1||d)&&(s.res=n),s}},St=Symbol(),jt=async(e,t=Object.create(null))=>{const{all:a=!1,dot:s=!1}=t,r=(e instanceof rt?e.raw.headers:e.headers).get("Content-Type");return r!=null&&r.startsWith("multipart/form-data")||r!=null&&r.startsWith("application/x-www-form-urlencoded")?Et(e,{all:a,dot:s}):{}};async function Et(e,t){const a=await e.formData();return a?At(a,t):{}}function At(e,t){const a=Object.create(null);return e.forEach((s,i)=>{t.all||i.endsWith("[]")?Ot(a,i,s):a[i]=s}),t.dot&&Object.entries(a).forEach(([s,i])=>{s.includes(".")&&(Rt(a,s,i),delete a[s])}),a}var Ot=(e,t,a)=>{e[t]!==void 0?Array.isArray(e[t])?e[t].push(a):e[t]=[e[t],a]:t.endsWith("[]")?e[t]=[a]:e[t]=a},Rt=(e,t,a)=>{let s=e;const i=t.split(".");i.forEach((r,l)=>{l===i.length-1?s[r]=a:((!s[r]||typeof s[r]!="object"||Array.isArray(s[r])||s[r]instanceof File)&&(s[r]=Object.create(null)),s=s[r])})},et=e=>{const t=e.split("/");return t[0]===""&&t.shift(),t},Tt=e=>{const{groups:t,path:a}=Pt(e),s=et(a);return Lt(s,t)},Pt=e=>{const t=[];return e=e.replace(/\{[^}]+\}/g,(a,s)=>{const i=`@${s}`;return t.push([i,a]),i}),{groups:t,path:e}},Lt=(e,t)=>{for(let a=t.length-1;a>=0;a--){const[s]=t[a];for(let i=e.length-1;i>=0;i--)if(e[i].includes(s)){e[i]=e[i].replace(s,t[a][1]);break}}return e},Ce={},It=(e,t)=>{if(e==="*")return"*";const a=e.match(/^\:([^\{\}]+)(?:\{(.+)\})?$/);if(a){const s=`${e}#${t}`;return Ce[s]||(a[2]?Ce[s]=t&&t[0]!==":"&&t[0]!=="*"?[s,a[1],new RegExp(`^${a[2]}(?=/${t})`)]:[e,a[1],new RegExp(`^${a[2]}$`)]:Ce[s]=[e,a[1],!0]),Ce[s]}return null},ze=(e,t)=>{try{return t(e)}catch{return e.replace(/(?:%[0-9A-Fa-f]{2})+/g,a=>{try{return t(a)}catch{return a}})}},qt=e=>ze(e,decodeURI),tt=e=>{const t=e.url,a=t.indexOf("/",t.indexOf(":")+4);let s=a;for(;s<t.length;s++){const i=t.charCodeAt(s);if(i===37){const r=t.indexOf("?",s),l=t.slice(a,r===-1?void 0:r);return qt(l.includes("%25")?l.replace(/%25/g,"%2525"):l)}else if(i===63)break}return t.slice(a,s)},Ft=e=>{const t=tt(e);return t.length>1&&t.at(-1)==="/"?t.slice(0,-1):t},se=(e,t,...a)=>(a.length&&(t=se(t,...a)),`${(e==null?void 0:e[0])==="/"?"":"/"}${e}${t==="/"?"":`${(e==null?void 0:e.at(-1))==="/"?"":"/"}${(t==null?void 0:t[0])==="/"?t.slice(1):t}`}`),at=e=>{if(e.charCodeAt(e.length-1)!==63||!e.includes(":"))return null;const t=e.split("/"),a=[];let s="";return t.forEach(i=>{if(i!==""&&!/\:/.test(i))s+="/"+i;else if(/\:/.test(i))if(/\?/.test(i)){a.length===0&&s===""?a.push("/"):a.push(s);const r=i.replace("?","");s+="/"+r,a.push(s)}else s+="/"+i}),a.filter((i,r,l)=>l.indexOf(i)===r)},Le=e=>/[%+]/.test(e)?(e.indexOf("+")!==-1&&(e=e.replace(/\+/g," ")),e.indexOf("%")!==-1?ze(e,it):e):e,st=(e,t,a)=>{let s;if(!a&&t&&!/[%+]/.test(t)){let l=e.indexOf(`?${t}`,8);for(l===-1&&(l=e.indexOf(`&${t}`,8));l!==-1;){const c=e.charCodeAt(l+t.length+1);if(c===61){const n=l+t.length+2,d=e.indexOf("&",n);return Le(e.slice(n,d===-1?void 0:d))}else if(c==38||isNaN(c))return"";l=e.indexOf(`&${t}`,l+1)}if(s=/[%+]/.test(e),!s)return}const i={};s??(s=/[%+]/.test(e));let r=e.indexOf("?",8);for(;r!==-1;){const l=e.indexOf("&",r+1);let c=e.indexOf("=",r);c>l&&l!==-1&&(c=-1);let n=e.slice(r+1,c===-1?l===-1?void 0:l:c);if(s&&(n=Le(n)),r=l,n==="")continue;let d;c===-1?d="":(d=e.slice(c+1,l===-1?void 0:l),s&&(d=Le(d))),a?(i[n]&&Array.isArray(i[n])||(i[n]=[]),i[n].push(d)):i[n]??(i[n]=d)}return t?i[t]:i},zt=st,Dt=(e,t)=>st(e,t,!0),it=decodeURIComponent,_e=e=>ze(e,it),oe,O,N,ot,lt,qe,_,Ve,rt=(Ve=class{constructor(e,t="/",a=[[]]){g(this,N);f(this,"raw");g(this,oe);g(this,O);f(this,"routeIndex",0);f(this,"path");f(this,"bodyCache",{});g(this,_,e=>{const{bodyCache:t,raw:a}=this,s=t[e];if(s)return s;const i=Object.keys(t)[0];return i?t[i].then(r=>(i==="json"&&(r=JSON.stringify(r)),new Response(r)[e]())):t[e]=a[e]()});this.raw=e,this.path=t,p(this,O,a),p(this,oe,{})}param(e){return e?x(this,N,ot).call(this,e):x(this,N,lt).call(this)}query(e){return zt(this.url,e)}queries(e){return Dt(this.url,e)}header(e){if(e)return this.raw.headers.get(e)??void 0;const t={};return this.raw.headers.forEach((a,s)=>{t[s]=a}),t}async parseBody(e){var t;return(t=this.bodyCache).parsedBody??(t.parsedBody=await jt(this,e))}json(){return o(this,_).call(this,"text").then(e=>JSON.parse(e))}text(){return o(this,_).call(this,"text")}arrayBuffer(){return o(this,_).call(this,"arrayBuffer")}blob(){return o(this,_).call(this,"blob")}formData(){return o(this,_).call(this,"formData")}addValidatedData(e,t){o(this,oe)[e]=t}valid(e){return o(this,oe)[e]}get url(){return this.raw.url}get method(){return this.raw.method}get[St](){return o(this,O)}get matchedRoutes(){return o(this,O)[0].map(([[,e]])=>e)}get routePath(){return o(this,O)[0].map(([[,e]])=>e)[this.routeIndex].path}},oe=new WeakMap,O=new WeakMap,N=new WeakSet,ot=function(e){const t=o(this,O)[0][this.routeIndex][1][e],a=x(this,N,qe).call(this,t);return a?/\%/.test(a)?_e(a):a:void 0},lt=function(){const e={},t=Object.keys(o(this,O)[0][this.routeIndex][1]);for(const a of t){const s=x(this,N,qe).call(this,o(this,O)[0][this.routeIndex][1][a]);s&&typeof s=="string"&&(e[a]=/\%/.test(s)?_e(s):s)}return e},qe=function(e){return o(this,O)[1]?o(this,O)[1][e]:e},_=new WeakMap,Ve),Ht={Stringify:1},nt=async(e,t,a,s,i)=>{typeof e=="object"&&!(e instanceof String)&&(e instanceof Promise||(e=e.toString()),e instanceof Promise&&(e=await e));const r=e.callbacks;return r!=null&&r.length?(i?i[0]+=e:i=[e],Promise.all(r.map(c=>c({phase:t,buffer:i,context:s}))).then(c=>Promise.all(c.filter(Boolean).map(n=>nt(n,t,!1,s,i))).then(()=>i[0]))):Promise.resolve(e)},Nt="text/plain; charset=UTF-8",Ie=(e,t)=>({"Content-Type":e,...t}),xe,ve,F,le,z,E,be,ne,ce,K,ye,we,$,ie,Ge,Mt=(Ge=class{constructor(e,t){g(this,$);g(this,xe);g(this,ve);f(this,"env",{});g(this,F);f(this,"finalized",!1);f(this,"error");g(this,le);g(this,z);g(this,E);g(this,be);g(this,ne);g(this,ce);g(this,K);g(this,ye);g(this,we);f(this,"render",(...e)=>(o(this,ne)??p(this,ne,t=>this.html(t)),o(this,ne).call(this,...e)));f(this,"setLayout",e=>p(this,be,e));f(this,"getLayout",()=>o(this,be));f(this,"setRenderer",e=>{p(this,ne,e)});f(this,"header",(e,t,a)=>{this.finalized&&p(this,E,new Response(o(this,E).body,o(this,E)));const s=o(this,E)?o(this,E).headers:o(this,K)??p(this,K,new Headers);t===void 0?s.delete(e):a!=null&&a.append?s.append(e,t):s.set(e,t)});f(this,"status",e=>{p(this,le,e)});f(this,"set",(e,t)=>{o(this,F)??p(this,F,new Map),o(this,F).set(e,t)});f(this,"get",e=>o(this,F)?o(this,F).get(e):void 0);f(this,"newResponse",(...e)=>x(this,$,ie).call(this,...e));f(this,"body",(e,t,a)=>x(this,$,ie).call(this,e,t,a));f(this,"text",(e,t,a)=>!o(this,K)&&!o(this,le)&&!t&&!a&&!this.finalized?new Response(e):x(this,$,ie).call(this,e,t,Ie(Nt,a)));f(this,"json",(e,t,a)=>x(this,$,ie).call(this,JSON.stringify(e),t,Ie("application/json",a)));f(this,"html",(e,t,a)=>{const s=i=>x(this,$,ie).call(this,i,t,Ie("text/html; charset=UTF-8",a));return typeof e=="object"?nt(e,Ht.Stringify,!1,{}).then(s):s(e)});f(this,"redirect",(e,t)=>{const a=String(e);return this.header("Location",/[^\x00-\xFF]/.test(a)?encodeURI(a):a),this.newResponse(null,t??302)});f(this,"notFound",()=>(o(this,ce)??p(this,ce,()=>new Response),o(this,ce).call(this,this)));p(this,xe,e),t&&(p(this,z,t.executionCtx),this.env=t.env,p(this,ce,t.notFoundHandler),p(this,we,t.path),p(this,ye,t.matchResult))}get req(){return o(this,ve)??p(this,ve,new rt(o(this,xe),o(this,we),o(this,ye))),o(this,ve)}get event(){if(o(this,z)&&"respondWith"in o(this,z))return o(this,z);throw Error("This context has no FetchEvent")}get executionCtx(){if(o(this,z))return o(this,z);throw Error("This context has no ExecutionContext")}get res(){return o(this,E)||p(this,E,new Response(null,{headers:o(this,K)??p(this,K,new Headers)}))}set res(e){if(o(this,E)&&e){e=new Response(e.body,e);for(const[t,a]of o(this,E).headers.entries())if(t!=="content-type")if(t==="set-cookie"){const s=o(this,E).headers.getSetCookie();e.headers.delete("set-cookie");for(const i of s)e.headers.append("set-cookie",i)}else e.headers.set(t,a)}p(this,E,e),this.finalized=!0}get var(){return o(this,F)?Object.fromEntries(o(this,F)):{}}},xe=new WeakMap,ve=new WeakMap,F=new WeakMap,le=new WeakMap,z=new WeakMap,E=new WeakMap,be=new WeakMap,ne=new WeakMap,ce=new WeakMap,K=new WeakMap,ye=new WeakMap,we=new WeakMap,$=new WeakSet,ie=function(e,t,a){const s=o(this,E)?new Headers(o(this,E).headers):o(this,K)??new Headers;if(typeof t=="object"&&"headers"in t){const r=t.headers instanceof Headers?t.headers:new Headers(t.headers);for(const[l,c]of r)l.toLowerCase()==="set-cookie"?s.append(l,c):s.set(l,c)}if(a)for(const[r,l]of Object.entries(a))if(typeof l=="string")s.set(r,l);else{s.delete(r);for(const c of l)s.append(r,c)}const i=typeof t=="number"?t:(t==null?void 0:t.status)??o(this,le);return new Response(e,{status:i,headers:s})},Ge),w="ALL",_t="all",$t=["get","post","put","delete","options","patch"],ct="Can not add a route since the matcher is already built.",dt=class extends Error{},Wt="__COMPOSED_HANDLER",Bt=e=>e.text("404 Not Found",404),$e=(e,t)=>{if("getResponse"in e){const a=e.getResponse();return t.newResponse(a.body,a)}return console.error(e),t.text("Internal Server Error",500)},T,k,ht,P,U,Se,je,Ue,mt=(Ue=class{constructor(t={}){g(this,k);f(this,"get");f(this,"post");f(this,"put");f(this,"delete");f(this,"options");f(this,"patch");f(this,"all");f(this,"on");f(this,"use");f(this,"router");f(this,"getPath");f(this,"_basePath","/");g(this,T,"/");f(this,"routes",[]);g(this,P,Bt);f(this,"errorHandler",$e);f(this,"onError",t=>(this.errorHandler=t,this));f(this,"notFound",t=>(p(this,P,t),this));f(this,"fetch",(t,...a)=>x(this,k,je).call(this,t,a[1],a[0],t.method));f(this,"request",(t,a,s,i)=>t instanceof Request?this.fetch(a?new Request(t,a):t,s,i):(t=t.toString(),this.fetch(new Request(/^https?:\/\//.test(t)?t:`http://localhost${se("/",t)}`,a),s,i)));f(this,"fire",()=>{addEventListener("fetch",t=>{t.respondWith(x(this,k,je).call(this,t.request,t,void 0,t.request.method))})});[...$t,_t].forEach(r=>{this[r]=(l,...c)=>(typeof l=="string"?p(this,T,l):x(this,k,U).call(this,r,o(this,T),l),c.forEach(n=>{x(this,k,U).call(this,r,o(this,T),n)}),this)}),this.on=(r,l,...c)=>{for(const n of[l].flat()){p(this,T,n);for(const d of[r].flat())c.map(m=>{x(this,k,U).call(this,d.toUpperCase(),o(this,T),m)})}return this},this.use=(r,...l)=>(typeof r=="string"?p(this,T,r):(p(this,T,"*"),l.unshift(r)),l.forEach(c=>{x(this,k,U).call(this,w,o(this,T),c)}),this);const{strict:s,...i}=t;Object.assign(this,i),this.getPath=s??!0?t.getPath??tt:Ft}route(t,a){const s=this.basePath(t);return a.routes.map(i=>{var l;let r;a.errorHandler===$e?r=i.handler:(r=async(c,n)=>(await Me([],a.errorHandler)(c,()=>i.handler(c,n))).res,r[Wt]=i.handler),x(l=s,k,U).call(l,i.method,i.path,r)}),this}basePath(t){const a=x(this,k,ht).call(this);return a._basePath=se(this._basePath,t),a}mount(t,a,s){let i,r;s&&(typeof s=="function"?r=s:(r=s.optionHandler,s.replaceRequest===!1?i=n=>n:i=s.replaceRequest));const l=r?n=>{const d=r(n);return Array.isArray(d)?d:[d]}:n=>{let d;try{d=n.executionCtx}catch{}return[n.env,d]};i||(i=(()=>{const n=se(this._basePath,t),d=n==="/"?0:n.length;return m=>{const h=new URL(m.url);return h.pathname=h.pathname.slice(d)||"/",new Request(h,m)}})());const c=async(n,d)=>{const m=await a(i(n.req.raw),...l(n));if(m)return m;await d()};return x(this,k,U).call(this,w,se(t,"*"),c),this}},T=new WeakMap,k=new WeakSet,ht=function(){const t=new mt({router:this.router,getPath:this.getPath});return t.errorHandler=this.errorHandler,p(t,P,o(this,P)),t.routes=this.routes,t},P=new WeakMap,U=function(t,a,s){t=t.toUpperCase(),a=se(this._basePath,a);const i={basePath:this._basePath,path:a,method:t,handler:s};this.router.add(t,a,[s,i]),this.routes.push(i)},Se=function(t,a){if(t instanceof Error)return this.errorHandler(t,a);throw t},je=function(t,a,s,i){if(i==="HEAD")return(async()=>new Response(null,await x(this,k,je).call(this,t,a,s,"GET")))();const r=this.getPath(t,{env:s}),l=this.router.match(i,r),c=new Mt(t,{path:r,matchResult:l,env:s,executionCtx:a,notFoundHandler:o(this,P)});if(l[0].length===1){let d;try{d=l[0][0][0][0](c,async()=>{c.res=await o(this,P).call(this,c)})}catch(m){return x(this,k,Se).call(this,m,c)}return d instanceof Promise?d.then(m=>m||(c.finalized?c.res:o(this,P).call(this,c))).catch(m=>x(this,k,Se).call(this,m,c)):d??o(this,P).call(this,c)}const n=Me(l[0],this.errorHandler,o(this,P));return(async()=>{try{const d=await n(c);if(!d.finalized)throw new Error("Context is not finalized. Did you forget to return a Response object or `await next()`?");return d.res}catch(d){return x(this,k,Se).call(this,d,c)}})()},Ue),Ae="[^/]+",ue=".*",ge="(?:|/.*)",re=Symbol(),Vt=new Set(".\\+*[^]$()");function Gt(e,t){return e.length===1?t.length===1?e<t?-1:1:-1:t.length===1||e===ue||e===ge?1:t===ue||t===ge?-1:e===Ae?1:t===Ae?-1:e.length===t.length?e<t?-1:1:t.length-e.length}var J,Q,L,Ye,Fe=(Ye=class{constructor(){g(this,J);g(this,Q);g(this,L,Object.create(null))}insert(t,a,s,i,r){if(t.length===0){if(o(this,J)!==void 0)throw re;if(r)return;p(this,J,a);return}const[l,...c]=t,n=l==="*"?c.length===0?["","",ue]:["","",Ae]:l==="/*"?["","",ge]:l.match(/^\:([^\{\}]+)(?:\{(.+)\})?$/);let d;if(n){const m=n[1];let h=n[2]||Ae;if(m&&n[2]&&(h===".*"||(h=h.replace(/^\((?!\?:)(?=[^)]+\)$)/,"(?:"),/\((?!\?:)/.test(h))))throw re;if(d=o(this,L)[h],!d){if(Object.keys(o(this,L)).some(u=>u!==ue&&u!==ge))throw re;if(r)return;d=o(this,L)[h]=new Fe,m!==""&&p(d,Q,i.varIndex++)}!r&&m!==""&&s.push([m,o(d,Q)])}else if(d=o(this,L)[l],!d){if(Object.keys(o(this,L)).some(m=>m.length>1&&m!==ue&&m!==ge))throw re;if(r)return;d=o(this,L)[l]=new Fe}d.insert(c,a,s,i,r)}buildRegExpStr(){const a=Object.keys(o(this,L)).sort(Gt).map(s=>{const i=o(this,L)[s];return(typeof o(i,Q)=="number"?`(${s})@${o(i,Q)}`:Vt.has(s)?`\\${s}`:s)+i.buildRegExpStr()});return typeof o(this,J)=="number"&&a.unshift(`#${o(this,J)}`),a.length===0?"":a.length===1?a[0]:"(?:"+a.join("|")+")"}},J=new WeakMap,Q=new WeakMap,L=new WeakMap,Ye),Oe,ke,Ke,Ut=(Ke=class{constructor(){g(this,Oe,{varIndex:0});g(this,ke,new Fe)}insert(e,t,a){const s=[],i=[];for(let l=0;;){let c=!1;if(e=e.replace(/\{[^}]+\}/g,n=>{const d=`@\\${l}`;return i[l]=[d,n],l++,c=!0,d}),!c)break}const r=e.match(/(?::[^\/]+)|(?:\/\*$)|./g)||[];for(let l=i.length-1;l>=0;l--){const[c]=i[l];for(let n=r.length-1;n>=0;n--)if(r[n].indexOf(c)!==-1){r[n]=r[n].replace(c,i[l][1]);break}}return o(this,ke).insert(r,t,s,o(this,Oe),a),s}buildRegExp(){let e=o(this,ke).buildRegExpStr();if(e==="")return[/^$/,[],[]];let t=0;const a=[],s=[];return e=e.replace(/#(\d+)|@(\d+)|\.\*\$/g,(i,r,l)=>r!==void 0?(a[++t]=Number(r),"$()"):(l!==void 0&&(s[Number(l)]=++t),"")),[new RegExp(`^${e}`),a,s]}},Oe=new WeakMap,ke=new WeakMap,Ke),pt=[],Yt=[/^$/,[],Object.create(null)],Ee=Object.create(null);function ft(e){return Ee[e]??(Ee[e]=new RegExp(e==="*"?"":`^${e.replace(/\/\*$|([.\\+*[^\]$()])/g,(t,a)=>a?`\\${a}`:"(?:|/.*)")}$`))}function Kt(){Ee=Object.create(null)}function Jt(e){var d;const t=new Ut,a=[];if(e.length===0)return Yt;const s=e.map(m=>[!/\*|\/:/.test(m[0]),...m]).sort(([m,h],[u,y])=>m?1:u?-1:h.length-y.length),i=Object.create(null);for(let m=0,h=-1,u=s.length;m<u;m++){const[y,A,v]=s[m];y?i[A]=[v.map(([j])=>[j,Object.create(null)]),pt]:h++;let b;try{b=t.insert(A,h,y)}catch(j){throw j===re?new dt(A):j}y||(a[h]=v.map(([j,te])=>{const he=Object.create(null);for(te-=1;te>=0;te--){const[I,Re]=b[te];he[I]=Re}return[j,he]}))}const[r,l,c]=t.buildRegExp();for(let m=0,h=a.length;m<h;m++)for(let u=0,y=a[m].length;u<y;u++){const A=(d=a[m][u])==null?void 0:d[1];if(!A)continue;const v=Object.keys(A);for(let b=0,j=v.length;b<j;b++)A[v[b]]=c[A[v[b]]]}const n=[];for(const m in l)n[m]=a[l[m]];return[r,n,i]}function ae(e,t){if(e){for(const a of Object.keys(e).sort((s,i)=>i.length-s.length))if(ft(a).test(t))return[...e[a]]}}var W,B,me,ut,gt,Je,Qt=(Je=class{constructor(){g(this,me);f(this,"name","RegExpRouter");g(this,W);g(this,B);p(this,W,{[w]:Object.create(null)}),p(this,B,{[w]:Object.create(null)})}add(e,t,a){var c;const s=o(this,W),i=o(this,B);if(!s||!i)throw new Error(ct);s[e]||[s,i].forEach(n=>{n[e]=Object.create(null),Object.keys(n[w]).forEach(d=>{n[e][d]=[...n[w][d]]})}),t==="/*"&&(t="*");const r=(t.match(/\/:/g)||[]).length;if(/\*$/.test(t)){const n=ft(t);e===w?Object.keys(s).forEach(d=>{var m;(m=s[d])[t]||(m[t]=ae(s[d],t)||ae(s[w],t)||[])}):(c=s[e])[t]||(c[t]=ae(s[e],t)||ae(s[w],t)||[]),Object.keys(s).forEach(d=>{(e===w||e===d)&&Object.keys(s[d]).forEach(m=>{n.test(m)&&s[d][m].push([a,r])})}),Object.keys(i).forEach(d=>{(e===w||e===d)&&Object.keys(i[d]).forEach(m=>n.test(m)&&i[d][m].push([a,r]))});return}const l=at(t)||[t];for(let n=0,d=l.length;n<d;n++){const m=l[n];Object.keys(i).forEach(h=>{var u;(e===w||e===h)&&((u=i[h])[m]||(u[m]=[...ae(s[h],m)||ae(s[w],m)||[]]),i[h][m].push([a,r-d+n+1]))})}}match(e,t){Kt();const a=x(this,me,ut).call(this);return this.match=(s,i)=>{const r=a[s]||a[w],l=r[2][i];if(l)return l;const c=i.match(r[0]);if(!c)return[[],pt];const n=c.indexOf("",1);return[r[1][n],c]},this.match(e,t)}},W=new WeakMap,B=new WeakMap,me=new WeakSet,ut=function(){const e=Object.create(null);return Object.keys(o(this,B)).concat(Object.keys(o(this,W))).forEach(t=>{e[t]||(e[t]=x(this,me,gt).call(this,t))}),p(this,W,p(this,B,void 0)),e},gt=function(e){const t=[];let a=e===w;return[o(this,W),o(this,B)].forEach(s=>{const i=s[e]?Object.keys(s[e]).map(r=>[r,s[e][r]]):[];i.length!==0?(a||(a=!0),t.push(...i)):e!==w&&t.push(...Object.keys(s[w]).map(r=>[r,s[w][r]]))}),a?Jt(t):null},Je),V,D,Qe,Xt=(Qe=class{constructor(e){f(this,"name","SmartRouter");g(this,V,[]);g(this,D,[]);p(this,V,e.routers)}add(e,t,a){if(!o(this,D))throw new Error(ct);o(this,D).push([e,t,a])}match(e,t){if(!o(this,D))throw new Error("Fatal error");const a=o(this,V),s=o(this,D),i=a.length;let r=0,l;for(;r<i;r++){const c=a[r];try{for(let n=0,d=s.length;n<d;n++)c.add(...s[n]);l=c.match(e,t)}catch(n){if(n instanceof dt)continue;throw n}this.match=c.match.bind(c),p(this,V,[c]),p(this,D,void 0);break}if(r===i)throw new Error("Fatal error");return this.name=`SmartRouter + ${this.activeRouter.name}`,l}get activeRouter(){if(o(this,D)||o(this,V).length!==1)throw new Error("No active router has been determined yet.");return o(this,V)[0]}},V=new WeakMap,D=new WeakMap,Qe),fe=Object.create(null),G,S,X,de,C,H,Y,Xe,xt=(Xe=class{constructor(e,t,a){g(this,H);g(this,G);g(this,S);g(this,X);g(this,de,0);g(this,C,fe);if(p(this,S,a||Object.create(null)),p(this,G,[]),e&&t){const s=Object.create(null);s[e]={handler:t,possibleKeys:[],score:0},p(this,G,[s])}p(this,X,[])}insert(e,t,a){p(this,de,++Ne(this,de)._);let s=this;const i=Tt(t),r=[];for(let l=0,c=i.length;l<c;l++){const n=i[l],d=i[l+1],m=It(n,d),h=Array.isArray(m)?m[0]:n;if(h in o(s,S)){s=o(s,S)[h],m&&r.push(m[1]);continue}o(s,S)[h]=new xt,m&&(o(s,X).push(m),r.push(m[1])),s=o(s,S)[h]}return o(s,G).push({[e]:{handler:a,possibleKeys:r.filter((l,c,n)=>n.indexOf(l)===c),score:o(this,de)}}),s}search(e,t){var c;const a=[];p(this,C,fe);let i=[this];const r=et(t),l=[];for(let n=0,d=r.length;n<d;n++){const m=r[n],h=n===d-1,u=[];for(let y=0,A=i.length;y<A;y++){const v=i[y],b=o(v,S)[m];b&&(p(b,C,o(v,C)),h?(o(b,S)["*"]&&a.push(...x(this,H,Y).call(this,o(b,S)["*"],e,o(v,C))),a.push(...x(this,H,Y).call(this,b,e,o(v,C)))):u.push(b));for(let j=0,te=o(v,X).length;j<te;j++){const he=o(v,X)[j],I=o(v,C)===fe?{}:{...o(v,C)};if(he==="*"){const M=o(v,S)["*"];M&&(a.push(...x(this,H,Y).call(this,M,e,o(v,C))),p(M,C,I),u.push(M));continue}const[Re,De,pe]=he;if(!m&&!(pe instanceof RegExp))continue;const q=o(v,S)[Re],wt=r.slice(n).join("/");if(pe instanceof RegExp){const M=pe.exec(wt);if(M){if(I[De]=M[0],a.push(...x(this,H,Y).call(this,q,e,o(v,C),I)),Object.keys(o(q,S)).length){p(q,C,I);const Te=((c=M[0].match(/\//))==null?void 0:c.length)??0;(l[Te]||(l[Te]=[])).push(q)}continue}}(pe===!0||pe.test(m))&&(I[De]=m,h?(a.push(...x(this,H,Y).call(this,q,e,I,o(v,C))),o(q,S)["*"]&&a.push(...x(this,H,Y).call(this,o(q,S)["*"],e,I,o(v,C)))):(p(q,C,I),u.push(q)))}}i=u.concat(l.shift()??[])}return a.length>1&&a.sort((n,d)=>n.score-d.score),[a.map(({handler:n,params:d})=>[n,d])]}},G=new WeakMap,S=new WeakMap,X=new WeakMap,de=new WeakMap,C=new WeakMap,H=new WeakSet,Y=function(e,t,a,s){const i=[];for(let r=0,l=o(e,G).length;r<l;r++){const c=o(e,G)[r],n=c[t]||c[w],d={};if(n!==void 0&&(n.params=Object.create(null),i.push(n),a!==fe||s&&s!==fe))for(let m=0,h=n.possibleKeys.length;m<h;m++){const u=n.possibleKeys[m],y=d[n.score];n.params[u]=s!=null&&s[u]&&!y?s[u]:a[u]??(s==null?void 0:s[u]),d[n.score]=!0}}return i},Xe),Z,Ze,Zt=(Ze=class{constructor(){f(this,"name","TrieRouter");g(this,Z);p(this,Z,new xt)}add(e,t,a){const s=at(t);if(s){for(let i=0,r=s.length;i<r;i++)o(this,Z).insert(e,s[i],a);return}o(this,Z).insert(e,t,a)}match(e,t){return o(this,Z).search(e,t)}},Z=new WeakMap,Ze),vt=class extends mt{constructor(e={}){super(e),this.router=e.router??new Xt({routers:[new Qt,new Zt]})}},ea=e=>{const a={...{origin:"*",allowMethods:["GET","HEAD","PUT","POST","DELETE","PATCH"],allowHeaders:[],exposeHeaders:[]},...e},s=(r=>typeof r=="string"?r==="*"?()=>r:l=>r===l?l:null:typeof r=="function"?r:l=>r.includes(l)?l:null)(a.origin),i=(r=>typeof r=="function"?r:Array.isArray(r)?()=>r:()=>[])(a.allowMethods);return async function(l,c){var m;function n(h,u){l.res.headers.set(h,u)}const d=await s(l.req.header("origin")||"",l);if(d&&n("Access-Control-Allow-Origin",d),a.origin!=="*"){const h=l.req.header("Vary");h?n("Vary",h):n("Vary","Origin")}if(a.credentials&&n("Access-Control-Allow-Credentials","true"),(m=a.exposeHeaders)!=null&&m.length&&n("Access-Control-Expose-Headers",a.exposeHeaders.join(",")),l.req.method==="OPTIONS"){a.maxAge!=null&&n("Access-Control-Max-Age",a.maxAge.toString());const h=await i(l.req.header("origin")||"",l);h.length&&n("Access-Control-Allow-Methods",h.join(","));let u=a.allowHeaders;if(!(u!=null&&u.length)){const y=l.req.header("Access-Control-Request-Headers");y&&(u=y.split(/\s*,\s*/))}return u!=null&&u.length&&(n("Access-Control-Allow-Headers",u.join(",")),l.res.headers.append("Vary","Access-Control-Request-Headers")),l.res.headers.delete("Content-Length"),l.res.headers.delete("Content-Type"),new Response(null,{headers:l.res.headers,status:204,statusText:"No Content"})}await c()}},ta=/^\s*(?:text\/(?!event-stream(?:[;\s]|$))[^;\s]+|application\/(?:javascript|json|xml|xml-dtd|ecmascript|dart|postscript|rtf|tar|toml|vnd\.dart|vnd\.ms-fontobject|vnd\.ms-opentype|wasm|x-httpd-php|x-javascript|x-ns-proxy-autoconfig|x-sh|x-tar|x-virtualbox-hdd|x-virtualbox-ova|x-virtualbox-ovf|x-virtualbox-vbox|x-virtualbox-vdi|x-virtualbox-vhd|x-virtualbox-vmdk|x-www-form-urlencoded)|font\/(?:otf|ttf)|image\/(?:bmp|vnd\.adobe\.photoshop|vnd\.microsoft\.icon|vnd\.ms-dds|x-icon|x-ms-bmp)|message\/rfc822|model\/gltf-binary|x-shader\/x-fragment|x-shader\/x-vertex|[^;\s]+?\+(?:json|text|xml|yaml))(?:[;\s]|$)/i,We=(e,t=sa)=>{const a=/\.([a-zA-Z0-9]+?)$/,s=e.match(a);if(!s)return;let i=t[s[1]];return i&&i.startsWith("text")&&(i+="; charset=utf-8"),i},aa={aac:"audio/aac",avi:"video/x-msvideo",avif:"image/avif",av1:"video/av1",bin:"application/octet-stream",bmp:"image/bmp",css:"text/css",csv:"text/csv",eot:"application/vnd.ms-fontobject",epub:"application/epub+zip",gif:"image/gif",gz:"application/gzip",htm:"text/html",html:"text/html",ico:"image/x-icon",ics:"text/calendar",jpeg:"image/jpeg",jpg:"image/jpeg",js:"text/javascript",json:"application/json",jsonld:"application/ld+json",map:"application/json",mid:"audio/x-midi",midi:"audio/x-midi",mjs:"text/javascript",mp3:"audio/mpeg",mp4:"video/mp4",mpeg:"video/mpeg",oga:"audio/ogg",ogv:"video/ogg",ogx:"application/ogg",opus:"audio/opus",otf:"font/otf",pdf:"application/pdf",png:"image/png",rtf:"application/rtf",svg:"image/svg+xml",tif:"image/tiff",tiff:"image/tiff",ts:"video/mp2t",ttf:"font/ttf",txt:"text/plain",wasm:"application/wasm",webm:"video/webm",weba:"audio/webm",webmanifest:"application/manifest+json",webp:"image/webp",woff:"font/woff",woff2:"font/woff2",xhtml:"application/xhtml+xml",xml:"application/xml",zip:"application/zip","3gp":"video/3gpp","3g2":"video/3gpp2",gltf:"model/gltf+json",glb:"model/gltf-binary"},sa=aa,ia=(...e)=>{let t=e.filter(i=>i!=="").join("/");t=t.replace(new RegExp("(?<=\\/)\\/+","g"),"");const a=t.split("/"),s=[];for(const i of a)i===".."&&s.length>0&&s.at(-1)!==".."?s.pop():i!=="."&&s.push(i);return s.join("/")||"."},bt={br:".br",zstd:".zst",gzip:".gz"},ra=Object.keys(bt),oa="index.html",la=e=>{const t=e.root??"./",a=e.path,s=e.join??ia;return async(i,r)=>{var m,h,u,y;if(i.finalized)return r();let l;if(e.path)l=e.path;else try{if(l=decodeURIComponent(i.req.path),/(?:^|[\/\\])\.\.(?:$|[\/\\])/.test(l))throw new Error}catch{return await((m=e.onNotFound)==null?void 0:m.call(e,i.req.path,i)),r()}let c=s(t,!a&&e.rewriteRequestPath?e.rewriteRequestPath(l):l);e.isDir&&await e.isDir(c)&&(c=s(c,oa));const n=e.getContent;let d=await n(c,i);if(d instanceof Response)return i.newResponse(d.body,d);if(d){const A=e.mimes&&We(c,e.mimes)||We(c);if(i.header("Content-Type",A||"application/octet-stream"),e.precompressed&&(!A||ta.test(A))){const v=new Set((h=i.req.header("Accept-Encoding"))==null?void 0:h.split(",").map(b=>b.trim()));for(const b of ra){if(!v.has(b))continue;const j=await n(c+bt[b],i);if(j){d=j,i.header("Content-Encoding",b),i.header("Vary","Accept-Encoding",{append:!0});break}}}return await((u=e.onFound)==null?void 0:u.call(e,c,i)),i.body(d)}await((y=e.onNotFound)==null?void 0:y.call(e,c,i)),await r()}},na=async(e,t)=>{let a;t&&t.manifest?typeof t.manifest=="string"?a=JSON.parse(t.manifest):a=t.manifest:typeof __STATIC_CONTENT_MANIFEST=="string"?a=JSON.parse(__STATIC_CONTENT_MANIFEST):a=__STATIC_CONTENT_MANIFEST;let s;t&&t.namespace?s=t.namespace:s=__STATIC_CONTENT;const i=a[e]||e;if(!i)return null;const r=await s.get(i,{type:"stream"});return r||null},ca=e=>async function(a,s){return la({...e,getContent:async r=>na(r,{manifest:e.manifest,namespace:e.namespace?e.namespace:a.env?a.env.__STATIC_CONTENT:void 0})})(a,s)},da=e=>ca(e);function ee({children:e,title:t,currentPage:a}){return`
+var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in e?kt(e,t,{enumerable:!0,configurable:!0,writable:!0,value:a}):e[t]=a;var h=(e,t,a)=>Ct(e,typeof t!="symbol"?t+"":t,a),Ae=(e,t,a)=>t.has(e)||He("Cannot "+a);var o=(e,t,a)=>(Ae(e,t,"read from private field"),a?a.call(e):t.get(e)),u=(e,t,a)=>t.has(e)?He("Cannot add the same private member more than once"):t instanceof WeakSet?t.add(e):t.set(e,a),p=(e,t,a,s)=>(Ae(e,t,"write to private field"),s?s.call(e,a):t.set(e,a),a),x=(e,t,a)=>(Ae(e,t,"access private method"),a);var Me=(e,t,a,s)=>({set _(i){p(e,t,i,a)},get _(){return o(e,t,s)}});var Ne=(e,t,a)=>(s,i)=>{let l=-1;return r(0);async function r(d){if(d<=l)throw new Error("next() called multiple times");l=d;let n,c=!1,m;if(e[d]?(m=e[d][0][0],s.req.routeIndex=d):m=d===e.length&&i||void 0,m)try{n=await m(s,()=>r(d+1))}catch(g){if(g instanceof Error&&t)s.error=g,n=await t(g,s),c=!0;else throw g}else s.finalized===!1&&a&&(n=await a(s));return n&&(s.finalized===!1||c)&&(s.res=n),s}},jt=Symbol(),St=async(e,t=Object.create(null))=>{const{all:a=!1,dot:s=!1}=t,l=(e instanceof lt?e.raw.headers:e.headers).get("Content-Type");return l!=null&&l.startsWith("multipart/form-data")||l!=null&&l.startsWith("application/x-www-form-urlencoded")?Et(e,{all:a,dot:s}):{}};async function Et(e,t){const a=await e.formData();return a?Tt(a,t):{}}function Tt(e,t){const a=Object.create(null);return e.forEach((s,i)=>{t.all||i.endsWith("[]")?qt(a,i,s):a[i]=s}),t.dot&&Object.entries(a).forEach(([s,i])=>{s.includes(".")&&(zt(a,s,i),delete a[s])}),a}var qt=(e,t,a)=>{e[t]!==void 0?Array.isArray(e[t])?e[t].push(a):e[t]=[e[t],a]:t.endsWith("[]")?e[t]=[a]:e[t]=a},zt=(e,t,a)=>{let s=e;const i=t.split(".");i.forEach((l,r)=>{r===i.length-1?s[l]=a:((!s[l]||typeof s[l]!="object"||Array.isArray(s[l])||s[l]instanceof File)&&(s[l]=Object.create(null)),s=s[l])})},et=e=>{const t=e.split("/");return t[0]===""&&t.shift(),t},Pt=e=>{const{groups:t,path:a}=At(e),s=et(a);return Ot(s,t)},At=e=>{const t=[];return e=e.replace(/\{[^}]+\}/g,(a,s)=>{const i=`@${s}`;return t.push([i,a]),i}),{groups:t,path:e}},Ot=(e,t)=>{for(let a=t.length-1;a>=0;a--){const[s]=t[a];for(let i=e.length-1;i>=0;i--)if(e[i].includes(s)){e[i]=e[i].replace(s,t[a][1]);break}}return e},Ce={},Rt=(e,t)=>{if(e==="*")return"*";const a=e.match(/^\:([^\{\}]+)(?:\{(.+)\})?$/);if(a){const s=`${e}#${t}`;return Ce[s]||(a[2]?Ce[s]=t&&t[0]!==":"&&t[0]!=="*"?[s,a[1],new RegExp(`^${a[2]}(?=/${t})`)]:[e,a[1],new RegExp(`^${a[2]}$`)]:Ce[s]=[e,a[1],!0]),Ce[s]}return null},Fe=(e,t)=>{try{return t(e)}catch{return e.replace(/(?:%[0-9A-Fa-f]{2})+/g,a=>{try{return t(a)}catch{return a}})}},It=e=>Fe(e,decodeURI),tt=e=>{const t=e.url,a=t.indexOf("/",t.indexOf(":")+4);let s=a;for(;s<t.length;s++){const i=t.charCodeAt(s);if(i===37){const l=t.indexOf("?",s),r=t.slice(a,l===-1?void 0:l);return It(r.includes("%25")?r.replace(/%25/g,"%2525"):r)}else if(i===63)break}return t.slice(a,s)},Lt=e=>{const t=tt(e);return t.length>1&&t.at(-1)==="/"?t.slice(0,-1):t},se=(e,t,...a)=>(a.length&&(t=se(t,...a)),`${(e==null?void 0:e[0])==="/"?"":"/"}${e}${t==="/"?"":`${(e==null?void 0:e.at(-1))==="/"?"":"/"}${(t==null?void 0:t[0])==="/"?t.slice(1):t}`}`),at=e=>{if(e.charCodeAt(e.length-1)!==63||!e.includes(":"))return null;const t=e.split("/"),a=[];let s="";return t.forEach(i=>{if(i!==""&&!/\:/.test(i))s+="/"+i;else if(/\:/.test(i))if(/\?/.test(i)){a.length===0&&s===""?a.push("/"):a.push(s);const l=i.replace("?","");s+="/"+l,a.push(s)}else s+="/"+i}),a.filter((i,l,r)=>r.indexOf(i)===l)},Oe=e=>/[%+]/.test(e)?(e.indexOf("+")!==-1&&(e=e.replace(/\+/g," ")),e.indexOf("%")!==-1?Fe(e,it):e):e,st=(e,t,a)=>{let s;if(!a&&t&&!/[%+]/.test(t)){let r=e.indexOf(`?${t}`,8);for(r===-1&&(r=e.indexOf(`&${t}`,8));r!==-1;){const d=e.charCodeAt(r+t.length+1);if(d===61){const n=r+t.length+2,c=e.indexOf("&",n);return Oe(e.slice(n,c===-1?void 0:c))}else if(d==38||isNaN(d))return"";r=e.indexOf(`&${t}`,r+1)}if(s=/[%+]/.test(e),!s)return}const i={};s??(s=/[%+]/.test(e));let l=e.indexOf("?",8);for(;l!==-1;){const r=e.indexOf("&",l+1);let d=e.indexOf("=",l);d>r&&r!==-1&&(d=-1);let n=e.slice(l+1,d===-1?r===-1?void 0:r:d);if(s&&(n=Oe(n)),l=r,n==="")continue;let c;d===-1?c="":(c=e.slice(d+1,r===-1?void 0:r),s&&(c=Oe(c))),a?(i[n]&&Array.isArray(i[n])||(i[n]=[]),i[n].push(c)):i[n]??(i[n]=c)}return t?i[t]:i},Ft=st,Dt=(e,t)=>st(e,t,!0),it=decodeURIComponent,_e=e=>Fe(e,it),oe,q,M,ot,rt,Ie,_,Be,lt=(Be=class{constructor(e,t="/",a=[[]]){u(this,M);h(this,"raw");u(this,oe);u(this,q);h(this,"routeIndex",0);h(this,"path");h(this,"bodyCache",{});u(this,_,e=>{const{bodyCache:t,raw:a}=this,s=t[e];if(s)return s;const i=Object.keys(t)[0];return i?t[i].then(l=>(i==="json"&&(l=JSON.stringify(l)),new Response(l)[e]())):t[e]=a[e]()});this.raw=e,this.path=t,p(this,q,a),p(this,oe,{})}param(e){return e?x(this,M,ot).call(this,e):x(this,M,rt).call(this)}query(e){return Ft(this.url,e)}queries(e){return Dt(this.url,e)}header(e){if(e)return this.raw.headers.get(e)??void 0;const t={};return this.raw.headers.forEach((a,s)=>{t[s]=a}),t}async parseBody(e){var t;return(t=this.bodyCache).parsedBody??(t.parsedBody=await St(this,e))}json(){return o(this,_).call(this,"text").then(e=>JSON.parse(e))}text(){return o(this,_).call(this,"text")}arrayBuffer(){return o(this,_).call(this,"arrayBuffer")}blob(){return o(this,_).call(this,"blob")}formData(){return o(this,_).call(this,"formData")}addValidatedData(e,t){o(this,oe)[e]=t}valid(e){return o(this,oe)[e]}get url(){return this.raw.url}get method(){return this.raw.method}get[jt](){return o(this,q)}get matchedRoutes(){return o(this,q)[0].map(([[,e]])=>e)}get routePath(){return o(this,q)[0].map(([[,e]])=>e)[this.routeIndex].path}},oe=new WeakMap,q=new WeakMap,M=new WeakSet,ot=function(e){const t=o(this,q)[0][this.routeIndex][1][e],a=x(this,M,Ie).call(this,t);return a?/\%/.test(a)?_e(a):a:void 0},rt=function(){const e={},t=Object.keys(o(this,q)[0][this.routeIndex][1]);for(const a of t){const s=x(this,M,Ie).call(this,o(this,q)[0][this.routeIndex][1][a]);s&&typeof s=="string"&&(e[a]=/\%/.test(s)?_e(s):s)}return e},Ie=function(e){return o(this,q)[1]?o(this,q)[1][e]:e},_=new WeakMap,Be),Ht={Stringify:1},nt=async(e,t,a,s,i)=>{typeof e=="object"&&!(e instanceof String)&&(e instanceof Promise||(e=e.toString()),e instanceof Promise&&(e=await e));const l=e.callbacks;return l!=null&&l.length?(i?i[0]+=e:i=[e],Promise.all(l.map(d=>d({phase:t,buffer:i,context:s}))).then(d=>Promise.all(d.filter(Boolean).map(n=>nt(n,t,!1,s,i))).then(()=>i[0]))):Promise.resolve(e)},Mt="text/plain; charset=UTF-8",Re=(e,t)=>({"Content-Type":e,...t}),xe,ve,L,re,F,E,be,ne,de,K,ye,we,$,ie,Ve,Nt=(Ve=class{constructor(e,t){u(this,$);u(this,xe);u(this,ve);h(this,"env",{});u(this,L);h(this,"finalized",!1);h(this,"error");u(this,re);u(this,F);u(this,E);u(this,be);u(this,ne);u(this,de);u(this,K);u(this,ye);u(this,we);h(this,"render",(...e)=>(o(this,ne)??p(this,ne,t=>this.html(t)),o(this,ne).call(this,...e)));h(this,"setLayout",e=>p(this,be,e));h(this,"getLayout",()=>o(this,be));h(this,"setRenderer",e=>{p(this,ne,e)});h(this,"header",(e,t,a)=>{this.finalized&&p(this,E,new Response(o(this,E).body,o(this,E)));const s=o(this,E)?o(this,E).headers:o(this,K)??p(this,K,new Headers);t===void 0?s.delete(e):a!=null&&a.append?s.append(e,t):s.set(e,t)});h(this,"status",e=>{p(this,re,e)});h(this,"set",(e,t)=>{o(this,L)??p(this,L,new Map),o(this,L).set(e,t)});h(this,"get",e=>o(this,L)?o(this,L).get(e):void 0);h(this,"newResponse",(...e)=>x(this,$,ie).call(this,...e));h(this,"body",(e,t,a)=>x(this,$,ie).call(this,e,t,a));h(this,"text",(e,t,a)=>!o(this,K)&&!o(this,re)&&!t&&!a&&!this.finalized?new Response(e):x(this,$,ie).call(this,e,t,Re(Mt,a)));h(this,"json",(e,t,a)=>x(this,$,ie).call(this,JSON.stringify(e),t,Re("application/json",a)));h(this,"html",(e,t,a)=>{const s=i=>x(this,$,ie).call(this,i,t,Re("text/html; charset=UTF-8",a));return typeof e=="object"?nt(e,Ht.Stringify,!1,{}).then(s):s(e)});h(this,"redirect",(e,t)=>{const a=String(e);return this.header("Location",/[^\x00-\xFF]/.test(a)?encodeURI(a):a),this.newResponse(null,t??302)});h(this,"notFound",()=>(o(this,de)??p(this,de,()=>new Response),o(this,de).call(this,this)));p(this,xe,e),t&&(p(this,F,t.executionCtx),this.env=t.env,p(this,de,t.notFoundHandler),p(this,we,t.path),p(this,ye,t.matchResult))}get req(){return o(this,ve)??p(this,ve,new lt(o(this,xe),o(this,we),o(this,ye))),o(this,ve)}get event(){if(o(this,F)&&"respondWith"in o(this,F))return o(this,F);throw Error("This context has no FetchEvent")}get executionCtx(){if(o(this,F))return o(this,F);throw Error("This context has no ExecutionContext")}get res(){return o(this,E)||p(this,E,new Response(null,{headers:o(this,K)??p(this,K,new Headers)}))}set res(e){if(o(this,E)&&e){e=new Response(e.body,e);for(const[t,a]of o(this,E).headers.entries())if(t!=="content-type")if(t==="set-cookie"){const s=o(this,E).headers.getSetCookie();e.headers.delete("set-cookie");for(const i of s)e.headers.append("set-cookie",i)}else e.headers.set(t,a)}p(this,E,e),this.finalized=!0}get var(){return o(this,L)?Object.fromEntries(o(this,L)):{}}},xe=new WeakMap,ve=new WeakMap,L=new WeakMap,re=new WeakMap,F=new WeakMap,E=new WeakMap,be=new WeakMap,ne=new WeakMap,de=new WeakMap,K=new WeakMap,ye=new WeakMap,we=new WeakMap,$=new WeakSet,ie=function(e,t,a){const s=o(this,E)?new Headers(o(this,E).headers):o(this,K)??new Headers;if(typeof t=="object"&&"headers"in t){const l=t.headers instanceof Headers?t.headers:new Headers(t.headers);for(const[r,d]of l)r.toLowerCase()==="set-cookie"?s.append(r,d):s.set(r,d)}if(a)for(const[l,r]of Object.entries(a))if(typeof r=="string")s.set(l,r);else{s.delete(l);for(const d of r)s.append(l,d)}const i=typeof t=="number"?t:(t==null?void 0:t.status)??o(this,re);return new Response(e,{status:i,headers:s})},Ve),w="ALL",_t="all",$t=["get","post","put","delete","options","patch"],dt="Can not add a route since the matcher is already built.",ct=class extends Error{},Wt="__COMPOSED_HANDLER",Gt=e=>e.text("404 Not Found",404),$e=(e,t)=>{if("getResponse"in e){const a=e.getResponse();return t.newResponse(a.body,a)}return console.error(e),t.text("Internal Server Error",500)},P,k,gt,A,U,je,Se,Ue,mt=(Ue=class{constructor(t={}){u(this,k);h(this,"get");h(this,"post");h(this,"put");h(this,"delete");h(this,"options");h(this,"patch");h(this,"all");h(this,"on");h(this,"use");h(this,"router");h(this,"getPath");h(this,"_basePath","/");u(this,P,"/");h(this,"routes",[]);u(this,A,Gt);h(this,"errorHandler",$e);h(this,"onError",t=>(this.errorHandler=t,this));h(this,"notFound",t=>(p(this,A,t),this));h(this,"fetch",(t,...a)=>x(this,k,Se).call(this,t,a[1],a[0],t.method));h(this,"request",(t,a,s,i)=>t instanceof Request?this.fetch(a?new Request(t,a):t,s,i):(t=t.toString(),this.fetch(new Request(/^https?:\/\//.test(t)?t:`http://localhost${se("/",t)}`,a),s,i)));h(this,"fire",()=>{addEventListener("fetch",t=>{t.respondWith(x(this,k,Se).call(this,t.request,t,void 0,t.request.method))})});[...$t,_t].forEach(l=>{this[l]=(r,...d)=>(typeof r=="string"?p(this,P,r):x(this,k,U).call(this,l,o(this,P),r),d.forEach(n=>{x(this,k,U).call(this,l,o(this,P),n)}),this)}),this.on=(l,r,...d)=>{for(const n of[r].flat()){p(this,P,n);for(const c of[l].flat())d.map(m=>{x(this,k,U).call(this,c.toUpperCase(),o(this,P),m)})}return this},this.use=(l,...r)=>(typeof l=="string"?p(this,P,l):(p(this,P,"*"),r.unshift(l)),r.forEach(d=>{x(this,k,U).call(this,w,o(this,P),d)}),this);const{strict:s,...i}=t;Object.assign(this,i),this.getPath=s??!0?t.getPath??tt:Lt}route(t,a){const s=this.basePath(t);return a.routes.map(i=>{var r;let l;a.errorHandler===$e?l=i.handler:(l=async(d,n)=>(await Ne([],a.errorHandler)(d,()=>i.handler(d,n))).res,l[Wt]=i.handler),x(r=s,k,U).call(r,i.method,i.path,l)}),this}basePath(t){const a=x(this,k,gt).call(this);return a._basePath=se(this._basePath,t),a}mount(t,a,s){let i,l;s&&(typeof s=="function"?l=s:(l=s.optionHandler,s.replaceRequest===!1?i=n=>n:i=s.replaceRequest));const r=l?n=>{const c=l(n);return Array.isArray(c)?c:[c]}:n=>{let c;try{c=n.executionCtx}catch{}return[n.env,c]};i||(i=(()=>{const n=se(this._basePath,t),c=n==="/"?0:n.length;return m=>{const g=new URL(m.url);return g.pathname=g.pathname.slice(c)||"/",new Request(g,m)}})());const d=async(n,c)=>{const m=await a(i(n.req.raw),...r(n));if(m)return m;await c()};return x(this,k,U).call(this,w,se(t,"*"),d),this}},P=new WeakMap,k=new WeakSet,gt=function(){const t=new mt({router:this.router,getPath:this.getPath});return t.errorHandler=this.errorHandler,p(t,A,o(this,A)),t.routes=this.routes,t},A=new WeakMap,U=function(t,a,s){t=t.toUpperCase(),a=se(this._basePath,a);const i={basePath:this._basePath,path:a,method:t,handler:s};this.router.add(t,a,[s,i]),this.routes.push(i)},je=function(t,a){if(t instanceof Error)return this.errorHandler(t,a);throw t},Se=function(t,a,s,i){if(i==="HEAD")return(async()=>new Response(null,await x(this,k,Se).call(this,t,a,s,"GET")))();const l=this.getPath(t,{env:s}),r=this.router.match(i,l),d=new Nt(t,{path:l,matchResult:r,env:s,executionCtx:a,notFoundHandler:o(this,A)});if(r[0].length===1){let c;try{c=r[0][0][0][0](d,async()=>{d.res=await o(this,A).call(this,d)})}catch(m){return x(this,k,je).call(this,m,d)}return c instanceof Promise?c.then(m=>m||(d.finalized?d.res:o(this,A).call(this,d))).catch(m=>x(this,k,je).call(this,m,d)):c??o(this,A).call(this,d)}const n=Ne(r[0],this.errorHandler,o(this,A));return(async()=>{try{const c=await n(d);if(!c.finalized)throw new Error("Context is not finalized. Did you forget to return a Response object or `await next()`?");return c.res}catch(c){return x(this,k,je).call(this,c,d)}})()},Ue),Te="[^/]+",fe=".*",ue="(?:|/.*)",le=Symbol(),Bt=new Set(".\\+*[^]$()");function Vt(e,t){return e.length===1?t.length===1?e<t?-1:1:-1:t.length===1||e===fe||e===ue?1:t===fe||t===ue?-1:e===Te?1:t===Te?-1:e.length===t.length?e<t?-1:1:t.length-e.length}var J,Q,O,Ye,Le=(Ye=class{constructor(){u(this,J);u(this,Q);u(this,O,Object.create(null))}insert(t,a,s,i,l){if(t.length===0){if(o(this,J)!==void 0)throw le;if(l)return;p(this,J,a);return}const[r,...d]=t,n=r==="*"?d.length===0?["","",fe]:["","",Te]:r==="/*"?["","",ue]:r.match(/^\:([^\{\}]+)(?:\{(.+)\})?$/);let c;if(n){const m=n[1];let g=n[2]||Te;if(m&&n[2]&&(g===".*"||(g=g.replace(/^\((?!\?:)(?=[^)]+\)$)/,"(?:"),/\((?!\?:)/.test(g))))throw le;if(c=o(this,O)[g],!c){if(Object.keys(o(this,O)).some(f=>f!==fe&&f!==ue))throw le;if(l)return;c=o(this,O)[g]=new Le,m!==""&&p(c,Q,i.varIndex++)}!l&&m!==""&&s.push([m,o(c,Q)])}else if(c=o(this,O)[r],!c){if(Object.keys(o(this,O)).some(m=>m.length>1&&m!==fe&&m!==ue))throw le;if(l)return;c=o(this,O)[r]=new Le}c.insert(d,a,s,i,l)}buildRegExpStr(){const a=Object.keys(o(this,O)).sort(Vt).map(s=>{const i=o(this,O)[s];return(typeof o(i,Q)=="number"?`(${s})@${o(i,Q)}`:Bt.has(s)?`\\${s}`:s)+i.buildRegExpStr()});return typeof o(this,J)=="number"&&a.unshift(`#${o(this,J)}`),a.length===0?"":a.length===1?a[0]:"(?:"+a.join("|")+")"}},J=new WeakMap,Q=new WeakMap,O=new WeakMap,Ye),qe,ke,Ke,Ut=(Ke=class{constructor(){u(this,qe,{varIndex:0});u(this,ke,new Le)}insert(e,t,a){const s=[],i=[];for(let r=0;;){let d=!1;if(e=e.replace(/\{[^}]+\}/g,n=>{const c=`@\\${r}`;return i[r]=[c,n],r++,d=!0,c}),!d)break}const l=e.match(/(?::[^\/]+)|(?:\/\*$)|./g)||[];for(let r=i.length-1;r>=0;r--){const[d]=i[r];for(let n=l.length-1;n>=0;n--)if(l[n].indexOf(d)!==-1){l[n]=l[n].replace(d,i[r][1]);break}}return o(this,ke).insert(l,t,s,o(this,qe),a),s}buildRegExp(){let e=o(this,ke).buildRegExpStr();if(e==="")return[/^$/,[],[]];let t=0;const a=[],s=[];return e=e.replace(/#(\d+)|@(\d+)|\.\*\$/g,(i,l,r)=>l!==void 0?(a[++t]=Number(l),"$()"):(r!==void 0&&(s[Number(r)]=++t),"")),[new RegExp(`^${e}`),a,s]}},qe=new WeakMap,ke=new WeakMap,Ke),pt=[],Yt=[/^$/,[],Object.create(null)],Ee=Object.create(null);function ht(e){return Ee[e]??(Ee[e]=new RegExp(e==="*"?"":`^${e.replace(/\/\*$|([.\\+*[^\]$()])/g,(t,a)=>a?`\\${a}`:"(?:|/.*)")}$`))}function Kt(){Ee=Object.create(null)}function Jt(e){var c;const t=new Ut,a=[];if(e.length===0)return Yt;const s=e.map(m=>[!/\*|\/:/.test(m[0]),...m]).sort(([m,g],[f,y])=>m?1:f?-1:g.length-y.length),i=Object.create(null);for(let m=0,g=-1,f=s.length;m<f;m++){const[y,T,v]=s[m];y?i[T]=[v.map(([S])=>[S,Object.create(null)]),pt]:g++;let b;try{b=t.insert(T,g,y)}catch(S){throw S===le?new ct(T):S}y||(a[g]=v.map(([S,te])=>{const ge=Object.create(null);for(te-=1;te>=0;te--){const[R,ze]=b[te];ge[R]=ze}return[S,ge]}))}const[l,r,d]=t.buildRegExp();for(let m=0,g=a.length;m<g;m++)for(let f=0,y=a[m].length;f<y;f++){const T=(c=a[m][f])==null?void 0:c[1];if(!T)continue;const v=Object.keys(T);for(let b=0,S=v.length;b<S;b++)T[v[b]]=d[T[v[b]]]}const n=[];for(const m in r)n[m]=a[r[m]];return[l,n,i]}function ae(e,t){if(e){for(const a of Object.keys(e).sort((s,i)=>i.length-s.length))if(ht(a).test(t))return[...e[a]]}}var W,G,me,ft,ut,Je,Qt=(Je=class{constructor(){u(this,me);h(this,"name","RegExpRouter");u(this,W);u(this,G);p(this,W,{[w]:Object.create(null)}),p(this,G,{[w]:Object.create(null)})}add(e,t,a){var d;const s=o(this,W),i=o(this,G);if(!s||!i)throw new Error(dt);s[e]||[s,i].forEach(n=>{n[e]=Object.create(null),Object.keys(n[w]).forEach(c=>{n[e][c]=[...n[w][c]]})}),t==="/*"&&(t="*");const l=(t.match(/\/:/g)||[]).length;if(/\*$/.test(t)){const n=ht(t);e===w?Object.keys(s).forEach(c=>{var m;(m=s[c])[t]||(m[t]=ae(s[c],t)||ae(s[w],t)||[])}):(d=s[e])[t]||(d[t]=ae(s[e],t)||ae(s[w],t)||[]),Object.keys(s).forEach(c=>{(e===w||e===c)&&Object.keys(s[c]).forEach(m=>{n.test(m)&&s[c][m].push([a,l])})}),Object.keys(i).forEach(c=>{(e===w||e===c)&&Object.keys(i[c]).forEach(m=>n.test(m)&&i[c][m].push([a,l]))});return}const r=at(t)||[t];for(let n=0,c=r.length;n<c;n++){const m=r[n];Object.keys(i).forEach(g=>{var f;(e===w||e===g)&&((f=i[g])[m]||(f[m]=[...ae(s[g],m)||ae(s[w],m)||[]]),i[g][m].push([a,l-c+n+1]))})}}match(e,t){Kt();const a=x(this,me,ft).call(this);return this.match=(s,i)=>{const l=a[s]||a[w],r=l[2][i];if(r)return r;const d=i.match(l[0]);if(!d)return[[],pt];const n=d.indexOf("",1);return[l[1][n],d]},this.match(e,t)}},W=new WeakMap,G=new WeakMap,me=new WeakSet,ft=function(){const e=Object.create(null);return Object.keys(o(this,G)).concat(Object.keys(o(this,W))).forEach(t=>{e[t]||(e[t]=x(this,me,ut).call(this,t))}),p(this,W,p(this,G,void 0)),e},ut=function(e){const t=[];let a=e===w;return[o(this,W),o(this,G)].forEach(s=>{const i=s[e]?Object.keys(s[e]).map(l=>[l,s[e][l]]):[];i.length!==0?(a||(a=!0),t.push(...i)):e!==w&&t.push(...Object.keys(s[w]).map(l=>[l,s[w][l]]))}),a?Jt(t):null},Je),B,D,Qe,Xt=(Qe=class{constructor(e){h(this,"name","SmartRouter");u(this,B,[]);u(this,D,[]);p(this,B,e.routers)}add(e,t,a){if(!o(this,D))throw new Error(dt);o(this,D).push([e,t,a])}match(e,t){if(!o(this,D))throw new Error("Fatal error");const a=o(this,B),s=o(this,D),i=a.length;let l=0,r;for(;l<i;l++){const d=a[l];try{for(let n=0,c=s.length;n<c;n++)d.add(...s[n]);r=d.match(e,t)}catch(n){if(n instanceof ct)continue;throw n}this.match=d.match.bind(d),p(this,B,[d]),p(this,D,void 0);break}if(l===i)throw new Error("Fatal error");return this.name=`SmartRouter + ${this.activeRouter.name}`,r}get activeRouter(){if(o(this,D)||o(this,B).length!==1)throw new Error("No active router has been determined yet.");return o(this,B)[0]}},B=new WeakMap,D=new WeakMap,Qe),he=Object.create(null),V,j,X,ce,C,H,Y,Xe,xt=(Xe=class{constructor(e,t,a){u(this,H);u(this,V);u(this,j);u(this,X);u(this,ce,0);u(this,C,he);if(p(this,j,a||Object.create(null)),p(this,V,[]),e&&t){const s=Object.create(null);s[e]={handler:t,possibleKeys:[],score:0},p(this,V,[s])}p(this,X,[])}insert(e,t,a){p(this,ce,++Me(this,ce)._);let s=this;const i=Pt(t),l=[];for(let r=0,d=i.length;r<d;r++){const n=i[r],c=i[r+1],m=Rt(n,c),g=Array.isArray(m)?m[0]:n;if(g in o(s,j)){s=o(s,j)[g],m&&l.push(m[1]);continue}o(s,j)[g]=new xt,m&&(o(s,X).push(m),l.push(m[1])),s=o(s,j)[g]}return o(s,V).push({[e]:{handler:a,possibleKeys:l.filter((r,d,n)=>n.indexOf(r)===d),score:o(this,ce)}}),s}search(e,t){var d;const a=[];p(this,C,he);let i=[this];const l=et(t),r=[];for(let n=0,c=l.length;n<c;n++){const m=l[n],g=n===c-1,f=[];for(let y=0,T=i.length;y<T;y++){const v=i[y],b=o(v,j)[m];b&&(p(b,C,o(v,C)),g?(o(b,j)["*"]&&a.push(...x(this,H,Y).call(this,o(b,j)["*"],e,o(v,C))),a.push(...x(this,H,Y).call(this,b,e,o(v,C)))):f.push(b));for(let S=0,te=o(v,X).length;S<te;S++){const ge=o(v,X)[S],R=o(v,C)===he?{}:{...o(v,C)};if(ge==="*"){const N=o(v,j)["*"];N&&(a.push(...x(this,H,Y).call(this,N,e,o(v,C))),p(N,C,R),f.push(N));continue}const[ze,De,pe]=ge;if(!m&&!(pe instanceof RegExp))continue;const I=o(v,j)[ze],wt=l.slice(n).join("/");if(pe instanceof RegExp){const N=pe.exec(wt);if(N){if(R[De]=N[0],a.push(...x(this,H,Y).call(this,I,e,o(v,C),R)),Object.keys(o(I,j)).length){p(I,C,R);const Pe=((d=N[0].match(/\//))==null?void 0:d.length)??0;(r[Pe]||(r[Pe]=[])).push(I)}continue}}(pe===!0||pe.test(m))&&(R[De]=m,g?(a.push(...x(this,H,Y).call(this,I,e,R,o(v,C))),o(I,j)["*"]&&a.push(...x(this,H,Y).call(this,o(I,j)["*"],e,R,o(v,C)))):(p(I,C,R),f.push(I)))}}i=f.concat(r.shift()??[])}return a.length>1&&a.sort((n,c)=>n.score-c.score),[a.map(({handler:n,params:c})=>[n,c])]}},V=new WeakMap,j=new WeakMap,X=new WeakMap,ce=new WeakMap,C=new WeakMap,H=new WeakSet,Y=function(e,t,a,s){const i=[];for(let l=0,r=o(e,V).length;l<r;l++){const d=o(e,V)[l],n=d[t]||d[w],c={};if(n!==void 0&&(n.params=Object.create(null),i.push(n),a!==he||s&&s!==he))for(let m=0,g=n.possibleKeys.length;m<g;m++){const f=n.possibleKeys[m],y=c[n.score];n.params[f]=s!=null&&s[f]&&!y?s[f]:a[f]??(s==null?void 0:s[f]),c[n.score]=!0}}return i},Xe),Z,Ze,Zt=(Ze=class{constructor(){h(this,"name","TrieRouter");u(this,Z);p(this,Z,new xt)}add(e,t,a){const s=at(t);if(s){for(let i=0,l=s.length;i<l;i++)o(this,Z).insert(e,s[i],a);return}o(this,Z).insert(e,t,a)}match(e,t){return o(this,Z).search(e,t)}},Z=new WeakMap,Ze),vt=class extends mt{constructor(e={}){super(e),this.router=e.router??new Xt({routers:[new Qt,new Zt]})}},ea=e=>{const a={...{origin:"*",allowMethods:["GET","HEAD","PUT","POST","DELETE","PATCH"],allowHeaders:[],exposeHeaders:[]},...e},s=(l=>typeof l=="string"?l==="*"?()=>l:r=>l===r?r:null:typeof l=="function"?l:r=>l.includes(r)?r:null)(a.origin),i=(l=>typeof l=="function"?l:Array.isArray(l)?()=>l:()=>[])(a.allowMethods);return async function(r,d){var m;function n(g,f){r.res.headers.set(g,f)}const c=await s(r.req.header("origin")||"",r);if(c&&n("Access-Control-Allow-Origin",c),a.origin!=="*"){const g=r.req.header("Vary");g?n("Vary",g):n("Vary","Origin")}if(a.credentials&&n("Access-Control-Allow-Credentials","true"),(m=a.exposeHeaders)!=null&&m.length&&n("Access-Control-Expose-Headers",a.exposeHeaders.join(",")),r.req.method==="OPTIONS"){a.maxAge!=null&&n("Access-Control-Max-Age",a.maxAge.toString());const g=await i(r.req.header("origin")||"",r);g.length&&n("Access-Control-Allow-Methods",g.join(","));let f=a.allowHeaders;if(!(f!=null&&f.length)){const y=r.req.header("Access-Control-Request-Headers");y&&(f=y.split(/\s*,\s*/))}return f!=null&&f.length&&(n("Access-Control-Allow-Headers",f.join(",")),r.res.headers.append("Vary","Access-Control-Request-Headers")),r.res.headers.delete("Content-Length"),r.res.headers.delete("Content-Type"),new Response(null,{headers:r.res.headers,status:204,statusText:"No Content"})}await d()}},ta=/^\s*(?:text\/(?!event-stream(?:[;\s]|$))[^;\s]+|application\/(?:javascript|json|xml|xml-dtd|ecmascript|dart|postscript|rtf|tar|toml|vnd\.dart|vnd\.ms-fontobject|vnd\.ms-opentype|wasm|x-httpd-php|x-javascript|x-ns-proxy-autoconfig|x-sh|x-tar|x-virtualbox-hdd|x-virtualbox-ova|x-virtualbox-ovf|x-virtualbox-vbox|x-virtualbox-vdi|x-virtualbox-vhd|x-virtualbox-vmdk|x-www-form-urlencoded)|font\/(?:otf|ttf)|image\/(?:bmp|vnd\.adobe\.photoshop|vnd\.microsoft\.icon|vnd\.ms-dds|x-icon|x-ms-bmp)|message\/rfc822|model\/gltf-binary|x-shader\/x-fragment|x-shader\/x-vertex|[^;\s]+?\+(?:json|text|xml|yaml))(?:[;\s]|$)/i,We=(e,t=sa)=>{const a=/\.([a-zA-Z0-9]+?)$/,s=e.match(a);if(!s)return;let i=t[s[1]];return i&&i.startsWith("text")&&(i+="; charset=utf-8"),i},aa={aac:"audio/aac",avi:"video/x-msvideo",avif:"image/avif",av1:"video/av1",bin:"application/octet-stream",bmp:"image/bmp",css:"text/css",csv:"text/csv",eot:"application/vnd.ms-fontobject",epub:"application/epub+zip",gif:"image/gif",gz:"application/gzip",htm:"text/html",html:"text/html",ico:"image/x-icon",ics:"text/calendar",jpeg:"image/jpeg",jpg:"image/jpeg",js:"text/javascript",json:"application/json",jsonld:"application/ld+json",map:"application/json",mid:"audio/x-midi",midi:"audio/x-midi",mjs:"text/javascript",mp3:"audio/mpeg",mp4:"video/mp4",mpeg:"video/mpeg",oga:"audio/ogg",ogv:"video/ogg",ogx:"application/ogg",opus:"audio/opus",otf:"font/otf",pdf:"application/pdf",png:"image/png",rtf:"application/rtf",svg:"image/svg+xml",tif:"image/tiff",tiff:"image/tiff",ts:"video/mp2t",ttf:"font/ttf",txt:"text/plain",wasm:"application/wasm",webm:"video/webm",weba:"audio/webm",webmanifest:"application/manifest+json",webp:"image/webp",woff:"font/woff",woff2:"font/woff2",xhtml:"application/xhtml+xml",xml:"application/xml",zip:"application/zip","3gp":"video/3gpp","3g2":"video/3gpp2",gltf:"model/gltf+json",glb:"model/gltf-binary"},sa=aa,ia=(...e)=>{let t=e.filter(i=>i!=="").join("/");t=t.replace(new RegExp("(?<=\\/)\\/+","g"),"");const a=t.split("/"),s=[];for(const i of a)i===".."&&s.length>0&&s.at(-1)!==".."?s.pop():i!=="."&&s.push(i);return s.join("/")||"."},bt={br:".br",zstd:".zst",gzip:".gz"},la=Object.keys(bt),oa="index.html",ra=e=>{const t=e.root??"./",a=e.path,s=e.join??ia;return async(i,l)=>{var m,g,f,y;if(i.finalized)return l();let r;if(e.path)r=e.path;else try{if(r=decodeURIComponent(i.req.path),/(?:^|[\/\\])\.\.(?:$|[\/\\])/.test(r))throw new Error}catch{return await((m=e.onNotFound)==null?void 0:m.call(e,i.req.path,i)),l()}let d=s(t,!a&&e.rewriteRequestPath?e.rewriteRequestPath(r):r);e.isDir&&await e.isDir(d)&&(d=s(d,oa));const n=e.getContent;let c=await n(d,i);if(c instanceof Response)return i.newResponse(c.body,c);if(c){const T=e.mimes&&We(d,e.mimes)||We(d);if(i.header("Content-Type",T||"application/octet-stream"),e.precompressed&&(!T||ta.test(T))){const v=new Set((g=i.req.header("Accept-Encoding"))==null?void 0:g.split(",").map(b=>b.trim()));for(const b of la){if(!v.has(b))continue;const S=await n(d+bt[b],i);if(S){c=S,i.header("Content-Encoding",b),i.header("Vary","Accept-Encoding",{append:!0});break}}}return await((f=e.onFound)==null?void 0:f.call(e,d,i)),i.body(c)}await((y=e.onNotFound)==null?void 0:y.call(e,d,i)),await l()}},na=async(e,t)=>{let a;t&&t.manifest?typeof t.manifest=="string"?a=JSON.parse(t.manifest):a=t.manifest:typeof __STATIC_CONTENT_MANIFEST=="string"?a=JSON.parse(__STATIC_CONTENT_MANIFEST):a=__STATIC_CONTENT_MANIFEST;let s;t&&t.namespace?s=t.namespace:s=__STATIC_CONTENT;const i=a[e]||e;if(!i)return null;const l=await s.get(i,{type:"stream"});return l||null},da=e=>async function(a,s){return ra({...e,getContent:async l=>na(l,{manifest:e.manifest,namespace:e.namespace?e.namespace:a.env?a.env.__STATIC_CONTENT:void 0})})(a,s)},ca=e=>da(e);function ee({children:e,title:t,currentPage:a}){return`
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +20,7 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link href="/static/styles.css" rel="stylesheet">
+    <link href="/static/styles.css?v=2025091601" rel="stylesheet">
     
     <!-- Tailwind Config -->
     <script>
@@ -85,15 +85,15 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
                 </div>
                 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="/" class="nav-link ${a==="home"?"active":""}">Home</a>
-                        <a href="/about" class="nav-link ${a==="about"?"active":""}">About</a>
-                        <a href="/framework" class="nav-link ${a==="framework"?"active":""}">LLI Framework™</a>
-                        <a href="/assessment" class="nav-link ${a==="assessment"?"active":""}">Assessment</a>
-                        <a href="/services" class="nav-link ${a==="services"?"active":""}">Services</a>
-                        <a href="/founder" class="nav-link ${a==="founder"?"active":""}">Founder</a>
-                        <a href="/contact" class="nav-link ${a==="contact"?"active":""}">Contact</a>
+                <div class="block">
+                    <div class="ml-10 flex items-baseline space-x-4 lg:space-x-8">
+                        <a href="/" class="nav-link ${a==="home"?"active":""}" style="color: white !important; font-weight: bold !important; font-size: 16px !important;">Home</a>
+                        <a href="/about" class="nav-link ${a==="about"?"active":""}" style="color: white !important; font-weight: bold !important; font-size: 16px !important;">About</a>
+                        <a href="/framework" class="nav-link ${a==="framework"?"active":""}" style="color: white !important; font-weight: bold !important; font-size: 16px !important;">LLI Framework™</a>
+                        <a href="/assessment" class="nav-link ${a==="assessment"?"active":""}" style="color: white !important; font-weight: bold !important; font-size: 16px !important;">Assessment</a>
+                        <a href="/services" class="nav-link ${a==="services"?"active":""}" style="color: white !important; font-weight: bold !important; font-size: 16px !important;">Services</a>
+                        <a href="/founder" class="nav-link ${a==="founder"?"active":""}" style="color: white !important; font-weight: bold !important; font-size: 16px !important;">Founder</a>
+                        <a href="/contact" class="nav-link ${a==="contact"?"active":""}" style="color: white !important; font-weight: bold !important; font-size: 16px !important;">Contact</a>
                     </div>
                 </div>
                 
@@ -177,7 +177,7 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
     <script src="/static/app.js"><\/script>
 </body>
 </html>
-  `}const R=new vt;R.use("/api/*",ea());R.use("/static/*",da({root:"./public"}));R.get("/api/contact",e=>e.json({message:"Contact endpoint ready"}));R.post("/api/contact",async e=>{try{const{name:t,email:a,organization:s,industry:i,message:r,service:l}=await e.req.json();return e.json({success:!0,message:"Thank you for your message! We will get back to you soon.",data:{name:t,email:a,organization:s,industry:i,service:l}})}catch{return e.json({success:!1,message:"Failed to process your message"},400)}});R.get("/",e=>e.html(ee({children:`
+  `}const z=new vt;z.use("/api/*",ea());z.use("/static/*",ca({root:"./public"}));z.get("/api/contact",e=>e.json({message:"Contact endpoint ready"}));z.post("/api/contact",async e=>{try{const{name:t,email:a,organization:s,industry:i,message:l,service:r}=await e.req.json();return e.json({success:!0,message:"Thank you for your message! We will get back to you soon.",data:{name:t,email:a,organization:s,industry:i,service:r}})}catch{return e.json({success:!1,message:"Failed to process your message"},400)}});z.get("/",e=>e.html(ee({children:`
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <!-- Background -->
@@ -242,22 +242,320 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
         </div>
     </section>
 
-    <!-- Featured Success Image -->
+    <!-- Featured Success Images Gallery -->
     <section class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12" data-aos="fade-up">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6 font-playfair">Real Transformation in Action</h2>
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                
+                <!-- Main Featured Image -->
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl mb-8">
                     <img 
-                        src="https://www.consultingsuccess.com/wp-content/uploads/2024/03/strategic-consulting-meeting-agenda-framework.jpeg" 
-                        alt="CTS Consulting strategic planning session with diverse leadership team"
-                        class="w-full h-80 object-cover"
+                        src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&q=80" 
+                        alt="Diverse team of professionals collaborating in modern office environment"
+                        class="w-full h-80 object-contain bg-gray-50"
                         loading="lazy"
                     />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div class="absolute bottom-8 left-8 text-white">
-                        <h3 class="text-2xl font-bold mb-2">Strategic Leadership Development</h3>
+                        <h3 class="text-2xl font-bold mb-2">Real People, Real Transformation</h3>
                         <p class="text-lg opacity-90">Empowering diverse teams through the LLI Framework™</p>
+                    </div>
+                </div>
+                
+                <!-- Image Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" 
+                            alt="Professional woman in business meeting discussing equity strategies"
+                            class="w-full h-48 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-semibold">Leadership Coaching</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&q=80" 
+                            alt="Diverse team collaboration and strategic planning session"
+                            class="w-full h-48 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-semibold">Team Development</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&q=80" 
+                            alt="Organizational culture and workplace equity transformation"
+                            class="w-full h-48 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-semibold">Culture Change</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- People & Stories Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6 font-playfair">The Faces Behind Transformation</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Meet the people who make organizational change possible - from executives to team members, everyone plays a vital role
+                </p>
+            </div>
+            
+            <!-- People Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Executive Leader -->
+                <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover" data-aos="fade-up" data-aos-delay="100">
+                    <img 
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" 
+                        alt="Professional executive leader implementing equity strategies"
+                        class="w-full h-64 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h4 class="text-xl font-bold mb-2">Executive Leadership</h4>
+                        <p class="text-sm opacity-90">"The LLI Framework changed how we approach culture transformation."</p>
+                        <div class="mt-3 flex items-center">
+                            <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                            <span class="text-xs">Fortune 500 CEO</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Collaborator -->
+                <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover" data-aos="fade-up" data-aos-delay="200">
+                    <img 
+                        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&q=80" 
+                        alt="Diverse team member participating in workshop"
+                        class="w-full h-64 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h4 class="text-xl font-bold mb-2">Team Innovation</h4>
+                        <p class="text-sm opacity-90">"I finally feel heard and valued in our workplace."</p>
+                        <div class="mt-3 flex items-center">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                            <span class="text-xs">Product Manager</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Diverse Team -->
+                <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover" data-aos="fade-up" data-aos-delay="300">
+                    <img 
+                        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&q=80" 
+                        alt="Diverse team of professionals working together in collaborative space"
+                        class="w-full h-64 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h4 class="text-xl font-bold mb-2">Collaborative Culture</h4>
+                        <p class="text-sm opacity-90">"Our team dynamics have completely transformed."</p>
+                        <div class="mt-3 flex items-center">
+                            <div class="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
+                            <span class="text-xs">Development Team</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portrait Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4" data-aos="fade-up">
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80" 
+                        alt="Professional woman executive leader"
+                        class="w-full h-32 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" 
+                        alt="Professional man business leader"
+                        class="w-full h-32 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" 
+                        alt="Professional businesswoman in meeting"
+                        class="w-full h-32 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=200&q=80" 
+                        alt="Professional man team leader"
+                        class="w-full h-32 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=200&q=80" 
+                        alt="Young professional woman consultant"
+                        class="w-full h-32 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=200&q=80" 
+                        alt="Professional businessman consultant"
+                        class="w-full h-32 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Success Stories with Full Images -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 font-playfair">Our Expertise in Action</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    From boardrooms to team meetings, see how we create lasting transformation
+                </p>
+            </div>
+            
+            <!-- Large Image Showcase Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Consulting Excellence -->
+                <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover" data-aos="fade-right">
+                    <img 
+                        src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&q=80" 
+                        alt="Executive consulting and strategic leadership development"
+                        class="w-full h-72 object-contain bg-white"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Executive Consulting</h3>
+                        <p class="text-lg opacity-90">Strategic leadership transformation at the highest levels</p>
+                        <div class="mt-3 flex items-center">
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-gold-400"></i>
+                                <i class="fas fa-star text-gold-400"></i>
+                                <i class="fas fa-star text-gold-400"></i>
+                                <i class="fas fa-star text-gold-400"></i>
+                                <i class="fas fa-star text-gold-400"></i>
+                            </div>
+                            <span class="ml-2 text-sm">Certified Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Development -->
+                <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover" data-aos="fade-left">
+                    <img 
+                        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80" 
+                        alt="Team development and collaborative workplace culture"
+                        class="w-full h-72 object-contain bg-white"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Team Development</h3>
+                        <p class="text-lg opacity-90">Building high-performing, inclusive teams</p>
+                        <div class="mt-3 flex items-center">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                                98% Success Rate
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Smaller Image Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6" data-aos="fade-up">
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=300&q=80" 
+                        alt="Workshop facilitation and training sessions"
+                        class="w-full h-48 object-contain bg-gray-50"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Workshops</h5>
+                        <p class="text-xs opacity-90">Interactive Training</p>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=300&q=80" 
+                        alt="Individual coaching and mentorship programs"
+                        class="w-full h-48 object-contain bg-gray-50"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Coaching</h5>
+                        <p class="text-xs opacity-90">Personal Development</p>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&q=80" 
+                        alt="Strategic planning and organizational assessment"
+                        class="w-full h-48 object-contain bg-gray-50"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Strategy</h5>
+                        <p class="text-xs opacity-90">Planning & Assessment</p>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=300&q=80" 
+                        alt="Culture transformation and organizational change"
+                        class="w-full h-48 object-contain bg-gray-50"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Culture</h5>
+                        <p class="text-xs opacity-90">Transformation</p>
                     </div>
                 </div>
             </div>
@@ -313,19 +611,184 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
                     </div>
                 </div>
                 
-                <!-- Image -->
+                <!-- Images Stack -->
                 <div data-aos="fade-left">
                     <div class="relative">
+                        <!-- Main Image -->
                         <img 
-                            src="https://www.aihr.com/wp-content/uploads/diversity-equity-inclusion-belonging-social-1.png" 
+                            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80" 
                             alt="Diversity, equity, inclusion and belonging workplace transformation"
-                            class="w-full h-96 object-cover rounded-2xl shadow-xl"
+                            class="w-full h-96 object-contain bg-white rounded-2xl shadow-xl"
                             loading="lazy"
                         />
                         <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-lg">
                             <div class="text-center">
                                 <div class="text-3xl font-bold text-primary-600 mb-1">95%</div>
                                 <div class="text-sm text-gray-600">Success Rate</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Small overlay images -->
+                        <div class="absolute -top-6 -left-6 w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                            <img 
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" 
+                                alt="African American professional consultant headshot"
+                                class="w-full h-full object-cover bg-gray-100"
+                                loading="lazy"
+                            />
+                        </div>
+                        
+                        <div class="absolute -bottom-2 -left-6 w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                            <img 
+                                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80" 
+                                alt="African American diverse leadership team member"
+                                class="w-full h-full object-cover bg-gray-100"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Portfolio Gallery -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6 font-playfair">Professional Excellence Portfolio</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Showcasing our comprehensive approach to organizational transformation
+                </p>
+            </div>
+            
+            <!-- Hero Image Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Leadership Training -->
+                <div class="lg:col-span-2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl image-hover h-80" data-aos="fade-right">
+                        <img 
+                            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" 
+                            alt="Executive leadership team in strategic planning meeting"
+                            class="w-full h-full object-contain bg-gray-50"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 text-white max-w-md">
+                            <h3 class="text-3xl font-bold mb-3">Leadership Excellence</h3>
+                            <p class="text-lg opacity-90 mb-4">Transforming executive teams through strategic coaching and development</p>
+                            <div class="flex items-center space-x-4">
+                                <span class="bg-gold-500 text-black px-4 py-2 rounded-full text-sm font-semibold">
+                                    500+ Leaders Trained
+                                </span>
+                                <span class="text-gold-400 font-semibold">97% Success Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Statistics Card -->
+                <div class="space-y-4" data-aos="fade-left">
+                    <div class="bg-gradient-to-br from-primary-500 to-primary-600 p-8 rounded-2xl text-white">
+                        <h4 class="text-2xl font-bold mb-4">Impact Statistics</h4>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span>Client Retention</span>
+                                <span class="text-2xl font-bold text-gold-400">98%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>Avg. Improvement</span>
+                                <span class="text-2xl font-bold text-gold-400">85%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>Project Success</span>
+                                <span class="text-2xl font-bold text-gold-400">97%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative rounded-xl overflow-hidden shadow-xl image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&q=80" 
+                            alt="Team workshop and collaborative training session"
+                            class="w-full h-40 object-contain bg-gray-50"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h5 class="font-bold text-lg">Team Workshops</h5>
+                                <p class="text-sm opacity-90">Interactive & Engaging</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Services Showcase -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up">
+                <div class="relative group">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=300&q=80" 
+                            alt="Strategic consulting and business planning"
+                            class="w-full h-32 object-contain bg-gradient-to-br from-blue-50 to-white"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-primary-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-chart-line text-2xl mb-2"></i>
+                                <p class="font-semibold">Strategic Planning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80" 
+                            alt="Executive coaching and leadership mentorship"
+                            class="w-full h-32 object-contain bg-gradient-to-br from-purple-50 to-white"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-accent-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-user-tie text-2xl mb-2"></i>
+                                <p class="font-semibold">Executive Coaching</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&q=80" 
+                            alt="Cultural transformation and organizational development"
+                            class="w-full h-32 object-contain bg-gradient-to-br from-green-50 to-white"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-green-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-seedling text-2xl mb-2"></i>
+                                <p class="font-semibold">Culture Change</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=300&q=80" 
+                            alt="Assessment tools and organizational analysis"
+                            class="w-full h-32 object-contain bg-gradient-to-br from-orange-50 to-white"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gold-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-clipboard-check text-2xl mb-2"></i>
+                                <p class="font-semibold">Assessments</p>
                             </div>
                         </div>
                     </div>
@@ -357,7 +820,246 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
             </div>
         </div>
     </section>
-  `,title:"Equity Strategy & Transformation",currentPage:"home"})));R.get("/about",e=>e.html(ee({children:`
+
+    <!-- Diverse Leadership Spotlight -->
+    <section class="py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-teal-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6 font-playfair">Celebrating Diverse Leadership</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Empowering leaders from all backgrounds to drive meaningful organizational change
+                </p>
+            </div>
+            
+            <!-- Leadership Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="relative group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80" 
+                            alt="Executive woman leader"
+                            class="w-full h-80 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h4 class="text-lg font-bold mb-1">Executive Excellence</h4>
+                            <p class="text-sm opacity-90">Leading with purpose</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <div class="bg-gold-500 text-black px-3 py-1 rounded-full text-xs font-semibold">
+                                CEO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" 
+                            alt="Professional man in leadership role"
+                            class="w-full h-80 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h4 class="text-lg font-bold mb-1">Strategic Vision</h4>
+                            <p class="text-sm opacity-90">Innovative thinking</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <div class="bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                                CTO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80" 
+                            alt="Young professional woman"
+                            class="w-full h-80 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h4 class="text-lg font-bold mb-1">Rising Leader</h4>
+                            <p class="text-sm opacity-90">Future focused</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <div class="bg-accent-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                                VP
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=300&q=80" 
+                            alt="Professional man executive"
+                            class="w-full h-80 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h4 class="text-lg font-bold mb-1">Transformational</h4>
+                            <p class="text-sm opacity-90">Change catalyst</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <div class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                                COO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Success Metrics -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold text-primary-600 mb-2">85%</div>
+                        <div class="text-gray-600">Leadership diversity increase</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-gold-600 mb-2">92%</div>
+                        <div class="text-gray-600">Employee engagement improvement</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-accent-600 mb-2">500+</div>
+                        <div class="text-gray-600">Leaders developed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Success Stories with Images -->
+    <section class="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-white mb-6 font-playfair">Transformations That Inspire</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    See how organizations like yours have achieved remarkable results with our proven approach
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <!-- Success Story 1 -->
+                <div data-aos="fade-right">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img 
+                            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" 
+                            alt="Corporate boardroom transformation and leadership development"
+                            class="w-full h-64 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="text-2xl font-bold mb-2">Fortune 500 Transformation</h3>
+                            <p class="text-lg opacity-90">85% improvement in leadership inclusivity scores</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="text-white space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-r from-gold-500 to-gold-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-trophy text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-1">Award-Winning Culture</h4>
+                                <p class="text-gray-300">Recognized as "Best Place to Work" after our engagement</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-chart-line text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-1">Measurable Results</h4>
+                                <p class="text-gray-300">40% increase in employee engagement within 12 months</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-users text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-1">Leadership Excellence</h4>
+                                <p class="text-gray-300">95% of leaders completed advanced equity training</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=300&q=80" 
+                        alt="Team collaboration and diversity training session"
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Workshop Excellence</h5>
+                        <p class="text-sm opacity-90">Interactive Learning</p>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=300&q=80" 
+                        alt="Executive coaching and leadership development session"
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Executive Coaching</h5>
+                        <p class="text-sm opacity-90">1-on-1 Development</p>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=300&q=80" 
+                        alt="Workplace culture assessment and strategic planning"
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Culture Assessment</h5>
+                        <p class="text-sm opacity-90">Data-Driven Insights</p>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=300&q=80" 
+                        alt="Team building and organizational development activities"
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Team Building</h5>
+                        <p class="text-sm opacity-90">Stronger Connections</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  `,title:"Equity Strategy & Transformation",currentPage:"home"})));z.get("/about",e=>e.html(ee({children:`
     <!-- Page Header -->
     <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -388,14 +1090,31 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
                     </div>
                 </div>
                 
-                <!-- Image -->
+                <!-- Image Stack -->
                 <div data-aos="fade-left" data-aos-duration="1000">
-                    <img 
-                        src="https://www.aihr.com/wp-content/uploads/building-diverse-and-inclusive-workspaces-featured.png" 
-                        alt="Building diverse and inclusive workspaces"
-                        class="w-full h-80 object-cover rounded-2xl shadow-xl"
-                        loading="lazy"
-                    />
+                    <div class="relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&q=80" 
+                            alt="Building diverse and inclusive workspaces"
+                            class="w-full h-80 object-contain bg-gray-50 rounded-2xl shadow-xl"
+                            loading="lazy"
+                        />
+                        <!-- Overlaid smaller images -->
+                        <div class="absolute -bottom-8 -right-8 grid grid-cols-2 gap-2">
+                            <img 
+                                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=150&q=80" 
+                                alt="Professional team meeting diverse perspectives"
+                                class="w-16 h-16 object-cover rounded-lg shadow-lg border-2 border-white"
+                                loading="lazy"
+                            />
+                            <img 
+                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&q=80" 
+                                alt="Leadership coaching and mentorship"
+                                class="w-16 h-16 object-cover rounded-lg shadow-lg border-2 border-white"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -468,12 +1187,54 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right">
-                    <img 
-                        src="https://www.aihr.com/wp-content/uploads/Organizational-Transformation-Process.png" 
-                        alt="Organizational transformation process methodology"
-                        class="w-full h-96 object-cover rounded-2xl shadow-xl"
-                        loading="lazy"
-                    />
+                    <div class="space-y-4">
+                        <!-- Main transformation image -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1600880292630-53c7234d3bd0?w=600&q=80" 
+                            alt="Organizational transformation process methodology"
+                            class="w-full h-64 object-contain bg-gray-50 rounded-2xl shadow-xl"
+                            loading="lazy"
+                        />
+                        
+                        <!-- Process images grid -->
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="relative rounded-lg overflow-hidden shadow-lg image-hover">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=200&q=80" 
+                                    alt="Team listening and collaboration session"
+                                    class="w-full h-20 object-cover"
+                                    loading="lazy"
+                                />
+                                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                                    <span class="text-white text-xs font-semibold">Listen</span>
+                                </div>
+                            </div>
+                            
+                            <div class="relative rounded-lg overflow-hidden shadow-lg image-hover">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=200&q=80" 
+                                    alt="Strategic learning and development"
+                                    class="w-full h-20 object-cover"
+                                    loading="lazy"
+                                />
+                                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                                    <span class="text-white text-xs font-semibold">Learn</span>
+                                </div>
+                            </div>
+                            
+                            <div class="relative rounded-lg overflow-hidden shadow-lg image-hover">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=200&q=80" 
+                                    alt="Implementation and action planning"
+                                    class="w-full h-20 object-cover"
+                                    loading="lazy"
+                                />
+                                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                                    <span class="text-white text-xs font-semibold">Implement</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div data-aos="fade-left">
@@ -516,6 +1277,94 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
         </div>
     </section>
 
+    <!-- Our Impact Gallery -->
+    <section class="py-20 bg-gradient-to-br from-gray-900 via-primary-900 to-accent-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-white mb-6 font-playfair">Our Impact in Action</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Witness the transformation happening in organizations worldwide
+                </p>
+            </div>
+            
+            <!-- Impact Stories Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl image-hover" data-aos="fade-up" data-aos-delay="100">
+                    <img 
+                        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&q=80" 
+                        alt="Executive leadership team implementing equity strategies"
+                        class="w-full h-64 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h4 class="text-xl font-bold mb-2">Leadership Excellence</h4>
+                        <p class="text-sm opacity-90">C-Suite Transformation</p>
+                        <div class="mt-2 flex items-center">
+                            <span class="text-gold-400 font-bold text-lg">92%</span>
+                            <span class="text-sm ml-2">Improvement Rate</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl image-hover" data-aos="fade-up" data-aos-delay="200">
+                    <img 
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" 
+                        alt="Diverse team collaboration and psychological safety"
+                        class="w-full h-64 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h4 class="text-xl font-bold mb-2">Team Dynamics</h4>
+                        <p class="text-sm opacity-90">Psychological Safety</p>
+                        <div class="mt-2 flex items-center">
+                            <span class="text-gold-400 font-bold text-lg">89%</span>
+                            <span class="text-sm ml-2">Safety Increase</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl image-hover" data-aos="fade-up" data-aos-delay="300">
+                    <img 
+                        src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&q=80" 
+                        alt="Organizational culture transformation and workplace equity"
+                        class="w-full h-64 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h4 class="text-xl font-bold mb-2">Culture Shift</h4>
+                        <p class="text-sm opacity-90">Organizational Change</p>
+                        <div class="mt-2 flex items-center">
+                            <span class="text-gold-400 font-bold text-lg">96%</span>
+                            <span class="text-sm ml-2">Engagement Score</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Awards and Recognition -->
+            <div class="text-center" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-white mb-8">Recognition & Awards</h3>
+                <div class="flex flex-wrap justify-center items-center gap-8 opacity-80">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-trophy text-gold-400 text-2xl"></i>
+                        <span class="text-white">Best Consulting Firm 2024</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-star text-gold-400 text-2xl"></i>
+                        <span class="text-white">Excellence in DEI</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-medal text-gold-400 text-2xl"></i>
+                        <span class="text-white">Industry Innovation Award</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Call to Action -->
     <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -533,7 +1382,7 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
             </div>
         </div>
     </section>
-  `,title:"About Us - Our Vision & Values",currentPage:"about"})));R.get("/framework",e=>e.html(ee({children:`
+  `,title:"About Us - Our Vision & Values",currentPage:"about"})));z.get("/framework",e=>e.html(ee({children:`
     <!-- Page Header -->
     <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -702,7 +1551,7 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
             </div>
         </div>
     </section>
-  `,title:"LLI Framework™ - Our Proven Methodology",currentPage:"framework"})));R.get("/assessment",e=>e.html(ee({children:`
+  `,title:"LLI Framework™ - Our Proven Methodology",currentPage:"framework"})));z.get("/assessment",e=>e.html(ee({children:`
     <!-- Page Header -->
     <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -960,7 +1809,7 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
             </div>
         </div>
     </section>
-  `,title:"Free Equity Assessment - Discover Your Readiness",currentPage:"assessment"})));R.get("/services",async e=>{const{servicesPage:t}=await Promise.resolve().then(()=>pa);return e.html(ee({children:t,title:"Our Services - Comprehensive Equity Solutions",currentPage:"services"}))});R.get("/founder",e=>e.html(ee({children:`
+  `,title:"Free Equity Assessment - Discover Your Readiness",currentPage:"assessment"})));z.get("/services",async e=>{const{servicesPage:t}=await Promise.resolve().then(()=>pa);return e.html(ee({children:t,title:"Our Services - Comprehensive Equity Solutions",currentPage:"services"}))});z.get("/founder",e=>e.html(ee({children:`
     <!-- Page Header -->
     <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1203,7 +2052,7 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
             </div>
         </div>
     </section>
-  `,title:"Chiara Smith, MA - Founder & CEO",currentPage:"founder"})));R.get("/contact",e=>e.html(ee({children:`
+  `,title:"Chiara Smith, MA - Founder & CEO",currentPage:"founder"})));z.get("/contact",e=>e.html(ee({children:`
     <!-- Page Header -->
     <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1493,7 +2342,7 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
             </div>
         </div>
     </section>
-  `,title:"Contact Us - Start Your Transformation",currentPage:"contact"})));const Be=new vt,ma=Object.assign({"/src/index.tsx":R});let yt=!1;for(const[,e]of Object.entries(ma))e&&(Be.route("/",e),Be.notFound(e.notFoundHandler),yt=!0);if(!yt)throw new Error("Can't import modules from ['/src/index.tsx','/app/server.ts']");const ha=`
+  `,title:"Contact Us - Start Your Transformation",currentPage:"contact"})));const Ge=new vt,ma=Object.assign({"/src/index.tsx":z});let yt=!1;for(const[,e]of Object.entries(ma))e&&(Ge.route("/",e),Ge.notFound(e.notFoundHandler),yt=!0);if(!yt)throw new Error("Can't import modules from ['/src/index.tsx','/app/server.ts']");const ga=`
     <!-- Page Header -->
     <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1783,4 +2632,4 @@ var kt=Object.defineProperty;var He=e=>{throw TypeError(e)};var Ct=(e,t,a)=>t in
             </div>
         </div>
     </section>
-`,pa=Object.freeze(Object.defineProperty({__proto__:null,servicesPage:ha},Symbol.toStringTag,{value:"Module"}));export{Be as default};
+`,pa=Object.freeze(Object.defineProperty({__proto__:null,servicesPage:ga},Symbol.toStringTag,{value:"Module"}));export{Ge as default};

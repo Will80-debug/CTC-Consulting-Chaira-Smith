@@ -100,22 +100,320 @@ app.get('/', (c) => {
         </div>
     </section>
 
-    <!-- Featured Success Image -->
+    <!-- Featured Success Images Gallery -->
     <section class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12" data-aos="fade-up">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6 font-playfair">Real Transformation in Action</h2>
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                
+                <!-- Main Featured Image -->
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl mb-8">
                     <img 
-                        src="https://www.consultingsuccess.com/wp-content/uploads/2024/03/strategic-consulting-meeting-agenda-framework.jpeg" 
-                        alt="CTS Consulting strategic planning session with diverse leadership team"
-                        class="w-full h-80 object-cover"
+                        src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&q=80" 
+                        alt="Diverse team of professionals collaborating in modern office environment"
+                        class="w-full h-80 object-contain bg-gray-50"
                         loading="lazy"
                     />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div class="absolute bottom-8 left-8 text-white">
-                        <h3 class="text-2xl font-bold mb-2">Strategic Leadership Development</h3>
+                        <h3 class="text-2xl font-bold mb-2">Real People, Real Transformation</h3>
                         <p class="text-lg opacity-90">Empowering diverse teams through the LLI Framework™</p>
+                    </div>
+                </div>
+                
+                <!-- Image Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" 
+                            alt="Professional woman in business meeting discussing equity strategies"
+                            class="w-full h-48 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-semibold">Leadership Coaching</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&q=80" 
+                            alt="Diverse team collaboration and strategic planning session"
+                            class="w-full h-48 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-semibold">Team Development</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&q=80" 
+                            alt="Organizational culture and workplace equity transformation"
+                            class="w-full h-48 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-semibold">Culture Change</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- People & Stories Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6 font-playfair">The Faces Behind Transformation</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Meet the people who make organizational change possible - from executives to team members, everyone plays a vital role
+                </p>
+            </div>
+            
+            <!-- People Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Executive Leader -->
+                <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover" data-aos="fade-up" data-aos-delay="100">
+                    <img 
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" 
+                        alt="Professional executive leader implementing equity strategies"
+                        class="w-full h-64 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h4 class="text-xl font-bold mb-2">Executive Leadership</h4>
+                        <p class="text-sm opacity-90">"The LLI Framework changed how we approach culture transformation."</p>
+                        <div class="mt-3 flex items-center">
+                            <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                            <span class="text-xs">Fortune 500 CEO</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Collaborator -->
+                <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover" data-aos="fade-up" data-aos-delay="200">
+                    <img 
+                        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&q=80" 
+                        alt="Diverse team member participating in workshop"
+                        class="w-full h-64 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h4 class="text-xl font-bold mb-2">Team Innovation</h4>
+                        <p class="text-sm opacity-90">"I finally feel heard and valued in our workplace."</p>
+                        <div class="mt-3 flex items-center">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                            <span class="text-xs">Product Manager</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Diverse Team -->
+                <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover" data-aos="fade-up" data-aos-delay="300">
+                    <img 
+                        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&q=80" 
+                        alt="Diverse team of professionals working together in collaborative space"
+                        class="w-full h-64 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h4 class="text-xl font-bold mb-2">Collaborative Culture</h4>
+                        <p class="text-sm opacity-90">"Our team dynamics have completely transformed."</p>
+                        <div class="mt-3 flex items-center">
+                            <div class="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
+                            <span class="text-xs">Development Team</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portrait Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4" data-aos="fade-up">
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80" 
+                        alt="Professional woman executive leader"
+                        class="w-full h-32 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" 
+                        alt="Professional man business leader"
+                        class="w-full h-32 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" 
+                        alt="Professional businesswoman in meeting"
+                        class="w-full h-32 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=200&q=80" 
+                        alt="Professional man team leader"
+                        class="w-full h-32 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=200&q=80" 
+                        alt="Young professional woman consultant"
+                        class="w-full h-32 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=200&q=80" 
+                        alt="Professional businessman consultant"
+                        class="w-full h-32 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Success Stories with Full Images -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 font-playfair">Our Expertise in Action</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    From boardrooms to team meetings, see how we create lasting transformation
+                </p>
+            </div>
+            
+            <!-- Large Image Showcase Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Consulting Excellence -->
+                <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover" data-aos="fade-right">
+                    <img 
+                        src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&q=80" 
+                        alt="Executive consulting and strategic leadership development"
+                        class="w-full h-72 object-contain bg-white"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Executive Consulting</h3>
+                        <p class="text-lg opacity-90">Strategic leadership transformation at the highest levels</p>
+                        <div class="mt-3 flex items-center">
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-gold-400"></i>
+                                <i class="fas fa-star text-gold-400"></i>
+                                <i class="fas fa-star text-gold-400"></i>
+                                <i class="fas fa-star text-gold-400"></i>
+                                <i class="fas fa-star text-gold-400"></i>
+                            </div>
+                            <span class="ml-2 text-sm">Certified Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Development -->
+                <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover" data-aos="fade-left">
+                    <img 
+                        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80" 
+                        alt="Team development and collaborative workplace culture"
+                        class="w-full h-72 object-contain bg-white"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Team Development</h3>
+                        <p class="text-lg opacity-90">Building high-performing, inclusive teams</p>
+                        <div class="mt-3 flex items-center">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                                98% Success Rate
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Smaller Image Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6" data-aos="fade-up">
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=300&q=80" 
+                        alt="Workshop facilitation and training sessions"
+                        class="w-full h-48 object-contain bg-gray-50"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Workshops</h5>
+                        <p class="text-xs opacity-90">Interactive Training</p>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=300&q=80" 
+                        alt="Individual coaching and mentorship programs"
+                        class="w-full h-48 object-contain bg-gray-50"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Coaching</h5>
+                        <p class="text-xs opacity-90">Personal Development</p>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&q=80" 
+                        alt="Strategic planning and organizational assessment"
+                        class="w-full h-48 object-contain bg-gray-50"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Strategy</h5>
+                        <p class="text-xs opacity-90">Planning & Assessment</p>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=300&q=80" 
+                        alt="Culture transformation and organizational change"
+                        class="w-full h-48 object-contain bg-gray-50"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Culture</h5>
+                        <p class="text-xs opacity-90">Transformation</p>
                     </div>
                 </div>
             </div>
@@ -171,19 +469,184 @@ app.get('/', (c) => {
                     </div>
                 </div>
                 
-                <!-- Image -->
+                <!-- Images Stack -->
                 <div data-aos="fade-left">
                     <div class="relative">
+                        <!-- Main Image -->
                         <img 
-                            src="https://www.aihr.com/wp-content/uploads/diversity-equity-inclusion-belonging-social-1.png" 
+                            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80" 
                             alt="Diversity, equity, inclusion and belonging workplace transformation"
-                            class="w-full h-96 object-cover rounded-2xl shadow-xl"
+                            class="w-full h-96 object-contain bg-white rounded-2xl shadow-xl"
                             loading="lazy"
                         />
                         <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-lg">
                             <div class="text-center">
                                 <div class="text-3xl font-bold text-primary-600 mb-1">95%</div>
                                 <div class="text-sm text-gray-600">Success Rate</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Small overlay images -->
+                        <div class="absolute -top-6 -left-6 w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                            <img 
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" 
+                                alt="African American professional consultant headshot"
+                                class="w-full h-full object-cover bg-gray-100"
+                                loading="lazy"
+                            />
+                        </div>
+                        
+                        <div class="absolute -bottom-2 -left-6 w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                            <img 
+                                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80" 
+                                alt="African American diverse leadership team member"
+                                class="w-full h-full object-cover bg-gray-100"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Portfolio Gallery -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6 font-playfair">Professional Excellence Portfolio</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Showcasing our comprehensive approach to organizational transformation
+                </p>
+            </div>
+            
+            <!-- Hero Image Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Leadership Training -->
+                <div class="lg:col-span-2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl image-hover h-80" data-aos="fade-right">
+                        <img 
+                            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" 
+                            alt="Executive leadership team in strategic planning meeting"
+                            class="w-full h-full object-contain bg-gray-50"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 text-white max-w-md">
+                            <h3 class="text-3xl font-bold mb-3">Leadership Excellence</h3>
+                            <p class="text-lg opacity-90 mb-4">Transforming executive teams through strategic coaching and development</p>
+                            <div class="flex items-center space-x-4">
+                                <span class="bg-gold-500 text-black px-4 py-2 rounded-full text-sm font-semibold">
+                                    500+ Leaders Trained
+                                </span>
+                                <span class="text-gold-400 font-semibold">97% Success Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Statistics Card -->
+                <div class="space-y-4" data-aos="fade-left">
+                    <div class="bg-gradient-to-br from-primary-500 to-primary-600 p-8 rounded-2xl text-white">
+                        <h4 class="text-2xl font-bold mb-4">Impact Statistics</h4>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span>Client Retention</span>
+                                <span class="text-2xl font-bold text-gold-400">98%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>Avg. Improvement</span>
+                                <span class="text-2xl font-bold text-gold-400">85%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>Project Success</span>
+                                <span class="text-2xl font-bold text-gold-400">97%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative rounded-xl overflow-hidden shadow-xl image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&q=80" 
+                            alt="Team workshop and collaborative training session"
+                            class="w-full h-40 object-contain bg-gray-50"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h5 class="font-bold text-lg">Team Workshops</h5>
+                                <p class="text-sm opacity-90">Interactive & Engaging</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Services Showcase -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up">
+                <div class="relative group">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=300&q=80" 
+                            alt="Strategic consulting and business planning"
+                            class="w-full h-32 object-contain bg-gradient-to-br from-blue-50 to-white"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-primary-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-chart-line text-2xl mb-2"></i>
+                                <p class="font-semibold">Strategic Planning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80" 
+                            alt="Executive coaching and leadership mentorship"
+                            class="w-full h-32 object-contain bg-gradient-to-br from-purple-50 to-white"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-accent-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-user-tie text-2xl mb-2"></i>
+                                <p class="font-semibold">Executive Coaching</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&q=80" 
+                            alt="Cultural transformation and organizational development"
+                            class="w-full h-32 object-contain bg-gradient-to-br from-green-50 to-white"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-green-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-seedling text-2xl mb-2"></i>
+                                <p class="font-semibold">Culture Change</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=300&q=80" 
+                            alt="Assessment tools and organizational analysis"
+                            class="w-full h-32 object-contain bg-gradient-to-br from-orange-50 to-white"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gold-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-clipboard-check text-2xl mb-2"></i>
+                                <p class="font-semibold">Assessments</p>
                             </div>
                         </div>
                     </div>
@@ -211,6 +674,245 @@ app.get('/', (c) => {
                         <i class="fas fa-calendar mr-2"></i>
                         Schedule Consultation
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diverse Leadership Spotlight -->
+    <section class="py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-teal-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6 font-playfair">Celebrating Diverse Leadership</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Empowering leaders from all backgrounds to drive meaningful organizational change
+                </p>
+            </div>
+            
+            <!-- Leadership Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="relative group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80" 
+                            alt="Executive woman leader"
+                            class="w-full h-80 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h4 class="text-lg font-bold mb-1">Executive Excellence</h4>
+                            <p class="text-sm opacity-90">Leading with purpose</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <div class="bg-gold-500 text-black px-3 py-1 rounded-full text-xs font-semibold">
+                                CEO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" 
+                            alt="Professional man in leadership role"
+                            class="w-full h-80 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h4 class="text-lg font-bold mb-1">Strategic Vision</h4>
+                            <p class="text-sm opacity-90">Innovative thinking</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <div class="bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                                CTO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80" 
+                            alt="Young professional woman"
+                            class="w-full h-80 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h4 class="text-lg font-bold mb-1">Rising Leader</h4>
+                            <p class="text-sm opacity-90">Future focused</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <div class="bg-accent-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                                VP
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl image-hover">
+                        <img 
+                            src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=300&q=80" 
+                            alt="Professional man executive"
+                            class="w-full h-80 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h4 class="text-lg font-bold mb-1">Transformational</h4>
+                            <p class="text-sm opacity-90">Change catalyst</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <div class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                                COO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Success Metrics -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold text-primary-600 mb-2">85%</div>
+                        <div class="text-gray-600">Leadership diversity increase</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-gold-600 mb-2">92%</div>
+                        <div class="text-gray-600">Employee engagement improvement</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-accent-600 mb-2">500+</div>
+                        <div class="text-gray-600">Leaders developed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Success Stories with Images -->
+    <section class="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-white mb-6 font-playfair">Transformations That Inspire</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    See how organizations like yours have achieved remarkable results with our proven approach
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <!-- Success Story 1 -->
+                <div data-aos="fade-right">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img 
+                            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" 
+                            alt="Corporate boardroom transformation and leadership development"
+                            class="w-full h-64 object-cover"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="text-2xl font-bold mb-2">Fortune 500 Transformation</h3>
+                            <p class="text-lg opacity-90">85% improvement in leadership inclusivity scores</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="text-white space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-r from-gold-500 to-gold-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-trophy text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-1">Award-Winning Culture</h4>
+                                <p class="text-gray-300">Recognized as "Best Place to Work" after our engagement</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-chart-line text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-1">Measurable Results</h4>
+                                <p class="text-gray-300">40% increase in employee engagement within 12 months</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-users text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-1">Leadership Excellence</h4>
+                                <p class="text-gray-300">95% of leaders completed advanced equity training</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=300&q=80" 
+                        alt="Team collaboration and diversity training session"
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Workshop Excellence</h5>
+                        <p class="text-sm opacity-90">Interactive Learning</p>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=300&q=80" 
+                        alt="Executive coaching and leadership development session"
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Executive Coaching</h5>
+                        <p class="text-sm opacity-90">1-on-1 Development</p>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=300&q=80" 
+                        alt="Workplace culture assessment and strategic planning"
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Culture Assessment</h5>
+                        <p class="text-sm opacity-90">Data-Driven Insights</p>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-xl overflow-hidden shadow-lg image-hover">
+                    <img 
+                        src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=300&q=80" 
+                        alt="Team building and organizational development activities"
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h5 class="font-semibold">Team Building</h5>
+                        <p class="text-sm opacity-90">Stronger Connections</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -253,14 +955,31 @@ app.get('/about', (c) => {
                     </div>
                 </div>
                 
-                <!-- Image -->
+                <!-- Image Stack -->
                 <div data-aos="fade-left" data-aos-duration="1000">
-                    <img 
-                        src="https://www.aihr.com/wp-content/uploads/building-diverse-and-inclusive-workspaces-featured.png" 
-                        alt="Building diverse and inclusive workspaces"
-                        class="w-full h-80 object-cover rounded-2xl shadow-xl"
-                        loading="lazy"
-                    />
+                    <div class="relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&q=80" 
+                            alt="Building diverse and inclusive workspaces"
+                            class="w-full h-80 object-contain bg-gray-50 rounded-2xl shadow-xl"
+                            loading="lazy"
+                        />
+                        <!-- Overlaid smaller images -->
+                        <div class="absolute -bottom-8 -right-8 grid grid-cols-2 gap-2">
+                            <img 
+                                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=150&q=80" 
+                                alt="Professional team meeting diverse perspectives"
+                                class="w-16 h-16 object-cover rounded-lg shadow-lg border-2 border-white"
+                                loading="lazy"
+                            />
+                            <img 
+                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&q=80" 
+                                alt="Leadership coaching and mentorship"
+                                class="w-16 h-16 object-cover rounded-lg shadow-lg border-2 border-white"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -333,12 +1052,54 @@ app.get('/about', (c) => {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right">
-                    <img 
-                        src="https://www.aihr.com/wp-content/uploads/Organizational-Transformation-Process.png" 
-                        alt="Organizational transformation process methodology"
-                        class="w-full h-96 object-cover rounded-2xl shadow-xl"
-                        loading="lazy"
-                    />
+                    <div class="space-y-4">
+                        <!-- Main transformation image -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1600880292630-53c7234d3bd0?w=600&q=80" 
+                            alt="Organizational transformation process methodology"
+                            class="w-full h-64 object-contain bg-gray-50 rounded-2xl shadow-xl"
+                            loading="lazy"
+                        />
+                        
+                        <!-- Process images grid -->
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="relative rounded-lg overflow-hidden shadow-lg image-hover">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=200&q=80" 
+                                    alt="Team listening and collaboration session"
+                                    class="w-full h-20 object-cover"
+                                    loading="lazy"
+                                />
+                                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                                    <span class="text-white text-xs font-semibold">Listen</span>
+                                </div>
+                            </div>
+                            
+                            <div class="relative rounded-lg overflow-hidden shadow-lg image-hover">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=200&q=80" 
+                                    alt="Strategic learning and development"
+                                    class="w-full h-20 object-cover"
+                                    loading="lazy"
+                                />
+                                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                                    <span class="text-white text-xs font-semibold">Learn</span>
+                                </div>
+                            </div>
+                            
+                            <div class="relative rounded-lg overflow-hidden shadow-lg image-hover">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=200&q=80" 
+                                    alt="Implementation and action planning"
+                                    class="w-full h-20 object-cover"
+                                    loading="lazy"
+                                />
+                                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                                    <span class="text-white text-xs font-semibold">Implement</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div data-aos="fade-left">
@@ -375,6 +1136,94 @@ app.get('/about', (c) => {
                                 <p class="text-gray-600">Strategy with soul — blending analytical rigor with authentic human connection.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Impact Gallery -->
+    <section class="py-20 bg-gradient-to-br from-gray-900 via-primary-900 to-accent-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-white mb-6 font-playfair">Our Impact in Action</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Witness the transformation happening in organizations worldwide
+                </p>
+            </div>
+            
+            <!-- Impact Stories Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl image-hover" data-aos="fade-up" data-aos-delay="100">
+                    <img 
+                        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&q=80" 
+                        alt="Executive leadership team implementing equity strategies"
+                        class="w-full h-64 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h4 class="text-xl font-bold mb-2">Leadership Excellence</h4>
+                        <p class="text-sm opacity-90">C-Suite Transformation</p>
+                        <div class="mt-2 flex items-center">
+                            <span class="text-gold-400 font-bold text-lg">92%</span>
+                            <span class="text-sm ml-2">Improvement Rate</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl image-hover" data-aos="fade-up" data-aos-delay="200">
+                    <img 
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" 
+                        alt="Diverse team collaboration and psychological safety"
+                        class="w-full h-64 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h4 class="text-xl font-bold mb-2">Team Dynamics</h4>
+                        <p class="text-sm opacity-90">Psychological Safety</p>
+                        <div class="mt-2 flex items-center">
+                            <span class="text-gold-400 font-bold text-lg">89%</span>
+                            <span class="text-sm ml-2">Safety Increase</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl image-hover" data-aos="fade-up" data-aos-delay="300">
+                    <img 
+                        src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&q=80" 
+                        alt="Organizational culture transformation and workplace equity"
+                        class="w-full h-64 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h4 class="text-xl font-bold mb-2">Culture Shift</h4>
+                        <p class="text-sm opacity-90">Organizational Change</p>
+                        <div class="mt-2 flex items-center">
+                            <span class="text-gold-400 font-bold text-lg">96%</span>
+                            <span class="text-sm ml-2">Engagement Score</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Awards and Recognition -->
+            <div class="text-center" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-white mb-8">Recognition & Awards</h3>
+                <div class="flex flex-wrap justify-center items-center gap-8 opacity-80">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-trophy text-gold-400 text-2xl"></i>
+                        <span class="text-white">Best Consulting Firm 2024</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-star text-gold-400 text-2xl"></i>
+                        <span class="text-white">Excellence in DEI</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-medal text-gold-400 text-2xl"></i>
+                        <span class="text-white">Industry Innovation Award</span>
                     </div>
                 </div>
             </div>

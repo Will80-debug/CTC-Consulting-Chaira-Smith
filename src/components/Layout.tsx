@@ -23,7 +23,7 @@ export function Layout({ children, title, currentPage }: { children: any, title:
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link href="/static/styles.css" rel="stylesheet">
+    <link href="/static/styles.css?v=2025091601" rel="stylesheet">
     
     <!-- Tailwind Config -->
     <script>
@@ -88,15 +88,15 @@ export function Layout({ children, title, currentPage }: { children: any, title:
                 </div>
                 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="/" class="nav-link ${currentPage === 'home' ? 'active' : ''}">Home</a>
-                        <a href="/about" class="nav-link ${currentPage === 'about' ? 'active' : ''}">About</a>
-                        <a href="/framework" class="nav-link ${currentPage === 'framework' ? 'active' : ''}">LLI Framework™</a>
-                        <a href="/assessment" class="nav-link ${currentPage === 'assessment' ? 'active' : ''}">Assessment</a>
-                        <a href="/services" class="nav-link ${currentPage === 'services' ? 'active' : ''}">Services</a>
-                        <a href="/founder" class="nav-link ${currentPage === 'founder' ? 'active' : ''}">Founder</a>
-                        <a href="/contact" class="nav-link ${currentPage === 'contact' ? 'active' : ''}">Contact</a>
+                <div class="block">
+                    <div class="ml-10 flex items-baseline space-x-4 lg:space-x-8">
+                        <a href="/" class="nav-link ${currentPage === 'home' ? 'active' : ''}" style="color: white !important; font-weight: bold !important; font-size: 16px !important;">Home</a>
+                        <a href="/about" class="nav-link ${currentPage === 'about' ? 'active' : ''}" style="color: white !important; font-weight: bold !important; font-size: 16px !important;">About</a>
+                        <a href="/framework" class="nav-link ${currentPage === 'framework' ? 'active' : ''}" style="color: white !important; font-weight: bold !important; font-size: 16px !important;">LLI Framework™</a>
+                        <a href="/assessment" class="nav-link ${currentPage === 'assessment' ? 'active' : ''}" style="color: white !important; font-weight: bold !important; font-size: 16px !important;">Assessment</a>
+                        <a href="/services" class="nav-link ${currentPage === 'services' ? 'active' : ''}" style="color: white !important; font-weight: bold !important; font-size: 16px !important;">Services</a>
+                        <a href="/founder" class="nav-link ${currentPage === 'founder' ? 'active' : ''}" style="color: white !important; font-weight: bold !important; font-size: 16px !important;">Founder</a>
+                        <a href="/contact" class="nav-link ${currentPage === 'contact' ? 'active' : ''}" style="color: white !important; font-weight: bold !important; font-size: 16px !important;">Contact</a>
                     </div>
                 </div>
                 
