@@ -7,7 +7,7 @@ html {
 
 /* Navigation styles */
 .nav-link {
-  @apply text-white hover:text-gold-300 px-3 py-2 text-sm font-medium transition-colors duration-300 relative;
+  @apply text-gold-400 hover:text-gold-300 px-3 py-2 text-sm font-medium transition-colors duration-300 relative;
 }
 
 .nav-link::after {
@@ -27,7 +27,7 @@ html {
 }
 
 .mobile-nav-link {
-  @apply text-white hover:text-gold-300 block px-3 py-2 text-base font-medium transition-colors duration-300;
+  @apply text-gold-400 hover:text-gold-300 block px-3 py-2 text-base font-medium transition-colors duration-300;
 }
 
 /* Background navbar */

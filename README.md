@@ -104,6 +104,11 @@
 - **Local Development**: http://localhost:3000
 - **Public Access**: https://3000-i5xvdgz90z0ll9f6vug8q-6532622b.e2b.dev
 
+### Visual Assets
+- **Chiara's Professional Photo**: Professional headshot integrated in founder section
+- **Team Collaboration Image**: Diverse team visual in services section
+- **Strategic Planning Visual**: Framework methodology illustration
+
 ### Future Production URLs
 - **Cloudflare Pages**: (To be deployed)
 - **Custom Domain**: (To be configured)

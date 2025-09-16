@@ -634,7 +634,7 @@ app.get('/', (c) => {
                         <div class="aspect-w-4 aspect-h-5 bg-gradient-to-br from-primary-200 to-accent-200 rounded-2xl overflow-hidden shadow-2xl">
                             <img 
                                 src="https://page.gensparksite.com/v1/base64_upload/d2587015bf5f776d9212e72f6427e4d6" 
-                                alt="Chiara Smith, Masters - Founder and CEO of CTS Consulting" 
+                                alt="Chiara Smith, MA - Founder and CEO of CTS Consulting" 
                                 class="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
                                 loading="lazy"
                             />
@@ -661,7 +661,7 @@ app.get('/', (c) => {
                 <div class="order-1 lg:order-2" data-aos="fade-left" data-aos-duration="1000">
                     <div class="space-y-6">
                         <div>
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2 font-playfair">Chiara Smith, Masters</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2 font-playfair">Chiara Smith, MA</h3>
                             <div class="space-y-2 text-lg text-gray-600">
                                 <p class="font-semibold">Founder • Equity Strategist • Community Architect</p>
                                 <p class="font-semibold text-primary-600">CEO of CTS Consulting™ | Creator of the LLI Framework™</p>
@@ -672,7 +672,7 @@ app.get('/', (c) => {
                         
                         <div class="space-y-4 text-gray-700 leading-relaxed">
                             <p>
-                                Chiara Smith, Masters, is a trusted equity advisor and thought leader committed to systems change. 
+                                Chiara Smith, MA, is a trusted equity advisor and thought leader committed to systems change. 
                                 As the Founder and CEO of CTS Consulting™, she supports organizations, institutions, and communities 
                                 in building cultures grounded in psychological safety, racial equity, and collective well-being.
                             </p>
@@ -745,7 +745,7 @@ app.get('/', (c) => {
                         <i class="fas fa-calendar mr-2"></i>
                         Schedule Your Consultation
                     </a>
-                    <a href="tel:+1-555-CTS-CONSULT" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-300">
+                    <a href="tel:+15859051772" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-300">
                         <i class="fas fa-phone mr-2"></i>
                         Call Us Today
                     </a>
@@ -871,8 +871,8 @@ app.get('/', (c) => {
                                     </div>
                                     <div>
                                         <div class="font-semibold text-gray-900">Phone</div>
-                                        <a href="tel:+1-555-CTS-CONSULT" class="text-accent-600 hover:text-accent-800 transition-colors">
-                                            +1 (555) CTS-CONSULT
+                                        <a href="tel:+15859051772" class="text-accent-600 hover:text-accent-800 transition-colors">
+                                            (585) 905-1772
                                         </a>
                                     </div>
                                 </div>
@@ -981,7 +981,7 @@ app.get('/', (c) => {
                     <h4 class="text-lg font-semibold mb-4">Get in Touch</h4>
                     <div class="space-y-2 text-gray-300">
                         <p><i class="fas fa-envelope mr-2"></i> hello@ctsconsulting.com</p>
-                        <p><i class="fas fa-phone mr-2"></i> +1 (555) CTS-CONSULT</p>
+                        <p><i class="fas fa-phone mr-2"></i> (585) 905-1772</p>
                         <p><i class="fas fa-map-marker-alt mr-2"></i> Rochester, NY</p>
                     </div>
                 </div>
