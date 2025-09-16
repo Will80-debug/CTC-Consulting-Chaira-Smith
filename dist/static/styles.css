@@ -10,6 +10,10 @@ html {
   @apply text-gold-400 hover:text-gold-300 px-3 py-2 text-sm font-medium transition-colors duration-300 relative;
 }
 
+.nav-link.active {
+  @apply text-gold-300 font-semibold;
+}
+
 .nav-link::after {
   content: '';
   position: absolute;
@@ -22,12 +26,18 @@ html {
   transform: translateX(-50%);
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
 }
 
 .mobile-nav-link {
   @apply text-gold-400 hover:text-gold-300 block px-3 py-2 text-base font-medium transition-colors duration-300;
+}
+
+.mobile-nav-link.active {
+  @apply text-gold-300 font-semibold bg-black bg-opacity-30 rounded-lg;
+}
 }
 
 /* Background navbar */

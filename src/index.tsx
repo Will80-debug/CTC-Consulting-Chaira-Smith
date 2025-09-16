@@ -1,6 +1,7 @@
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 import { serveStatic } from 'hono/cloudflare-workers'
+import { Layout } from './components/Layout'
 
 const app = new Hono()
 
@@ -17,7 +18,7 @@ app.get('/api/contact', (c) => {
 
 app.post('/api/contact', async (c) => {
   try {
-    const { name, email, organization, message, service } = await c.req.json()
+    const { name, email, organization, industry, message, service } = await c.req.json()
     
     // In a real application, you would process the contact form here
     // For now, we'll just return a success response
@@ -25,139 +26,18 @@ app.post('/api/contact', async (c) => {
     return c.json({ 
       success: true, 
       message: 'Thank you for your message! We will get back to you soon.',
-      data: { name, email, organization, service }
+      data: { name, email, organization, industry, service }
     })
   } catch (error) {
     return c.json({ success: false, message: 'Failed to process your message' }, 400)
   }
 })
 
-// Main page
+// Home Page
 app.get('/', (c) => {
-  return c.html(`
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTS Consulting - Equity • Strategy • Transformation</title>
-    <meta name="description" content="CTS Consulting helps organizations build safe, equitable cultures using the LLI Framework™. From insight to impact with real strategy, accountability, and outcomes.">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome -->
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link href="/static/styles.css" rel="stylesheet">
-    
-    <!-- Tailwind Config -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              'inter': ['Inter', 'sans-serif'],
-              'playfair': ['Playfair Display', 'serif'],
-            },
-            colors: {
-              primary: {
-                50: '#f0f9ff',
-                100: '#e0f2fe',
-                200: '#bae6fd',
-                300: '#7dd3fc',
-                400: '#38bdf8',
-                500: '#0ea5e9',
-                600: '#0284c7',
-                700: '#0369a1',
-                800: '#075985',
-                900: '#0c4a6e',
-              },
-              accent: {
-                50: '#fdf4ff',
-                100: '#fae8ff',
-                200: '#f5d0fe',
-                300: '#f0abfc',
-                400: '#e879f9',
-                500: '#d946ef',
-                600: '#c026d3',
-                700: '#a21caf',
-                800: '#86198f',
-                900: '#701a75',
-              },
-              gold: {
-                50: '#fffbeb',
-                100: '#fef3c7',
-                200: '#fde68a',
-                300: '#fcd34d',
-                400: '#fbbf24',
-                500: '#f59e0b',
-                600: '#d97706',
-                700: '#b45309',
-                800: '#92400e',
-                900: '#78350f',
-              }
-            }
-          }
-        }
-      }
-    </script>
-</head>
-<body class="font-inter text-gray-900 antialiased">
-    
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex-shrink-0">
-                    <a href="#home" class="text-2xl font-bold text-white font-playfair">CTS Consulting</a>
-                </div>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="nav-link">Home</a>
-                        <a href="#about" class="nav-link">About</a>
-                        <a href="#framework" class="nav-link">LLI Framework™</a>
-                        <a href="#assessment" class="nav-link">Assessment</a>
-                        <a href="#services" class="nav-link">Services</a>
-                        <a href="#founder" class="nav-link">Founder</a>
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </div>
-                </div>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-white hover:text-gold-300 transition-colors">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 bg-black bg-opacity-90 backdrop-blur-sm">
-                <a href="#home" class="mobile-nav-link">Home</a>
-                <a href="#about" class="mobile-nav-link">About</a>
-                <a href="#framework" class="mobile-nav-link">LLI Framework™</a>
-                <a href="#assessment" class="mobile-nav-link">Assessment</a>
-                <a href="#services" class="mobile-nav-link">Services</a>
-                <a href="#founder" class="mobile-nav-link">Founder</a>
-                <a href="#contact" class="mobile-nav-link">Contact</a>
-            </div>
-        </div>
-    </nav>
-
+  const content = `
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <!-- Background -->
         <div class="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900"></div>
         <div class="absolute inset-0 bg-black bg-opacity-30"></div>
@@ -188,11 +68,11 @@ app.get('/', (c) => {
             </div>
             
             <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" class="space-y-4 sm:space-y-0 sm:space-x-6 sm:flex sm:justify-center">
-                <a href="#assessment" class="inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-gold-400 hover:to-gold-500 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                <a href="/assessment" class="inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-gold-400 hover:to-gold-500 transform hover:scale-105 transition-all duration-300 shadow-lg">
                     <i class="fas fa-chart-line mr-2"></i>
                     Take Free Assessment
                 </a>
-                <a href="#contact" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-300">
+                <a href="/contact" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-300">
                     <i class="fas fa-rocket mr-2"></i>
                     Start Your Transformation
                 </a>
@@ -218,25 +98,144 @@ app.get('/', (c) => {
                 </div>
             </div>
         </div>
-        
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-            <a href="#about" class="block">
-                <i class="fas fa-chevron-down text-2xl"></i>
-            </a>
+    </section>
+
+    <!-- Featured Success Image -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 font-playfair">Real Transformation in Action</h2>
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <img 
+                        src="https://www.consultingsuccess.com/wp-content/uploads/2024/03/strategic-consulting-meeting-agenda-framework.jpeg" 
+                        alt="CTS Consulting strategic planning session with diverse leadership team"
+                        class="w-full h-80 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Strategic Leadership Development</h3>
+                        <p class="text-lg opacity-90">Empowering diverse teams through the LLI Framework™</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- About/Vision Section -->
-    <section id="about" class="py-20 bg-white">
+    <!-- Quick Overview -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-primary-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 font-playfair">Our Vision & Values</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Building a world where equity is not just a value — it's an outcome.
-                </p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Content -->
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6 font-playfair">Why Choose CTS Consulting?</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-award text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Proven LLI Framework™</h3>
+                                <p class="text-gray-600">Our signature Listen → Learn → Implement methodology delivers measurable, sustainable change.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gradient-to-r from-gold-500 to-gold-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-users text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">15+ Years Experience</h3>
+                                <p class="text-gray-600">Deep expertise in organizational transformation, leadership development, and equity strategy.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gradient-to-r from-accent-500 to-accent-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-heart text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Holistic Approach</h3>
+                                <p class="text-gray-600">Strategy with soul — rooted in values, guided by data, committed to lasting transformation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 space-x-4">
+                        <a href="/about" class="inline-block bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                            Learn More About Us
+                        </a>
+                        <a href="/framework" class="inline-block bg-transparent border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all">
+                            Explore LLI Framework™
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Image -->
+                <div data-aos="fade-left">
+                    <div class="relative">
+                        <img 
+                            src="https://www.aihr.com/wp-content/uploads/diversity-equity-inclusion-belonging-social-1.png" 
+                            alt="Diversity, equity, inclusion and belonging workplace transformation"
+                            class="w-full h-96 object-cover rounded-2xl shadow-xl"
+                            loading="lazy"
+                        />
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-lg">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary-600 mb-1">95%</div>
+                                <div class="text-sm text-gray-600">Success Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-6 font-playfair">
+                    Ready to Transform Your Organization?
+                </h2>
+                <p class="text-xl text-gray-200 mb-8 leading-relaxed">
+                    Take our free assessment to discover where your organization stands today and get personalized recommendations for your equity journey.
+                </p>
+                <div class="space-y-4 sm:space-y-0 sm:space-x-6 sm:flex sm:justify-center">
+                    <a href="/assessment" class="inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-gold-400 hover:to-gold-500 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                        <i class="fas fa-chart-line mr-2"></i>
+                        Take Free Assessment
+                    </a>
+                    <a href="/contact" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-300">
+                        <i class="fas fa-calendar mr-2"></i>
+                        Schedule Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+  `
+  
+  return c.html(Layout({ children: content, title: 'Equity Strategy & Transformation', currentPage: 'home' }))
+})
+
+// About Page
+app.get('/about', (c) => {
+  const content = `
+    <!-- Page Header -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl sm:text-6xl font-bold mb-6 font-playfair">About CTS Consulting</h1>
+            <p class="text-xl text-gray-200 leading-relaxed">
+                Building a world where equity is not just a value — it's an outcome.
+            </p>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Vision -->
                 <div data-aos="fade-right" data-aos-duration="1000">
@@ -254,162 +253,189 @@ app.get('/', (c) => {
                     </div>
                 </div>
                 
-                <!-- Values -->
+                <!-- Image -->
                 <div data-aos="fade-left" data-aos-duration="1000">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 font-playfair">Our Core Values</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-gold-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                                <i class="fas fa-balance-scale text-white text-sm"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Equity without ego</h4>
-                                <p class="text-gray-600">Putting outcomes before recognition</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                                <i class="fas fa-ear-listen text-white text-sm"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Listening before leading</h4>
-                                <p class="text-gray-600">Understanding before action</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-accent-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                                <i class="fas fa-heart text-white text-sm"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Wellness is a right</h4>
-                                <p class="text-gray-600">Supporting whole-person wellbeing</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-gold-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                                <i class="fas fa-shield-alt text-white text-sm"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Safety is a strategy</h4>
-                                <p class="text-gray-600">Creating psychological safety by design</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                                <i class="fas fa-compass text-white text-sm"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Truth is our guide</h4>
-                                <p class="text-gray-600">Data-driven, authentic approaches</p>
-                            </div>
-                        </div>
-                    </div>
+                    <img 
+                        src="https://www.aihr.com/wp-content/uploads/building-diverse-and-inclusive-workspaces-featured.png" 
+                        alt="Building diverse and inclusive workspaces"
+                        class="w-full h-80 object-cover rounded-2xl shadow-xl"
+                        loading="lazy"
+                    />
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- We Help You Section -->
+    <!-- Our Values -->
     <section class="py-20 bg-gradient-to-br from-gray-50 to-primary-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Hero Image -->
-            <div class="text-center mb-12" data-aos="fade-up">
-                <div class="max-w-4xl mx-auto mb-12">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-                        <img 
-                            src="https://thediversitymovement.com/wp-content/uploads/2024/01/iStock-1481369283-scaled.jpg" 
-                            alt="Diverse team collaboration representing inclusive workplace culture"
-                            class="w-full h-64 sm:h-80 object-cover"
-                            loading="lazy"
-                        />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 text-white">
-                            <p class="text-lg font-semibold">Building Inclusive, Thriving Teams</p>
-                            <p class="text-sm opacity-90">Real collaboration. Real outcomes.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 font-playfair">We Help You...</h2>
+                <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 font-playfair">Our Core Values</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Transform your organization with proven strategies and sustainable outcomes
+                    These values guide every interaction, strategy, and outcome we create together.
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="help-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center h-full">
-                        <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-handshake text-white text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Cultivate Trust</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Build authentic trust across your teams and community through transparent, equitable practices.
-                        </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-balance-scale text-white text-2xl"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Equity without ego</h3>
+                    <p class="text-gray-600 text-center">Putting outcomes before recognition, focusing on sustainable change rather than performative actions.</p>
                 </div>
                 
-                <div class="help-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center h-full">
-                        <div class="w-16 h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-users text-white text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Safe Cultures</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Create safe, honest, and equitable work cultures where everyone can thrive authentically.
-                        </p>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-ear-listen text-white text-2xl"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Listening before leading</h3>
+                    <p class="text-gray-600 text-center">Understanding diverse perspectives and experiences before developing strategies and solutions.</p>
                 </div>
                 
-                <div class="help-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center h-full">
-                        <div class="w-16 h-16 bg-gradient-to-r from-gold-500 to-gold-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-dna text-white text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Center Equity</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Embed equity and wellness into your organizational DNA for lasting transformation.
-                        </p>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-white text-2xl"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Wellness is a right</h3>
+                    <p class="text-gray-600 text-center">Supporting whole-person wellbeing as fundamental to creating thriving, equitable organizations.</p>
                 </div>
                 
-                <div class="help-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center h-full">
-                        <div class="w-16 h-16 bg-gradient-to-r from-primary-600 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-cogs text-white text-2xl"></i>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-gold-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Safety is a strategy</h3>
+                    <p class="text-gray-600 text-center">Creating psychological safety by design, not by accident, in every organizational system.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-compass text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Truth is our guide</h3>
+                    <p class="text-gray-600 text-center">Data-driven, authentic approaches that address root causes, not just symptoms.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 bg-accent-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-hands-helping text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Collaboration over control</h3>
+                    <p class="text-gray-600 text-center">Co-creating solutions with stakeholders rather than imposing external fixes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img 
+                        src="https://www.aihr.com/wp-content/uploads/Organizational-Transformation-Process.png" 
+                        alt="Organizational transformation process methodology"
+                        class="w-full h-96 object-cover rounded-2xl shadow-xl"
+                        loading="lazy"
+                    />
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6 font-playfair">Our Approach is Different</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-500 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Intentional, Not Performative</h3>
+                                <p class="text-gray-600">Every strategy is designed for concrete, measurable shifts that create lasting change.</p>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Systems Change</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Move beyond "diversity days" into meaningful, systems-level organizational change.
-                        </p>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-500 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Systems-Level Focus</h3>
+                                <p class="text-gray-600">We move beyond "diversity days" to embed equity into organizational DNA.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-500 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Data-Driven Outcomes</h3>
+                                <p class="text-gray-600">Real strategy, real accountability, and real outcomes that you can measure and sustain.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-500 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Holistic Transformation</h3>
+                                <p class="text-gray-600">Strategy with soul — blending analytical rigor with authentic human connection.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- LLI Framework Section -->
-    <section id="framework" class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl sm:text-5xl font-bold mb-6 font-playfair">The LLI Framework™</h2>
-                <p class="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
-                    Our signature 3-part system for sustainable change: From insight to impact with real strategy, accountability, and outcomes.
-                </p>
-                <div class="w-24 h-1 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full"></div>
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-6 font-playfair">Ready to Learn More?</h2>
+            <p class="text-xl text-gray-200 mb-8">
+                Discover how our LLI Framework™ can transform your organization's culture and outcomes.
+            </p>
+            <div class="space-x-6">
+                <a href="/framework" class="inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    Explore LLI Framework™
+                </a>
+                <a href="/assessment" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-300">
+                    Take Assessment
+                </a>
             </div>
-            
+        </div>
+    </section>
+  `
+  
+  return c.html(Layout({ children: content, title: 'About Us - Our Vision & Values', currentPage: 'about' }))
+})
+
+// Framework Page
+app.get('/framework', (c) => {
+  const content = `
+    <!-- Page Header -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl sm:text-6xl font-bold mb-6 font-playfair">The LLI Framework™</h1>
+            <p class="text-xl text-gray-200 leading-relaxed">
+                Our signature 3-part system for sustainable change: From insight to impact with real strategy, accountability, and outcomes.
+            </p>
+        </div>
+    </section>
+
+    <!-- Framework Overview Image -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <img 
+                src="https://digitalleadership.com/wp-content/uploads/2022/11/Strategic-Planning-Process.webp" 
+                alt="Strategic planning process visualization representing the LLI Framework methodology"
+                class="w-full h-64 object-contain rounded-lg shadow-lg mx-auto"
+                loading="lazy"
+            />
+        </div>
+    </section>
+
+    <!-- LLI Framework Steps -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Listen -->
                 <div class="framework-step listen" data-aos="fade-up" data-aos-delay="100">
                     <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-2xl text-center h-full">
-                        <div class="step-number mx-auto">1</div>
+                        <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center text-2xl font-bold text-white mb-6 mx-auto">1</div>
                         <h3 class="text-3xl font-bold mb-4 font-playfair">Listen</h3>
                         <div class="w-16 h-1 bg-primary-400 mx-auto mb-6 rounded-full"></div>
                         <ul class="text-left space-y-3 text-gray-200">
@@ -436,7 +462,7 @@ app.get('/', (c) => {
                 <!-- Learn -->
                 <div class="framework-step learn" data-aos="fade-up" data-aos-delay="200">
                     <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-2xl text-center h-full">
-                        <div class="step-number mx-auto">2</div>
+                        <div class="w-16 h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-full flex items-center justify-center text-2xl font-bold text-white mb-6 mx-auto">2</div>
                         <h3 class="text-3xl font-bold mb-4 font-playfair">Learn</h3>
                         <div class="w-16 h-1 bg-accent-400 mx-auto mb-6 rounded-full"></div>
                         <ul class="text-left space-y-3 text-gray-200">
@@ -463,7 +489,7 @@ app.get('/', (c) => {
                 <!-- Implement -->
                 <div class="framework-step implement" data-aos="fade-up" data-aos-delay="300">
                     <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-2xl text-center h-full">
-                        <div class="step-number mx-auto">3</div>
+                        <div class="w-16 h-16 bg-gradient-to-r from-gold-500 to-gold-600 rounded-full flex items-center justify-center text-2xl font-bold text-white mb-6 mx-auto">3</div>
                         <h3 class="text-3xl font-bold mb-4 font-playfair">Implement</h3>
                         <div class="w-16 h-1 bg-gold-400 mx-auto mb-6 rounded-full"></div>
                         <ul class="text-left space-y-3 text-gray-200">
@@ -487,248 +513,43 @@ app.get('/', (c) => {
                     </div>
                 </div>
             </div>
-            
-            <!-- Framework Visual -->
-            <div class="text-center mt-16 mb-12" data-aos="fade-up" data-aos-delay="350">
-                <div class="max-w-2xl mx-auto">
-                    <img 
-                        src="https://digitalleadership.com/wp-content/uploads/2022/11/Strategic-Planning-Process.webp" 
-                        alt="Strategic planning process visualization representing the LLI Framework methodology"
-                        class="w-full h-48 object-contain opacity-80 rounded-lg"
-                        loading="lazy"
-                    />
-                </div>
-            </div>
-            
-            <!-- Framework CTA -->
-            <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="400">
-                <p class="text-xl text-gray-200 mb-8">
-                    Ready to transform your organization with the LLI Framework™?
-                </p>
-                <a href="#contact" class="inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-gold-400 hover:to-gold-500 transform hover:scale-105 transition-all duration-300 shadow-lg">
-                    <i class="fas fa-comments mr-2"></i>
-                    Start the Conversation
-                </a>
-            </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
+    <!-- Framework in Action -->
+    <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 font-playfair">Core Focus Areas</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-6 font-playfair">The Framework in Action</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Comprehensive strategies for building equitable, thriving organizations
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Psychological Safety -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-shield-alt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Psychological Safety & Workplace Culture</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Create environments where all team members feel safe to contribute, question, and innovate without fear.
-                    </p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center"><i class="fas fa-check text-primary-500 mr-2"></i> Culture assessments</li>
-                        <li class="flex items-center"><i class="fas fa-check text-primary-500 mr-2"></i> Safety audits</li>
-                        <li class="flex items-center"><i class="fas fa-check text-primary-500 mr-2"></i> Team workshops</li>
-                    </ul>
-                </div>
-                
-                <!-- Racial & Philanthropic Equity -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-balance-scale text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Racial & Philanthropic Equity</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Address systemic inequities and build truly inclusive practices that create measurable change.
-                    </p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center"><i class="fas fa-check text-accent-500 mr-2"></i> Equity audits</li>
-                        <li class="flex items-center"><i class="fas fa-check text-accent-500 mr-2"></i> Policy development</li>
-                        <li class="flex items-center"><i class="fas fa-check text-accent-500 mr-2"></i> Impact measurement</li>
-                    </ul>
-                </div>
-                
-                <!-- Organizational Development -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-gradient-to-r from-gold-500 to-gold-600 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-sitemap text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Organizational Development</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Redesign systems, processes, and structures to support equity and excellence simultaneously.
-                    </p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center"><i class="fas fa-check text-gold-500 mr-2"></i> Systems mapping</li>
-                        <li class="flex items-center"><i class="fas fa-check text-gold-500 mr-2"></i> Process redesign</li>
-                        <li class="flex items-center"><i class="fas fa-check text-gold-500 mr-2"></i> Change management</li>
-                    </ul>
-                </div>
-                
-                <!-- Violence Prevention -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-hands-helping text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Violence Prevention & Community Engagement</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Build safer communities through proactive prevention strategies and authentic engagement.
-                    </p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center"><i class="fas fa-check text-red-500 mr-2"></i> Prevention programs</li>
-                        <li class="flex items-center"><i class="fas fa-check text-red-500 mr-2"></i> Community partnerships</li>
-                        <li class="flex items-center"><i class="fas fa-check text-red-500 mr-2"></i> Training & education</li>
-                    </ul>
-                </div>
-                
-                <!-- Wellness-Centered Leadership -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-heart text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Wellness-Centered Leadership</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Develop leaders who prioritize collective wellbeing while driving organizational success.
-                    </p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Leadership coaching</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Wellness frameworks</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Sustainable practices</li>
-                    </ul>
-                </div>
-                
-                <!-- Strategic Planning -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-chess text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Strategic Planning & Implementation</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Develop and execute strategies that embed equity into every aspect of your operations.
-                    </p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center"><i class="fas fa-check text-purple-500 mr-2"></i> Strategic planning</li>
-                        <li class="flex items-center"><i class="fas fa-check text-purple-500 mr-2"></i> Implementation support</li>
-                        <li class="flex items-center"><i class="fas fa-check text-purple-500 mr-2"></i> Progress tracking</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Founder Section -->
-    <section id="founder" class="py-20 bg-gradient-to-br from-gray-50 to-primary-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 font-playfair">Meet Our Founder</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    "Listen. Learn. Implement.™ Transform Together."
+                    See how the LLI Framework™ creates lasting organizational transformation
                 </p>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Founder Image -->
-                <div class="order-2 lg:order-1" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="image-hover relative">
-                        <div class="aspect-w-4 aspect-h-5 bg-gradient-to-br from-primary-200 to-accent-200 rounded-2xl overflow-hidden shadow-2xl">
-                            <img 
-                                src="https://page.gensparksite.com/v1/base64_upload/d2587015bf5f776d9212e72f6427e4d6" 
-                                alt="Chiara Smith, MA - Founder and CEO of CTS Consulting" 
-                                class="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
-                                loading="lazy"
-                            />
-                        </div>
-                        
-                        <!-- Achievement badges -->
-                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-lg">
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-primary-600">15+</div>
-                                <div class="text-xs text-gray-600">Years</div>
-                            </div>
-                        </div>
-                        
-                        <div class="absolute -top-6 -left-6 bg-white p-4 rounded-2xl shadow-lg">
-                            <div class="text-center">
-                                <div class="text-lg font-bold text-gold-600">LLI™</div>
-                                <div class="text-xs text-gray-600">Creator</div>
-                            </div>
-                        </div>
-                    </div>
+                <div data-aos="fade-right">
+                    <img 
+                        src="https://www.gartner.com/ngw/globalassets/en/articles/images/how-to-increase-change-management-success.png" 
+                        alt="Change management success methodology"
+                        class="w-full h-96 object-cover rounded-2xl shadow-xl"
+                        loading="lazy"
+                    />
                 </div>
                 
-                <!-- Founder Content -->
-                <div class="order-1 lg:order-2" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="space-y-6">
-                        <div>
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2 font-playfair">Chiara Smith, MA</h3>
-                            <div class="space-y-2 text-lg text-gray-600">
-                                <p class="font-semibold">Founder • Equity Strategist • Community Architect</p>
-                                <p class="font-semibold text-primary-600">CEO of CTS Consulting™ | Creator of the LLI Framework™</p>
-                            </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Real Results, Measured Impact</h3>
+                    <div class="space-y-4">
+                        <div class="bg-primary-50 p-4 rounded-lg border-l-4 border-primary-500">
+                            <h4 class="font-semibold text-gray-900 mb-1">Healthcare Organization</h4>
+                            <p class="text-gray-600">65% improvement in psychological safety scores within 6 months</p>
                         </div>
-                        
-                        <div class="w-24 h-1 bg-gradient-to-r from-gold-400 to-gold-600 rounded-full"></div>
-                        
-                        <div class="space-y-4 text-gray-700 leading-relaxed">
-                            <p>
-                                Chiara Smith, MA, is a trusted equity advisor and thought leader committed to systems change. 
-                                As the Founder and CEO of CTS Consulting™, she supports organizations, institutions, and communities 
-                                in building cultures grounded in psychological safety, racial equity, and collective well-being.
-                            </p>
-                            
-                            <p>
-                                With over 15 years in strategy, leadership development, and community engagement work, 
-                                Chiara's approach is always intentional — not performative. Whether through coaching, 
-                                listening sessions, or strategic planning, her focus is on concrete shifts that last.
-                            </p>
-                            
-                            <p class="bg-primary-50 p-4 rounded-lg border-l-4 border-primary-500">
-                                <strong>Notable Achievement:</strong> Author of "The Illusion of Inclusive Workspaces and the 
-                                Psychological Safety of BIPOC Colleagues" — Grant makers In Health's most-read article of 2021.
-                            </p>
+                        <div class="bg-gold-50 p-4 rounded-lg border-l-4 border-gold-500">
+                            <h4 class="font-semibold text-gray-900 mb-1">Tech Company</h4>
+                            <p class="text-gray-600">40% increase in diverse leadership representation in 1 year</p>
                         </div>
-                        
-                        <!-- Credentials -->
-                        <div class="grid grid-cols-2 gap-4 pt-6">
-                            <div class="bg-white p-4 rounded-lg shadow-sm">
-                                <div class="flex items-center">
-                                    <i class="fas fa-graduation-cap text-primary-500 mr-3"></i>
-                                    <div>
-                                        <div class="font-semibold text-gray-900">Masters Degree</div>
-                                        <div class="text-sm text-gray-600">Human Relations</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="bg-white p-4 rounded-lg shadow-sm">
-                                <div class="flex items-center">
-                                    <i class="fas fa-map-marker-alt text-accent-500 mr-3"></i>
-                                    <div>
-                                        <div class="font-semibold text-gray-900">Rochester Native</div>
-                                        <div class="text-sm text-gray-600">Deep Community Roots</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Fun Fact -->
-                        <div class="bg-gradient-to-r from-gold-50 to-gold-100 p-6 rounded-2xl border border-gold-200">
-                            <h4 class="font-bold text-gray-900 mb-2 flex items-center">
-                                <i class="fas fa-lightbulb text-gold-500 mr-2"></i>
-                                Fun Fact
-                            </h4>
-                            <p class="text-gray-700">
-                                Chiara is also the creative force behind <strong>Do Gooder: The Earth Conscious Brand™</strong> 
-                                and the founder of the <strong>14621 Food Stands</strong>, a mutual-aid initiative that fed 
-                                thousands during the COVID-19 pandemic.
-                            </p>
+                        <div class="bg-accent-50 p-4 rounded-lg border-l-4 border-accent-500">
+                            <h4 class="font-semibold text-gray-900 mb-1">Nonprofit Organization</h4>
+                            <p class="text-gray-600">89% employee satisfaction with new equity initiatives</p>
                         </div>
                     </div>
                 </div>
@@ -736,8 +557,43 @@ app.get('/', (c) => {
         </div>
     </section>
 
-    <!-- Interactive Assessment Tool -->
-    <section id="assessment" class="py-20 bg-white">
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6 font-playfair">Ready to Implement the LLI Framework™?</h2>
+            <p class="text-xl text-gray-200 mb-8">
+                Start your transformation journey with our proven methodology.
+            </p>
+            <div class="space-x-6">
+                <a href="/assessment" class="inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    Take Assessment
+                </a>
+                <a href="/contact" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-300">
+                    Schedule Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+  `
+  
+  return c.html(Layout({ children: content, title: 'LLI Framework™ - Our Proven Methodology', currentPage: 'framework' }))
+})
+
+// Assessment Page  
+app.get('/assessment', (c) => {
+  const content = `
+    <!-- Page Header -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl sm:text-6xl font-bold mb-6 font-playfair">Equity Readiness Assessment</h1>
+            <p class="text-xl text-gray-200 leading-relaxed">
+                Discover where your organization stands today and get personalized recommendations for your transformation journey.
+            </p>
+        </div>
+    </section>
+
+    <!-- Assessment Tool -->
+    <section class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12" data-aos="fade-up">
                 <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 font-playfair">Where Is Your Organization Today?</h2>
@@ -927,7 +783,7 @@ app.get('/', (c) => {
                     </div>
                     
                     <div class="text-center">
-                        <a href="#contact" class="inline-block bg-gradient-to-r from-primary-500 to-accent-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 mr-4">
+                        <a href="/contact" class="inline-block bg-gradient-to-r from-primary-500 to-accent-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 mr-4">
                             <i class="fas fa-calendar mr-2"></i>Schedule Consultation
                         </a>
                         <button id="retake-assessment" class="inline-block bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-full font-semibold transition-colors">
@@ -939,45 +795,375 @@ app.get('/', (c) => {
         </div>
     </section>
 
-    <!-- Call to Action Section -->
+    <!-- Why Take Assessment -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-primary-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6 font-playfair">Why Take This Assessment?</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map text-primary-500 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Know Where You Stand</h3>
+                                <p class="text-gray-600">Get an honest assessment of your organization's current equity maturity level.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-route text-gold-500 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Personalized Roadmap</h3>
+                                <p class="text-gray-600">Receive tailored recommendations based on your specific needs and industry.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-target text-accent-500 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Strategic Priority</h3>
+                                <p class="text-gray-600">Identify the highest-impact areas for your transformation journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <img 
+                        src="https://www.aihr.com/wp-content/uploads/Organizational-Transformation.jpg" 
+                        alt="Organizational transformation assessment and planning"
+                        class="w-full h-96 object-cover rounded-2xl shadow-xl"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+  `
+  
+  return c.html(Layout({ children: content, title: 'Free Equity Assessment - Discover Your Readiness', currentPage: 'assessment' }))
+})
+
+// Services Page
+app.get('/services', async (c) => {
+  const { servicesPage } = await import('./pages/services')
+  return c.html(Layout({ children: servicesPage, title: 'Our Services - Comprehensive Equity Solutions', currentPage: 'services' }))
+})
+
+// Founder Page
+app.get('/founder', (c) => {
+  const content = `
+    <!-- Page Header -->
     <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="text-4xl sm:text-5xl font-bold mb-6 font-playfair">
-                    Your People Deserve Safe, Equity-Centered Spaces to Thrive
-                </h2>
-                <p class="text-xl text-gray-200 mb-8 leading-relaxed">
-                    Let's co-create the systems that support that transformation.
-                </p>
-                <div class="space-y-4 sm:space-y-0 sm:space-x-6 sm:flex sm:justify-center">
-                    <a href="#contact" class="inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-gold-400 hover:to-gold-500 transform hover:scale-105 transition-all duration-300 shadow-lg">
-                        <i class="fas fa-calendar mr-2"></i>
-                        Schedule Your Consultation
-                    </a>
-                    <a href="tel:+15859051772" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-300">
-                        <i class="fas fa-phone mr-2"></i>
-                        Call Us Today
-                    </a>
+            <h1 class="text-5xl sm:text-6xl font-bold mb-6 font-playfair">Meet Our Founder</h1>
+            <p class="text-xl text-gray-200 leading-relaxed">
+                "Listen. Learn. Implement.™ Transform Together."
+            </p>
+        </div>
+    </section>
+
+    <!-- Founder Profile -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Founder Image -->
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <div class="image-hover relative">
+                        <div class="aspect-w-4 aspect-h-5 bg-gradient-to-br from-primary-200 to-accent-200 rounded-2xl overflow-hidden shadow-2xl">
+                            <img 
+                                src="https://page.gensparksite.com/v1/base64_upload/d2587015bf5f776d9212e72f6427e4d6" 
+                                alt="Chiara Smith, MA - Founder and CEO of CTS Consulting" 
+                                class="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                                loading="lazy"
+                            />
+                        </div>
+                        
+                        <!-- Achievement badges -->
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-lg">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-primary-600">15+</div>
+                                <div class="text-xs text-gray-600">Years</div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute -top-6 -left-6 bg-white p-4 rounded-2xl shadow-lg">
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-gold-600">LLI™</div>
+                                <div class="text-xs text-gray-600">Creator</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Founder Content -->
+                <div data-aos="fade-left" data-aos-duration="1000">
+                    <div class="space-y-6">
+                        <div>
+                            <h2 class="text-4xl font-bold text-gray-900 mb-4 font-playfair">Chiara Smith, MA</h2>
+                            <div class="space-y-2 text-lg text-gray-600">
+                                <p class="font-semibold text-xl">Founder • Equity Strategist • Community Architect</p>
+                                <p class="font-semibold text-primary-600">CEO of CTS Consulting™ | Creator of the LLI Framework™</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-24 h-1 bg-gradient-to-r from-gold-400 to-gold-600 rounded-full"></div>
+                        
+                        <div class="space-y-4 text-gray-700 leading-relaxed">
+                            <p>
+                                Chiara Smith, MA, is a trusted equity advisor and thought leader committed to systems change. 
+                                As the Founder and CEO of CTS Consulting™, she supports organizations, institutions, and communities 
+                                in building cultures grounded in psychological safety, racial equity, and collective well-being.
+                            </p>
+                            
+                            <p>
+                                With over 15 years in strategy, leadership development, and community engagement work, 
+                                Chiara's approach is always intentional — not performative. Whether through coaching, 
+                                listening sessions, or strategic planning, her focus is on concrete shifts that last.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-primary-50 p-6 rounded-lg border-l-4 border-primary-500">
+                            <h3 class="font-bold text-primary-800 mb-2 flex items-center">
+                                <i class="fas fa-star text-gold-500 mr-2"></i>
+                                Notable Achievement
+                            </h3>
+                            <p class="text-primary-700">
+                                Author of "The Illusion of Inclusive Workspaces and the Psychological Safety of BIPOC Colleagues" — 
+                                Grant makers In Health's most-read article of 2021, sparking national conversations on organizational wellness.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
+    <!-- Credentials & Experience -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-primary-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 font-playfair">Start Your Transformation</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Ready to build safe, equitable cultures? Let's begin the conversation about your organization's journey.
-                </p>
+                <h2 class="text-4xl font-bold text-gray-900 mb-6 font-playfair">Experience & Credentials</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-graduation-cap text-4xl text-primary-500 mb-4"></i>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Masters Degree</h3>
+                    <p class="text-gray-600">Human Relations</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-award text-4xl text-gold-500 mb-4"></i>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">15+ Years</h3>
+                    <p class="text-gray-600">Strategy & Leadership Development</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-map-marker-alt text-4xl text-accent-500 mb-4"></i>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Rochester Native</h3>
+                    <p class="text-gray-600">Deep Community Roots</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-lightbulb text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Framework Creator</h3>
+                    <p class="text-gray-600">LLI Framework™ Innovator</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Philosophy -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img 
+                        src="https://www.ccl.org/wp-content/uploads/2023/03/leading-with-wellbeing-infographic-center-for-creative-leadership.png.webp" 
+                        alt="Leading with wellbeing - culture, leadership and wellbeing interconnection"
+                        class="w-full h-96 object-cover rounded-2xl shadow-xl"
+                        loading="lazy"
+                    />
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6 font-playfair">Leadership Philosophy</h2>
+                    <div class="space-y-6">
+                        <blockquote class="text-lg italic text-gray-700 border-l-4 border-gold-500 pl-6">
+                            "Her leadership style blends strategy with soul — rooted in values, guided by data, 
+                            and committed to crafting spaces where people feel seen, safe, and supported."
+                        </blockquote>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-heart text-primary-500 text-xl mr-4 mt-1"></i>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Values-Driven Leadership</h3>
+                                    <p class="text-gray-600">Every strategy rooted in authentic values and genuine care for human dignity.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-chart-line text-accent-500 text-xl mr-4 mt-1"></i>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Data-Informed Decisions</h3>
+                                    <p class="text-gray-600">Combining emotional intelligence with analytical rigor for sustainable outcomes.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-users text-gold-500 text-xl mr-4 mt-1"></i>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Community-Centered Approach</h3>
+                                    <p class="text-gray-600">Building solutions with communities, not for them — authentic co-creation at every step.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts & Impact -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-primary-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6 font-playfair">Beyond Consulting</h2>
+                <p class="text-xl text-gray-600">Community impact and entrepreneurial ventures</p>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-leaf text-3xl text-green-500 mr-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-900">Do Gooder: The Earth Conscious Brand™</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Creative force behind an innovative sustainable brand that combines environmental consciousness 
+                        with social impact, demonstrating how business can be a force for positive change.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-utensils text-3xl text-gold-500 mr-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-900">14621 Food Stands Initiative</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Founded mutual-aid initiative that fed thousands during the COVID-19 pandemic, 
+                        demonstrating community-centered leadership and rapid response to crisis through 
+                        grassroots organizing and authentic community partnership.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Speaking & Recognition -->
+            <div class="mt-16 text-center" data-aos="fade-up">
+                <div class="bg-gradient-to-r from-primary-50 to-accent-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Speaking & Recognition</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Chiara has spoken at national forums on leadership, health equity, and community power, 
+                        sharing insights that bridge grassroots organizing with institutional transformation.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+                        <span class="bg-white px-4 py-2 rounded-full">National Health Equity Forums</span>
+                        <span class="bg-white px-4 py-2 rounded-full">Leadership Development Conferences</span>
+                        <span class="bg-white px-4 py-2 rounded-full">Community Power Symposiums</span>
+                        <span class="bg-white px-4 py-2 rounded-full">Grant makers In Health Publications</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6 font-playfair">Ready to Work with Chiara?</h2>
+            <p class="text-xl text-gray-200 mb-8">
+                Experience firsthand what values-driven, data-informed leadership can do for your organization.
+            </p>
+            <div class="space-x-6">
+                <a href="/assessment" class="inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    Start with Assessment
+                </a>
+                <a href="/contact" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-300">
+                    Schedule Meeting
+                </a>
+            </div>
+        </div>
+    </section>
+  `
+  
+  return c.html(Layout({ children: content, title: 'Chiara Smith, MA - Founder & CEO', currentPage: 'founder' }))
+})
+
+// Contact Page
+app.get('/contact', (c) => {
+  const content = `
+    <!-- Page Header -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl sm:text-6xl font-bold mb-6 font-playfair">Get in Touch</h1>
+            <p class="text-xl text-gray-200 leading-relaxed">
+                Ready to start your transformation journey? Let's begin the conversation about building safe, equitable cultures together.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+                    <p class="text-gray-600 mb-3">Speak directly with our team</p>
+                    <a href="tel:+15859051772" class="text-primary-600 hover:text-primary-800 font-semibold text-lg">
+                        (585) 905-1772
+                    </a>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+                    <p class="text-gray-600 mb-3">Send us a detailed message</p>
+                    <a href="mailto:hello@ctsconsulting.com" class="text-accent-600 hover:text-accent-800 font-semibold text-lg">
+                        hello@ctsconsulting.com
+                    </a>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+                    <p class="text-gray-600 mb-3">Rochester, NY & Virtual</p>
+                    <span class="text-gold-600 font-semibold text-lg">
+                        Consultations Available
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-primary-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Contact Form -->
                 <div data-aos="fade-right" data-aos-duration="1000">
-                    <div class="bg-gradient-to-br from-gray-50 to-primary-50 p-8 rounded-2xl shadow-lg">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
+                    <div class="bg-white p-8 rounded-2xl shadow-xl">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 font-playfair">Start Your Transformation</h2>
+                        <p class="text-gray-600 mb-8">
+                            Ready to build safe, equitable cultures? Let's begin the conversation about your organization's journey.
+                        </p>
                         
                         <form id="contact-form" class="space-y-6">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -1080,92 +1266,83 @@ app.get('/', (c) => {
                     </div>
                 </div>
                 
-                <!-- Contact Information -->
+                <!-- Contact Information & Benefits -->
                 <div data-aos="fade-left" data-aos-duration="1000">
                     <div class="space-y-8">
-                        <!-- Contact Details -->
-                        <div class="bg-white p-8 rounded-2xl shadow-lg">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
-                            
-                            <div class="space-y-4">
-                                <div class="flex items-center">
-                                    <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
-                                        <i class="fas fa-envelope text-primary-600"></i>
-                                    </div>
-                                    <div>
-                                        <div class="font-semibold text-gray-900">Email</div>
-                                        <a href="mailto:hello@ctsconsulting.com" class="text-primary-600 hover:text-primary-800 transition-colors">
-                                            hello@ctsconsulting.com
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-center">
-                                    <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mr-4">
-                                        <i class="fas fa-phone text-accent-600"></i>
-                                    </div>
-                                    <div>
-                                        <div class="font-semibold text-gray-900">Phone</div>
-                                        <a href="tel:+15859051772" class="text-accent-600 hover:text-accent-800 transition-colors">
-                                            (585) 905-1772
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-center">
-                                    <div class="w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center mr-4">
-                                        <i class="fas fa-map-marker-alt text-gold-600"></i>
-                                    </div>
-                                    <div>
-                                        <div class="font-semibold text-gray-900">Location</div>
-                                        <span class="text-gray-600">Rochester, NY & Virtual Consultations</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
                         <!-- Why Choose Us -->
-                        <div class="bg-gradient-to-br from-primary-50 to-accent-50 p-8 rounded-2xl">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-6">Why Choose CTS Consulting?</h3>
+                        <div class="bg-white p-8 rounded-2xl shadow-lg">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6 font-playfair">Why Choose CTS Consulting?</h3>
                             
-                            <div class="space-y-4">
+                            <div class="space-y-6">
                                 <div class="flex items-start">
-                                    <i class="fas fa-star text-gold-500 mr-3 mt-1"></i>
+                                    <i class="fas fa-star text-gold-500 text-xl mr-4 mt-1"></i>
                                     <div>
-                                        <div class="font-semibold text-gray-900">Proven Framework</div>
-                                        <div class="text-gray-600">LLI Framework™ with measurable outcomes</div>
+                                        <div class="font-semibold text-gray-900 mb-1">Proven Framework</div>
+                                        <div class="text-gray-600">LLI Framework™ with measurable outcomes and 95% satisfaction rate</div>
                                     </div>
                                 </div>
                                 
                                 <div class="flex items-start">
-                                    <i class="fas fa-users text-primary-500 mr-3 mt-1"></i>
+                                    <i class="fas fa-users text-primary-500 text-xl mr-4 mt-1"></i>
                                     <div>
-                                        <div class="font-semibold text-gray-900">15+ Years Experience</div>
-                                        <div class="text-gray-600">Deep expertise in equity and transformation</div>
+                                        <div class="font-semibold text-gray-900 mb-1">15+ Years Experience</div>
+                                        <div class="text-gray-600">500+ leaders transformed across healthcare, nonprofit, education, and corporate sectors</div>
                                     </div>
                                 </div>
                                 
                                 <div class="flex items-start">
-                                    <i class="fas fa-heart text-accent-500 mr-3 mt-1"></i>
+                                    <i class="fas fa-heart text-accent-500 text-xl mr-4 mt-1"></i>
                                     <div>
-                                        <div class="font-semibold text-gray-900">Holistic Approach</div>
-                                        <div class="text-gray-600">Strategy with soul, rooted in values</div>
+                                        <div class="font-semibold text-gray-900 mb-1">Holistic Approach</div>
+                                        <div class="text-gray-600">Strategy with soul — rooted in values, guided by data, committed to lasting change</div>
                                     </div>
                                 </div>
                                 
                                 <div class="flex items-start">
-                                    <i class="fas fa-chart-line text-gold-500 mr-3 mt-1"></i>
+                                    <i class="fas fa-chart-line text-gold-500 text-xl mr-4 mt-1"></i>
                                     <div>
-                                        <div class="font-semibold text-gray-900">Real Results</div>
-                                        <div class="text-gray-600">Sustainable, systems-level change</div>
+                                        <div class="font-semibold text-gray-900 mb-1">Real Results</div>
+                                        <div class="text-gray-600">3x faster transformation with sustainable, systems-level change that lasts</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Social Links -->
+                        <!-- Next Steps -->
+                        <div class="bg-gradient-to-br from-primary-50 to-accent-50 p-8 rounded-2xl border border-primary-200">
+                            <h3 class="text-xl font-bold text-gray-900 mb-6">What Happens Next?</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-6 h-6 bg-primary-500 text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 text-sm font-bold">1</div>
+                                    <div>
+                                        <div class="font-semibold text-gray-900">Initial Consultation</div>
+                                        <div class="text-gray-600 text-sm">30-minute discovery call to understand your needs</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-6 h-6 bg-accent-500 text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 text-sm font-bold">2</div>
+                                    <div>
+                                        <div class="font-semibold text-gray-900">Customized Proposal</div>
+                                        <div class="text-gray-600 text-sm">Tailored strategy and timeline for your transformation</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-6 h-6 bg-gold-500 text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 text-sm font-bold">3</div>
+                                    <div>
+                                        <div class="font-semibold text-gray-900">LLI Framework™ Implementation</div>
+                                        <div class="text-gray-600 text-sm">Begin your journey from insight to impact</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Connect -->
                         <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
                             <h3 class="text-xl font-bold text-gray-900 mb-4">Connect With Us</h3>
+                            <p class="text-gray-600 mb-6">Follow our journey and get insights on equity transformation</p>
                             <div class="flex justify-center space-x-4">
                                 <a href="#" class="w-12 h-12 bg-primary-100 hover:bg-primary-200 rounded-full flex items-center justify-center transition-colors">
                                     <i class="fab fa-linkedin-in text-primary-600"></i>
@@ -1184,59 +1361,40 @@ app.get('/', (c) => {
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Brand -->
-                <div>
-                    <h3 class="text-2xl font-bold mb-4 font-playfair">CTS Consulting</h3>
-                    <p class="text-gray-300 mb-4">
-                        Building a world where equity is not just a value — it's an outcome.
-                    </p>
-                    <p class="text-gold-400 font-semibold">
-                        "Listen. Learn. Implement.™ Transform Together."
-                    </p>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#about" class="text-gray-300 hover:text-gold-400 transition-colors">About</a></li>
-                        <li><a href="#framework" class="text-gray-300 hover:text-gold-400 transition-colors">LLI Framework™</a></li>
-                        <li><a href="#services" class="text-gray-300 hover:text-gold-400 transition-colors">Services</a></li>
-                        <li><a href="#founder" class="text-gray-300 hover:text-gold-400 transition-colors">Founder</a></li>
-                        <li><a href="#contact" class="text-gray-300 hover:text-gold-400 transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contact Info -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Get in Touch</h4>
-                    <div class="space-y-2 text-gray-300">
-                        <p><i class="fas fa-envelope mr-2"></i> hello@ctsconsulting.com</p>
-                        <p><i class="fas fa-phone mr-2"></i> (585) 905-1772</p>
-                        <p><i class="fas fa-map-marker-alt mr-2"></i> Rochester, NY</p>
+    <!-- Alternative Contact Methods -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 font-playfair">Prefer a Different Approach?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-2xl">
+                        <i class="fas fa-chart-line text-4xl text-primary-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Start with Assessment</h3>
+                        <p class="text-gray-600 mb-6">
+                            Not sure where to begin? Take our free assessment to get personalized recommendations.
+                        </p>
+                        <a href="/assessment" class="inline-block bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-full font-semibold transition-colors">
+                            Take Free Assessment
+                        </a>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-gold-50 to-gold-100 p-8 rounded-2xl">
+                        <i class="fas fa-phone text-4xl text-gold-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Call Directly</h3>
+                        <p class="text-gray-600 mb-6">
+                            Prefer to speak directly? Call us for an immediate conversation about your needs.
+                        </p>
+                        <a href="tel:+15859051772" class="inline-block bg-gold-500 hover:bg-gold-600 text-black px-6 py-3 rounded-full font-semibold transition-colors">
+                            (585) 905-1772
+                        </a>
                     </div>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">
-                    &copy; 2024 CTS Consulting. All rights reserved. | LLI Framework™ is a trademark of CTS Consulting.
-                </p>
-            </div>
         </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.0/dist/axios.min.js"></script>
-    <script src="/static/app.js"></script>
-</body>
-</html>
-  `)
+    </section>
+  `
+  
+  return c.html(Layout({ children: content, title: 'Contact Us - Start Your Transformation', currentPage: 'contact' }))
 })
 
 export default app
