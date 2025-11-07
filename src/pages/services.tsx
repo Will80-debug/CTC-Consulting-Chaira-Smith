@@ -68,10 +68,9 @@ export const ServicesPage = () => {
                   <button 
                     id="watch-video-btn"
                     className="bg-lli-red hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl flex items-center mx-auto space-x-3"
-                    onclick="toggleVideo()"
                   >
                     <i className="fas fa-play text-lg"></i>
-                    <span className="text-lg">Watch Video</span>
+                    <span className="text-lg ml-2">Watch Video</span>
                   </button>
                 </div>
               </div>
@@ -199,43 +198,7 @@ export const ServicesPage = () => {
       </footer>
 
       {/* JavaScript for Video Toggle */}
-      <script dangerouslySetInnerHTML={{
-        __html: `
-          function toggleVideo() {
-            const video = document.getElementById('coaching-video');
-            const placeholder = document.getElementById('video-placeholder');
-            const button = document.getElementById('watch-video-btn');
-            
-            if (video.classList.contains('hidden')) {
-              // Show video, hide placeholder
-              video.classList.remove('hidden');
-              placeholder.style.display = 'none';
-              
-              // Update button to "Hide Video"
-              button.innerHTML = '<i class="fas fa-eye-slash text-lg"></i><span class="text-lg">Hide Video</span>';
-              button.classList.remove('bg-lli-red', 'hover:bg-red-700');
-              button.classList.add('bg-gray-600', 'hover:bg-gray-700');
-              
-              // Auto-play the video
-              video.play().catch(e => {
-                console.log('Auto-play prevented by browser:', e);
-              });
-            } else {
-              // Hide video, show placeholder
-              video.classList.add('hidden');
-              placeholder.style.display = 'flex';
-              
-              // Update button back to "Watch Video"
-              button.innerHTML = '<i class="fas fa-play text-lg"></i><span class="text-lg">Watch Video</span>';
-              button.classList.remove('bg-gray-600', 'hover:bg-gray-700');
-              button.classList.add('bg-lli-red', 'hover:bg-red-700');
-              
-              // Pause the video
-              video.pause();
-            }
-          }
-        `
-      }}></script>
+      <script src="/static/video-player.js"></script>
     </div>
   )
 }
