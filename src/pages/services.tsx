@@ -1,6 +1,7 @@
 export const ServicesPage = () => {
   const logoUrl = "https://page.gensparksite.com/v1/base64_upload/76289e59443ab0b47d1ab4851999fbe6"
   const chiaraPhotoUrl = "https://page.gensparksite.com/v1/base64_upload/e6822a23cff671668f780475724b62e7"
+  const introVideoUrl = "https://page.gensparksite.com/get_upload_url/f3ade8ec614b90cdfd115b763d7da8b6d74c6e28f60223e4eca0ae0ca5e13349/default/c3bdcd60-64b6-44dc-854d-ab1b78c33435"
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
@@ -22,6 +23,127 @@ export const ServicesPage = () => {
           </div>
         </div>
       </header>
+
+      {/* Introduction Video Section */}
+      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Welcome to LLI Consulting Group
+            </h2>
+            <p className="text-xl text-gray-300">
+              Transforming Leadership, Building Culture, Creating Impact
+            </p>
+          </div>
+          
+          {/* Video Player */}
+          <div className="bg-black rounded-2xl overflow-hidden shadow-2xl mb-8">
+            <video 
+              className="w-full"
+              controls
+              preload="metadata"
+              poster=""
+            >
+              <source src={introVideoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          {/* LLI Framework Overview */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <div className="text-center mb-10">
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                The LLI Framework
+              </h3>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                Our proven methodology transforms organizations through three powerful stages, moving beyond performative actions to create measurable, lasting change.
+              </p>
+            </div>
+
+            {/* Framework Steps */}
+            <div className="grid md:grid-cols-3 gap-8 mb-10">
+              {/* Listen */}
+              <div className="text-center">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-transform duration-300">
+                  <i className="fas fa-ear-listen text-4xl"></i>
+                </div>
+                <h4 className="text-2xl font-bold text-orange-600 mb-3">Listen Deeply</h4>
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  We engage with your organization to understand its unique challenges, culture, and aspirations. Through careful listening, we identify the real issues beneath surface-level symptoms.
+                </p>
+              </div>
+
+              {/* Learn */}
+              <div className="text-center">
+                <div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-transform duration-300">
+                  <i className="fas fa-graduation-cap text-4xl"></i>
+                </div>
+                <h4 className="text-2xl font-bold text-teal-600 mb-3">Learn Courageously</h4>
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  We develop customized strategies and solutions rooted in equity-centered principles. Together, we explore new approaches that challenge the status quo and drive authentic transformation.
+                </p>
+              </div>
+
+              {/* Implement */}
+              <div className="text-center">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-transform duration-300">
+                  <i className="fas fa-rocket text-4xl"></i>
+                </div>
+                <h4 className="text-2xl font-bold text-orange-600 mb-3">Implement Boldly</h4>
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  We translate insights into action through coaching, strategy, and equity-centered culture design. This is where transformation becomes tangible and sustainable.
+                </p>
+              </div>
+            </div>
+
+            {/* Framework Impact */}
+            <div className="bg-gradient-to-br from-orange-50 via-teal-50 to-orange-50 rounded-xl p-8 border-2 border-orange-200">
+              <h4 className="text-2xl font-bold text-gray-900 mb-6 text-center">Creating Lasting Impact</h4>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <i className="fas fa-check-circle text-teal-600 text-2xl mt-1"></i>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-lg text-gray-900 mb-2">Build Trust & Psychological Safety</h5>
+                    <p className="text-gray-700">Create environments where innovation thrives and every voice matters</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <i className="fas fa-check-circle text-orange-600 text-2xl mt-1"></i>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-lg text-gray-900 mb-2">Make Equity Actionable</h5>
+                    <p className="text-gray-700">Move beyond statements to measurable actions that transform culture daily</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <i className="fas fa-check-circle text-teal-600 text-2xl mt-1"></i>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-lg text-gray-900 mb-2">Shape Tomorrow's Leadership</h5>
+                    <p className="text-gray-700">Develop leaders who drive authentic change from executive to organization-wide levels</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <i className="fas fa-check-circle text-orange-600 text-2xl mt-1"></i>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-lg text-gray-900 mb-2">Drive Measurable Results</h5>
+                    <p className="text-gray-700">Create tangible outcomes that demonstrate real organizational transformation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Hero Section with Background Pattern */}
       <section className="relative py-20 overflow-hidden">
