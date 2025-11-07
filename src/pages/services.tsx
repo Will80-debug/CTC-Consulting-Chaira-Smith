@@ -197,7 +197,12 @@ export const ServicesPage = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2">
+            <a 
+              href="https://www.LLIConsulting.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2 cursor-pointer"
+            >
               <div className="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
                 <i className="fas fa-users text-white text-6xl opacity-90"></i>
               </div>
@@ -211,9 +216,14 @@ export const ServicesPage = () => {
                   <i className="fas fa-arrow-right ml-2"></i>
                 </div>
               </div>
-            </div>
+            </a>
             
-            <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2">
+            <a 
+              href="https://www.LLIConsulting.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2 cursor-pointer"
+            >
               <div className="h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
                 <i className="fas fa-building text-white text-6xl opacity-90"></i>
               </div>
@@ -227,9 +237,14 @@ export const ServicesPage = () => {
                   <i className="fas fa-arrow-right ml-2"></i>
                 </div>
               </div>
-            </div>
+            </a>
             
-            <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2">
+            <a 
+              href="https://www.LLIConsulting.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2 cursor-pointer"
+            >
               <div className="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
                 <i className="fas fa-chalkboard-teacher text-white text-6xl opacity-90"></i>
               </div>
@@ -243,7 +258,7 @@ export const ServicesPage = () => {
                   <i className="fas fa-arrow-right ml-2"></i>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </section>
       </main>
