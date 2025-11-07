@@ -1,7 +1,13 @@
 export const ServicesPage = () => {
   const logoUrl = "https://page.gensparksite.com/v1/base64_upload/76289e59443ab0b47d1ab4851999fbe6"
   const chiaraPhotoUrl = "https://page.gensparksite.com/v1/base64_upload/e6822a23cff671668f780475724b62e7"
-  const introVideoUrl = "https://page.gensparksite.com/get_upload_url/f3ade8ec614b90cdfd115b763d7da8b6d74c6e28f60223e4eca0ae0ca5e13349/default/c3bdcd60-64b6-44dc-854d-ab1b78c33435"
+  const introVideoUrl = "https://page.gensparksite.com/get_upload_url/f3ade8ec614b90cdfd115b763d7da8b6d74c6e28f60223e4eca0ae0ca5e13349/default/65faa4a0-caea-452d-a9fc-f8af558c38fd"
+  
+  // Additional professional images for visual appeal
+  const teamMeetingImg = "https://sspark.genspark.ai/cfimages?u1=p3451G3ZEplqSVU1hpWslMBIRhknlX84CsLjYH3SkznuTIrlkxpyLAuCwkmtMFXbwhpEvre9YJ3e99PmcLuDRrpBMd2vgWUNT%2BvkZwb2HqDUbZe%2FfwNbySP593IfQLzHOX%2FP1WA3WLrjXpp%2FnLigzhI%2B5CHarzSTteaGCdJuAw7caVHr%2FR8IrzhY3HPD5eqAoLqHXC9oAtaaRBQ4DxSo3yzd1vrQGBSFuJKrYw%3D%3D&u2=r5lJXZBmG11V2fj%2B&width=2560"
+  const diversityImg = "https://sspark.genspark.ai/cfimages?u1=mBzrm%2FITxbifSCnl6VSi0VBL8jW7BYLARSnPGIKDFLwD%2FztAX0QY59OB%2BpFGhr3%2BB1QFUtKFUdxUJ2YiK3N1k8HIw6w9q6rfDEPoTVb9HCSRcZUqllhE5XVLSQUkJnzqsl%2BDhdoCuljW&u2=AJs5ASJIXhyWd%2FHw&width=2560"
+  const leadershipImg = "https://sspark.genspark.ai/cfimages?u1=ghImmXMbKrGBMxYuscEj017YLMrF0DuubmxINuyW3IRDyr7yWiBRs7RVJ1n4aDLhNcPJo7gV7gzv8zDCMDIWIhu%2BIXi%2FBTIEIfDfaGUQ5kPejVntVrPMHks0xMBbNPeZRMX41IgOaDi2QFodGwkIOOAsYXw2vpMdhbYvKMsTc8bXCmCVH%2BW2dVHsh0601%2BVtEvftdaQ7ixSB3FDhc9NXrZUy3MBL&u2=DRJBwiDrnjEHDgQ%2B&width=2560"
+  const confidentLeaderImg = "https://sspark.genspark.ai/cfimages?u1=libfD%2BLiDFBvnWLRicgCLgdV4Xf5%2B8x7ENBS1SbKL4u3KHw4O25%2Fc%2By695hEukTSkJVOPhIBtsm5x0PYfdOBGYc%2BY8RK40ErfWDTwDrddbgFznxJjD%2BUxM%2Bf%2Bft2nQMtOCKUM2V%2F%2F9%2BIMXLPAttKVX2dQhwBm5FHBtlUIuC8qudpi8BMId3mwyR3Y%2FWxhkXkC443R4fS3FdZ1L3zGTuvpKHEFG0xChuzpwB7jWbMxF9eXX%2FG1iexpa6xMTbk%2FsTcRJrwcNBTOgoqJLmjQPbBsZlfe1pyFA4V001LZyj2REGI8HQnnvupsAJfVZk%2BXZCiInzQV65mW5ziXLHY7yQocdLmhaFv4idK7IsqtoPgitvJoxT%2BvOLBFjDT%2FUNC&u2=XxZr0F61XXEU8HKB&width=2560"
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
@@ -145,15 +151,24 @@ export const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Hero Section with Background Pattern */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-teal-50 to-orange-50 opacity-50"></div>
+      {/* Hero Section with Background Image */}
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img 
+            src={teamMeetingImg} 
+            alt="Professional Team Meeting" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-lli-black via-lli-black/90 to-lli-black/70"></div>
+        </div>
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <div className="text-center">
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
               Lead with <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-orange to-lli-teal">Confidence</span>, <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-teal to-lli-orange">Clarity</span>, and <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-orange to-lli-teal">Purpose</span>
             </h2>
-            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-100 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
               Unlock your authentic leadership potential through personalized 1:1 coaching designed for emerging leaders and seasoned professionals.
             </p>
           </div>
@@ -203,6 +218,25 @@ export const ServicesPage = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Visual Divider - Leadership Excellence */}
+        <section className="mb-20 relative h-96 overflow-hidden rounded-3xl">
+          <img 
+            src={confidentLeaderImg} 
+            alt="Confident Leader" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-lli-orange/80 to-lli-teal/80 flex items-center justify-center">
+            <div className="text-center text-white px-4">
+              <h3 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+                Transform Your Leadership Journey
+              </h3>
+              <p className="text-xl md:text-2xl max-w-3xl mx-auto drop-shadow-md">
+                From self-awareness to organizational impact
+              </p>
             </div>
           </div>
         </section>
@@ -309,6 +343,25 @@ export const ServicesPage = () => {
           </div>
         </section>
 
+        {/* Visual Divider - Diversity & Inclusion */}
+        <section className="mb-20 relative h-96 overflow-hidden rounded-3xl">
+          <img 
+            src={diversityImg} 
+            alt="Diverse Team Collaboration" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-lli-teal/85 to-lli-orange/85 flex items-center justify-center">
+            <div className="text-center text-white px-4">
+              <h3 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+                Building Inclusive, Equitable Cultures
+              </h3>
+              <p className="text-xl md:text-2xl max-w-3xl mx-auto drop-shadow-md">
+                Where every voice is heard and valued
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Additional Services with Visual Cards */}
         <section className="mb-20">
           <div className="text-center mb-12">
@@ -383,10 +436,29 @@ export const ServicesPage = () => {
             </a>
           </div>
         </section>
+
+        {/* Visual Divider - Empowerment */}
+        <section className="mb-0 relative h-80 overflow-hidden">
+          <img 
+            src={leadershipImg} 
+            alt="Leadership Development" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-lli-black via-lli-black/70 to-transparent flex items-center justify-center">
+            <div className="text-center text-white px-4">
+              <h3 className="text-3xl md:text-4xl font-bold mb-3 drop-shadow-lg">
+                Your Leadership Journey Starts Here
+              </h3>
+              <p className="text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
+                Partner with LLI Consulting Group to unlock your full potential
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-12">
+      <footer className="bg-gradient-to-r from-lli-black to-gray-800 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
