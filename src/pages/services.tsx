@@ -1,204 +1,292 @@
 export const ServicesPage = () => {
-  const videoUrl = "https://page.gensparksite.com/get_upload_url/f3ade8ec614b90cdfd115b763d7da8b6d74c6e28f60223e4eca0ae0ca5e13349/default/65faa4a0-caea-452d-a9fc-f8af558c38fd"
+  const logoUrl = "https://page.gensparksite.com/v1/base64_upload/76289e59443ab0b47d1ab4851999fbe6"
+  const chiaraPhotoUrl = "https://page.gensparksite.com/v1/base64_upload/e6822a23cff671668f780475724b62e7"
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      {/* Header */}
-      <header className="bg-white shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-lli-dark mb-2">LLI Consulting Group</h1>
-            <p className="text-lg text-gray-600">Professional Coaching & Leadership Development</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+      {/* Header with Logo */}
+      <header className="bg-gradient-to-r from-gray-900 to-gray-800 shadow-2xl">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex items-center space-x-4 mb-4 md:mb-0">
+              <img 
+                src={logoUrl} 
+                alt="LLI Consulting Group Logo" 
+                className="h-20 w-20 object-contain"
+              />
+              <div className="text-left">
+                <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">LLI Consulting Group</h1>
+                <p className="text-lg text-gray-300">Professional Coaching & Leadership Development</p>
+              </div>
+            </div>
           </div>
         </div>
       </header>
 
+      {/* Hero Section with Background Pattern */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-teal-50 to-orange-50 opacity-50"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Lead with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-teal-600">Confidence</span>, <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-orange-600">Clarity</span>, and <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-teal-600">Purpose</span>
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              Unlock your authentic leadership potential through personalized 1:1 coaching designed for emerging leaders and seasoned professionals.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-lli-dark mb-6">
-            Lead with Confidence, Clarity, and Purpose
-          </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Unlock your authentic leadership potential through personalized 1:1 coaching designed for emerging leaders and seasoned professionals.
-          </p>
+        {/* Meet Your Coach Section with Chiara's Photo */}
+        <section className="mb-20">
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Photo Side */}
+              <div className="relative h-96 md:h-auto">
+                <img 
+                  src={chiaraPhotoUrl} 
+                  alt="Chiara - Leadership Coach" 
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-40"></div>
+              </div>
+              
+              {/* Content Side */}
+              <div className="p-8 md:p-12 flex flex-col justify-center">
+                <div className="inline-block px-4 py-2 bg-gradient-to-r from-orange-100 to-teal-100 rounded-full mb-4 self-start">
+                  <span className="text-sm font-semibold text-gray-800">Meet Your Coach</span>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Expert Leadership Coaching
+                </h3>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  Our experienced coaches bring years of expertise in leadership development, workplace equity, and organizational transformation. We partner with you to unlock your authentic leadership potential and drive meaningful impact.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <i className="fas fa-check-circle text-teal-600 text-xl mt-1"></i>
+                    <p className="text-gray-700">Personalized coaching tailored to your unique journey</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <i className="fas fa-check-circle text-orange-600 text-xl mt-1"></i>
+                    <p className="text-gray-700">Evidence-based strategies for sustainable growth</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <i className="fas fa-check-circle text-teal-600 text-xl mt-1"></i>
+                    <p className="text-gray-700">Proven track record of transforming leaders</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Individual Coaching Section */}
         <section className="mb-20">
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="bg-gradient-to-r from-lli-red to-lli-teal text-white p-8">
-              <h3 className="text-3xl font-bold mb-4 flex items-center">
-                <i className="fas fa-user-tie mr-3"></i>
-                Individual Coaching
-              </h3>
-              <p className="text-lg opacity-90">
-                Leadership starts from within. Transform your internal confidence, clarity, and purpose into authentic leadership impact.
+          <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+            <div className="bg-gradient-to-r from-orange-600 to-teal-600 text-white p-8 md:p-10">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="bg-white bg-opacity-20 rounded-full p-4">
+                  <i className="fas fa-user-tie text-3xl"></i>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold">Individual Coaching</h3>
+              </div>
+              <p className="text-xl opacity-95 leading-relaxed">
+                Leadership starts from within. Transform your internal confidence, clarity, and purpose into authentic leadership impact that resonates throughout your organization.
               </p>
             </div>
             
-            <div className="p-8">
-              {/* Video Section */}
-              <div className="mb-8">
-                <div className="relative bg-gray-100 rounded-lg overflow-hidden shadow-inner mb-6">
-                  <video 
-                    id="coaching-video" 
-                    className="w-full h-auto max-h-96 hidden"
-                    controls
-                    preload="metadata"
-                  >
-                    <source src={videoUrl} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  
-                  {/* Video Placeholder/Thumbnail */}
-                  <div id="video-placeholder" className="aspect-video bg-gradient-to-br from-lli-red to-lli-teal flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <i className="fas fa-play-circle text-6xl mb-4 opacity-80"></i>
-                      <h4 className="text-2xl font-semibold mb-2">Discover Our 1:1 Coaching Approach</h4>
-                      <p className="text-lg opacity-90">See how we help leaders unlock their authentic potential</p>
-                    </div>
+            <div className="p-8 md:p-12">
+              {/* Coaching Pillars with Visual Icons */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div className="group text-center p-8 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-orange-200">
+                  <div className="text-orange-600 mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                    <i className="fas fa-lightbulb text-5xl"></i>
                   </div>
+                  <h4 className="font-bold text-xl mb-3 text-gray-900">Leadership Development</h4>
+                  <p className="text-gray-700 leading-relaxed">Build confidence and discover your authentic leadership voice through personalized guidance</p>
                 </div>
                 
-                {/* Watch Video Button */}
-                <div className="text-center">
-                  <button 
-                    id="watch-video-btn"
-                    className="bg-lli-red hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl flex items-center mx-auto space-x-3"
-                  >
-                    <i className="fas fa-play text-lg"></i>
-                    <span className="text-lg ml-2">Watch Video</span>
-                  </button>
+                <div className="group text-center p-8 bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-teal-200">
+                  <div className="text-teal-600 mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                    <i className="fas fa-balance-scale text-5xl"></i>
+                  </div>
+                  <h4 className="font-bold text-xl mb-3 text-gray-900">Workplace Equity</h4>
+                  <p className="text-gray-700 leading-relaxed">Navigate equity challenges with strategic insight, empathy, and resilience</p>
+                </div>
+                
+                <div className="group text-center p-8 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-orange-200">
+                  <div className="text-orange-600 mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                    <i className="fas fa-shield-heart text-5xl"></i>
+                  </div>
+                  <h4 className="font-bold text-xl mb-3 text-gray-900">Stress Management</h4>
+                  <p className="text-gray-700 leading-relaxed">Foster psychological safety, balance, and sustainable leader wellbeing</p>
+                </div>
+                
+                <div className="group text-center p-8 bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-teal-200">
+                  <div className="text-teal-600 mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                    <i className="fas fa-target text-5xl"></i>
+                  </div>
+                  <h4 className="font-bold text-xl mb-3 text-gray-900">Goal Setting</h4>
+                  <p className="text-gray-700 leading-relaxed">Transform vision into measurable, accountable action steps with clarity</p>
                 </div>
               </div>
 
-              {/* Coaching Pillars */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div className="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                  <div className="text-lli-red mb-3">
-                    <i className="fas fa-lightbulb text-3xl"></i>
-                  </div>
-                  <h4 className="font-semibold text-lg mb-2">Leadership Development</h4>
-                  <p className="text-sm text-gray-600">Build confidence and find your authentic leadership voice</p>
-                </div>
-                
-                <div className="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                  <div className="text-lli-teal mb-3">
-                    <i className="fas fa-balance-scale text-3xl"></i>
-                  </div>
-                  <h4 className="font-semibold text-lg mb-2">Workplace Equity</h4>
-                  <p className="text-sm text-gray-600">Navigate equity challenges with strategy, empathy, and resilience</p>
-                </div>
-                
-                <div className="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                  <div className="text-lli-red mb-3">
-                    <i className="fas fa-shield-heart text-3xl"></i>
-                  </div>
-                  <h4 className="font-semibold text-lg mb-2">Stress Management</h4>
-                  <p className="text-sm text-gray-600">Foster psychological safety and leader wellbeing</p>
-                </div>
-                
-                <div className="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                  <div className="text-lli-teal mb-3">
-                    <i className="fas fa-target text-3xl"></i>
-                  </div>
-                  <h4 className="font-semibold text-lg mb-2">Goal Setting</h4>
-                  <p className="text-sm text-gray-600">Turn vision into measurable, accountable action steps</p>
-                </div>
-              </div>
-
-              {/* LLI Approach */}
-              <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-8 mb-8">
-                <h4 className="text-2xl font-bold text-lli-dark mb-4 text-center">The LLI Approach</h4>
-                <div className="grid md:grid-cols-3 gap-6 text-center">
-                  <div>
-                    <div className="text-lli-red mb-3">
+              {/* The LLI Approach */}
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 md:p-10 mb-12 border-2 border-gray-200">
+                <h4 className="text-3xl font-bold text-gray-900 mb-8 text-center">The LLI Approach</h4>
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div className="text-center">
+                    <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
                       <i className="fas fa-ear-listen text-3xl"></i>
                     </div>
-                    <h5 className="font-semibold text-lg mb-2">Listen</h5>
-                    <p className="text-gray-600">We deeply understand your unique leadership challenges and aspirations</p>
+                    <h5 className="font-bold text-xl mb-3 text-gray-900">Listen</h5>
+                    <p className="text-gray-700 leading-relaxed">We deeply understand your unique leadership challenges, aspirations, and organizational context</p>
                   </div>
-                  <div>
-                    <div className="text-lli-teal mb-3">
+                  <div className="text-center">
+                    <div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
                       <i className="fas fa-graduation-cap text-3xl"></i>
                     </div>
-                    <h5 className="font-semibold text-lg mb-2">Learn</h5>
-                    <p className="text-gray-600">Develop personalized strategies and tools for your growth</p>
+                    <h5 className="font-bold text-xl mb-3 text-gray-900">Learn</h5>
+                    <p className="text-gray-700 leading-relaxed">Develop personalized strategies, tools, and insights designed for your specific growth path</p>
                   </div>
-                  <div>
-                    <div className="text-lli-red mb-3">
+                  <div className="text-center">
+                    <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
                       <i className="fas fa-rocket text-3xl"></i>
                     </div>
-                    <h5 className="font-semibold text-lg mb-2">Implement</h5>
-                    <p className="text-gray-600">Transform personal growth into measurable organizational impact</p>
+                    <h5 className="font-bold text-xl mb-3 text-gray-900">Implement</h5>
+                    <p className="text-gray-700 leading-relaxed">Transform personal growth into tangible, measurable organizational impact and results</p>
                   </div>
                 </div>
               </div>
 
               {/* Call to Action */}
-              <div className="text-center">
-                <h4 className="text-2xl font-semibold text-lli-dark mb-4">
+              <div className="text-center bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-10 text-white">
+                <h4 className="text-3xl font-bold mb-4">
                   Ready to Transform Your Leadership?
                 </h4>
-                <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90 leading-relaxed">
                   Schedule your personalized coaching consultation today and discover how our proven approach can help you lead with confidence, clarity, and purpose.
                 </p>
                 <a 
                   href="https://www.LLIConsulting.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-lli-teal hover:bg-teal-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl inline-flex items-center space-x-3"
+                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-orange-500 to-teal-500 hover:from-orange-600 hover:to-teal-600 text-white font-bold py-4 px-10 rounded-full shadow-2xl transform transition-all duration-200 hover:scale-105"
                 >
-                  <i className="fas fa-calendar-check"></i>
-                  <span>Schedule Your Consultation</span>
-                  <i className="fas fa-external-link-alt text-sm"></i>
+                  <i className="fas fa-calendar-check text-xl"></i>
+                  <span className="text-lg">Schedule Your Consultation</span>
+                  <i className="fas fa-arrow-right"></i>
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Additional Services Teaser */}
-        <section className="text-center bg-white rounded-2xl shadow-xl p-8">
-          <h3 className="text-3xl font-bold text-lli-dark mb-4">More Services Available</h3>
-          <p className="text-gray-600 mb-6">
-            Explore our comprehensive range of leadership development and organizational consulting services.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
-              <i className="fas fa-users text-lli-red text-2xl mb-3"></i>
-              <h4 className="font-semibold mb-2">Team Coaching</h4>
-              <p className="text-sm text-gray-600">Develop high-performing teams with collaborative leadership skills</p>
+        {/* Additional Services with Visual Cards */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold text-gray-900 mb-4">Comprehensive Leadership Solutions</h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore our full range of leadership development and organizational consulting services designed to drive transformation at every level.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2">
+              <div className="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                <i className="fas fa-users text-white text-6xl opacity-90"></i>
+              </div>
+              <div className="p-8">
+                <h4 className="font-bold text-2xl mb-3 text-gray-900">Team Coaching</h4>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Develop high-performing teams with collaborative leadership skills, enhanced communication, and shared accountability for results.
+                </p>
+                <div className="flex items-center text-orange-600 font-semibold group-hover:translate-x-2 transition-transform">
+                  <span>Learn More</span>
+                  <i className="fas fa-arrow-right ml-2"></i>
+                </div>
+              </div>
             </div>
-            <div className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
-              <i className="fas fa-building text-lli-teal text-2xl mb-3"></i>
-              <h4 className="font-semibold mb-2">Organizational Development</h4>
-              <p className="text-sm text-gray-600">Transform company culture and operational effectiveness</p>
+            
+            <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2">
+              <div className="h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+                <i className="fas fa-building text-white text-6xl opacity-90"></i>
+              </div>
+              <div className="p-8">
+                <h4 className="font-bold text-2xl mb-3 text-gray-900">Organizational Development</h4>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Transform company culture, operational effectiveness, and strategic alignment to drive sustainable organizational success.
+                </p>
+                <div className="flex items-center text-teal-600 font-semibold group-hover:translate-x-2 transition-transform">
+                  <span>Learn More</span>
+                  <i className="fas fa-arrow-right ml-2"></i>
+                </div>
+              </div>
             </div>
-            <div className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
-              <i className="fas fa-chalkboard-teacher text-lli-red text-2xl mb-3"></i>
-              <h4 className="font-semibold mb-2">Leadership Workshops</h4>
-              <p className="text-sm text-gray-600">Intensive group training sessions for leadership excellence</p>
+            
+            <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2">
+              <div className="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                <i className="fas fa-chalkboard-teacher text-white text-6xl opacity-90"></i>
+              </div>
+              <div className="p-8">
+                <h4 className="font-bold text-2xl mb-3 text-gray-900">Leadership Workshops</h4>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Intensive group training sessions focused on building leadership excellence, strategic thinking, and executive presence.
+                </p>
+                <div className="flex items-center text-orange-600 font-semibold group-hover:translate-x-2 transition-transform">
+                  <span>Learn More</span>
+                  <i className="fas fa-arrow-right ml-2"></i>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-lli-dark text-white py-8 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="mb-2">&copy; 2024 LLI Consulting Group. All rights reserved.</p>
-          <p className="text-gray-400">
-            Visit us at <a href="https://www.LLIConsulting.com" className="text-lli-teal hover:text-teal-300 transition-colors" target="_blank" rel="noopener noreferrer">www.LLIConsulting.com</a>
-          </p>
+      <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <img 
+                src={logoUrl} 
+                alt="LLI Consulting Group Logo" 
+                className="h-16 w-16 mb-4"
+              />
+              <h5 className="font-bold text-xl mb-2">LLI Consulting Group</h5>
+              <p className="text-gray-400">Empowering leaders to drive meaningful change</p>
+            </div>
+            <div>
+              <h5 className="font-bold text-lg mb-4">Quick Links</h5>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:text-orange-400 transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-orange-400 transition-colors">Services</a></li>
+                <li><a href="#" className="hover:text-orange-400 transition-colors">Resources</a></li>
+                <li><a href="#" className="hover:text-orange-400 transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-bold text-lg mb-4">Connect With Us</h5>
+              <div className="flex space-x-4 mb-4">
+                <a href="#" className="text-2xl hover:text-orange-400 transition-colors"><i className="fab fa-linkedin"></i></a>
+                <a href="#" className="text-2xl hover:text-orange-400 transition-colors"><i className="fab fa-twitter"></i></a>
+                <a href="#" className="text-2xl hover:text-orange-400 transition-colors"><i className="fab fa-facebook"></i></a>
+              </div>
+              <p className="text-gray-400">
+                Visit: <a href="https://www.LLIConsulting.com" className="text-teal-400 hover:text-teal-300 transition-colors font-semibold" target="_blank" rel="noopener noreferrer">www.LLIConsulting.com</a>
+              </p>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 pt-8 text-center">
+            <p className="text-gray-400">&copy; 2024 LLI Consulting Group. All rights reserved.</p>
+          </div>
         </div>
       </footer>
-
-      {/* JavaScript for Video Toggle */}
-      <script src="/static/video-player.js"></script>
     </div>
   )
 }
