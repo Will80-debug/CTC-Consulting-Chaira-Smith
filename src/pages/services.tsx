@@ -47,8 +47,10 @@ export const ServicesPage = () => {
             <video 
               className="w-full"
               controls
-              preload="metadata"
-              poster=""
+              autoplay
+              muted
+              playsinline
+              preload="auto"
             >
               <source src={introVideoUrl} type="video/mp4" />
               Your browser does not support the video tag.
