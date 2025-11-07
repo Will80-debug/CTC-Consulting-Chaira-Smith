@@ -16,9 +16,12 @@ export const renderer = jsxRenderer(({ children }) => {
               theme: {
                 extend: {
                   colors: {
-                    'lli-red': '#B91C1C',
-                    'lli-teal': '#0F766E',
-                    'lli-dark': '#1F2937'
+                    'lli-orange': '#EA580C',
+                    'lli-orange-dark': '#C2410C',
+                    'lli-teal': '#14B8A6',
+                    'lli-teal-dark': '#0F766E',
+                    'lli-black': '#000000',
+                    'lli-white': '#FFFFFF'
                   }
                 }
               }

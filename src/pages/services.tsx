@@ -6,7 +6,7 @@ export const ServicesPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
       {/* Header with Logo */}
-      <header className="bg-gradient-to-r from-gray-900 to-gray-800 shadow-2xl">
+      <header className="bg-gradient-to-r from-lli-black to-gray-800 shadow-2xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-4 mb-4 md:mb-0">
@@ -25,7 +25,7 @@ export const ServicesPage = () => {
       </header>
 
       {/* Introduction Video Section */}
-      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16">
+      <section className="bg-gradient-to-br from-lli-black via-gray-800 to-lli-black py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -64,10 +64,10 @@ export const ServicesPage = () => {
             <div className="grid md:grid-cols-3 gap-8 mb-10">
               {/* Listen */}
               <div className="text-center">
-                <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-br from-lli-orange to-lli-orange-dark text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-transform duration-300">
                   <i className="fas fa-ear-listen text-4xl"></i>
                 </div>
-                <h4 className="text-2xl font-bold text-orange-600 mb-3">Listen Deeply</h4>
+                <h4 className="text-2xl font-bold text-lli-orange mb-3">Listen Deeply</h4>
                 <p className="text-gray-700 leading-relaxed text-lg">
                   We engage with your organization to understand its unique challenges, culture, and aspirations. Through careful listening, we identify the real issues beneath surface-level symptoms.
                 </p>
@@ -75,10 +75,10 @@ export const ServicesPage = () => {
 
               {/* Learn */}
               <div className="text-center">
-                <div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-br from-lli-teal to-lli-teal-dark text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-transform duration-300">
                   <i className="fas fa-graduation-cap text-4xl"></i>
                 </div>
-                <h4 className="text-2xl font-bold text-teal-600 mb-3">Learn Courageously</h4>
+                <h4 className="text-2xl font-bold text-lli-teal mb-3">Learn Courageously</h4>
                 <p className="text-gray-700 leading-relaxed text-lg">
                   We develop customized strategies and solutions rooted in equity-centered principles. Together, we explore new approaches that challenge the status quo and drive authentic transformation.
                 </p>
@@ -86,10 +86,10 @@ export const ServicesPage = () => {
 
               {/* Implement */}
               <div className="text-center">
-                <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-br from-lli-orange to-lli-orange-dark text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-transform duration-300">
                   <i className="fas fa-rocket text-4xl"></i>
                 </div>
-                <h4 className="text-2xl font-bold text-orange-600 mb-3">Implement Boldly</h4>
+                <h4 className="text-2xl font-bold text-lli-orange mb-3">Implement Boldly</h4>
                 <p className="text-gray-700 leading-relaxed text-lg">
                   We translate insights into action through coaching, strategy, and equity-centered culture design. This is where transformation becomes tangible and sustainable.
                 </p>
@@ -97,12 +97,12 @@ export const ServicesPage = () => {
             </div>
 
             {/* Framework Impact */}
-            <div className="bg-gradient-to-br from-orange-50 via-teal-50 to-orange-50 rounded-xl p-8 border-2 border-orange-200">
+            <div className="bg-gradient-to-br from-orange-50 via-teal-50 to-orange-50 rounded-xl p-8 border-2 border-lli-orange">
               <h4 className="text-2xl font-bold text-gray-900 mb-6 text-center">Creating Lasting Impact</h4>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <i className="fas fa-check-circle text-teal-600 text-2xl mt-1"></i>
+                    <i className="fas fa-check-circle text-lli-teal text-2xl mt-1"></i>
                   </div>
                   <div>
                     <h5 className="font-bold text-lg text-gray-900 mb-2">Build Trust & Psychological Safety</h5>
@@ -112,7 +112,7 @@ export const ServicesPage = () => {
                 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <i className="fas fa-check-circle text-orange-600 text-2xl mt-1"></i>
+                    <i className="fas fa-check-circle text-lli-orange text-2xl mt-1"></i>
                   </div>
                   <div>
                     <h5 className="font-bold text-lg text-gray-900 mb-2">Make Equity Actionable</h5>
@@ -122,7 +122,7 @@ export const ServicesPage = () => {
                 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <i className="fas fa-check-circle text-teal-600 text-2xl mt-1"></i>
+                    <i className="fas fa-check-circle text-lli-teal text-2xl mt-1"></i>
                   </div>
                   <div>
                     <h5 className="font-bold text-lg text-gray-900 mb-2">Shape Tomorrow's Leadership</h5>
@@ -132,7 +132,7 @@ export const ServicesPage = () => {
                 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <i className="fas fa-check-circle text-orange-600 text-2xl mt-1"></i>
+                    <i className="fas fa-check-circle text-lli-orange text-2xl mt-1"></i>
                   </div>
                   <div>
                     <h5 className="font-bold text-lg text-gray-900 mb-2">Drive Measurable Results</h5>
@@ -151,7 +151,7 @@ export const ServicesPage = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Lead with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-teal-600">Confidence</span>, <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-orange-600">Clarity</span>, and <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-teal-600">Purpose</span>
+              Lead with <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-orange to-lli-teal">Confidence</span>, <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-teal to-lli-orange">Clarity</span>, and <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-orange to-lli-teal">Purpose</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
               Unlock your authentic leadership potential through personalized 1:1 coaching designed for emerging leaders and seasoned professionals.
@@ -190,15 +190,15 @@ export const ServicesPage = () => {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">
-                    <i className="fas fa-check-circle text-teal-600 text-xl mt-1"></i>
+                    <i className="fas fa-check-circle text-lli-teal text-xl mt-1"></i>
                     <p className="text-gray-700">Personalized coaching tailored to your unique journey</p>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <i className="fas fa-check-circle text-orange-600 text-xl mt-1"></i>
+                    <i className="fas fa-check-circle text-lli-orange text-xl mt-1"></i>
                     <p className="text-gray-700">Evidence-based strategies for sustainable growth</p>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <i className="fas fa-check-circle text-teal-600 text-xl mt-1"></i>
+                    <i className="fas fa-check-circle text-lli-teal text-xl mt-1"></i>
                     <p className="text-gray-700">Proven track record of transforming leaders</p>
                   </div>
                 </div>
@@ -210,7 +210,7 @@ export const ServicesPage = () => {
         {/* Individual Coaching Section */}
         <section className="mb-20">
           <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-xl overflow-hidden border border-gray-100">
-            <div className="bg-gradient-to-r from-orange-600 to-teal-600 text-white p-8 md:p-10">
+            <div className="bg-gradient-to-r from-lli-orange to-lli-teal text-white p-8 md:p-10">
               <div className="flex items-center space-x-4 mb-4">
                 <div className="bg-white bg-opacity-20 rounded-full p-4">
                   <i className="fas fa-user-tie text-3xl"></i>
@@ -226,15 +226,15 @@ export const ServicesPage = () => {
               {/* Coaching Pillars with Visual Icons */}
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                 <div className="group text-center p-8 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-orange-200">
-                  <div className="text-orange-600 mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-lli-orange mb-4 transform group-hover:scale-110 transition-transform duration-300">
                     <i className="fas fa-lightbulb text-5xl"></i>
                   </div>
                   <h4 className="font-bold text-xl mb-3 text-gray-900">Leadership Development</h4>
                   <p className="text-gray-700 leading-relaxed">Build confidence and discover your authentic leadership voice through personalized guidance</p>
                 </div>
                 
-                <div className="group text-center p-8 bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-teal-200">
-                  <div className="text-teal-600 mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="group text-center p-8 bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-lli-teal">
+                  <div className="text-lli-teal mb-4 transform group-hover:scale-110 transition-transform duration-300">
                     <i className="fas fa-balance-scale text-5xl"></i>
                   </div>
                   <h4 className="font-bold text-xl mb-3 text-gray-900">Workplace Equity</h4>
@@ -242,15 +242,15 @@ export const ServicesPage = () => {
                 </div>
                 
                 <div className="group text-center p-8 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-orange-200">
-                  <div className="text-orange-600 mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-lli-orange mb-4 transform group-hover:scale-110 transition-transform duration-300">
                     <i className="fas fa-shield-heart text-5xl"></i>
                   </div>
                   <h4 className="font-bold text-xl mb-3 text-gray-900">Stress Management</h4>
                   <p className="text-gray-700 leading-relaxed">Foster psychological safety, balance, and sustainable leader wellbeing</p>
                 </div>
                 
-                <div className="group text-center p-8 bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-teal-200">
-                  <div className="text-teal-600 mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="group text-center p-8 bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-lli-teal">
+                  <div className="text-lli-teal mb-4 transform group-hover:scale-110 transition-transform duration-300">
                     <i className="fas fa-target text-5xl"></i>
                   </div>
                   <h4 className="font-bold text-xl mb-3 text-gray-900">Goal Setting</h4>
@@ -263,21 +263,21 @@ export const ServicesPage = () => {
                 <h4 className="text-3xl font-bold text-gray-900 mb-8 text-center">The LLI Approach</h4>
                 <div className="grid md:grid-cols-3 gap-8">
                   <div className="text-center">
-                    <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <div className="bg-gradient-to-br from-lli-orange to-lli-orange-dark text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
                       <i className="fas fa-ear-listen text-3xl"></i>
                     </div>
                     <h5 className="font-bold text-xl mb-3 text-gray-900">Listen</h5>
                     <p className="text-gray-700 leading-relaxed">We deeply understand your unique leadership challenges, aspirations, and organizational context</p>
                   </div>
                   <div className="text-center">
-                    <div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <div className="bg-gradient-to-br from-lli-teal to-lli-teal-dark text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
                       <i className="fas fa-graduation-cap text-3xl"></i>
                     </div>
                     <h5 className="font-bold text-xl mb-3 text-gray-900">Learn</h5>
                     <p className="text-gray-700 leading-relaxed">Develop personalized strategies, tools, and insights designed for your specific growth path</p>
                   </div>
                   <div className="text-center">
-                    <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <div className="bg-gradient-to-br from-lli-orange to-lli-orange-dark text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
                       <i className="fas fa-rocket text-3xl"></i>
                     </div>
                     <h5 className="font-bold text-xl mb-3 text-gray-900">Implement</h5>
@@ -298,7 +298,7 @@ export const ServicesPage = () => {
                   href="https://www.LLIConsulting.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-orange-500 to-teal-500 hover:from-orange-600 hover:to-teal-600 text-white font-bold py-4 px-10 rounded-full shadow-2xl transform transition-all duration-200 hover:scale-105"
+                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-lli-orange to-lli-teal hover:from-lli-orange-dark hover:to-lli-teal-dark text-white font-bold py-4 px-10 rounded-full shadow-2xl transform transition-all duration-200 hover:scale-105"
                 >
                   <i className="fas fa-calendar-check text-xl"></i>
                   <span className="text-lg">Schedule Your Consultation</span>
@@ -325,7 +325,7 @@ export const ServicesPage = () => {
               rel="noopener noreferrer"
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2 cursor-pointer"
             >
-              <div className="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+              <div className="h-48 bg-gradient-to-br from-lli-orange to-lli-orange-dark flex items-center justify-center">
                 <i className="fas fa-users text-white text-6xl opacity-90"></i>
               </div>
               <div className="p-8">
@@ -333,7 +333,7 @@ export const ServicesPage = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Develop high-performing teams with collaborative leadership skills, enhanced communication, and shared accountability for results.
                 </p>
-                <div className="flex items-center text-orange-600 font-semibold group-hover:translate-x-2 transition-transform">
+                <div className="flex items-center text-lli-orange font-semibold group-hover:translate-x-2 transition-transform">
                   <span>Learn More</span>
                   <i className="fas fa-arrow-right ml-2"></i>
                 </div>
@@ -346,7 +346,7 @@ export const ServicesPage = () => {
               rel="noopener noreferrer"
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2 cursor-pointer"
             >
-              <div className="h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+              <div className="h-48 bg-gradient-to-br from-lli-teal to-lli-teal-dark flex items-center justify-center">
                 <i className="fas fa-building text-white text-6xl opacity-90"></i>
               </div>
               <div className="p-8">
@@ -354,7 +354,7 @@ export const ServicesPage = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Transform company culture, operational effectiveness, and strategic alignment to drive sustainable organizational success.
                 </p>
-                <div className="flex items-center text-teal-600 font-semibold group-hover:translate-x-2 transition-transform">
+                <div className="flex items-center text-lli-teal font-semibold group-hover:translate-x-2 transition-transform">
                   <span>Learn More</span>
                   <i className="fas fa-arrow-right ml-2"></i>
                 </div>
@@ -367,7 +367,7 @@ export const ServicesPage = () => {
               rel="noopener noreferrer"
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2 cursor-pointer"
             >
-              <div className="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+              <div className="h-48 bg-gradient-to-br from-lli-orange to-lli-orange-dark flex items-center justify-center">
                 <i className="fas fa-chalkboard-teacher text-white text-6xl opacity-90"></i>
               </div>
               <div className="p-8">
@@ -375,7 +375,7 @@ export const ServicesPage = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Intensive group training sessions focused on building leadership excellence, strategic thinking, and executive presence.
                 </p>
-                <div className="flex items-center text-orange-600 font-semibold group-hover:translate-x-2 transition-transform">
+                <div className="flex items-center text-lli-orange font-semibold group-hover:translate-x-2 transition-transform">
                   <span>Learn More</span>
                   <i className="fas fa-arrow-right ml-2"></i>
                 </div>
@@ -401,21 +401,21 @@ export const ServicesPage = () => {
             <div>
               <h5 className="font-bold text-lg mb-4">Quick Links</h5>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-orange-400 transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-orange-400 transition-colors">Services</a></li>
-                <li><a href="#" className="hover:text-orange-400 transition-colors">Resources</a></li>
-                <li><a href="#" className="hover:text-orange-400 transition-colors">Contact</a></li>
+                <li><a href="#" className="hover:text-lli-orange transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-lli-orange transition-colors">Services</a></li>
+                <li><a href="#" className="hover:text-lli-orange transition-colors">Resources</a></li>
+                <li><a href="#" className="hover:text-lli-orange transition-colors">Contact</a></li>
               </ul>
             </div>
             <div>
               <h5 className="font-bold text-lg mb-4">Connect With Us</h5>
               <div className="flex space-x-4 mb-4">
-                <a href="#" className="text-2xl hover:text-orange-400 transition-colors"><i className="fab fa-linkedin"></i></a>
-                <a href="#" className="text-2xl hover:text-orange-400 transition-colors"><i className="fab fa-twitter"></i></a>
-                <a href="#" className="text-2xl hover:text-orange-400 transition-colors"><i className="fab fa-facebook"></i></a>
+                <a href="#" className="text-2xl hover:text-lli-orange transition-colors"><i className="fab fa-linkedin"></i></a>
+                <a href="#" className="text-2xl hover:text-lli-orange transition-colors"><i className="fab fa-twitter"></i></a>
+                <a href="#" className="text-2xl hover:text-lli-orange transition-colors"><i className="fab fa-facebook"></i></a>
               </div>
               <p className="text-gray-400">
-                Visit: <a href="https://www.LLIConsulting.com" className="text-teal-400 hover:text-teal-300 transition-colors font-semibold" target="_blank" rel="noopener noreferrer">www.LLIConsulting.com</a>
+                Visit: <a href="https://www.LLIConsulting.com" className="text-lli-teal hover:text-lli-orange transition-colors font-semibold" target="_blank" rel="noopener noreferrer">www.LLIConsulting.com</a>
               </p>
             </div>
           </div>
