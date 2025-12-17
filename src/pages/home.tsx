@@ -1,8 +1,18 @@
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
+import { Modals } from '../components/Modals'
 
 export const HomePage = () => {
   const introVideoUrl = "https://page.gensparksite.com/get_upload_url/f3ade8ec614b90cdfd115b763d7da8b6d74c6e28f60223e4eca0ae0ca5e13349/default/c3bdcd60-64b6-44dc-854d-ab1b78c33435"
+  
+  // Professional images for visual appeal
+  const chiaraPhotoUrl = "https://page.gensparksite.com/v1/base64_upload/e6822a23cff671668f780475724b62e7"
+  const teamMeetingImg = "https://sspark.genspark.ai/cfimages?u1=p3451G3ZEplqSVU1hpWslMBIRhknlX84CsLjYH3SkznuTIrlkxpyLAuCwkmtMFXbwhpEvre9YJ3e99PmcLuDRrpBMd2vgWUNT%2BvkZwb2HqDUbZe%2FfwNbySP593IfQLzHOX%2FP1WA3WLrjXpp%2FnLigzhI%2B5CHarzSTteaGCdJuAw7caVHr%2FR8IrzhY3HPD5eqAoLqHXC9oAtaaRBQ4DxSo3yzd1vrQGBSFuJKrYw%3D%3D&u2=r5lJXZBmG11V2fj%2B&width=2560"
+  const diversityImg = "https://sspark.genspark.ai/cfimages?u1=mBzrm%2FITxbifSCnl6VSi0VBL8jW7BYLARSnPGIKDFLwD%2FztAX0QY59OB%2BpFGhr3%2BB1QFUtKFUdxUJ2YiK3N1k8HIw6w9q6rfDEPoTVb9HCSRcZUqllhE5XVLSQUkJnzqsl%2BDhdoCuljW&u2=AJs5ASJIXhyWd%2FHw&width=2560"
+  const leadershipImg = "https://sspark.genspark.ai/cfimages?u1=ghImmXMbKrGBMxYuscEj017YLMrF0DuubmxINuyW3IRDyr7yWiBRs7RVJ1n4aDLhNcPJo7gV7gzv8zDCMDIWIhu%2BIXi%2FBTIEIfDfaGUQ5kPejVntVrPMHks0xMBbNPeZRMX41IgOaDi2QFodGwkIOOAsYXw2vpMdhbYvKMsTc8bXCmCVH%2BW2dVHsh0601%2BVtEvftdaQ7ixSB3FDhc9NXrZUy3MBL&u2=DRJBwiDrnjEHDgQ%2B&width=2560"
+  const confidentLeaderImg = "https://sspark.genspark.ai/cfimages?u1=libfD%2BLiDFBvnWLRicgCLgdV4Xf5%2B8x7ENBS1SbKL4u3KHw4O25%2Fc%2By695hEukTSkJVOPhIBtsm5x0PYfdOBGYc%2BY8RK40ErfWDTwDrddbgFznxJjD%2BUxM%2Bf%2Bft2nQMtOCKUM2V%2F%2F9%2BIMXLPAttKVX2dQhwBm5FHBtlUIuC8qudpi8BMId3mwyR3Y%2FWxhkXkC443R4fS3FdZ1L3zGTuvpKHEFG0xChuzpwB7jWbMxF9eXX%2FG1iexpa6xMTbk%2FsTcRJrwcNBTOgoqJLmjQPbBsZlfe1pyFA4V001LZyj2REGI8HQnnvupsAJfVZk%2BXZCiInzQV65mW5ziXLHY7yQocdLmhaFv4idK7IsqtoPgitvJoxT%2BvOLBFjDT%2FUNC&u2=XxZr0F61XXEU8HKB&width=2560"
+  const coachingSessionImg = "https://sspark.genspark.ai/cfimages?u1=kl8PzsxZyCGgKkLv85O%2FuF%2F5Hgj%2FXXJGsGYv2JVCvyEhGPBGOxmyNlxgBp0%2FRGekZdGZJ5OEhQx9VB%2BPLiJGPQ%3D%3D&u2=RQPXYdBbHghGxL7h&width=2560"
+  const workshopImg = "https://sspark.genspark.ai/cfimages?u1=8Yz7K5BfKMmsj9MYV%2FHkiBH49T0R4yNOqSxCVx3lBN7J7vU3lU35Ew9gFBVPcM3SowRzqhG8kp%2F7P0%2FsNP9xUg%3D%3D&u2=8dQ4ySE1xRh2BQN8&width=2560"
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
@@ -275,6 +285,15 @@ export const HomePage = () => {
 
             {/* Team Development Panel */}
             <div id="tab-team" className="expertise-content hidden bg-white rounded-2xl shadow-xl p-8 md:p-12">
+              {/* Featured Image */}
+              <div className="mb-8 rounded-xl overflow-hidden">
+                <img 
+                  src={teamMeetingImg} 
+                  alt="Team development session" 
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-2xl font-bold text-lli-orange mb-6">
@@ -348,6 +367,15 @@ export const HomePage = () => {
 
             {/* Workshops Panel */}
             <div id="tab-workshops" className="expertise-content hidden bg-white rounded-2xl shadow-xl p-8 md:p-12">
+              {/* Featured Image */}
+              <div className="mb-8 rounded-xl overflow-hidden">
+                <img 
+                  src={workshopImg} 
+                  alt="Workshop and training session" 
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-2xl font-bold text-lli-teal mb-6">
@@ -421,6 +449,15 @@ export const HomePage = () => {
 
             {/* Strategy Panel */}
             <div id="tab-strategy" className="expertise-content hidden bg-white rounded-2xl shadow-xl p-8 md:p-12">
+              {/* Featured Image */}
+              <div className="mb-8 rounded-xl overflow-hidden">
+                <img 
+                  src={leadershipImg} 
+                  alt="Strategic consulting session" 
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-2xl font-bold text-lli-orange mb-6">
@@ -494,6 +531,15 @@ export const HomePage = () => {
 
             {/* Culture Panel */}
             <div id="tab-culture" className="expertise-content hidden bg-white rounded-2xl shadow-xl p-8 md:p-12">
+              {/* Featured Image */}
+              <div className="mb-8 rounded-xl overflow-hidden">
+                <img 
+                  src={confidentLeaderImg} 
+                  alt="Culture transformation" 
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-2xl font-bold text-lli-teal mb-6">
@@ -770,8 +816,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* Modals - Assessment and Fit Check (keeping from services page) */}
-      {/* You'll need to include the modal HTML here or import from services */}
+      <Modals />
       
       <Footer />
       
