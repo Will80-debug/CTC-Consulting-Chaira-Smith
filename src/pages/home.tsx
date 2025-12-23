@@ -222,14 +222,21 @@ export const HomePage = () => {
                 </div>
                 <div className="bg-black rounded-b-xl overflow-hidden shadow-xl">
                   <div className="relative" style={{paddingBottom: '56.25%'}}>
-                    <iframe 
+                    <video 
                       className="absolute top-0 left-0 w-full h-full"
-                      src="https://www.youtube.com/embed/kguWhXynzG0"
-                      title="Executive Coaching Video"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
+                      controls
+                      preload="metadata"
+                      style={{backgroundColor: '#000'}}
+                    >
+                      <source src="https://www.genspark.ai/api/files/s/GgoHKo3n" type="video/mp4" />
+                      <p className="text-white p-8 text-center">
+                        Your browser does not support the video tag or the video cannot be loaded.
+                        <br />
+                        <a href="https://www.genspark.ai/api/files/s/GgoHKo3n" target="_blank" rel="noopener noreferrer" className="text-lli-teal underline mt-4 inline-block">
+                          Click here to watch the video in a new tab
+                        </a>
+                      </p>
+                    </video>
                   </div>
                 </div>
               </div>
