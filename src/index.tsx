@@ -6,6 +6,7 @@ import { AboutPage } from './pages/about'
 import { ResourcesPage } from './pages/resources'
 import { BlogPage } from './pages/blog'
 import { CaseStudiesPage } from './pages/case-studies'
+import { ContactPage } from './pages/contact'
 
 const app = new Hono()
 
@@ -33,6 +34,10 @@ app.get('/blog', (c) => {
 
 app.get('/case-studies', (c) => {
   return c.render(<CaseStudiesPage />)
+})
+
+app.get('/contact', (c) => {
+  return c.render(<ContactPage />)
 })
 
 export default app

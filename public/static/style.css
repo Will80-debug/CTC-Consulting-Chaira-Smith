@@ -106,3 +106,56 @@ a:focus {
 .expertise-tab:hover::after {
   transform: scaleX(1);
 }
+
+/* Image lazy loading animations */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+img[loading="lazy"].fade-in,
+img.fade-in {
+  opacity: 1;
+}
+
+/* Loading placeholder for images */
+img[loading="lazy"]:not(.fade-in) {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Optimize video loading */
+video {
+  background-color: #000;
+}
+
+/* Form focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #14B8A6;
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
+  outline: none;
+}
+
+/* Calendly widget responsive container */
+.calendly-inline-widget {
+  position: relative;
+  min-height: 630px;
+}
+
+@media (max-width: 768px) {
+  .calendly-inline-widget {
+    min-height: 500px;
+  }
+}

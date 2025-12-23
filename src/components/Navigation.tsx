@@ -57,6 +57,12 @@ export const Navigation = () => {
               Case Studies
             </a>
             <a 
+              href="/contact" 
+              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-teal pb-1"
+            >
+              Contact
+            </a>
+            <a 
               href="https://www.LLIConsulting.com" 
               target="_blank"
               rel="noopener noreferrer"
@@ -120,6 +126,13 @@ export const Navigation = () => {
             >
               <i className="fas fa-chart-line mr-3"></i>
               Case Studies
+            </a>
+            <a 
+              href="/contact" 
+              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 py-2"
+            >
+              <i className="fas fa-envelope mr-3"></i>
+              Contact
             </a>
             <a 
               href="https://www.LLIConsulting.com" 
