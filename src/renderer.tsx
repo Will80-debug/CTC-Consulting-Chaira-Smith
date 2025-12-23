@@ -79,6 +79,45 @@ export const renderer = jsxRenderer(({ children }) => {
               }
             }
             
+            // Toggle blog topic display
+            function toggleTopic(topic) {
+              const articleDiv = document.getElementById(topic + '-articles');
+              const icon = document.getElementById(topic + '-icon');
+              
+              // Hide all other topics
+              ['leadership', 'dei', 'culture', 'implementation'].forEach(top => {
+                if (top !== topic) {
+                  const otherDiv = document.getElementById(top + '-articles');
+                  const otherIcon = document.getElementById(top + '-icon');
+                  if (otherDiv && !otherDiv.classList.contains('hidden')) {
+                    otherDiv.classList.add('hidden');
+                    if (otherIcon) {
+                      otherIcon.classList.remove('fa-chevron-up');
+                      otherIcon.classList.add('fa-chevron-down');
+                    }
+                  }
+                }
+              });
+              
+              // Toggle current topic
+              if (articleDiv) {
+                articleDiv.classList.toggle('hidden');
+                if (icon) {
+                  if (articleDiv.classList.contains('hidden')) {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                  } else {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                    // Smooth scroll to the opened section
+                    setTimeout(() => {
+                      articleDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 100);
+                  }
+                }
+              }
+            }
+            
             // Lazy load images when they enter viewport
             if ('IntersectionObserver' in window) {
               document.addEventListener('DOMContentLoaded', function() {

@@ -1,5 +1,6 @@
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
+import { leadershipArticles, deiArticles, cultureArticles, implementationArticles } from '../data/blog-articles'
 
 export const BlogPage = () => {
   // Blog post images
@@ -242,29 +243,113 @@ export const BlogPage = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <button className="bg-gradient-to-br from-lli-teal/10 to-white border-2 border-lli-teal hover:border-lli-teal-dark rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+            <button onclick="toggleTopic('leadership')" className="bg-gradient-to-br from-lli-teal/10 to-white border-2 border-lli-teal hover:border-lli-teal-dark rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
               <i className="fas fa-user-tie text-3xl text-lli-teal mb-3"></i>
               <h3 className="font-bold text-gray-900 mb-1">Leadership</h3>
-              <p className="text-sm text-gray-600">24 articles</p>
+              <p className="text-sm text-gray-600 mb-2">24 articles</p>
+              <i id="leadership-icon" className="fas fa-chevron-down text-lli-teal text-sm"></i>
             </button>
 
-            <button className="bg-gradient-to-br from-lli-orange/10 to-white border-2 border-lli-orange hover:border-lli-orange-dark rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+            <button onclick="toggleTopic('dei')" className="bg-gradient-to-br from-lli-orange/10 to-white border-2 border-lli-orange hover:border-lli-orange-dark rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
               <i className="fas fa-users text-3xl text-lli-orange mb-3"></i>
               <h3 className="font-bold text-gray-900 mb-1">DEI & Equity</h3>
-              <p className="text-sm text-gray-600">18 articles</p>
+              <p className="text-sm text-gray-600 mb-2">18 articles</p>
+              <i id="dei-icon" className="fas fa-chevron-down text-lli-orange text-sm"></i>
             </button>
 
-            <button className="bg-gradient-to-br from-lli-teal/10 to-white border-2 border-lli-teal hover:border-lli-teal-dark rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+            <button onclick="toggleTopic('culture')" className="bg-gradient-to-br from-lli-teal/10 to-white border-2 border-lli-teal hover:border-lli-teal-dark rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
               <i className="fas fa-chart-line text-3xl text-lli-teal mb-3"></i>
               <h3 className="font-bold text-gray-900 mb-1">Culture Change</h3>
-              <p className="text-sm text-gray-600">15 articles</p>
+              <p className="text-sm text-gray-600 mb-2">15 articles</p>
+              <i id="culture-icon" className="fas fa-chevron-down text-lli-teal text-sm"></i>
             </button>
 
-            <button className="bg-gradient-to-br from-lli-orange/10 to-white border-2 border-lli-orange hover:border-lli-orange-dark rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+            <button onclick="toggleTopic('implementation')" className="bg-gradient-to-br from-lli-orange/10 to-white border-2 border-lli-orange hover:border-lli-orange-dark rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
               <i className="fas fa-rocket text-3xl text-lli-orange mb-3"></i>
               <h3 className="font-bold text-gray-900 mb-1">Implementation</h3>
-              <p className="text-sm text-gray-600">12 articles</p>
+              <p className="text-sm text-gray-600 mb-2">12 articles</p>
+              <i id="implementation-icon" className="fas fa-chevron-down text-lli-orange text-sm"></i>
             </button>
+          </div>
+
+          {/* Leadership Articles (24) */}
+          <div id="leadership-articles" className="hidden mt-12">
+            <div className="bg-gradient-to-br from-lli-teal/5 to-white border-2 border-lli-teal rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <i className="fas fa-user-tie text-lli-teal mr-3"></i>
+                Leadership Articles (24)
+              </h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {leadershipArticles.map((article, index) => (
+                  <article key={index} className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                    <span className="text-xs text-lli-teal font-semibold">LEADERSHIP</span>
+                    <h4 className="font-bold text-gray-900 mt-2 mb-2">{article.title}</h4>
+                    <p className="text-sm text-gray-600 mb-3">{article.description}</p>
+                    <span className="text-xs text-gray-500">{article.readTime}</span>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* DEI & Equity Articles (18) */}
+          <div id="dei-articles" className="hidden mt-12">
+            <div className="bg-gradient-to-br from-lli-orange/5 to-white border-2 border-lli-orange rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <i className="fas fa-users text-lli-orange mr-3"></i>
+                DEI & Equity Articles (18)
+              </h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {deiArticles.map((article, index) => (
+                  <article key={index} className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                    <span className="text-xs text-lli-orange font-semibold">DEI & EQUITY</span>
+                    <h4 className="font-bold text-gray-900 mt-2 mb-2">{article.title}</h4>
+                    <p className="text-sm text-gray-600 mb-3">{article.description}</p>
+                    <span className="text-xs text-gray-500">{article.readTime}</span>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Culture Change Articles (15) */}
+          <div id="culture-articles" className="hidden mt-12">
+            <div className="bg-gradient-to-br from-lli-teal/5 to-white border-2 border-lli-teal rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <i className="fas fa-chart-line text-lli-teal mr-3"></i>
+                Culture Change Articles (15)
+              </h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {cultureArticles.map((article, index) => (
+                  <article key={index} className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                    <span className="text-xs text-lli-teal font-semibold">CULTURE CHANGE</span>
+                    <h4 className="font-bold text-gray-900 mt-2 mb-2">{article.title}</h4>
+                    <p className="text-sm text-gray-600 mb-3">{article.description}</p>
+                    <span className="text-xs text-gray-500">{article.readTime}</span>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Implementation Articles (12) */}
+          <div id="implementation-articles" className="hidden mt-12">
+            <div className="bg-gradient-to-br from-lli-orange/5 to-white border-2 border-lli-orange rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <i className="fas fa-rocket text-lli-orange mr-3"></i>
+                Implementation Articles (12)
+              </h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {implementationArticles.map((article, index) => (
+                  <article key={index} className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                    <span className="text-xs text-lli-orange font-semibold">IMPLEMENTATION</span>
+                    <h4 className="font-bold text-gray-900 mt-2 mb-2">{article.title}</h4>
+                    <p className="text-sm text-gray-600 mb-3">{article.description}</p>
+                    <span className="text-xs text-gray-500">{article.readTime}</span>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
