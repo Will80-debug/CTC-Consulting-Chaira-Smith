@@ -75,10 +75,13 @@ export const BlogPage = () => {
                   </div>
                 </div>
                 
-                <button className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 inline-flex items-center">
+                <a 
+                  href="/blog/beyond-performative-actions"
+                  className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 inline-flex items-center"
+                >
                   Read Full Article
                   <i className="fas fa-arrow-right ml-2"></i>
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -281,12 +284,19 @@ export const BlogPage = () => {
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {leadershipArticles.map((article, index) => (
-                  <article key={index} className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                  <a 
+                    key={index} 
+                    href={`/blog/${article.slug}`}
+                    className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 block group"
+                  >
                     <span className="text-xs text-lli-teal font-semibold">LEADERSHIP</span>
-                    <h4 className="font-bold text-gray-900 mt-2 mb-2">{article.title}</h4>
+                    <h4 className="font-bold text-gray-900 mt-2 mb-2 group-hover:text-lli-teal transition-colors">{article.title}</h4>
                     <p className="text-sm text-gray-600 mb-3">{article.description}</p>
-                    <span className="text-xs text-gray-500">{article.readTime}</span>
-                  </article>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-gray-500">{article.readTime}</span>
+                      <i className="fas fa-arrow-right text-lli-teal opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -301,12 +311,19 @@ export const BlogPage = () => {
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {deiArticles.map((article, index) => (
-                  <article key={index} className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                  <a 
+                    key={index} 
+                    href={`/blog/${article.slug}`}
+                    className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 block group"
+                  >
                     <span className="text-xs text-lli-orange font-semibold">DEI & EQUITY</span>
-                    <h4 className="font-bold text-gray-900 mt-2 mb-2">{article.title}</h4>
+                    <h4 className="font-bold text-gray-900 mt-2 mb-2 group-hover:text-lli-orange transition-colors">{article.title}</h4>
                     <p className="text-sm text-gray-600 mb-3">{article.description}</p>
-                    <span className="text-xs text-gray-500">{article.readTime}</span>
-                  </article>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-gray-500">{article.readTime}</span>
+                      <i className="fas fa-arrow-right text-lli-orange opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -321,12 +338,19 @@ export const BlogPage = () => {
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {cultureArticles.map((article, index) => (
-                  <article key={index} className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                  <a 
+                    key={index} 
+                    href={`/blog/${article.slug}`}
+                    className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 block group"
+                  >
                     <span className="text-xs text-lli-teal font-semibold">CULTURE CHANGE</span>
-                    <h4 className="font-bold text-gray-900 mt-2 mb-2">{article.title}</h4>
+                    <h4 className="font-bold text-gray-900 mt-2 mb-2 group-hover:text-lli-teal transition-colors">{article.title}</h4>
                     <p className="text-sm text-gray-600 mb-3">{article.description}</p>
-                    <span className="text-xs text-gray-500">{article.readTime}</span>
-                  </article>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-gray-500">{article.readTime}</span>
+                      <i className="fas fa-arrow-right text-lli-teal opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -341,12 +365,19 @@ export const BlogPage = () => {
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {implementationArticles.map((article, index) => (
-                  <article key={index} className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                  <a 
+                    key={index} 
+                    href={`/blog/${article.slug}`}
+                    className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 block group"
+                  >
                     <span className="text-xs text-lli-orange font-semibold">IMPLEMENTATION</span>
-                    <h4 className="font-bold text-gray-900 mt-2 mb-2">{article.title}</h4>
+                    <h4 className="font-bold text-gray-900 mt-2 mb-2 group-hover:text-lli-orange transition-colors">{article.title}</h4>
                     <p className="text-sm text-gray-600 mb-3">{article.description}</p>
-                    <span className="text-xs text-gray-500">{article.readTime}</span>
-                  </article>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-gray-500">{article.readTime}</span>
+                      <i className="fas fa-arrow-right text-lli-orange opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                  </a>
                 ))}
               </div>
             </div>

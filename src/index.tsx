@@ -7,6 +7,8 @@ import { ResourcesPage } from './pages/resources'
 import { BlogPage } from './pages/blog'
 import { CaseStudiesPage } from './pages/case-studies'
 import { ContactPage } from './pages/contact'
+import { BeyondPerformativeActionsPage } from './pages/blog-posts/beyond-performative-actions'
+import { GenericBlogPostPage } from './pages/blog-posts/generic-article'
 
 const app = new Hono()
 
@@ -30,6 +32,17 @@ app.get('/resources', (c) => {
 
 app.get('/blog', (c) => {
   return c.render(<BlogPage />)
+})
+
+// Featured article - special custom page
+app.get('/blog/beyond-performative-actions', (c) => {
+  return c.render(<BeyondPerformativeActionsPage />)
+})
+
+// Dynamic route for all other blog posts
+app.get('/blog/:slug', (c) => {
+  const slug = c.req.param('slug')
+  return c.render(<GenericBlogPostPage slug={slug} />)
 })
 
 app.get('/case-studies', (c) => {
