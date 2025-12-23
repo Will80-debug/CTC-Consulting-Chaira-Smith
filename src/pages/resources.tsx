@@ -74,7 +74,7 @@ export const ResourcesPage = () => {
                   </li>
                 </ul>
                 <a 
-                  href="/resources/leadership-self-assessment-guide.html" 
+                  href="/static/resources/leadership-self-assessment-guide.html" 
                   target="_blank"
                   className="w-full bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 inline-block text-center"
                 >
@@ -116,7 +116,7 @@ export const ResourcesPage = () => {
                   </li>
                 </ul>
                 <a 
-                  href="/resources/dei-culture-toolkit.html" 
+                  href="/static/resources/dei-culture-toolkit.html" 
                   target="_blank"
                   className="w-full bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 inline-block text-center"
                 >
@@ -158,7 +158,7 @@ export const ResourcesPage = () => {
                   </li>
                 </ul>
                 <a 
-                  href="/resources/culture-change-playbook.html" 
+                  href="/static/resources/culture-change-playbook.html" 
                   target="_blank"
                   className="w-full bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 inline-block text-center"
                 >
