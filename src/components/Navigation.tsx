@@ -19,7 +19,7 @@ export const Navigation = () => {
           </a>
           
           {/* Navigation Menu */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             <a 
               href="/" 
               className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-teal pb-1"
@@ -33,16 +33,28 @@ export const Navigation = () => {
               Services
             </a>
             <a 
-              href="/case-studies" 
-              className="text-white hover:text-lli-orange font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-orange pb-1"
-            >
-              Case Studies
-            </a>
-            <a 
               href="/about" 
               className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-teal pb-1"
             >
               About
+            </a>
+            <a 
+              href="/resources" 
+              className="text-white hover:text-lli-orange font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-orange pb-1"
+            >
+              Resources
+            </a>
+            <a 
+              href="/blog" 
+              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-teal pb-1"
+            >
+              Blog
+            </a>
+            <a 
+              href="/case-studies" 
+              className="text-white hover:text-lli-orange font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-orange pb-1"
+            >
+              Case Studies
             </a>
             <a 
               href="https://www.LLIConsulting.com" 
@@ -82,18 +94,32 @@ export const Navigation = () => {
               Services
             </a>
             <a 
-              href="/case-studies" 
-              className="text-white hover:text-lli-orange font-semibold transition-colors duration-200 py-2"
-            >
-              <i className="fas fa-chart-line mr-3"></i>
-              Case Studies
-            </a>
-            <a 
               href="/about" 
               className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 py-2"
             >
               <i className="fas fa-info-circle mr-3"></i>
               About
+            </a>
+            <a 
+              href="/resources" 
+              className="text-white hover:text-lli-orange font-semibold transition-colors duration-200 py-2"
+            >
+              <i className="fas fa-book mr-3"></i>
+              Resources
+            </a>
+            <a 
+              href="/blog" 
+              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 py-2"
+            >
+              <i className="fas fa-newspaper mr-3"></i>
+              Blog
+            </a>
+            <a 
+              href="/case-studies" 
+              className="text-white hover:text-lli-orange font-semibold transition-colors duration-200 py-2"
+            >
+              <i className="fas fa-chart-line mr-3"></i>
+              Case Studies
             </a>
             <a 
               href="https://www.LLIConsulting.com" 

@@ -2,6 +2,10 @@ import { Hono } from 'hono'
 import { renderer } from './renderer'
 import { HomePage } from './pages/home'
 import { ServicesPage } from './pages/services'
+import { AboutPage } from './pages/about'
+import { ResourcesPage } from './pages/resources'
+import { BlogPage } from './pages/blog'
+import { CaseStudiesPage } from './pages/case-studies'
 
 const app = new Hono()
 
@@ -15,13 +19,20 @@ app.get('/services', (c) => {
   return c.render(<ServicesPage />)
 })
 
-// Placeholder routes for future pages
 app.get('/about', (c) => {
-  return c.html('<html><body><h1>About Page - Coming Soon</h1><a href="/">Back to Home</a></body></html>')
+  return c.render(<AboutPage />)
+})
+
+app.get('/resources', (c) => {
+  return c.render(<ResourcesPage />)
+})
+
+app.get('/blog', (c) => {
+  return c.render(<BlogPage />)
 })
 
 app.get('/case-studies', (c) => {
-  return c.html('<html><body><h1>Case Studies Page - Coming Soon</h1><a href="/">Back to Home</a></body></html>')
+  return c.render(<CaseStudiesPage />)
 })
 
 export default app
