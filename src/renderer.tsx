@@ -40,6 +40,45 @@ export const renderer = jsxRenderer(({ children }) => {
               }
             }
             
+            // Toggle resource category display
+            function toggleCategory(category) {
+              const resourceDiv = document.getElementById(category + '-resources');
+              const icon = document.getElementById(category + '-icon');
+              
+              // Hide all other categories
+              ['leadership', 'dei', 'change', 'strategic'].forEach(cat => {
+                if (cat !== category) {
+                  const otherDiv = document.getElementById(cat + '-resources');
+                  const otherIcon = document.getElementById(cat + '-icon');
+                  if (otherDiv && !otherDiv.classList.contains('hidden')) {
+                    otherDiv.classList.add('hidden');
+                    if (otherIcon) {
+                      otherIcon.classList.remove('fa-chevron-up');
+                      otherIcon.classList.add('fa-chevron-down');
+                    }
+                  }
+                }
+              });
+              
+              // Toggle current category
+              if (resourceDiv) {
+                resourceDiv.classList.toggle('hidden');
+                if (icon) {
+                  if (resourceDiv.classList.contains('hidden')) {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                  } else {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                    // Smooth scroll to the opened section
+                    setTimeout(() => {
+                      resourceDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 100);
+                  }
+                }
+              }
+            }
+            
             // Lazy load images when they enter viewport
             if ('IntersectionObserver' in window) {
               document.addEventListener('DOMContentLoaded', function() {
