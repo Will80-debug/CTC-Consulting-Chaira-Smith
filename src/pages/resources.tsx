@@ -73,10 +73,14 @@ export const ResourcesPage = () => {
                     <span>Development resources</span>
                   </li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105">
-                  <i className="fas fa-download mr-2"></i>
-                  Download PDF
-                </button>
+                <a 
+                  href="/resources/leadership-self-assessment-guide.html" 
+                  target="_blank"
+                  className="w-full bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 inline-block text-center"
+                >
+                  <i className="fas fa-file-pdf mr-2"></i>
+                  View & Download PDF
+                </a>
               </div>
             </div>
 
@@ -111,10 +115,14 @@ export const ResourcesPage = () => {
                     <span>Implementation checklist</span>
                   </li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105">
-                  <i className="fas fa-download mr-2"></i>
-                  Download PDF
-                </button>
+                <a 
+                  href="/resources/dei-culture-toolkit.html" 
+                  target="_blank"
+                  className="w-full bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 inline-block text-center"
+                >
+                  <i className="fas fa-file-pdf mr-2"></i>
+                  View & Download PDF
+                </a>
               </div>
             </div>
 
@@ -149,10 +157,14 @@ export const ResourcesPage = () => {
                     <span>Success metrics framework</span>
                   </li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105">
-                  <i className="fas fa-download mr-2"></i>
-                  Download PDF
-                </button>
+                <a 
+                  href="/resources/culture-change-playbook.html" 
+                  target="_blank"
+                  className="w-full bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 inline-block text-center"
+                >
+                  <i className="fas fa-file-pdf mr-2"></i>
+                  View & Download PDF
+                </a>
               </div>
             </div>
           </div>
