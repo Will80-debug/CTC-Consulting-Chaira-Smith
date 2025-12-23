@@ -212,6 +212,27 @@ export const HomePage = () => {
             {/* Tab Content Panels */}
             {/* Executive Coaching Panel */}
             <div id="tab-coaching" className="expertise-content bg-white rounded-2xl shadow-xl p-8 md:p-12">
+              {/* Executive Coaching Video */}
+              <div className="mb-8 rounded-xl overflow-hidden shadow-2xl">
+                <div className="relative bg-black" style="padding-bottom: 56.25%;">
+                  <video 
+                    src="https://www.genspark.ai/api/files/s/YEjI0SKr"
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    controls
+                    preload="metadata"
+                    poster=""
+                  >
+                    <p className="text-white p-4">Your browser does not support the video tag.</p>
+                  </video>
+                </div>
+                <div className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-6 py-3">
+                  <p className="text-sm font-semibold">
+                    <i className="fas fa-play-circle mr-2"></i>
+                    Executive Coaching in Action - See How We Transform Leaders
+                  </p>
+                </div>
+              </div>
+
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-2xl font-bold text-lli-teal mb-6">
