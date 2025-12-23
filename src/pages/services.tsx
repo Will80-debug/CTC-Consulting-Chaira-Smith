@@ -17,34 +17,60 @@ export const ServicesPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
       <Navigation />
 
-      {/* Introduction Video Section */}
-      <section className="bg-gradient-to-br from-lli-black via-gray-800 to-lli-black py-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Header Section with Professional Image */}
+      <section className="relative bg-gradient-to-br from-lli-black via-gray-800 to-lli-black py-20 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img 
+            src={confidentLeaderImg} 
+            alt="Professional Leadership Team" 
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-lli-black/80 via-gray-900/70 to-lli-black/80"></div>
+        </div>
+        
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               Welcome to LLI Consulting Group
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transforming Leadership, Building Culture, Creating Impact
             </p>
+            
+            {/* Key Value Propositions */}
+            <div className="grid md:grid-cols-3 gap-6 mt-12">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                <div className="text-lli-orange text-3xl mb-3">
+                  <i className="fas fa-users"></i>
+                </div>
+                <h3 className="text-white font-bold text-lg mb-2">Individual Coaching</h3>
+                <p className="text-gray-300 text-sm">1-on-1 executive coaching for transformational growth</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                <div className="text-lli-teal text-3xl mb-3">
+                  <i className="fas fa-people-group"></i>
+                </div>
+                <h3 className="text-white font-bold text-lg mb-2">Team Development</h3>
+                <p className="text-gray-300 text-sm">Build high-performing, cohesive teams</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                <div className="text-lli-orange text-3xl mb-3">
+                  <i className="fas fa-chart-line"></i>
+                </div>
+                <h3 className="text-white font-bold text-lg mb-2">Culture Transformation</h3>
+                <p className="text-gray-300 text-sm">Strategic planning for sustainable change</p>
+              </div>
+            </div>
           </div>
-          
-          {/* Video Player */}
-          <div className="bg-black rounded-2xl overflow-hidden shadow-2xl mb-8">
-            <video 
-              className="w-full"
-              controls
-              autoplay
-              muted
-              playsinline
-              preload="auto"
-            >
-              <source src={introVideoUrl} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+        </div>
+      </section>
 
-          {/* Interactive LLI Framework Journey */}
+      {/* Interactive LLI Framework Journey */}
+      <section className="bg-white py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
