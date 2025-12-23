@@ -213,23 +213,48 @@ export const HomePage = () => {
             {/* Executive Coaching Panel */}
             <div id="tab-coaching" className="expertise-content bg-white rounded-2xl shadow-xl p-8 md:p-12">
               {/* Executive Coaching Video */}
-              <div className="mb-8 max-w-3xl mx-auto">
-                <div className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-4 py-2 rounded-t-xl">
-                  <p className="text-sm font-semibold">
-                    <i className="fas fa-play-circle mr-2"></i>
+              <div className="mb-8">
+                <div className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-6 py-3 rounded-t-xl">
+                  <p className="text-lg font-semibold">
+                    <i className="fas fa-video mr-2"></i>
                     Executive Coaching in Action - See How We Transform Leaders
                   </p>
                 </div>
-                <div className="bg-black rounded-b-xl overflow-hidden shadow-xl">
-                  <video 
-                    src="https://www.genspark.ai/api/files/s/YEjI0SKr"
-                    className="w-full"
-                    style={{maxHeight: '400px', objectFit: 'contain'}}
-                    controls
-                    preload="metadata"
-                  >
-                    <p className="text-white p-4">Your browser does not support the video tag.</p>
-                  </video>
+                <div className="bg-gradient-to-br from-gray-900 to-black rounded-b-xl overflow-hidden shadow-xl">
+                  <div className="aspect-video relative bg-black flex items-center justify-center">
+                    {/* Video placeholder with play button */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 flex flex-col items-center justify-center p-12 text-center">
+                      <div className="bg-lli-teal w-24 h-24 rounded-full flex items-center justify-center mb-6 hover:bg-lli-teal-dark transition-all duration-300 transform hover:scale-110 cursor-pointer shadow-2xl">
+                        <i className="fas fa-play text-white text-4xl ml-2"></i>
+                      </div>
+                      <h3 className="text-white text-2xl font-bold mb-3">Watch Executive Coaching in Action</h3>
+                      <p className="text-gray-300 text-lg mb-6 max-w-2xl">
+                        See real examples of our LLI Framework™ in practice as we guide executives through transformational leadership development.
+                      </p>
+                      <p className="text-gray-400 text-sm mb-6">
+                        <i className="fas fa-clock mr-2"></i>
+                        Duration: 42 seconds | HD Quality
+                      </p>
+                      <div className="flex gap-4">
+                        <a 
+                          href="https://www.genspark.ai/api/files/s/YEjI0SKr" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-gradient-to-r from-lli-teal to-lli-teal-dark hover:from-lli-teal-dark hover:to-lli-teal text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105"
+                        >
+                          <i className="fas fa-external-link-alt mr-2"></i>
+                          Watch Video
+                        </a>
+                        <button 
+                          onclick="alert('Video will be embedded here in production. For now, click Watch Video to view in a new tab.')"
+                          className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200"
+                        >
+                          <i className="fas fa-info-circle mr-2"></i>
+                          Learn More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
