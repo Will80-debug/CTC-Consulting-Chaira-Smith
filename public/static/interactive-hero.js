@@ -355,4 +355,52 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Initialize first expertise tab
   showExpertiseTab('coaching');
+  
+  // Initialize video auto-pause functionality
+  initVideoAutoPause();
 });
+
+// Video Auto-Pause Functionality
+// Automatically pause all videos when user switches tabs or clicks outside the page
+function initVideoAutoPause() {
+  // Pause all videos when page visibility changes (tab switch)
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      pauseAllVideos();
+    }
+  });
+  
+  // Pause all videos when window loses focus (click outside)
+  window.addEventListener('blur', () => {
+    pauseAllVideos();
+  });
+  
+  // Optional: Resume videos when page becomes visible again (uncomment if desired)
+  // window.addEventListener('focus', () => {
+  //   // You can add logic here to resume videos if needed
+  // });
+}
+
+function pauseAllVideos() {
+  // Pause all HTML5 video elements
+  const videoElements = document.querySelectorAll('video');
+  videoElements.forEach(video => {
+    if (!video.paused) {
+      video.pause();
+    }
+  });
+  
+  // Pause all YouTube iframe videos
+  const youtubeIframes = document.querySelectorAll('iframe[src*="youtube.com"]');
+  youtubeIframes.forEach(iframe => {
+    // Send postMessage to pause YouTube videos
+    // This requires YouTube's iframe API
+    iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+  });
+  
+  // Pause all Vimeo iframe videos (if any)
+  const vimeoIframes = document.querySelectorAll('iframe[src*="vimeo.com"]');
+  vimeoIframes.forEach(iframe => {
+    iframe.contentWindow.postMessage('{"method":"pause"}', '*');
+  });
+}

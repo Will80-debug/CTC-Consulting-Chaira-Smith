@@ -224,7 +224,7 @@ export const HomePage = () => {
                   <div className="relative" style={{paddingBottom: '56.25%'}}>
                     <iframe 
                       className="absolute top-0 left-0 w-full h-full"
-                      src="https://www.youtube.com/embed/qtcbMBQxT2s"
+                      src="https://www.youtube.com/embed/qtcbMBQxT2s?enablejsapi=1"
                       title="Executive Coaching Video"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -319,7 +319,7 @@ export const HomePage = () => {
                   <div className="relative" style={{paddingBottom: '56.25%'}}>
                     <iframe 
                       className="absolute top-0 left-0 w-full h-full"
-                      src="https://www.youtube.com/embed/w6z2Iv5B18E"
+                      src="https://www.youtube.com/embed/w6z2Iv5B18E?enablejsapi=1"
                       title="Team Development Training Video"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -496,7 +496,7 @@ export const HomePage = () => {
                   <div className="relative" style={{paddingBottom: '56.25%'}}>
                     <iframe 
                       className="absolute top-0 left-0 w-full h-full"
-                      src="https://www.youtube.com/embed/YSgPO_eoVyQ"
+                      src="https://www.youtube.com/embed/YSgPO_eoVyQ?enablejsapi=1"
                       title="Strategic Consulting Video"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -591,7 +591,7 @@ export const HomePage = () => {
                   <div className="relative" style={{paddingBottom: '56.25%'}}>
                     <iframe 
                       className="absolute top-0 left-0 w-full h-full"
-                      src="https://www.youtube.com/embed/d5ESOlafejA"
+                      src="https://www.youtube.com/embed/d5ESOlafejA?enablejsapi=1"
                       title="Culture Transformation Video"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
