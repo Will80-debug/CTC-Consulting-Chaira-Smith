@@ -228,11 +228,11 @@ export const HomePage = () => {
                       preload="metadata"
                       style={{backgroundColor: '#000'}}
                     >
-                      <source src="https://www.genspark.ai/api/files/s/GgoHKo3n" type="video/mp4" />
+                      <source src="https://www.genspark.ai/api/files/s/VwnlhxBR" type="video/mp4" />
                       <p className="text-white p-8 text-center">
                         Your browser does not support the video tag or the video cannot be loaded.
                         <br />
-                        <a href="https://www.genspark.ai/api/files/s/GgoHKo3n" target="_blank" rel="noopener noreferrer" className="text-lli-teal underline mt-4 inline-block">
+                        <a href="https://www.genspark.ai/api/files/s/VwnlhxBR" target="_blank" rel="noopener noreferrer" className="text-lli-teal underline mt-4 inline-block">
                           Click here to watch the video in a new tab
                         </a>
                       </p>
