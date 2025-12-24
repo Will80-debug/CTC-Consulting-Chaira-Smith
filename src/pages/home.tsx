@@ -319,7 +319,7 @@ export const HomePage = () => {
                   <div className="relative" style={{paddingBottom: '56.25%'}}>
                     <iframe 
                       className="absolute top-0 left-0 w-full h-full"
-                      src="https://www.youtube.com/embed/0CQi8F2Ryt8"
+                      src="https://www.youtube.com/embed/w6z2Iv5B18E"
                       title="Team Development Training Video"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -484,13 +484,26 @@ export const HomePage = () => {
 
             {/* Strategy Panel */}
             <div id="tab-strategy" className="expertise-content hidden bg-white rounded-2xl shadow-xl p-8 md:p-12">
-              {/* Featured Image */}
-              <div className="mb-8 rounded-xl overflow-hidden">
-                <img 
-                  src={leadershipImg} 
-                  alt="Strategic consulting session" 
-                  className="w-full h-64 object-cover"
-                />
+              {/* Strategy Video */}
+              <div className="mb-8">
+                <div className="bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-6 py-3 rounded-t-xl">
+                  <p className="text-lg font-semibold">
+                    <i className="fas fa-video mr-2"></i>
+                    Strategic Consulting - Creating Transformational Change
+                  </p>
+                </div>
+                <div className="bg-black rounded-b-xl overflow-hidden shadow-xl">
+                  <div className="relative" style={{paddingBottom: '56.25%'}}>
+                    <iframe 
+                      className="absolute top-0 left-0 w-full h-full"
+                      src="https://www.youtube.com/embed/YSgPO_eoVyQ"
+                      title="Strategic Consulting Video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
               </div>
               
               <div className="grid md:grid-cols-2 gap-8">
