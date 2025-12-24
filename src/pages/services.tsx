@@ -4,8 +4,8 @@ import { Footer } from '../components/Footer'
 export const ServicesPage = () => {
   const logoUrl = "https://page.gensparksite.com/v1/base64_upload/76289e59443ab0b47d1ab4851999fbe6"
   const chiaraPhotoUrl = "https://page.gensparksite.com/v1/base64_upload/e6822a23cff671668f780475724b62e7"
-  // LLI Strategic Planning Training video - updated with new file
-  const introVideoUrl = "https://www.genspark.ai/api/files/s/hNVrmI5h"
+  // Strategic planning consultation image - unique to services page
+  const strategicPlanningImg = "https://www.genspark.ai/api/files/s/MtukJf3v?cache_control=3600"
   
   // Additional professional images for visual appeal
   const teamMeetingImg = "https://sspark.genspark.ai/cfimages?u1=p3451G3ZEplqSVU1hpWslMBIRhknlX84CsLjYH3SkznuTIrlkxpyLAuCwkmtMFXbwhpEvre9YJ3e99PmcLuDRrpBMd2vgWUNT%2BvkZwb2HqDUbZe%2FfwNbySP593IfQLzHOX%2FP1WA3WLrjXpp%2FnLigzhI%2B5CHarzSTteaGCdJuAw7caVHr%2FR8IrzhY3HPD5eqAoLqHXC9oAtaaRBQ4DxSo3yzd1vrQGBSFuJKrYw%3D%3D&u2=r5lJXZBmG11V2fj%2B&width=2560"
@@ -448,36 +448,30 @@ export const ServicesPage = () => {
               </div>
             </div>
             
-            {/* Right: Intro Video */}
+            {/* Right: Strategic Planning Image */}
             <div className="relative">
-              {/* Video Text Overlay Above */}
+              {/* Image Text Overlay Above */}
               <div className="mb-4">
                 <p className="text-gray-700 font-medium text-center">
-                  <i className="fas fa-play-circle text-lli-teal mr-2"></i>
-                  Watch: How the LLI Framework™ Transforms Organizations (90 seconds)
+                  <i className="fas fa-handshake text-lli-teal mr-2"></i>
+                  How the LLI Framework™ Transforms Organizations
                 </p>
               </div>
               
-              {/* Video Player */}
-              <div className="bg-black rounded-2xl overflow-hidden shadow-2xl">
-                <video 
-                  className="w-full"
-                  controls
-                  autoplay
-                  muted
-                  playsinline
-                  loop
-                  preload="auto"
-                >
-                  <source src={introVideoUrl} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+              {/* Professional Consultation Image */}
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src={strategicPlanningImg} 
+                  alt="Strategic planning consultation - diverse team collaborating" 
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
               </div>
               
-              {/* Video Caption Below */}
+              {/* Image Caption Below */}
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  LLI Consulting Group breaks down how Listen → Learn → Implement helps leaders move from intent to impact.
+                  LLI Consulting Group helps leaders move from intent to impact through collaborative strategic planning.
                 </p>
               </div>
             </div>
