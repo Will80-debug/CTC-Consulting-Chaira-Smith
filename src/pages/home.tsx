@@ -222,35 +222,6 @@ export const HomePage = () => {
                 </div>
                 <div className="bg-black rounded-b-xl overflow-hidden shadow-xl">
                   <div className="relative" style={{paddingBottom: '56.25%'}}>
-                    <video 
-                      className="absolute top-0 left-0 w-full h-full"
-                      controls
-                      preload="metadata"
-                      style={{backgroundColor: '#000'}}
-                    >
-                      <source src="/videos/executive-coaching-2.mp4" type="video/mp4" />
-                      <p className="text-white p-8 text-center">
-                        Your browser does not support the video tag or the video cannot be loaded.
-                        <br />
-                        <a href="/videos/executive-coaching-2.mp4" target="_blank" rel="noopener noreferrer" className="text-lli-teal underline mt-4 inline-block">
-                          Click here to watch the video in a new tab
-                        </a>
-                      </p>
-                    </video>
-                  </div>
-                </div>
-              </div>
-
-              {/* Additional YouTube Video */}
-              <div className="mb-8">
-                <div className="bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-6 py-3 rounded-t-xl">
-                  <p className="text-lg font-semibold">
-                    <i className="fas fa-video mr-2"></i>
-                    Executive Coaching Insights - Leadership Transformation
-                  </p>
-                </div>
-                <div className="bg-black rounded-b-xl overflow-hidden shadow-xl">
-                  <div className="relative" style={{paddingBottom: '56.25%'}}>
                     <iframe 
                       className="absolute top-0 left-0 w-full h-full"
                       src="https://www.youtube.com/embed/qtcbMBQxT2s"
