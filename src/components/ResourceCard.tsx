@@ -26,9 +26,31 @@ export const ResourceCard = ({ title, description, type, duration, image, color 
   };
 
   const classes = colorClasses[color];
+  
+  // Generate resource URL based on title
+  const generateResourceUrl = () => {
+    const slug = title.toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+      .trim();
+    
+    if (type === 'PDF') {
+      return `/static/resources/${slug}.html`;
+    } else {
+      return `/static/resources/${slug}-video.html`;
+    }
+  };
+
+  const resourceUrl = generateResourceUrl();
 
   return (
-    <div className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+    <a 
+      href={resourceUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 block"
+    >
       <div className="relative h-32 overflow-hidden">
         <img 
           src={image} 
@@ -50,11 +72,11 @@ export const ResourceCard = ({ title, description, type, duration, image, color 
             <i className={`fas ${type === 'PDF' ? 'fa-file-pdf' : 'fa-video'} mr-1 ${classes.icon}`}></i>
             {duration}
           </span>
-          <button className={`${classes.button} font-semibold text-sm`}>
+          <span className={`${classes.button} font-semibold text-sm`}>
             View <i className="fas fa-arrow-right ml-1"></i>
-          </button>
+          </span>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
