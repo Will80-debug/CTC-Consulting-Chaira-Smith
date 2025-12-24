@@ -241,6 +241,28 @@ export const HomePage = () => {
                 </div>
               </div>
 
+              {/* Additional YouTube Video */}
+              <div className="mb-8">
+                <div className="bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-6 py-3 rounded-t-xl">
+                  <p className="text-lg font-semibold">
+                    <i className="fas fa-video mr-2"></i>
+                    Executive Coaching Insights - Leadership Transformation
+                  </p>
+                </div>
+                <div className="bg-black rounded-b-xl overflow-hidden shadow-xl">
+                  <div className="relative" style={{paddingBottom: '56.25%'}}>
+                    <iframe 
+                      className="absolute top-0 left-0 w-full h-full"
+                      src="https://www.youtube.com/embed/qtcbMBQxT2s"
+                      title="Executive Coaching Video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-2xl font-bold text-lli-teal mb-6">
