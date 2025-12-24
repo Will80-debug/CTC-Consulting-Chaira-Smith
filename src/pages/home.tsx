@@ -566,13 +566,26 @@ export const HomePage = () => {
 
             {/* Culture Panel */}
             <div id="tab-culture" className="expertise-content hidden bg-white rounded-2xl shadow-xl p-8 md:p-12">
-              {/* Featured Image */}
-              <div className="mb-8 rounded-xl overflow-hidden">
-                <img 
-                  src={confidentLeaderImg} 
-                  alt="Culture transformation" 
-                  className="w-full h-64 object-cover"
-                />
+              {/* Culture Transformation Video */}
+              <div className="mb-8">
+                <div className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-6 py-3 rounded-t-xl">
+                  <p className="text-lg font-semibold">
+                    <i className="fas fa-video mr-2"></i>
+                    Culture Transformation in Action - Building Inclusive Workplaces
+                  </p>
+                </div>
+                <div className="bg-black rounded-b-xl overflow-hidden shadow-xl">
+                  <div className="relative" style={{paddingBottom: '56.25%'}}>
+                    <iframe 
+                      className="absolute top-0 left-0 w-full h-full"
+                      src="https://www.youtube.com/embed/d5ESOlafejA"
+                      title="Culture Transformation Video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
               </div>
               
               <div className="grid md:grid-cols-2 gap-8">
