@@ -1,5 +1,7 @@
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
+import { ResourceCard } from '../components/ResourceCard'
+import { leadershipResources, deiResources, changeResources, strategicResources } from '../data/resource-library'
 
 export const ResourcesPage = () => {
   // Resource images
@@ -323,137 +325,17 @@ export const ResourcesPage = () => {
                 Leadership Development Resources
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Emotional Intelligence for Leaders</h4>
-                      <p className="text-sm text-gray-600">Guide to developing EQ competencies</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 8 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Feedback Framework</h4>
-                      <p className="text-sm text-gray-600">Master the art of giving and receiving feedback</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 6 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Decision-Making Under Pressure</h4>
-                      <p className="text-sm text-gray-600">Strategic frameworks for critical decisions</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 10 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-video text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Authentic Leadership Series</h4>
-                      <p className="text-sm text-gray-600">4-part video training on leading with authenticity</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">Video • 45 min</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Delegation Mastery Workbook</h4>
-                      <p className="text-sm text-gray-600">Learn to delegate effectively and empower teams</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 12 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Coaching Conversation Guide</h4>
-                      <p className="text-sm text-gray-600">Templates for powerful coaching conversations</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 7 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Executive Presence Blueprint</h4>
-                      <p className="text-sm text-gray-600">Build commanding presence and influence</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 9 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Resilient Leadership Toolkit</h4>
-                      <p className="text-sm text-gray-600">Build capacity to lead through adversity</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 11 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Time Management for Leaders</h4>
-                      <p className="text-sm text-gray-600">Prioritization strategies for busy executives</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 8 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Conflict Resolution Framework</h4>
-                      <p className="text-sm text-gray-600">Navigate difficult conversations with confidence</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 10 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Leadership Communication Playbook</h4>
-                      <p className="text-sm text-gray-600">Master stakeholder and team communication</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 14 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Building High-Trust Teams</h4>
-                      <p className="text-sm text-gray-600">Strategies for creating psychological safety</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 9 pages</span>
-                </div>
+                {leadershipResources.map((resource, index) => (
+                  <ResourceCard
+                    key={index}
+                    title={resource.title}
+                    description={resource.description}
+                    type={resource.type}
+                    duration={resource.duration}
+                    image={resource.image}
+                    color="teal"
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -466,203 +348,17 @@ export const ResourcesPage = () => {
                 DEI & Culture Resources
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Unconscious Bias Workshop Guide</h4>
-                      <p className="text-sm text-gray-600">Facilitator guide for bias awareness training</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 15 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Inclusive Hiring Practices</h4>
-                      <p className="text-sm text-gray-600">Remove bias from your recruitment process</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 12 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Microaggressions Response Guide</h4>
-                      <p className="text-sm text-gray-600">How to address subtle workplace exclusion</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 8 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Employee Resource Group Handbook</h4>
-                      <p className="text-sm text-gray-600">Launch and sustain effective ERGs</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 18 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Psychological Safety Assessment</h4>
-                      <p className="text-sm text-gray-600">Measure and improve team psychological safety</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 10 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Allyship Action Framework</h4>
-                      <p className="text-sm text-gray-600">Move from awareness to active allyship</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 11 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-video text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Difficult Conversations on Race</h4>
-                      <p className="text-sm text-gray-600">Video training for facilitating dialogue</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">Video • 60 min</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Generational Diversity Guide</h4>
-                      <p className="text-sm text-gray-600">Bridge gaps across 5 generations at work</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 13 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Neurodiversity in the Workplace</h4>
-                      <p className="text-sm text-gray-600">Create inclusive environments for all minds</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 14 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Gender Equity Playbook</h4>
-                      <p className="text-sm text-gray-600">Close gender gaps in leadership and pay</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 16 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Religious Accommodation Guide</h4>
-                      <p className="text-sm text-gray-600">Support diverse faith practices at work</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 9 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Pronoun Usage Best Practices</h4>
-                      <p className="text-sm text-gray-600">Create respectful, inclusive communication</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 6 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Cultural Competency Framework</h4>
-                      <p className="text-sm text-gray-600">Develop cross-cultural leadership skills</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 12 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Accessibility Audit Checklist</h4>
-                      <p className="text-sm text-gray-600">Ensure physical and digital accessibility</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 10 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Inclusive Language Style Guide</h4>
-                      <p className="text-sm text-gray-600">Write and speak with inclusion in mind</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 7 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">DEI Metrics Dashboard</h4>
-                      <p className="text-sm text-gray-600">Track progress and measure DEI impact</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 11 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Belonging Survey Template</h4>
-                      <p className="text-sm text-gray-600">Assess sense of belonging in your organization</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 8 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Inclusive Event Planning Guide</h4>
-                      <p className="text-sm text-gray-600">Host events that welcome everyone</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 9 pages</span>
-                </div>
+                {deiResources.map((resource, index) => (
+                  <ResourceCard
+                    key={index}
+                    title={resource.title}
+                    description={resource.description}
+                    type={resource.type}
+                    duration={resource.duration}
+                    image={resource.image}
+                    color="orange"
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -675,104 +371,17 @@ export const ResourcesPage = () => {
                 Change Management Resources
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Change Readiness Assessment</h4>
-                      <p className="text-sm text-gray-600">Evaluate organizational readiness for change</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 12 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Resistance Management Toolkit</h4>
-                      <p className="text-sm text-gray-600">Address and overcome change resistance</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 14 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Change Communication Plan Template</h4>
-                      <p className="text-sm text-gray-600">Craft effective change communication strategy</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 10 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Transition Management Workbook</h4>
-                      <p className="text-sm text-gray-600">Guide individuals through organizational change</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 16 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-video text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Leading Through Change Masterclass</h4>
-                      <p className="text-sm text-gray-600">Video series on change leadership</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">Video • 55 min</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Change Champion Network Guide</h4>
-                      <p className="text-sm text-gray-600">Build and activate change champion networks</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 11 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Kotter's 8-Step Process Workbook</h4>
-                      <p className="text-sm text-gray-600">Apply proven change framework to your initiative</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 18 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Merger & Acquisition Integration</h4>
-                      <p className="text-sm text-gray-600">Navigate cultural integration during M&A</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 20 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-teal text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Sustaining Change Momentum</h4>
-                      <p className="text-sm text-gray-600">Keep change initiatives on track long-term</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 9 pages</span>
-                </div>
+                {changeResources.map((resource, index) => (
+                  <ResourceCard
+                    key={index}
+                    title={resource.title}
+                    description={resource.description}
+                    type={resource.type}
+                    duration={resource.duration}
+                    image={resource.image}
+                    color="teal"
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -785,82 +394,17 @@ export const ResourcesPage = () => {
                 Strategic Planning Resources
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Vision & Mission Workshop Facilitation</h4>
-                      <p className="text-sm text-gray-600">Create compelling organizational vision</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 13 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">SWOT Analysis Deep Dive</h4>
-                      <p className="text-sm text-gray-600">Comprehensive strategic analysis framework</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 11 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">OKR Implementation Guide</h4>
-                      <p className="text-sm text-gray-600">Set and track objectives and key results</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 15 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Balanced Scorecard Template</h4>
-                      <p className="text-sm text-gray-600">Align strategy with execution and metrics</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 10 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-video text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Strategic Planning Retreat Guide</h4>
-                      <p className="text-sm text-gray-600">Video + workbook for effective planning sessions</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">Video • 40 min + PDF</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Competitive Analysis Framework</h4>
-                      <p className="text-sm text-gray-600">Assess market position and opportunities</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 12 pages</span>
-                </div>
-
-                <div className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start mb-3">
-                    <i className="fas fa-file-pdf text-lli-orange text-xl mr-3 mt-1"></i>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Scenario Planning Workbook</h4>
-                      <p className="text-sm text-gray-600">Prepare for multiple future scenarios</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-500">PDF • 14 pages</span>
-                </div>
+                {strategicResources.map((resource, index) => (
+                  <ResourceCard
+                    key={index}
+                    title={resource.title}
+                    description={resource.description}
+                    type={resource.type}
+                    duration={resource.duration}
+                    image={resource.image}
+                    color="orange"
+                  />
+                ))}
               </div>
             </div>
           </div>
