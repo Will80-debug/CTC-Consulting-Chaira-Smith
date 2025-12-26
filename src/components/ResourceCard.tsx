@@ -49,6 +49,7 @@ export const ResourceCard = ({ title, description, type, duration, image, color 
       href={resourceUrl}
       target="_blank"
       rel="noopener noreferrer"
+      onclick={`return handleResourceClick('${resourceUrl}', event)`}
       className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 block"
     >
       <div className="relative h-32 overflow-hidden">

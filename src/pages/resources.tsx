@@ -1,6 +1,7 @@
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
 import { ResourceCard } from '../components/ResourceCard'
+import { SubscriptionModal } from '../components/SubscriptionModal'
 import { leadershipResources, deiResources, changeResources, strategicResources } from '../data/resource-library'
 
 export const ResourcesPage = () => {
@@ -438,6 +439,12 @@ export const ResourcesPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Subscription Modal */}
+      <SubscriptionModal />
+
+      {/* Subscription Manager Script */}
+      <script src="/static/subscription-manager.js"></script>
 
       <Footer />
     </div>
