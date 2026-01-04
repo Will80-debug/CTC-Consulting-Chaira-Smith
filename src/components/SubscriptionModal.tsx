@@ -31,7 +31,7 @@ export const SubscriptionModal = () => {
           <div className="bg-gradient-to-br from-lli-teal/10 to-white border-2 border-lli-teal rounded-xl p-6 mb-6">
             <div className="text-center mb-4">
               <div className="text-5xl font-bold text-lli-teal mb-2">
-                $14.99<span className="text-xl text-gray-600">/month</span>
+                $79.00<span className="text-xl text-gray-600">/month</span>
               </div>
               <p className="text-gray-600">Cancel anytime • No commitment</p>
             </div>
