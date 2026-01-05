@@ -37,9 +37,9 @@ export const leadershipResources: Resource[] = [
   },
   {
     title: "Authentic Leadership Series",
-    description: "4-part video training on leading with authenticity and vulnerability",
-    type: "Video",
-    duration: "45 min",
+    description: "4-part guide on leading with authenticity and vulnerability",
+    type: "PDF",
+    duration: "18 pages",
     category: "Leadership Development",
     image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop"
   },
@@ -113,8 +113,8 @@ export const deiResources: Resource[] = [
   {
     title: "Unconscious Bias Training Module",
     description: "Recognize and mitigate unconscious biases in decision-making",
-    type: "Video",
-    duration: "52 min",
+    type: "PDF",
+    duration: "24 pages",
     category: "DEI & Culture",
     image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=600&fit=crop"
   },
@@ -169,8 +169,8 @@ export const deiResources: Resource[] = [
   {
     title: "Intersectionality Workshop Series",
     description: "Understanding overlapping identities and experiences",
-    type: "Video",
-    duration: "65 min",
+    type: "PDF",
+    duration: "28 pages",
     category: "DEI & Culture",
     image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800&h=600&fit=crop"
   },
@@ -193,8 +193,8 @@ export const deiResources: Resource[] = [
   {
     title: "Cultural Competency Training",
     description: "Develop cross-cultural awareness and sensitivity",
-    type: "Video",
-    duration: "48 min",
+    type: "PDF",
+    duration: "22 pages",
     category: "DEI & Culture",
     image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&h=600&fit=crop"
   },
@@ -233,8 +233,8 @@ export const deiResources: Resource[] = [
   {
     title: "Generational Diversity Workshop",
     description: "Bridge generational gaps and leverage diverse perspectives",
-    type: "Video",
-    duration: "42 min",
+    type: "PDF",
+    duration: "19 pages",
     category: "DEI & Culture",
     image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop"
   },
@@ -249,8 +249,8 @@ export const deiResources: Resource[] = [
   {
     title: "DEI Storytelling Workshop",
     description: "Share authentic stories to drive cultural transformation",
-    type: "Video",
-    duration: "35 min",
+    type: "PDF",
+    duration: "15 pages",
     category: "DEI & Culture",
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=600&fit=crop"
   }
