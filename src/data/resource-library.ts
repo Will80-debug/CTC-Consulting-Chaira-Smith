@@ -102,8 +102,8 @@ export const leadershipResources: Resource[] = [
   {
     title: "Innovation Leadership Workshop",
     description: "Foster innovation and creative problem-solving in your team",
-    type: "Video",
-    duration: "38 min",
+    type: "PDF",
+    duration: "16 pages",
     category: "Leadership Development",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop"
   }
@@ -308,8 +308,8 @@ export const changeResources: Resource[] = [
   {
     title: "Change Champion Training",
     description: "Develop internal advocates to support change initiatives",
-    type: "Video",
-    duration: "55 min",
+    type: "PDF",
+    duration: "23 pages",
     category: "Change Management",
     image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop"
   },
@@ -367,8 +367,8 @@ export const strategicResources: Resource[] = [
   {
     title: "Scenario Planning Workshop",
     description: "Prepare for multiple possible futures through scenario analysis",
-    type: "Video",
-    duration: "68 min",
+    type: "PDF",
+    duration: "26 pages",
     category: "Strategic Planning",
     image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=600&fit=crop"
   },
