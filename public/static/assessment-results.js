@@ -102,15 +102,102 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const results = JSON.parse(resultsJSON);
   
-  // Hide loading, show results
-  setTimeout(() => {
-    document.getElementById('loading').style.display = 'none';
-    document.getElementById('results-container').classList.remove('hidden');
-    
-    // Render results with animations
-    renderResults(results, timestamp);
-  }, 1500); // Simulate calculation time
+  // Check if email was already captured
+  const emailCaptured = localStorage.getItem('lli_assessment_email_captured');
+  
+  if (emailCaptured) {
+    // Email already captured, show results immediately
+    showResults(results, timestamp);
+  } else {
+    // Show email modal first
+    showEmailModal(results, timestamp);
+  }
 });
+
+// Show Email Modal
+function showEmailModal(results, timestamp) {
+  document.getElementById('email-modal').style.display = 'flex';
+  document.getElementById('loading').style.display = 'none';
+  
+  // Setup form submission
+  document.getElementById('email-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const name = document.getElementById('user-name').value;
+    const email = document.getElementById('user-email').value;
+    const organization = document.getElementById('user-organization').value;
+    
+    // Show loading state
+    const submitButton = e.target.querySelector('button[type="submit"]');
+    const originalText = submitButton.innerHTML;
+    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+    submitButton.disabled = true;
+    
+    try {
+      // Send email via API
+      const response = await fetch('/api/send-assessment-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          organization,
+          results,
+          timestamp
+        })
+      });
+      
+      if (response.ok) {
+        // Mark email as captured
+        localStorage.setItem('lli_assessment_email_captured', 'true');
+        localStorage.setItem('lli_assessment_user_email', email);
+        
+        // Show success message
+        document.getElementById('email-form').style.display = 'none';
+        document.getElementById('email-success').classList.remove('hidden');
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Email send error:', error);
+      alert('There was an error sending your report. You can still view your results below.');
+      closeEmailModal(results, timestamp);
+    } finally {
+      submitButton.innerHTML = originalText;
+      submitButton.disabled = false;
+    }
+  });
+}
+
+// Skip Email
+window.skipEmail = function() {
+  const results = JSON.parse(localStorage.getItem('lli_assessment_results'));
+  const timestamp = localStorage.getItem('lli_assessment_timestamp');
+  closeEmailModal(results, timestamp);
+};
+
+// Close Email Modal
+window.closeEmailModal = function(results, timestamp) {
+  if (!results) {
+    results = JSON.parse(localStorage.getItem('lli_assessment_results'));
+    timestamp = localStorage.getItem('lli_assessment_timestamp');
+  }
+  document.getElementById('email-modal').style.display = 'none';
+  showResults(results, timestamp);
+};
+
+// Show Results
+function showResults(results, timestamp) {
+  // Hide email modal and loading
+  document.getElementById('email-modal').style.display = 'none';
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('results-container').classList.remove('hidden');
+  
+  // Render results with animations
+  renderResults(results, timestamp);
+}
 
 // Render Results
 function renderResults(results, timestamp) {

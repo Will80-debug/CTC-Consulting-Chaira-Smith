@@ -8,8 +8,118 @@ export const AssessmentResultsPage = () => {
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
+        {/* Email Capture Modal */}
+        <div id="email-modal" className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-lg w-full p-8 shadow-2xl">
+            <div className="text-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-lli-teal to-lli-orange rounded-full mx-auto mb-4 flex items-center justify-center">
+                <i className="fas fa-file-pdf text-3xl text-white"></i>
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">Get Your Full Report</h2>
+              <p className="text-lg text-gray-600">
+                Enter your email to receive your comprehensive 15-page Leadership Readiness Report
+              </p>
+            </div>
+            
+            <form id="email-form" className="space-y-4">
+              <div>
+                <label htmlFor="user-name" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="user-name"
+                  name="name"
+                  required
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none"
+                  placeholder="Chiara Smith"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="user-email" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="user-email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none"
+                  placeholder="your@email.com"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="user-organization" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Organization (Optional)
+                </label>
+                <input
+                  type="text"
+                  id="user-organization"
+                  name="organization"
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none"
+                  placeholder="Your Company Name"
+                />
+              </div>
+              
+              <div className="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-500">
+                <div className="flex items-start">
+                  <i className="fas fa-gift text-blue-500 text-xl mr-3 mt-1"></i>
+                  <div className="text-sm text-gray-700">
+                    <p className="font-semibold mb-1">What You'll Get:</p>
+                    <ul className="space-y-1 text-xs">
+                      <li>✓ 15-page comprehensive report with detailed analysis</li>
+                      <li>✓ Personalized action plan for each dimension</li>
+                      <li>✓ Benchmarking against industry standards</li>
+                      <li>✓ Recommended resources and next steps</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex gap-3">
+                <button
+                  type="button"
+                  onClick={() => (window as any).skipEmail()}
+                  className="flex-1 px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-all"
+                >
+                  Skip for Now
+                </button>
+                <button
+                  type="submit"
+                  className="flex-1 px-6 py-3 bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white rounded-lg font-bold hover:shadow-lg transition-all"
+                >
+                  <i className="fas fa-envelope mr-2"></i>
+                  Send Report
+                </button>
+              </div>
+              
+              <p className="text-xs text-gray-500 text-center">
+                We respect your privacy. Your email will only be used to send your report and occasional leadership insights.
+              </p>
+            </form>
+            
+            <div id="email-success" className="hidden text-center">
+              <div className="w-20 h-20 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <i className="fas fa-check text-3xl text-green-600"></i>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Report Sent!</h3>
+              <p className="text-gray-600 mb-6">
+                Check your inbox for your comprehensive Leadership Readiness Report.
+              </p>
+              <button
+                onClick={() => (window as any).closeEmailModal()}
+                className="px-8 py-3 bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white rounded-lg font-bold hover:shadow-lg transition-all"
+              >
+                View Your Results
+              </button>
+            </div>
+          </div>
+        </div>
+
         {/* Loading State */}
-        <div id="loading" className="text-center py-20">
+        <div id="loading" className="hidden text-center py-20">
           <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-lli-teal mx-auto mb-4"></div>
           <p className="text-xl text-gray-600">Calculating your Leadership Readiness Score...</p>
         </div>
