@@ -102,133 +102,139 @@ export const BlogPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Blog Post 1 */}
-            <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="relative h-48">
-                <img 
-                  src={blogPost2Img} 
-                  alt="The Listening Gap" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-4 left-4 bg-lli-teal text-white px-3 py-1 rounded-lg text-sm font-semibold">
-                  Culture Change
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-gray-500 text-sm">December 10, 2024</span>
-                  <span className="text-gray-400">•</span>
-                  <span className="text-gray-500 text-sm">4 min read</span>
-                </div>
-                
-                <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-lli-teal transition-colors cursor-pointer">
-                  The Listening Gap: Why Your Culture Initiatives Keep Failing
-                </h3>
-                
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  Most leaders think they're listening. But are they really hearing what's being said? Discover the #1 mistake that derails culture work.
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <img 
-                      src={chiaraPhotoUrl} 
-                      alt="Chiara Smith" 
-                      className="w-8 h-8 rounded-full mr-2"
-                    />
-                    <span className="text-sm font-semibold text-gray-700">Chiara Smith</span>
+            <a href="/blog/listening-gap" className="block">
+              <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="relative h-48">
+                  <img 
+                    src={blogPost2Img} 
+                    alt="The Listening Gap" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-4 left-4 bg-lli-teal text-white px-3 py-1 rounded-lg text-sm font-semibold">
+                    Culture Change
                   </div>
-                  <button className="text-lli-teal hover:text-lli-teal-dark font-semibold text-sm flex items-center">
-                    Read More <i className="fas fa-arrow-right ml-2"></i>
-                  </button>
                 </div>
-              </div>
-            </article>
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-gray-500 text-sm">December 10, 2024</span>
+                    <span className="text-gray-400">•</span>
+                    <span className="text-gray-500 text-sm">4 min read</span>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-lli-teal transition-colors cursor-pointer">
+                    The Listening Gap: Why Your Culture Initiatives Keep Failing
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    Most leaders think they're listening. But are they really hearing what's being said? Discover the #1 mistake that derails culture work.
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <img 
+                        src={chiaraPhotoUrl} 
+                        alt="Chiara Smith" 
+                        className="w-8 h-8 rounded-full mr-2"
+                      />
+                      <span className="text-sm font-semibold text-gray-700">Chiara Smith</span>
+                    </div>
+                    <span className="text-lli-teal hover:text-lli-teal-dark font-semibold text-sm flex items-center">
+                      Read More <i className="fas fa-arrow-right ml-2"></i>
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </a>
 
             {/* Blog Post 2 */}
-            <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="relative h-48">
-                <img 
-                  src={blogPost3Img} 
-                  alt="Courageous Conversations" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-4 left-4 bg-lli-orange text-white px-3 py-1 rounded-lg text-sm font-semibold">
-                  Leadership
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-gray-500 text-sm">December 5, 2024</span>
-                  <span className="text-gray-400">•</span>
-                  <span className="text-gray-500 text-sm">6 min read</span>
-                </div>
-                
-                <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-lli-orange transition-colors cursor-pointer">
-                  How to Have Courageous Conversations Without Burning Bridges
-                </h3>
-                
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  Equity work requires difficult dialogue. Here's a 5-step framework for navigating tough conversations that build trust, not tension.
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <img 
-                      src={chiaraPhotoUrl} 
-                      alt="Chiara Smith" 
-                      className="w-8 h-8 rounded-full mr-2"
-                    />
-                    <span className="text-sm font-semibold text-gray-700">Chiara Smith</span>
+            <a href="/blog/courageous-conversations" className="block">
+              <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="relative h-48">
+                  <img 
+                    src={blogPost3Img} 
+                    alt="Courageous Conversations" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-4 left-4 bg-lli-orange text-white px-3 py-1 rounded-lg text-sm font-semibold">
+                    Leadership
                   </div>
-                  <button className="text-lli-orange hover:text-lli-orange-dark font-semibold text-sm flex items-center">
-                    Read More <i className="fas fa-arrow-right ml-2"></i>
-                  </button>
                 </div>
-              </div>
-            </article>
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-gray-500 text-sm">December 5, 2024</span>
+                    <span className="text-gray-400">•</span>
+                    <span className="text-gray-500 text-sm">6 min read</span>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-lli-orange transition-colors cursor-pointer">
+                    How to Have Courageous Conversations Without Burning Bridges
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    Equity work requires difficult dialogue. Here's a 5-step framework for navigating tough conversations that build trust, not tension.
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <img 
+                        src={chiaraPhotoUrl} 
+                        alt="Chiara Smith" 
+                        className="w-8 h-8 rounded-full mr-2"
+                      />
+                      <span className="text-sm font-semibold text-gray-700">Chiara Smith</span>
+                    </div>
+                    <span className="text-lli-orange hover:text-lli-orange-dark font-semibold text-sm flex items-center">
+                      Read More <i className="fas fa-arrow-right ml-2"></i>
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </a>
 
             {/* Blog Post 3 */}
-            <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="relative h-48">
-                <img 
-                  src={blogPost1Img} 
-                  alt="Implementing Change" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-4 left-4 bg-lli-teal text-white px-3 py-1 rounded-lg text-sm font-semibold">
-                  Implementation
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-gray-500 text-sm">November 28, 2024</span>
-                  <span className="text-gray-400">•</span>
-                  <span className="text-gray-500 text-sm">5 min read</span>
-                </div>
-                
-                <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-lli-teal transition-colors cursor-pointer">
-                  From Strategy to Action: Making Culture Change Stick
-                </h3>
-                
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  Great plans don't guarantee great results. Learn the accountability systems that turn culture strategies into lasting transformation.
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <img 
-                      src={chiaraPhotoUrl} 
-                      alt="Chiara Smith" 
-                      className="w-8 h-8 rounded-full mr-2"
-                    />
-                    <span className="text-sm font-semibold text-gray-700">Chiara Smith</span>
+            <a href="/blog/strategy-to-action" className="block">
+              <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="relative h-48">
+                  <img 
+                    src={blogPost1Img} 
+                    alt="Implementing Change" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-4 left-4 bg-lli-teal text-white px-3 py-1 rounded-lg text-sm font-semibold">
+                    Implementation
                   </div>
-                  <button className="text-lli-teal hover:text-lli-teal-dark font-semibold text-sm flex items-center">
-                    Read More <i className="fas fa-arrow-right ml-2"></i>
-                  </button>
                 </div>
-              </div>
-            </article>
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-gray-500 text-sm">November 28, 2024</span>
+                    <span className="text-gray-400">•</span>
+                    <span className="text-gray-500 text-sm">5 min read</span>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-lli-teal transition-colors cursor-pointer">
+                    From Strategy to Action: Making Culture Change Stick
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    Great plans don't guarantee great results. Learn the accountability systems that turn culture strategies into lasting transformation.
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <img 
+                        src={chiaraPhotoUrl} 
+                        alt="Chiara Smith" 
+                        className="w-8 h-8 rounded-full mr-2"
+                      />
+                      <span className="text-sm font-semibold text-gray-700">Chiara Smith</span>
+                    </div>
+                    <span className="text-lli-teal hover:text-lli-teal-dark font-semibold text-sm flex items-center">
+                      Read More <i className="fas fa-arrow-right ml-2"></i>
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </a>
           </div>
         </div>
       </section>

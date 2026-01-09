@@ -10,6 +10,7 @@ export interface BlogArticle {
 }
 
 export const leadershipArticles: BlogArticle[] = [
+  { title: "How to Have Courageous Conversations Without Burning Bridges", description: "Equity work requires difficult dialogue. Here's a 5-step framework for navigating tough conversations that build trust, not tension.", readTime: "6 min read", slug: "courageous-conversations", category: "Leadership", date: "December 5, 2024" },
   { title: "The Authenticity Paradox: Being Real Without Losing Authority", description: "How vulnerable should leaders really be? Find the balance that builds trust without undermining credibility.", readTime: "6 min read", slug: "authenticity-paradox", category: "Leadership", date: "December 20, 2024" },
   { title: "When Good Leaders Ask Bad Questions", description: "The quality of your questions determines the quality of your leadership. Learn what to ask—and what to avoid.", readTime: "5 min read", slug: "when-good-leaders-ask-bad-questions", category: "Leadership", date: "December 18, 2024" },
   { title: "The Delegation Trap: Why Your Team Isn't Growing", description: "You're not delegating—you're dumping. Here's how to develop people while getting work done.", readTime: "7 min read", slug: "delegation-trap", category: "Leadership", date: "December 16, 2024" },
@@ -58,6 +59,7 @@ export const deiArticles: BlogArticle[] = [
 ];
 
 export const cultureArticles: BlogArticle[] = [
+  { title: "The Listening Gap: Why Your Culture Initiatives Keep Failing", description: "Most leaders think they're listening. But are they really hearing what's being said? Discover the #1 mistake that derails culture work.", readTime: "4 min read", slug: "listening-gap", category: "Culture Change", date: "December 10, 2024" },
   { title: "Culture Isn't What You Say—It's What You Tolerate", description: "Your stated values mean nothing if behaviors contradict them. Align espoused and actual culture.", readTime: "6 min read", slug: "culture-what-you-tolerate", category: "Culture Change", date: "December 18, 2024" },
   { title: "The Culture Assessment: Diagnosis Before Treatment", description: "You can't fix what you don't understand. Assess your current culture before attempting transformation.", readTime: "7 min read", slug: "culture-assessment", category: "Culture Change", date: "December 16, 2024" },
   { title: "Psychological Safety: The Foundation of High-Performing Teams", description: "Without safety, talent doesn't matter. Build environments where people take risks without fear.", readTime: "8 min read", slug: "psychological-safety-foundation", category: "Culture Change", date: "December 14, 2024" },
@@ -76,6 +78,7 @@ export const cultureArticles: BlogArticle[] = [
 ];
 
 export const implementationArticles: BlogArticle[] = [
+  { title: "From Strategy to Action: Making Culture Change Stick", description: "Great plans don't guarantee great results. Learn the accountability systems that turn culture strategies into lasting transformation.", readTime: "5 min read", slug: "strategy-to-action", category: "Implementation", date: "November 28, 2024" },
   { title: "The Implementation Gap: Why Great Plans Fail", description: "Strategy is useless without execution. Bridge the gap between planning and doing.", readTime: "7 min read", slug: "implementation-gap", category: "Implementation", date: "December 17, 2024" },
   { title: "The First 90 Days: Making Change Stick", description: "Most change initiatives die in the first quarter. Use this playbook to build early momentum.", readTime: "8 min read", slug: "first-90-days-change", category: "Implementation", date: "December 15, 2024" },
   { title: "Resistance as Data: What Pushback Really Tells You", description: "Resistance isn't the enemy—it's information. Learn what objections reveal about your approach.", readTime: "6 min read", slug: "resistance-as-data", category: "Implementation", date: "December 13, 2024" },
