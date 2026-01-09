@@ -14,6 +14,9 @@ import { GenericBlogPostPage } from './pages/blog-posts/generic-article'
 import { TeamCoachingPage } from './pages/services/team-coaching'
 import { OrganizationalDevelopmentPage } from './pages/services/organizational-development'
 import { LeadershipWorkshopsPage } from './pages/services/leadership-workshops'
+import { AssessmentLandingPage } from './pages/assessment/landing'
+import { AssessmentStartPage } from './pages/assessment/start'
+import { AssessmentResultsPage } from './pages/assessment/results'
 
 const app = new Hono()
 
@@ -76,6 +79,18 @@ app.get('/case-studies', (c) => {
 
 app.get('/contact', (c) => {
   return c.render(<ContactPage />)
+})
+
+app.get('/assessment', (c) => {
+  return c.render(<AssessmentLandingPage />)
+})
+
+app.get('/assessment/start', (c) => {
+  return c.render(<AssessmentStartPage />)
+})
+
+app.get('/assessment/results', (c) => {
+  return c.render(<AssessmentResultsPage />)
 })
 
 export default app
