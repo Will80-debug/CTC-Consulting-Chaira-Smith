@@ -45,6 +45,12 @@ export const Navigation = () => {
               Resources
             </a>
             <a 
+              href="/pricing" 
+              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-teal pb-1"
+            >
+              Pricing
+            </a>
+            <a 
               href="/blog" 
               className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-teal pb-1"
             >
@@ -112,6 +118,13 @@ export const Navigation = () => {
             >
               <i className="fas fa-book mr-3"></i>
               Resources
+            </a>
+            <a 
+              href="/pricing" 
+              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 py-2"
+            >
+              <i className="fas fa-tag mr-3"></i>
+              Pricing
             </a>
             <a 
               href="/blog" 

@@ -1,4 +1,4 @@
-// Subscription Management System
+// Subscription Management System - 3 Tier Support
 
 // Storage keys
 const STORAGE_KEYS = {
@@ -6,8 +6,15 @@ const STORAGE_KEYS = {
   DEI_VIEWS: 'lli_dei_views',
   CHANGE_VIEWS: 'lli_change_views',
   STRATEGIC_VIEWS: 'lli_strategic_views',
-  SUBSCRIBED: 'lli_subscribed',
+  SUBSCRIPTION_TIER: 'lli_subscription_tier', // 'free', 'professional', 'enterprise'
   VIEWED_RESOURCES: 'lli_viewed_resources'
+};
+
+// Subscription tiers
+const TIERS = {
+  FREE: 'free',
+  PROFESSIONAL: 'professional',
+  ENTERPRISE: 'enterprise'
 };
 
 // Maximum free views per category
@@ -15,7 +22,6 @@ const MAX_FREE_VIEWS = 2;
 
 // Get category from resource URL
 function getCategoryFromUrl(url) {
-  // Extract category from resource data
   const urlLower = url.toLowerCase();
   
   // Map resource filenames to categories
@@ -23,28 +29,29 @@ function getCategoryFromUrl(url) {
     'emotional-intelligence', 'feedback-framework', 'decision-making', 
     'authentic-leadership', 'delegation-mastery', 'coaching-conversation',
     'conflict-resolution', 'executive-presence', 'strategic-thinking',
-    'team-dynamics', 'transformational-leadership', 'change-leadership'
+    'team-dynamics', 'transformational-leadership', 'leadership-communication',
+    'innovation-leadership'
   ];
   
   const deiResources = [
-    'unconscious-bias', 'inclusive-language', 'psychological-safety',
-    'allyship-action', 'microaggression', 'belonging-framework',
-    'equity-audit', 'diverse-hiring', 'retention-strategies',
-    'employee-resource', 'cross-cultural', 'gender-equity',
-    'racial-justice', 'accessibility', 'lgbtq', 'generational',
-    'intersectionality', 'accountability'
+    'unconscious-bias', 'inclusive-language', 'microaggression',
+    'allyship-action', 'psychological-safety', 'dei-metrics',
+    'equity-audit', 'intersectionality', 'disability-inclusion',
+    'lgbtq-workplace', 'cultural-competency', 'racial-equity',
+    'gender-equity', 'inclusive-recruitment', 'religious-diversity',
+    'generational-diversity', 'neurodiversity', 'dei-storytelling'
   ];
   
   const changeResources = [
-    'change-readiness', 'stakeholder-engagement', 'resistance-management',
-    'communication-plan', 'transition-roadmap', 'culture-integration',
-    'agile-transformation', 'digital-change', 'sustainability'
+    'change-readiness', 'stakeholder-mapping', 'communication-plan',
+    'resistance-management', 'change-impact', 'pilot-program',
+    'change-champion', 'organizational-culture-shift', 'transition-management'
   ];
   
   const strategicResources = [
-    'vision-mission', 'okr-framework', 'swot-analysis',
-    'scenario-planning', 'innovation-strategy', 'competitive-analysis',
-    'strategic-execution'
+    'strategic-planning', 'vision-mission', 'swot-analysis',
+    'goal-setting', 'scenario-planning', 'competitive-analysis',
+    'resource-allocation'
   ];
   
   // Check which category this resource belongs to
@@ -56,9 +63,15 @@ function getCategoryFromUrl(url) {
   return null;
 }
 
-// Check if user is subscribed
-function isSubscribed() {
-  return localStorage.getItem(STORAGE_KEYS.SUBSCRIBED) === 'true';
+// Get current subscription tier
+function getSubscriptionTier() {
+  return localStorage.getItem(STORAGE_KEYS.SUBSCRIPTION_TIER) || TIERS.FREE;
+}
+
+// Check if user has paid subscription
+function hasPaidSubscription() {
+  const tier = getSubscriptionTier();
+  return tier === TIERS.PROFESSIONAL || tier === TIERS.ENTERPRISE;
 }
 
 // Get view count for category
@@ -91,8 +104,8 @@ function hasViewedResource(resourceUrl) {
 
 // Check if user can access resource
 function canAccessResource(resourceUrl) {
-  // If subscribed, allow all access
-  if (isSubscribed()) {
+  // If paid subscription, allow all access
+  if (hasPaidSubscription()) {
     return true;
   }
   
@@ -107,7 +120,7 @@ function canAccessResource(resourceUrl) {
     return true; // Allow re-viewing already seen resources
   }
   
-  // Check view count for category
+  // Check view count for category (free tier gets 2 per category)
   const viewCount = getViewCount(category);
   return viewCount < MAX_FREE_VIEWS;
 }
@@ -149,24 +162,32 @@ function closeSubscriptionModal() {
   }
 }
 
-// Handle payment method selection
-function selectPaymentMethod(method) {
-  console.log('Selected payment method:', method);
+// Select subscription tier
+function selectSubscriptionTier(tier) {
+  console.log('Selected tier:', tier);
   
-  // Show a demo message (in production, integrate with actual payment processor)
-  alert(`Payment integration demo:\n\nYou selected ${method.toUpperCase()} payment.\n\nIn production, this would redirect to:\n- Card: Stripe payment form\n- PayPal: PayPal checkout\n- Apple Pay: Apple Pay sheet\n\nFor demo purposes, I'll activate your subscription now.`);
-  
-  // Demo: Activate subscription
-  activateSubscription();
+  if (tier === TIERS.PROFESSIONAL) {
+    // Redirect to Stripe checkout for Professional tier
+    window.location.href = '/checkout?plan=professional';
+  } else if (tier === TIERS.ENTERPRISE) {
+    // Redirect to contact form for Enterprise tier
+    window.location.href = '/contact?plan=enterprise';
+  }
 }
 
-// Activate subscription
-function activateSubscription() {
-  localStorage.setItem(STORAGE_KEYS.SUBSCRIBED, 'true');
+// Handle payment method selection (legacy - keeping for backwards compatibility)
+function selectPaymentMethod(method) {
+  console.log('Selected payment method:', method);
+  selectSubscriptionTier(TIERS.PROFESSIONAL);
+}
+
+// Activate subscription (called after successful payment)
+function activateSubscription(tier = TIERS.PROFESSIONAL) {
+  localStorage.setItem(STORAGE_KEYS.SUBSCRIPTION_TIER, tier);
   closeSubscriptionModal();
   
   // Show success message
-  showSuccessMessage();
+  showSuccessMessage(tier);
   
   // Reload page to update UI
   setTimeout(() => {
@@ -175,15 +196,16 @@ function activateSubscription() {
 }
 
 // Show success message
-function showSuccessMessage() {
+function showSuccessMessage(tier) {
+  const tierName = tier === TIERS.ENTERPRISE ? 'Enterprise' : 'Professional';
   const successDiv = document.createElement('div');
   successDiv.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-xl z-50 animate-slide-in';
   successDiv.innerHTML = `
     <div class="flex items-center">
       <i class="fas fa-check-circle text-2xl mr-3"></i>
       <div>
-        <div class="font-bold">Subscription Activated!</div>
-        <div class="text-sm">You now have unlimited access to all resources.</div>
+        <div class="font-bold">${tierName} Subscription Activated!</div>
+        <div class="text-sm">You now have ${tier === TIERS.ENTERPRISE ? 'team' : 'unlimited'} access to all resources.</div>
       </div>
     </div>
   `;
@@ -196,15 +218,43 @@ function showSuccessMessage() {
 
 // Add subscription indicator to page
 function addSubscriptionIndicator() {
-  if (isSubscribed()) {
+  const tier = getSubscriptionTier();
+  
+  if (tier === TIERS.PROFESSIONAL) {
     const indicator = document.createElement('div');
     indicator.className = 'fixed bottom-4 right-4 bg-lli-teal text-white px-4 py-2 rounded-full shadow-lg z-40 flex items-center';
     indicator.innerHTML = `
       <i class="fas fa-crown mr-2"></i>
-      <span class="font-semibold">Premium Member</span>
+      <span class="font-semibold">Professional Member</span>
+    `;
+    document.body.appendChild(indicator);
+  } else if (tier === TIERS.ENTERPRISE) {
+    const indicator = document.createElement('div');
+    indicator.className = 'fixed bottom-4 right-4 bg-lli-orange text-white px-4 py-2 rounded-full shadow-lg z-40 flex items-center';
+    indicator.innerHTML = `
+      <i class="fas fa-star mr-2"></i>
+      <span class="font-semibold">Enterprise Member</span>
     `;
     document.body.appendChild(indicator);
   }
+}
+
+// Get remaining free views for display
+function getRemainingViews() {
+  return {
+    leadership: MAX_FREE_VIEWS - getViewCount('leadership'),
+    dei: MAX_FREE_VIEWS - getViewCount('dei'),
+    change: MAX_FREE_VIEWS - getViewCount('change'),
+    strategic: MAX_FREE_VIEWS - getViewCount('strategic')
+  };
+}
+
+// Reset subscription (for testing)
+function resetSubscription() {
+  Object.values(STORAGE_KEYS).forEach(key => {
+    localStorage.removeItem(key);
+  });
+  location.reload();
 }
 
 // Initialize on page load
@@ -217,4 +267,13 @@ document.addEventListener('DOMContentLoaded', () => {
       closeSubscriptionModal();
     }
   });
+  
+  // Add debug info to console
+  if (window.location.hostname === 'localhost' || window.location.hostname.includes('e2b.dev')) {
+    console.log('🔐 Subscription Debug Info:');
+    console.log('Current Tier:', getSubscriptionTier());
+    console.log('Remaining Views:', getRemainingViews());
+    console.log('Has Paid Subscription:', hasPaidSubscription());
+    console.log('To reset subscription: resetSubscription()');
+  }
 });
