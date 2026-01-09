@@ -1069,7 +1069,7 @@ export const ServicesPage = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <a 
-              href="/contact" 
+              href="/services/team-coaching" 
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2 cursor-pointer"
             >
               <div className="h-48 bg-gradient-to-br from-lli-orange to-lli-orange-dark flex items-center justify-center">
@@ -1088,7 +1088,7 @@ export const ServicesPage = () => {
             </a>
             
             <a 
-              href="/contact" 
+              href="/services/organizational-development" 
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2 cursor-pointer"
             >
               <div className="h-48 bg-gradient-to-br from-lli-teal to-lli-teal-dark flex items-center justify-center">
@@ -1107,7 +1107,7 @@ export const ServicesPage = () => {
             </a>
             
             <a 
-              href="/contact" 
+              href="/services/leadership-workshops" 
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 transform hover:-translate-y-2 cursor-pointer"
             >
               <div className="h-48 bg-gradient-to-br from-lli-orange to-lli-orange-dark flex items-center justify-center">

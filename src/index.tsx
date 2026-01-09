@@ -11,6 +11,9 @@ import { PricingPage } from './pages/pricing'
 import { CheckoutPage } from './pages/checkout'
 import { BeyondPerformativeActionsPage } from './pages/blog-posts/beyond-performative-actions'
 import { GenericBlogPostPage } from './pages/blog-posts/generic-article'
+import { TeamCoachingPage } from './pages/services/team-coaching'
+import { OrganizationalDevelopmentPage } from './pages/services/organizational-development'
+import { LeadershipWorkshopsPage } from './pages/services/leadership-workshops'
 
 const app = new Hono()
 
@@ -22,6 +25,18 @@ app.get('/', (c) => {
 
 app.get('/services', (c) => {
   return c.render(<ServicesPage />)
+})
+
+app.get('/services/team-coaching', (c) => {
+  return c.render(<TeamCoachingPage />)
+})
+
+app.get('/services/organizational-development', (c) => {
+  return c.render(<OrganizationalDevelopmentPage />)
+})
+
+app.get('/services/leadership-workshops', (c) => {
+  return c.render(<LeadershipWorkshopsPage />)
 })
 
 app.get('/about', (c) => {
