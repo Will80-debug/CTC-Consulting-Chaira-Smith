@@ -48,7 +48,6 @@ export const Navigation = () => {
               href="/assessment" 
               className="text-white hover:text-lli-orange font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-orange pb-1"
             >
-              <i className="fas fa-clipboard-check mr-1"></i>
               Assessment
             </a>
             <a 
