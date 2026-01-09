@@ -327,6 +327,14 @@ function toggleMobileMenu() {
 document.addEventListener('DOMContentLoaded', () => {
   initCountUpAnimations();
   
+  // Check URL hash to open modals on page load
+  const hash = window.location.hash;
+  if (hash === '#assessment-modal') {
+    openAssessmentModal();
+  } else if (hash === '#fit-check-modal') {
+    openFitCheckModal();
+  }
+  
   // Close modals on escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
