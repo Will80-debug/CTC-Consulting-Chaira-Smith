@@ -127,48 +127,66 @@ Contact: ${email}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     `.trim()
     
-    // In a production environment, you would integrate with an email service
-    // For now, we'll log the email content and return success
-    // You can integrate with services like:
-    // - SendGrid
-    // - AWS SES
-    // - Resend
-    // - Mailgun
-    
+    // Log for debugging
     console.log('Assessment Report Email:', emailContent)
     console.log('Send to: Smithchiara@gmail.com')
     console.log('User Email:', email)
     
-    // TODO: Integrate with actual email service
-    // Example with fetch to an email service:
-    /*
-    const emailResponse = await fetch('https://api.sendgrid.com/v3/mail/send', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${env.SENDGRID_API_KEY}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        personalizations: [{
-          to: [{ email: 'Smithchiara@gmail.com' }],
-          subject: `New Assessment: ${name} - Score: ${overallScore}/100`
-        }],
-        from: { email: 'noreply@lliconsulting.com' },
-        content: [{
-          type: 'text/plain',
-          value: emailContent
-        }]
-      })
-    })
-    */
+    // Check if Resend API key is configured
+    const resendApiKey = c.env?.RESEND_API_KEY
     
-    return c.json({ 
-      success: true, 
-      message: 'Assessment report sent successfully',
-      note: 'Email integration pending - see console logs for content'
-    })
+    if (resendApiKey) {
+      // Send email via Resend
+      try {
+        const emailResponse = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${resendApiKey}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: 'LLI Assessment <noreply@lliconsulting.com>',
+            to: ['Smithchiara@gmail.com'],
+            reply_to: email, // User's email for easy reply
+            subject: `New Assessment: ${name} - Score: ${overallScore}/100`,
+            text: emailContent
+          })
+        })
+        
+        if (!emailResponse.ok) {
+          const errorData = await emailResponse.text()
+          console.error('Resend API error:', errorData)
+          throw new Error(`Resend API failed: ${emailResponse.status}`)
+        }
+        
+        const responseData = await emailResponse.json()
+        console.log('Email sent successfully via Resend:', responseData)
+        
+        return c.json({ 
+          success: true, 
+          message: 'Assessment report sent successfully',
+          emailId: responseData.id
+        })
+      } catch (emailError) {
+        console.error('Resend email error:', emailError)
+        // Fall back to logging if email fails
+        return c.json({ 
+          success: true, 
+          message: 'Assessment report logged (email service unavailable)',
+          note: 'Email content saved to console logs'
+        })
+      }
+    } else {
+      // No API key configured - log only mode
+      console.log('⚠️ RESEND_API_KEY not configured - email logged only')
+      return c.json({ 
+        success: true, 
+        message: 'Assessment report logged successfully',
+        note: 'Email integration pending - see console logs for content'
+      })
+    }
   } catch (error) {
-    console.error('Error sending assessment report:', error)
+    console.error('Error processing assessment report:', error)
     return c.json({ success: false, error: 'Failed to send report' }, 500)
   }
 })

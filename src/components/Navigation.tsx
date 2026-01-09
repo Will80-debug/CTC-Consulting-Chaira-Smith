@@ -45,6 +45,13 @@ export const Navigation = () => {
               Resources
             </a>
             <a 
+              href="/assessment" 
+              className="text-white hover:text-lli-orange font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-orange pb-1"
+            >
+              <i className="fas fa-clipboard-check mr-1"></i>
+              Assessment
+            </a>
+            <a 
               href="/pricing" 
               className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-teal pb-1"
             >
@@ -118,6 +125,13 @@ export const Navigation = () => {
             >
               <i className="fas fa-book mr-3"></i>
               Resources
+            </a>
+            <a 
+              href="/assessment" 
+              className="text-white hover:text-lli-orange font-semibold transition-colors duration-200 py-2"
+            >
+              <i className="fas fa-clipboard-check mr-3"></i>
+              Assessment
             </a>
             <a 
               href="/pricing" 
