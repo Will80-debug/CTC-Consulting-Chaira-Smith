@@ -82,9 +82,10 @@ export const AssessmentLandingPage = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {dimensions.map((dimension, index) => (
-              <div 
+              <a
+                href="/assessment/start"
                 key={dimension.id}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-lli-teal"
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-lli-teal cursor-pointer"
                 style={{ borderTopColor: dimension.color === 'lli-orange' ? '#E86D3A' : '#2D9FA5' }}
               >
                 <div className={`w-16 h-16 bg-gradient-to-br from-${dimension.color} to-${dimension.color}-dark text-white rounded-full flex items-center justify-center text-2xl mb-4`}>
@@ -94,11 +95,14 @@ export const AssessmentLandingPage = () => {
                 <p className="text-gray-700 leading-relaxed">
                   {dimension.description}
                 </p>
-              </div>
+              </a>
             ))}
             
             {/* Overall Score Card */}
-            <div className="bg-gradient-to-br from-lli-black to-gray-800 rounded-2xl p-8 shadow-xl border-t-4 border-lli-orange text-white">
+            <a
+              href="/assessment/start"
+              className="bg-gradient-to-br from-lli-black to-gray-800 rounded-2xl p-8 shadow-xl border-t-4 border-lli-orange text-white cursor-pointer hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+            >
               <div className="w-16 h-16 bg-lli-orange text-white rounded-full flex items-center justify-center text-2xl mb-4">
                 <i className="fas fa-trophy"></i>
               </div>
@@ -106,7 +110,7 @@ export const AssessmentLandingPage = () => {
               <p className="text-gray-200 leading-relaxed">
                 Your comprehensive Leadership Readiness Score from 0-100, showing where you stand and what to focus on next.
               </p>
-            </div>
+            </a>
           </div>
         </section>
 
