@@ -2,12 +2,12 @@ import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
 
 export const CaseStudiesPage = () => {
-  // Image URLs for case studies
-  const hospitalSystemImg = "https://sspark.genspark.ai/cfimages?u1=ghImmXMbKrGBMxYuscEj017YLMrF0DuubmxINuyW3IRDyr7yWiBRs7RVJ1n4aDLhNcPJo7gV7gzv8zDCMDIWIhu%2BIXi%2FBTIEIfDfaGUQ5kPejVntVrPMHks0xMBbNPeZRMX41IgOaDi2QFodGwkIOOAsYXw2vpMdhbYvKMsTc8bXCmCVH%2BW2dVHsh0601%2BVtEvftdaQ7ixSB3FDhc9NXrZUy3MBL&u2=DRJBwiDrnjEHDgQ%2B&width=2560"
-  const schoolDistrictImg = "https://sspark.genspark.ai/cfimages?u1=mBzrm%2FITxbifSCnl6VSi0VBL8jW7BYLARSnPGIKDFLwD%2FztAX0QY59OB%2BpFGhr3%2BB1QFUtKFUdxUJ2YiK3N1k8HIw6w9q6rfDEPoTVb9HCSRcZUqllhE5XVLSQUkJnzqsl%2BDhdoCuljW&u2=AJs5ASJIXhyWd%2FHw&width=2560"
-  const techCompanyImg = "https://sspark.genspark.ai/cfimages?u1=p3451G3ZEplqSVU1hpWslMBIRhknlX84CsLjYH3SkznuTIrlkxpyLAuCwkmtMFXbwhpEvre9YJ3e99PmcLuDRrpBMd2vgWUNT%2BvkZwb2HqDUbZe%2FfwNbySP593IfQLzHOX%2FP1WA3WLrjXpp%2FnLigzhI%2B5CHarzSTteaGCdJuAw7caVHr%2FR8IrzhY3HPD5eqAoLqHXC9oAtaaRBQ4DxSo3yzd1vrQGBSFuJKrYw%3D%3D&u2=r5lJXZBmG11V2fj%2B&width=2560"
-  const nonprofitImg = "https://sspark.genspark.ai/cfimages?u1=LRbsh8vZi8%2FZUWGtNTYI038CGh3kjBZkpg%2FVIaBmhyH4SGd97OSgl48FLUmOYqrWUpLHCGqKj1mmDfKPsAI8vCh893Wturp2Qgi%2BFmjInL3yAw%3D%3D&u2=8bVaSjrlGjJy%2BEN8&width=2560"
-  const financialServicesImg = "https://sspark.genspark.ai/cfimages?u1=NYZbICLF6InibIUerM9pqeo%2BHRUBL3lGDVr3aElJtVTTp3nyMuaZ36Rs4xToLAzI44ikYHhslXbJ9HpF2Sy8KIi%2Fl152%2Fp0E7JQkfxQJSzzIGhCn%2BXdCZEk%2FQ3X42D5xgYwtuLpHP8iDhsm6AFM%3D&u2=aakOqpp05ChNHQEi&width=2560"
+  // Image URLs for case studies - Using Unsplash for high-quality, watermark-free images
+  const hospitalSystemImg = "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop"
+  const schoolDistrictImg = "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop"
+  const techCompanyImg = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+  const nonprofitImg = "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=600&fit=crop"
+  const financialServicesImg = "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop"
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
