@@ -2,7 +2,7 @@ export const Navigation = () => {
   const logoUrl = "https://page.gensparksite.com/v1/base64_upload/76289e59443ab0b47d1ab4851999fbe6"
   
   return (
-    <header className="bg-gradient-to-r from-lli-black to-gray-800 shadow-2xl sticky top-0 z-50">
+    <header className="bg-gradient-to-r from-lli-orange to-lli-orange-dark shadow-2xl sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex items-center justify-between">
           {/* Logo and Brand */}
