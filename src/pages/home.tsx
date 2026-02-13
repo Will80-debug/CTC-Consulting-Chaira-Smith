@@ -28,57 +28,54 @@ export const HomePage = () => {
               {/* Overline */}
               <div className="mb-4">
                 <p className="text-sm font-semibold text-lli-teal uppercase tracking-wide">
-                  LLI Consulting Group
+                  LLI Consulting Group™
                 </p>
               </div>
               
               {/* Main Headline */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-                Transform Your Leadership.{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-orange to-lli-teal">
-                  Transform Your Culture.
-                </span>
+                Clarity Before Action.
               </h1>
               
               {/* Subheadline */}
               <p className="text-xl md:text-2xl text-gray-700 mb-4 leading-relaxed">
-                Equity-centered coaching and culture change for leaders who are ready to move beyond performative statements and do the real work.
+                LLI Consulting Group™ provides structured advisory support for foundations, government agencies, and mission-driven organizations navigating complex leadership and organizational decisions.
               </p>
               
               {/* Support Line */}
               <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-                Our <span className="font-bold text-lli-teal">LLI Framework™</span> helps you Listen, Learn, and Implement with courage, clarity, and measurable results.
+                When alignment matters and accountability is real, clarity is not optional.
               </p>
               
               {/* Interactive CTA Buttons */}
               <div className="flex flex-col gap-6 mb-12">
                 {/* Primary CTA */}
                 <div>
-                  <button 
-                    onclick="openAssessmentModal()"
+                  <a
+                    href="/contact"
                     className="group bg-gradient-to-r from-lli-teal to-lli-teal-dark hover:from-lli-teal-dark hover:to-lli-teal text-white font-bold py-4 px-8 rounded-lg shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl flex items-center justify-center space-x-3 w-full sm:w-auto"
                   >
-                    <i className="fas fa-clipboard-check text-xl"></i>
-                    <span className="text-lg">Take the 3-Minute Culture Check</span>
+                    <i className="fas fa-calendar-check text-xl"></i>
+                    <span className="text-lg">Book a Discovery Call</span>
                     <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                  </button>
+                  </a>
                   <p className="text-sm text-gray-500 mt-2 ml-1">
-                    No obligation. Instant snapshot of your culture's readiness.
+                    Schedule a consultation to discuss your leadership challenges.
                   </p>
                 </div>
                 
                 {/* Secondary CTA */}
                 <div>
-                  <button 
-                    onclick="openFitCheckModal()"
+                  <a
+                    href="/about"
                     className="group bg-gradient-to-r from-lli-orange to-lli-orange-dark hover:from-lli-orange-dark hover:to-lli-orange text-white font-bold py-4 px-8 rounded-lg shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl flex items-center justify-center space-x-3 w-full sm:w-auto"
                   >
-                    <i className="fas fa-calendar-check text-xl"></i>
-                    <span className="text-lg">Book a Strategy Call</span>
+                    <i className="fas fa-book-open text-xl"></i>
+                    <span className="text-lg">Learn About the Framework</span>
                     <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                  </button>
+                  </a>
                   <p className="text-sm text-gray-500 mt-2 ml-1">
-                    Talk directly with an LLI coach about your top challenge.
+                    Discover how the LLI Framework™ creates lasting change.
                   </p>
                 </div>
               </div>
