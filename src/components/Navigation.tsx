@@ -1,5 +1,5 @@
 export const Navigation = () => {
-  const logoUrl = "https://page.gensparksite.com/v1/base64_upload/76289e59443ab0b47d1ab4851999fbe6"
+  const logoUrl = "/static/lli-logo.png"
   
   return (
     <header className="bg-gradient-to-r from-lli-orange to-lli-orange-dark shadow-2xl sticky top-0 z-50">
@@ -7,13 +7,11 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo and Brand */}
           <a href="/" className="flex items-center space-x-4 hover:opacity-90 transition-opacity">
-            <div className="bg-gradient-to-br from-lli-teal to-lli-teal-dark rounded-lg p-2">
-              <img 
-                src={logoUrl} 
-                alt="LLI Consulting Group Logo" 
-                className="h-12 w-12 object-contain"
-              />
-            </div>
+            <img 
+              src={logoUrl} 
+              alt="LLI Consulting Group Logo" 
+              className="h-16 w-16 object-contain"
+            />
             <div className="text-left">
               <h1 className="text-2xl md:text-3xl font-bold text-white">LLI Consulting Group</h1>
               <p className="text-sm text-gray-300">Leadership & Culture Transformation</p>
