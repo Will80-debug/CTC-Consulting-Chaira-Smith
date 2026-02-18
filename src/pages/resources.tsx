@@ -125,33 +125,6 @@ export const ResourcesPage = () => {
         </div>
       </section>
 
-      {/* Webinar Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border-2 border-lli-orange">
-            <div className="flex items-start mb-6">
-              <div className="bg-lli-orange text-white rounded-lg p-4 mr-4">
-                <i className="fas fa-video text-3xl"></i>
-              </div>
-              <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-2">LLI Framework™ in Practice</h3>
-                <p className="text-lg text-gray-600">
-                  Recorded overview with planning worksheet.
-                </p>
-              </div>
-            </div>
-            
-            <a 
-              href="/contact" 
-              className="w-full bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 inline-block text-center text-lg"
-            >
-              <i className="fas fa-play-circle mr-3"></i>
-              Request Access
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Resource Library */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
