@@ -180,60 +180,51 @@ export const AboutPage = () => {
         </div>
       </section>
 
-      {/* Our Approach Visual */}
+      {/* What You Can Expect - Trust/Credibility Strip */}
       <section className="py-20 bg-gradient-to-br from-lli-black via-gray-800 to-lli-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <img 
-                src={diversityTeamImg} 
-                alt="Diversity and Inclusion in Action" 
-                className="w-full rounded-2xl shadow-2xl"
-              />
-            </div>
-            
-            <div className="text-white">
-              <h2 className="text-4xl font-bold mb-6">
-                Why Organizations <span className="text-lli-orange">Choose LLI</span>
-              </h2>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="bg-lli-teal w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                    <i className="fas fa-check text-white text-sm"></i>
-                  </div>
-                  <p className="text-lg leading-relaxed">
-                    <strong>Proven Results:</strong> 85% average improvement in leadership effectiveness, 98% client renewal rate
-                  </p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-lli-orange w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                    <i className="fas fa-check text-white text-sm"></i>
-                  </div>
-                  <p className="text-lg leading-relaxed">
-                    <strong>Real Expertise:</strong> 15+ years of experience, 500+ leaders coached across industries
-                  </p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-lli-teal w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                    <i className="fas fa-check text-white text-sm"></i>
-                  </div>
-                  <p className="text-lg leading-relaxed">
-                    <strong>Practical Framework:</strong> The LLI Framework™ provides clear, actionable steps from assessment to implementation
-                  </p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-lli-orange w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                    <i className="fas fa-check text-white text-sm"></i>
-                  </div>
-                  <p className="text-lg leading-relaxed">
-                    <strong>Beyond Performative:</strong> We move past statements and training to create sustainable culture change
-                  </p>
-                </div>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              What You Can <span className="text-lli-orange">Expect</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="bg-lli-teal w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <i className="fas fa-user-tie text-white text-2xl"></i>
               </div>
+              <h3 className="text-xl font-bold text-white mb-4 text-center">Principal-led, boutique engagement</h3>
+              <p className="text-gray-300 text-center leading-relaxed">
+                Direct access to experienced leadership, not a team of junior consultants
+              </p>
             </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="bg-lli-orange w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <i className="fas fa-users text-white text-2xl"></i>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4 text-center">Structured facilitation designed for high-accountability environments</h3>
+              <p className="text-gray-300 text-center leading-relaxed">
+                Rigorous process that respects the complexity of your work
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="bg-lli-teal w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <i className="fas fa-tasks text-white text-2xl"></i>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4 text-center">Practical next steps aligned with capacity and context</h3>
+              <p className="text-gray-300 text-center leading-relaxed">
+                Actionable plans that work within your constraints, not idealized blueprints
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-xl text-gray-300 italic">
+              No inflated metrics. No guarantees. Just disciplined advisory work.
+            </p>
           </div>
         </div>
       </section>
