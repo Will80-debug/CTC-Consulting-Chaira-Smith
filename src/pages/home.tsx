@@ -14,6 +14,11 @@ export const HomePage = () => {
   const coachingSessionImg = "https://sspark.genspark.ai/cfimages?u1=kl8PzsxZyCGgKkLv85O%2FuF%2F5Hgj%2FXXJGsGYv2JVCvyEhGPBGOxmyNlxgBp0%2FRGekZdGZJ5OEhQx9VB%2BPLiJGPQ%3D%3D&u2=RQPXYdBbHghGxL7h&width=2560"
   const workshopImg = "https://sspark.genspark.ai/cfimages?u1=8Yz7K5BfKMmsj9MYV%2FHkiBH49T0R4yNOqSxCVx3lBN7J7vU3lU35Ew9gFBVPcM3SowRzqhG8kp%2F7P0%2FsNP9xUg%3D%3D&u2=8dQ4ySE1xRh2BQN8&width=2560"
   
+  // New professional images
+  const strategyPresentationImg = "https://www.genspark.ai/api/files/s/awc6Ldqd"
+  const implementationMeetingImg = "https://www.genspark.ai/api/files/s/19Z0iBmj"
+  const workshopSessionImg = "https://www.genspark.ai/api/files/s/fRKMu4EB"
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
       <Navigation />
@@ -213,6 +218,19 @@ export const HomePage = () => {
         </div>
       </section>
 
+      {/* Professional Image Section 1 - Strategy Presentation */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src={strategyPresentationImg} 
+              alt="LLI Consulting Group strategy session" 
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Where This Work Is Most Useful */}
       <section className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -257,6 +275,19 @@ export const HomePage = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Image Section 2 - Implementation Meeting */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src={implementationMeetingImg} 
+              alt="LLI Consulting Group implementation planning session" 
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </section>
@@ -307,6 +338,19 @@ export const HomePage = () => {
             <p className="text-white/70 text-sm italic">
               Not a test. Not a score. Just structured space to think through what matters.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Image Section 3 - Workshop Session */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src={workshopSessionImg} 
+              alt="LLI Consulting Group workshop and learning session" 
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </section>
