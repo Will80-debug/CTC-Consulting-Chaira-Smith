@@ -7,8 +7,6 @@ import { ResourcesPage } from './pages/resources'
 import { BlogPage } from './pages/blog'
 import { CaseStudiesPage } from './pages/case-studies'
 import { ContactPage } from './pages/contact'
-import { PricingPage } from './pages/pricing'
-import { CheckoutPage } from './pages/checkout'
 import { BeyondPerformativeActionsPage } from './pages/blog-posts/beyond-performative-actions'
 import { GenericBlogPostPage } from './pages/blog-posts/generic-article'
 import { TeamCoachingPage } from './pages/services/team-coaching'
@@ -48,14 +46,6 @@ app.get('/about', (c) => {
 
 app.get('/resources', (c) => {
   return c.render(<ResourcesPage />)
-})
-
-app.get('/pricing', (c) => {
-  return c.render(<PricingPage />)
-})
-
-app.get('/checkout', (c) => {
-  return c.render(<CheckoutPage />)
 })
 
 app.get('/blog', (c) => {

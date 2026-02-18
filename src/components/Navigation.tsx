@@ -51,12 +51,6 @@ export const Navigation = () => {
               Assessment
             </a>
             <a 
-              href="/pricing" 
-              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-teal pb-1"
-            >
-              Pricing
-            </a>
-            <a 
               href="/blog" 
               className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-teal pb-1"
             >
@@ -131,13 +125,6 @@ export const Navigation = () => {
             >
               <i className="fas fa-clipboard-check mr-3"></i>
               Assessment
-            </a>
-            <a 
-              href="/pricing" 
-              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 py-2"
-            >
-              <i className="fas fa-tag mr-3"></i>
-              Pricing
             </a>
             <a 
               href="/blog" 
