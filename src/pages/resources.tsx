@@ -23,10 +23,10 @@ export const ResourcesPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-orange to-lli-teal">Leadership Resources</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-orange to-lli-teal">Resources for Reflection and Planning</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Free tools, guides, and insights to support your leadership and culture transformation journey
+              These tools are designed to support internal reflection and structured leadership conversations. They are not formal evaluations.
             </p>
           </div>
         </div>
@@ -37,11 +37,8 @@ export const ResourcesPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Featured <span className="text-lli-teal">Resources</span>
+              Resource <span className="text-lli-teal">Blocks</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Download our most popular guides and toolkits for immediate impact
-            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -50,32 +47,15 @@ export const ResourcesPage = () => {
               <div className="relative h-48">
                 <img 
                   src={downloadableGuideImg} 
-                  alt="Leadership Assessment Guide" 
+                  alt="Leadership Self-Reflection Guide" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-4 right-4 bg-lli-teal text-white px-3 py-1 rounded-lg text-sm font-semibold">
-                  Free Download
-                </div>
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">The Leadership Self-Assessment Guide</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Leadership Self-Reflection Guide</h3>
                 <p className="text-gray-600 mb-4">
-                  A comprehensive 20-question tool to evaluate your leadership effectiveness and identify areas for growth.
+                  20 structured prompts to support clarity and planning.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start text-gray-700">
-                    <i className="fas fa-check-circle text-lli-teal mr-2 mt-1"></i>
-                    <span>Self-scoring framework</span>
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <i className="fas fa-check-circle text-lli-teal mr-2 mt-1"></i>
-                    <span>Action planning template</span>
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <i className="fas fa-check-circle text-lli-teal mr-2 mt-1"></i>
-                    <span>Development resources</span>
-                  </li>
-                </ul>
                 <a 
                   href="/static/resources/leadership-self-assessment-guide.html" 
                   target="_blank"
@@ -100,24 +80,10 @@ export const ResourcesPage = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">DEI Culture Toolkit</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Culture & Leadership Conversation Toolkit</h3>
                 <p className="text-gray-600 mb-4">
-                  Practical tools and conversation guides for building more inclusive workplace cultures.
+                  Facilitation prompts and discussion guides.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start text-gray-700">
-                    <i className="fas fa-check-circle text-lli-orange mr-2 mt-1"></i>
-                    <span>Conversation starters</span>
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <i className="fas fa-check-circle text-lli-orange mr-2 mt-1"></i>
-                    <span>Team assessment tools</span>
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <i className="fas fa-check-circle text-lli-orange mr-2 mt-1"></i>
-                    <span>Implementation checklist</span>
-                  </li>
-                </ul>
                 <a 
                   href="/static/resources/dei-culture-toolkit.html" 
                   target="_blank"
@@ -142,24 +108,10 @@ export const ResourcesPage = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">The Culture Change Playbook</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Implementation Planning Playbook</h3>
                 <p className="text-gray-600 mb-4">
-                  Step-by-step guide to planning and executing sustainable culture transformation initiatives.
+                  Sequencing, ownership, and next-step planning framework.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start text-gray-700">
-                    <i className="fas fa-check-circle text-lli-teal mr-2 mt-1"></i>
-                    <span>90-day action plan</span>
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <i className="fas fa-check-circle text-lli-teal mr-2 mt-1"></i>
-                    <span>Stakeholder mapping</span>
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <i className="fas fa-check-circle text-lli-teal mr-2 mt-1"></i>
-                    <span>Success metrics framework</span>
-                  </li>
-                </ul>
                 <a 
                   href="/static/resources/culture-change-playbook.html" 
                   target="_blank"
