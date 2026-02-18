@@ -41,6 +41,282 @@ export const ServicesPage = () => {
         </div>
       </section>
 
+      {/* Video Showcase Section - Moved to top */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold text-gray-900 mb-4">
+              See Our Services in Action
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Watch how LLI Consulting Group LLC™ delivers transformative leadership experiences
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* 1:1 Coaching Video Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
+              <div className="bg-gradient-to-br from-lli-teal/10 to-white p-6 border-b-2 border-lli-teal/20">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="bg-lli-teal text-white w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-user-tie text-xl"></i>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">1:1 Coaching</h4>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Personalized executive coaching sessions designed to unlock individual leadership potential and drive measurable growth.
+                </p>
+              </div>
+              <div className="relative bg-black">
+                <video 
+                  controls 
+                  className="w-full aspect-video"
+                  poster="/static/assessment-consultation.jpg"
+                >
+                  <source src="/static/1-1-coaching.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Confidential one-on-one sessions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Customized leadership development</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Actionable strategies and tools</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Executive Coaching Video Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
+              <div className="bg-gradient-to-br from-lli-orange/10 to-white p-6 border-b-2 border-lli-orange/20">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="bg-lli-orange text-white w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-crown text-xl"></i>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">Executive Coaching</h4>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Strategic leadership coaching for C-suite executives navigating complex organizational challenges and transformation.
+                </p>
+              </div>
+              <div className="relative bg-black">
+                <video 
+                  controls 
+                  className="w-full aspect-video"
+                  poster="/static/assessment-presentation.jpg"
+                >
+                  <source src="/static/executive-coaching.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">C-suite leadership development</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Strategic decision-making support</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Organizational transformation guidance</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Team Development Training Video Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
+              <div className="bg-gradient-to-br from-lli-teal/10 to-white p-6 border-b-2 border-lli-teal/20">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="bg-lli-teal text-white w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-users text-xl"></i>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">Team Development</h4>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Interactive team training sessions that build cohesion, improve collaboration, and strengthen collective leadership capacity.
+                </p>
+              </div>
+              <div className="relative bg-black aspect-video">
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/w6z2Iv5B18E"
+                  title="Team Development Training"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Facilitated team workshops</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Collaborative learning experiences</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Group dynamics and trust-building</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* LLI Workshop Video Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
+              <div className="bg-gradient-to-br from-lli-orange/10 to-white p-6 border-b-2 border-lli-orange/20">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="bg-lli-orange text-white w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-chalkboard-teacher text-xl"></i>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">LLI Workshop</h4>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Structured workshop sessions using the Listen™ Learn™ Implement™ framework for organizational transformation.
+                </p>
+              </div>
+              <div className="relative bg-black aspect-video">
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/eirnJ03wwrk"
+                  title="LLI Workshop"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">LLI Framework implementation</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Interactive learning sessions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Practical action planning</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Organization Coaching and Culture Change Video Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
+              <div className="bg-gradient-to-br from-lli-teal/10 to-white p-6 border-b-2 border-lli-teal/20">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="bg-lli-teal text-white w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-building text-xl"></i>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">Organization Coaching</h4>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Comprehensive organizational coaching and culture change initiatives for sustainable transformation.
+                </p>
+              </div>
+              <div className="relative bg-black aspect-video">
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/DiAg8cbdV6I"
+                  title="Organization Coaching and Culture Change"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Organizational culture assessment</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Strategic change management</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Leadership alignment coaching</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* LLI Culture Reset Training Video Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
+              <div className="bg-gradient-to-br from-lli-orange/10 to-white p-6 border-b-2 border-lli-orange/20">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="bg-lli-orange text-white w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-sync-alt text-xl"></i>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">Culture Reset Training</h4>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Intensive culture reset training designed to rebuild organizational foundations and establish new norms.
+                </p>
+              </div>
+              <div className="relative bg-black aspect-video">
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/d5ESOlafejA"
+                  title="LLI Culture Reset Training"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Cultural foundation rebuilding</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">New behavioral norms establishment</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Organizational reset strategies</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Call-to-Action */}
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-700 mb-6">
+              Ready to experience these transformative services for yourself?
+            </p>
+            <a 
+              href="/contact" 
+              className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-10 py-5 rounded-xl font-bold text-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            >
+              <i className="fas fa-phone mr-3"></i>
+              Schedule Your Discovery Call
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Interactive LLI Framework Journey */}
       <section className="bg-white py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -469,282 +745,6 @@ export const ServicesPage = () => {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* Video Showcase Section */}
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">
-              See Our Services in Action
-            </h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Watch how LLI Consulting Group LLC™ delivers transformative leadership experiences
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* 1:1 Coaching Video Card */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
-              <div className="bg-gradient-to-br from-lli-teal/10 to-white p-6 border-b-2 border-lli-teal/20">
-                <div className="flex items-center space-x-3 mb-3">
-                  <div className="bg-lli-teal text-white w-12 h-12 rounded-full flex items-center justify-center">
-                    <i className="fas fa-user-tie text-xl"></i>
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900">1:1 Coaching</h4>
-                </div>
-                <p className="text-gray-700 leading-relaxed">
-                  Personalized executive coaching sessions designed to unlock individual leadership potential and drive measurable growth.
-                </p>
-              </div>
-              <div className="relative bg-black">
-                <video 
-                  controls 
-                  className="w-full aspect-video"
-                  poster="/static/assessment-consultation.jpg"
-                >
-                  <source src="/static/1-1-coaching.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Confidential one-on-one sessions</span>
-                  </li>
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Customized leadership development</span>
-                  </li>
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Actionable strategies and tools</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Executive Coaching Video Card */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
-              <div className="bg-gradient-to-br from-lli-orange/10 to-white p-6 border-b-2 border-lli-orange/20">
-                <div className="flex items-center space-x-3 mb-3">
-                  <div className="bg-lli-orange text-white w-12 h-12 rounded-full flex items-center justify-center">
-                    <i className="fas fa-crown text-xl"></i>
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900">Executive Coaching</h4>
-                </div>
-                <p className="text-gray-700 leading-relaxed">
-                  Strategic leadership coaching for C-suite executives navigating complex organizational challenges and transformation.
-                </p>
-              </div>
-              <div className="relative bg-black">
-                <video 
-                  controls 
-                  className="w-full aspect-video"
-                  poster="/static/assessment-presentation.jpg"
-                >
-                  <source src="/static/executive-coaching.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">C-suite leadership development</span>
-                  </li>
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Strategic decision-making support</span>
-                  </li>
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Organizational transformation guidance</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Team Development Training Video Card */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
-              <div className="bg-gradient-to-br from-lli-teal/10 to-white p-6 border-b-2 border-lli-teal/20">
-                <div className="flex items-center space-x-3 mb-3">
-                  <div className="bg-lli-teal text-white w-12 h-12 rounded-full flex items-center justify-center">
-                    <i className="fas fa-users text-xl"></i>
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900">Team Development</h4>
-                </div>
-                <p className="text-gray-700 leading-relaxed">
-                  Interactive team training sessions that build cohesion, improve collaboration, and strengthen collective leadership capacity.
-                </p>
-              </div>
-              <div className="relative bg-black aspect-video">
-                <iframe 
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/w6z2Iv5B18E"
-                  title="Team Development Training"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Facilitated team workshops</span>
-                  </li>
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Collaborative learning experiences</span>
-                  </li>
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Group dynamics and trust-building</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* LLI Workshop Video Card */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
-              <div className="bg-gradient-to-br from-lli-orange/10 to-white p-6 border-b-2 border-lli-orange/20">
-                <div className="flex items-center space-x-3 mb-3">
-                  <div className="bg-lli-orange text-white w-12 h-12 rounded-full flex items-center justify-center">
-                    <i className="fas fa-chalkboard-teacher text-xl"></i>
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900">LLI Workshop</h4>
-                </div>
-                <p className="text-gray-700 leading-relaxed">
-                  Structured workshop sessions using the Listen™ Learn™ Implement™ framework for organizational transformation.
-                </p>
-              </div>
-              <div className="relative bg-black aspect-video">
-                <iframe 
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/eirnJ03wwrk"
-                  title="LLI Workshop"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">LLI Framework implementation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Interactive learning sessions</span>
-                  </li>
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Practical action planning</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Organization Coaching and Culture Change Video Card */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
-              <div className="bg-gradient-to-br from-lli-teal/10 to-white p-6 border-b-2 border-lli-teal/20">
-                <div className="flex items-center space-x-3 mb-3">
-                  <div className="bg-lli-teal text-white w-12 h-12 rounded-full flex items-center justify-center">
-                    <i className="fas fa-building text-xl"></i>
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900">Organization Coaching</h4>
-                </div>
-                <p className="text-gray-700 leading-relaxed">
-                  Comprehensive organizational coaching and culture change initiatives for sustainable transformation.
-                </p>
-              </div>
-              <div className="relative bg-black aspect-video">
-                <iframe 
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/DiAg8cbdV6I"
-                  title="Organization Coaching and Culture Change"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Organizational culture assessment</span>
-                  </li>
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Strategic change management</span>
-                  </li>
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Leadership alignment coaching</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* LLI Culture Reset Training Video Card */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
-              <div className="bg-gradient-to-br from-lli-orange/10 to-white p-6 border-b-2 border-lli-orange/20">
-                <div className="flex items-center space-x-3 mb-3">
-                  <div className="bg-lli-orange text-white w-12 h-12 rounded-full flex items-center justify-center">
-                    <i className="fas fa-sync-alt text-xl"></i>
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900">Culture Reset Training</h4>
-                </div>
-                <p className="text-gray-700 leading-relaxed">
-                  Intensive culture reset training designed to rebuild organizational foundations and establish new norms.
-                </p>
-              </div>
-              <div className="relative bg-black aspect-video">
-                <iframe 
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/d5ESOlafejA"
-                  title="LLI Culture Reset Training"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Cultural foundation rebuilding</span>
-                  </li>
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">New behavioral norms establishment</span>
-                  </li>
-                  <li className="flex items-start">
-                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
-                    <span className="text-gray-700">Organizational reset strategies</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Call-to-Action */}
-          <div className="text-center mt-12">
-            <p className="text-lg text-gray-700 mb-6">
-              Ready to experience these transformative services for yourself?
-            </p>
-            <a 
-              href="/contact" 
-              className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-10 py-5 rounded-xl font-bold text-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-            >
-              <i className="fas fa-phone mr-3"></i>
-              Schedule Your Discovery Call
-            </a>
-          </div>
         </div>
       </section>
 
