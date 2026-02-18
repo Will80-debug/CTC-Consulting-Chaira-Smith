@@ -79,37 +79,6 @@ export const HomePage = () => {
                   </p>
                 </div>
               </div>
-              
-              {/* Real, Believable Stats with Count-up Animation */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-lli-teal mb-2">
-                    <span className="stat-number" data-target="85">0</span>
-                  </div>
-                  <p className="text-sm text-gray-600">Avg. engagement improvement</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-lli-orange mb-2">
-                    <span className="stat-number" data-target="500">0</span>
-                  </div>
-                  <p className="text-sm text-gray-600">Leaders coached</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-lli-teal mb-2">
-                    <span className="stat-number" data-target="98">0</span>
-                  </div>
-                  <p className="text-sm text-gray-600">Client renewal rate</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-lli-orange mb-2">
-                    <span className="stat-number" data-target="15">0</span>
-                  </div>
-                  <p className="text-sm text-gray-600">Years of expertise</p>
-                </div>
-              </div>
             </div>
             
             {/* Right: Intro Video */}
