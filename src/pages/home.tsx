@@ -292,51 +292,52 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* Assessment CTA Section */}
+      {/* Leadership & Culture Reflection Intake Section */}
       <section className="bg-gradient-to-r from-lli-teal via-lli-teal-dark to-lli-teal py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <div className="mb-6">
-              <i className="fas fa-chart-line text-6xl text-white/80"></i>
+              <i className="fas fa-pen-to-square text-6xl text-white/80"></i>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Want to Know Where You Stand?
+              Leadership & Culture Reflection Intake
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Take our free Leadership Readiness Assessment and get your personalized score across 5 critical dimensions. Discover your strengths, identify gaps, and get actionable recommendations in just 5 minutes.
+              A short reflection tool designed to help you clarify what you are navigating before our discovery call.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="grid md:grid-cols-4 gap-6 mb-8 text-white">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-4">
+                <div className="text-3xl font-bold mb-1">5-minute</div>
+                <div className="text-sm text-white/80">intake</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur rounded-xl p-4">
+                <div className="text-3xl font-bold mb-1">No scoring</div>
+                <div className="text-sm text-white/80">just reflection</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur rounded-xl p-4">
+                <div className="text-3xl font-bold mb-1">Designed</div>
+                <div className="text-sm text-white/80">for reflection</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur rounded-xl p-4">
+                <div className="text-3xl font-bold mb-1">Generates</div>
+                <div className="text-sm text-white/80">discussion prompts</div>
+              </div>
+            </div>
+
+            <div className="flex justify-center mb-8">
               <a 
                 href="/assessment" 
-                className="inline-block bg-white text-lli-teal px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
+                className="inline-block bg-white text-lli-teal px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
               >
-                <i className="fas fa-clipboard-check mr-2"></i>
-                Take Free Assessment
-              </a>
-              <a 
-                href="/assessment#how-it-works" 
-                className="inline-block bg-white/10 backdrop-blur text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300"
-              >
-                <i className="fas fa-info-circle mr-2"></i>
-                How It Works
+                <i className="fas fa-arrow-right mr-3"></i>
+                Begin Reflection Intake
               </a>
             </div>
             
-            <div className="flex items-center justify-center gap-8 text-white/80 text-sm">
-              <div className="flex items-center gap-2">
-                <i className="fas fa-check-circle"></i>
-                <span>100% Free</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <i className="fas fa-clock"></i>
-                <span>5 Minutes</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <i className="fas fa-shield-alt"></i>
-                <span>No Email Required</span>
-              </div>
-            </div>
+            <p className="text-white/70 text-sm italic">
+              Not a test. Not a score. Just structured space to think through what matters.
+            </p>
           </div>
         </div>
       </section>
