@@ -244,204 +244,50 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* Case Study Slider */}
+      {/* Where This Work Is Most Useful */}
       <section className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Transformation Stories
+              Where This Work Is Most Useful
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Real challenges, real interventions, real results. See how organizations partnered with LLI to create lasting change.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+              LLI Consulting Group™ frequently supports organizations navigating:
             </p>
           </div>
 
-          {/* Slider Container */}
-          <div className="relative">
-            {/* Slider Track */}
-            <div id="case-study-slider" className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide">
-              {/* Case Study 1 - Regional Hospital */}
-              <div className="case-study-card min-w-[350px] md:min-w-[450px] snap-center bg-white rounded-2xl shadow-xl p-8 border-t-4 border-lli-teal">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-semibold text-lli-teal uppercase tracking-wide">Healthcare</span>
-                  <i className="fas fa-hospital text-3xl text-lli-teal"></i>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Regional Hospital System</h3>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">Challenge:</h4>
-                  <p className="text-gray-700">Siloed leadership team, failed merger, defensive culture, low trust scores (32%), slow decision-making.</p>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">LLI Intervention:</h4>
-                  <p className="text-gray-700">8 group coaching sessions using Listen → Learn → Implement. Rebuilt trust through vulnerability, bias training, co-created communication protocols.</p>
-                </div>
-                
-                <div className="bg-gradient-to-br from-teal-50 to-white rounded-lg p-4 mb-4">
-                  <h4 className="text-sm font-bold text-gray-900 mb-2">Outcomes (4 months):</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li className="text-lli-teal font-semibold">✓ Trust score: 32% → 78%</li>
-                    <li className="text-lli-teal font-semibold">✓ 3x faster critical decisions</li>
-                    <li className="text-lli-teal font-semibold">✓ Zero leadership turnover (1 year)</li>
-                  </ul>
-                </div>
-                
-                <a href="/case-studies" className="inline-flex items-center text-lli-teal font-semibold hover:text-lli-teal-dark transition-colors">
-                  View full case study <i className="fas fa-arrow-right ml-2"></i>
-                </a>
-              </div>
-
-              {/* Case Study 2 - Urban School District */}
-              <div className="case-study-card min-w-[350px] md:min-w-[450px] snap-center bg-white rounded-2xl shadow-xl p-8 border-t-4 border-lli-orange">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-semibold text-lli-orange uppercase tracking-wide">Education</span>
-                  <i className="fas fa-school text-3xl text-lli-orange"></i>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Urban School District</h3>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">Challenge:</h4>
-                  <p className="text-gray-700">15,000 students, persistent achievement gaps, low teacher retention, no cohesive equity strategy.</p>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">LLI Intervention:</h4>
-                  <p className="text-gray-700">Stakeholder interviews, data analysis, co-created 5-year phased equity transformation plan with superintendent's cabinet.</p>
-                </div>
-                
-                <div className="bg-gradient-to-br from-orange-50 to-white rounded-lg p-4 mb-4">
-                  <h4 className="text-sm font-bold text-gray-900 mb-2">Outcomes (Year 1):</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li className="text-lli-orange font-semibold">✓ Board-approved $2M plan</li>
-                    <li className="text-lli-orange font-semibold">✓ +12 points teacher satisfaction</li>
-                    <li className="text-lli-orange font-semibold">✓ 3 pilot schools with early wins</li>
-                  </ul>
-                </div>
-                
-                <a href="/case-studies" className="inline-flex items-center text-lli-orange font-semibold hover:text-lli-orange-dark transition-colors">
-                  View full case study <i className="fas fa-arrow-right ml-2"></i>
-                </a>
-              </div>
-
-              {/* Case Study 3 - Mid-Size Tech Company */}
-              <div className="case-study-card min-w-[350px] md:min-w-[450px] snap-center bg-white rounded-2xl shadow-xl p-8 border-t-4 border-lli-teal">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-semibold text-lli-teal uppercase tracking-wide">Technology</span>
-                  <i className="fas fa-laptop-code text-3xl text-lli-teal"></i>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Mid-Size Tech Company</h3>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">Challenge:</h4>
-                  <p className="text-gray-700">120 managers lacked skills in inclusive hiring and leading diverse teams. Homogeneous workforce, low diversity metrics.</p>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">LLI Intervention:</h4>
-                  <p className="text-gray-700">3-workshop series: interactive exercises, real scenarios, peer learning. Each session built on LLI Framework™.</p>
-                </div>
-                
-                <div className="bg-gradient-to-br from-teal-50 to-white rounded-lg p-4 mb-4">
-                  <h4 className="text-sm font-bold text-gray-900 mb-2">Outcomes (Post-series):</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li className="text-lli-teal font-semibold">✓ +34% diverse candidate hires</li>
-                    <li className="text-lli-teal font-semibold">✓ 89% manager bias confidence</li>
-                    <li className="text-lli-teal font-semibold">✓ 96% would recommend</li>
-                  </ul>
-                </div>
-                
-                <a href="/case-studies" className="inline-flex items-center text-lli-teal font-semibold hover:text-lli-teal-dark transition-colors">
-                  View full case study <i className="fas fa-arrow-right ml-2"></i>
-                </a>
-              </div>
-
-              {/* Case Study 4 - Fortune 500 VP */}
-              <div className="case-study-card min-w-[350px] md:min-w-[450px] snap-center bg-white rounded-2xl shadow-xl p-8 border-t-4 border-lli-orange">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-semibold text-lli-orange uppercase tracking-wide">Corporate</span>
-                  <i className="fas fa-briefcase text-3xl text-lli-orange"></i>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Fortune 500 Executive</h3>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">Challenge:</h4>
-                  <p className="text-gray-700">VP inherited team with low morale, high turnover, disconnection. Needed leadership transformation.</p>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">LLI Intervention:</h4>
-                  <p className="text-gray-700">6 months 1:1 executive coaching. Listen deeply to employees, learn courageously about biases, implement boldly by redesigning workflows.</p>
-                </div>
-                
-                <div className="bg-gradient-to-br from-orange-50 to-white rounded-lg p-4 mb-4">
-                  <h4 className="text-sm font-bold text-gray-900 mb-2">Outcomes (6 months):</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li className="text-lli-orange font-semibold">✓ 40% reduction in turnover</li>
-                    <li className="text-lli-orange font-semibold">✓ Engagement: 61% → 92%</li>
-                    <li className="text-lli-orange font-semibold">✓ Promoted to SVP in 12 months</li>
-                  </ul>
-                </div>
-                
-                <a href="/case-studies" className="inline-flex items-center text-lli-orange font-semibold hover:text-lli-orange-dark transition-colors">
-                  View full case study <i className="fas fa-arrow-right ml-2"></i>
-                </a>
-              </div>
-
-              {/* Case Study 5 - Financial Services Firm */}
-              <div className="case-study-card min-w-[350px] md:min-w-[450px] snap-center bg-white rounded-2xl shadow-xl p-8 border-t-4 border-lli-teal">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-semibold text-lli-teal uppercase tracking-wide">Financial Services</span>
-                  <i className="fas fa-chart-line text-3xl text-lli-teal"></i>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Financial Services Firm</h3>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">Challenge:</h4>
-                  <p className="text-gray-700">Low engagement (54%), "old boys' club" reputation, only 18% women in senior leadership.</p>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">LLI Intervention:</h4>
-                  <p className="text-gray-700">18-month culture transformation: redesigned hiring, promotion, performance systems. Listening sessions, leadership training, accountability structures.</p>
-                </div>
-                
-                <div className="bg-gradient-to-br from-teal-50 to-white rounded-lg p-4 mb-4">
-                  <h4 className="text-sm font-bold text-gray-900 mb-2">Outcomes (18 months):</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li className="text-lli-teal font-semibold">✓ Engagement: 54% → 81%</li>
-                    <li className="text-lli-teal font-semibold">✓ Women leadership: 18% → 45%</li>
-                    <li className="text-lli-teal font-semibold">✓ Named "Best Place to Work"</li>
-                  </ul>
-                </div>
-                
-                <a href="/case-studies" className="inline-flex items-center text-lli-teal font-semibold hover:text-lli-teal-dark transition-colors">
-                  View full case study <i className="fas fa-arrow-right ml-2"></i>
-                </a>
+          {/* Context List */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+              <ul className="space-y-6">
+                <li className="flex items-start">
+                  <div className="bg-lli-teal/10 w-3 h-3 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <span className="text-lg text-gray-800">Strategic transitions</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="bg-lli-orange/10 w-3 h-3 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <span className="text-lg text-gray-800">Leadership alignment challenges</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="bg-lli-teal/10 w-3 h-3 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <span className="text-lg text-gray-800">Cross-department collaboration</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="bg-lli-orange/10 w-3 h-3 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <span className="text-lg text-gray-800">Community accountability dynamics</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="bg-lli-teal/10 w-3 h-3 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <span className="text-lg text-gray-800">Implementation sequencing decisions</span>
+                </li>
+              </ul>
+              
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <p className="text-center text-lg text-gray-700 italic">
+                  This work focuses on structure, clarity, and disciplined planning.
+                </p>
               </div>
             </div>
-
-            {/* Scroll Indicators */}
-            <div className="flex justify-center mt-8 gap-2">
-              <button onclick="scrollCaseStudy('left')" className="bg-gray-200 hover:bg-lli-teal hover:text-white text-gray-700 font-bold py-2 px-4 rounded-lg transition-all">
-                <i className="fas fa-chevron-left"></i>
-              </button>
-              <button onclick="scrollCaseStudy('right')" className="bg-gray-200 hover:bg-lli-teal hover:text-white text-gray-700 font-bold py-2 px-4 rounded-lg transition-all">
-                <i className="fas fa-chevron-right"></i>
-              </button>
-            </div>
-          </div>
-
-          {/* View All CTA */}
-          <div className="text-center mt-12">
-            <a 
-              href="/case-studies"
-              className="inline-flex items-center space-x-3 bg-gradient-to-r from-lli-orange to-lli-orange-dark hover:from-lli-orange-dark hover:to-lli-orange text-white font-bold py-4 px-8 rounded-lg shadow-lg transform transition-all duration-200 hover:scale-105"
-            >
-              <i className="fas fa-book-open text-xl"></i>
-              <span className="text-lg">View All Case Studies</span>
-              <i className="fas fa-arrow-right"></i>
-            </a>
           </div>
         </div>
       </section>
