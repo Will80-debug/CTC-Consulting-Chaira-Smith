@@ -342,6 +342,31 @@ export const HomePage = () => {
         </div>
       </section>
 
+      {/* Final CTA - Start With a Conversation */}
+      <section className="bg-white py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Start With a Conversation
+          </h2>
+          <p className="text-xl text-gray-700 mb-4 leading-relaxed">
+            Every engagement begins with a discovery call to confirm fit, scope, and alignment.
+          </p>
+          <p className="text-2xl text-gray-900 font-semibold mb-8">
+            No pressure. Just clarity.
+          </p>
+          
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-10 py-5 rounded-xl font-bold text-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            >
+              <i className="fas fa-phone mr-3"></i>
+              Schedule a Discovery Call
+            </a>
+          </div>
+        </div>
+      </section>
+
       <Modals />
       
       <Footer />

@@ -30,40 +30,13 @@ export const ServicesPage = () => {
         </div>
         
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Welcome to LLI Consulting Group
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transforming Leadership, Building Culture, Creating Impact
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Structured Support for Complex Leadership Work
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+              Boutique facilitation and advisory engagements designed to support clarity, alignment, and responsible planning.
             </p>
-            
-            {/* Key Value Propositions */}
-            <div className="grid md:grid-cols-3 gap-6 mt-12">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all">
-                <div className="text-lli-orange text-3xl mb-3">
-                  <i className="fas fa-users"></i>
-                </div>
-                <h3 className="text-white font-bold text-lg mb-2">Individual Coaching</h3>
-                <p className="text-gray-300 text-sm">1-on-1 executive coaching for transformational growth</p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all">
-                <div className="text-lli-teal text-3xl mb-3">
-                  <i className="fas fa-people-group"></i>
-                </div>
-                <h3 className="text-white font-bold text-lg mb-2">Team Development</h3>
-                <p className="text-gray-300 text-sm">Build high-performing, cohesive teams</p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all">
-                <div className="text-lli-orange text-3xl mb-3">
-                  <i className="fas fa-chart-line"></i>
-                </div>
-                <h3 className="text-white font-bold text-lg mb-2">Culture Transformation</h3>
-                <p className="text-gray-300 text-sm">Strategic planning for sustainable change</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -74,75 +47,51 @@ export const ServicesPage = () => {
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                The LLI Framework™ Journey
+                The Listen™ Learn™ Implement™ Framework
               </h3>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                Our proven methodology transforms organizations through three powerful stages. Click each step to explore.
+                The framework guides process. Outcomes depend on engagement and follow-through.
               </p>
             </div>
 
-            {/* Interactive Timeline with Clickable Cards */}
-            <div className="relative mb-12">
-              {/* Timeline Line (Desktop) */}
-              <div className="hidden md:block absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-lli-orange via-lli-teal to-lli-orange mx-32"></div>
-              
-              {/* Three Clickable Cards */}
-              <div className="grid md:grid-cols-3 gap-8 relative z-10">
-                {/* Listen Card */}
-                <div 
-                  onclick="toggleFrameworkCard('listen')" 
-                  className="framework-card cursor-pointer transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
-                >
-                  <div className="bg-white rounded-2xl border-4 border-lli-orange shadow-lg hover:shadow-2xl p-6 text-center">
-                    <div className="bg-gradient-to-br from-lli-orange to-lli-orange-dark text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <i className="fas fa-ear-listen text-4xl framework-icon"></i>
-                    </div>
-                    <h4 className="text-2xl font-bold text-lli-orange mb-2">Listen Deeply</h4>
-                    <p className="text-gray-600 text-sm mb-3">Phase 1</p>
-                    <div className="flex items-center justify-center text-lli-orange">
-                      <span className="text-sm font-semibold">Click to explore</span>
-                      <i className="fas fa-chevron-down ml-2 text-xs"></i>
-                    </div>
-                  </div>
+            {/* Three Framework Phases */}
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              {/* Listen Card */}
+              <div className="bg-gradient-to-br from-lli-orange/5 to-white border-2 border-lli-orange/20 rounded-2xl p-8">
+                <div className="bg-gradient-to-br from-lli-orange to-lli-orange-dark text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <i className="fas fa-ear-listen text-3xl"></i>
                 </div>
-
-                {/* Learn Card */}
-                <div 
-                  onclick="toggleFrameworkCard('learn')" 
-                  className="framework-card cursor-pointer transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
-                >
-                  <div className="bg-white rounded-2xl border-4 border-lli-teal shadow-lg hover:shadow-2xl p-6 text-center">
-                    <div className="bg-gradient-to-br from-lli-teal to-lli-teal-dark text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <i className="fas fa-graduation-cap text-4xl framework-icon"></i>
-                    </div>
-                    <h4 className="text-2xl font-bold text-lli-teal mb-2">Learn Courageously</h4>
-                    <p className="text-gray-600 text-sm mb-3">Phase 2</p>
-                    <div className="flex items-center justify-center text-lli-teal">
-                      <span className="text-sm font-semibold">Click to explore</span>
-                      <i className="fas fa-chevron-down ml-2 text-xs"></i>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Implement Card */}
-                <div 
-                  onclick="toggleFrameworkCard('implement')" 
-                  className="framework-card cursor-pointer transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
-                >
-                  <div className="bg-white rounded-2xl border-4 border-lli-orange shadow-lg hover:shadow-2xl p-6 text-center">
-                    <div className="bg-gradient-to-br from-lli-orange to-lli-orange-dark text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <i className="fas fa-rocket text-4xl framework-icon"></i>
-                    </div>
-                    <h4 className="text-2xl font-bold text-lli-orange mb-2">Implement Boldly</h4>
-                    <p className="text-gray-600 text-sm mb-3">Phase 3</p>
-                    <div className="flex items-center justify-center text-lli-orange">
-                      <span className="text-sm font-semibold">Click to explore</span>
-                      <i className="fas fa-chevron-down ml-2 text-xs"></i>
-                    </div>
-                  </div>
-                </div>
+                <h4 className="text-2xl font-bold text-lli-orange mb-4 text-center">Listen™</h4>
+                <p className="text-gray-700 text-center leading-relaxed">
+                  Create space for meaningful stakeholder and leadership input.
+                </p>
               </div>
 
+              {/* Learn Card */}
+              <div className="bg-gradient-to-br from-lli-teal/5 to-white border-2 border-lli-teal/20 rounded-2xl p-8">
+                <div className="bg-gradient-to-br from-lli-teal to-lli-teal-dark text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <i className="fas fa-lightbulb text-3xl"></i>
+                </div>
+                <h4 className="text-2xl font-bold text-lli-teal mb-4 text-center">Learn™</h4>
+                <p className="text-gray-700 text-center leading-relaxed">
+                  Identify themes, constraints, and readiness factors before committing resources.
+                </p>
+              </div>
+
+              {/* Implement Card */}
+              <div className="bg-gradient-to-br from-lli-orange/5 to-white border-2 border-lli-orange/20 rounded-2xl p-8">
+                <div className="bg-gradient-to-br from-lli-orange to-lli-orange-dark text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <i className="fas fa-tasks text-3xl"></i>
+                </div>
+                <h4 className="text-2xl font-bold text-lli-orange mb-4 text-center">Implement™</h4>
+                <p className="text-gray-700 text-center leading-relaxed">
+                  Support clear next steps aligned with leadership capacity and timelines.
+                </p>
+              </div>
+            </div>
+
+            {/* Removed Expandable Content - keeping structure minimal */}
+            <div style={{ display: 'none' }}>
               {/* Expandable Content Areas */}
               {/* Listen Details */}
               <div id="framework-listen" className="hidden mt-8 bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 border-2 border-lli-orange shadow-xl">
