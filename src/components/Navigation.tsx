@@ -1,5 +1,5 @@
 export const Navigation = () => {
-  const logoUrl = "/static/lli-logo.png"
+  const logoUrl = "/static/lli-logo-new.png"
   
   return (
     <header className="bg-gradient-to-r from-lli-orange to-lli-orange-dark shadow-2xl sticky top-0 z-50">
@@ -7,7 +7,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo and Brand */}
           <a href="/" className="flex items-center space-x-4 hover:opacity-90 transition-opacity">
-            <div className="bg-lli-teal-dark rounded-full p-3">
+            <div className="bg-white rounded-full p-2">
               <img 
                 src={logoUrl} 
                 alt="LLI Consulting Group Logo" 
