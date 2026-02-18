@@ -298,7 +298,7 @@ export const BeyondPerformativeActionsPage = () => {
     </div>
 
     <p class="text-lg text-gray-700 leading-relaxed">
-      At LLI Consulting Group, we specialize in moving organizations from performative gestures to real, lasting change. If you're ready to do DEI work that actually matters, let's talk.
+      At LLI Consulting Group LLC, we specialize in moving organizations from performative gestures to real, lasting change. If you're ready to do DEI work that actually matters, let's talk.
     </p>
   `;
 

@@ -5,7 +5,7 @@ export const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold text-lli-teal mb-4">LLI Consulting Group</h3>
+            <h3 className="text-xl font-bold text-lli-teal mb-4">LLI Consulting Group LLC</h3>
             <p className="text-gray-300 mb-4">
               Transforming leadership and culture through equity-centered coaching and strategic consulting.
             </p>
@@ -64,7 +64,7 @@ export const Footer = () => {
         
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} LLI Consulting Group. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} LLI Consulting Group LLC. All rights reserved.</p>
           <p className="mt-2 text-sm">
             <a href="#" className="hover:text-lli-teal transition-colors">Privacy Policy</a>
             {' • '}

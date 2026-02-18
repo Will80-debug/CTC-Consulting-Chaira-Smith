@@ -21,10 +21,10 @@ export const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-orange to-lli-teal">LLI Consulting Group™</span>
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-orange to-lli-teal">LLI Consulting Group LLC™</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              LLI Consulting Group™ is a principal-led advisory practice supporting foundations, public agencies, and mission-driven organizations navigating complex leadership and organizational work.
+              LLI Consulting Group LLC™ is a principal-led advisory practice supporting foundations, public agencies, and mission-driven organizations navigating complex leadership and organizational work.
             </p>
           </div>
         </div>
@@ -40,7 +40,7 @@ export const AboutPage = () => {
               </h2>
               <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  Founded by Chiara Smith, MHR, LLI Consulting Group™ was built on a simple premise: responsible leadership requires disciplined listening, careful learning, and intentional implementation.
+                  Founded by Chiara Smith, MHR, LLI Consulting Group LLC™ was built on a simple premise: responsible leadership requires disciplined listening, careful learning, and intentional implementation.
                 </p>
                 <p>
                   In high-accountability environments, decisions must balance urgency, capacity, and public trust. This practice exists to support that balance.
@@ -52,7 +52,7 @@ export const AboutPage = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300">
                 <img 
                   src={teamCollaborationImg} 
-                  alt="LLI Consulting Group Team Collaboration" 
+                  alt="LLI Consulting Group LLC Team Collaboration" 
                   className="w-full h-auto object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-lli-black/50 to-transparent"></div>
@@ -74,11 +74,11 @@ export const AboutPage = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center bg-white rounded-2xl shadow-xl p-8 md:p-12">
             <div className="order-2 md:order-1">
               <h3 className="text-3xl font-bold text-gray-900 mb-2">Chiara Smith, MHR</h3>
-              <p className="text-xl text-lli-teal font-semibold mb-6">Founder and Principal of LLI Consulting Group™</p>
+              <p className="text-xl text-lli-teal font-semibold mb-6">Founder and Principal of LLI Consulting Group LLC™</p>
               
               <div className="space-y-4 text-gray-700 leading-relaxed mb-8">
                 <p>
-                  Chiara Smith, MHR is the Founder and Principal of LLI Consulting Group™.
+                  Chiara Smith, MHR is the Founder and Principal of LLI Consulting Group LLC™.
                 </p>
                 <p>
                   Her work is informed by professional experience across philanthropy, government, and nonprofit sectors, along with lived experience in community-centered leadership environments.
@@ -115,7 +115,7 @@ export const AboutPage = () => {
               <div className="relative">
                 <img 
                   src={chiaraFounderImg} 
-                  alt="Chiara Smith - Founder of LLI Consulting Group" 
+                  alt="Chiara Smith - Founder of LLI Consulting Group LLC" 
                   className="w-full rounded-2xl shadow-2xl"
                 />
               </div>

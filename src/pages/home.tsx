@@ -33,7 +33,7 @@ export const HomePage = () => {
               {/* Overline */}
               <div className="mb-4">
                 <p className="text-sm font-semibold text-lli-teal uppercase tracking-wide">
-                  LLI Consulting Group™
+                  LLI Consulting Group LLC™
                 </p>
               </div>
               
@@ -44,7 +44,7 @@ export const HomePage = () => {
               
               {/* Subheadline */}
               <p className="text-xl md:text-2xl text-gray-700 mb-4 leading-relaxed">
-                LLI Consulting Group™ provides structured advisory support for foundations, government agencies, and mission-driven organizations navigating complex leadership and organizational decisions.
+                LLI Consulting Group LLC™ provides structured advisory support for foundations, government agencies, and mission-driven organizations navigating complex leadership and organizational decisions.
               </p>
               
               {/* Support Line */}
@@ -115,7 +115,7 @@ export const HomePage = () => {
               {/* Video Caption Below */}
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  LLI Consulting Group breaks down how Listen → Learn → Implement helps leaders move from intent to impact.
+                  LLI Consulting Group LLC breaks down how Listen → Learn → Implement helps leaders move from intent to impact.
                 </p>
               </div>
             </div>
@@ -131,7 +131,7 @@ export const HomePage = () => {
               How We Work
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              LLI Consulting Group™ offers focused engagements designed to support clarity and responsible implementation.
+              LLI Consulting Group LLC™ offers focused engagements designed to support clarity and responsible implementation.
             </p>
           </div>
 
@@ -251,7 +251,7 @@ export const HomePage = () => {
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src={strategyPresentationImg} 
-              alt="LLI Consulting Group strategy session" 
+              alt="LLI Consulting Group LLC strategy session" 
               className="w-full h-auto"
             />
           </div>
@@ -266,7 +266,7 @@ export const HomePage = () => {
               Where This Work Is Most Useful
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-              LLI Consulting Group™ frequently supports organizations navigating:
+              LLI Consulting Group LLC™ frequently supports organizations navigating:
             </p>
           </div>
 
@@ -275,7 +275,7 @@ export const HomePage = () => {
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src="/static/executive-leadership-training.jpg" 
-                alt="Executive leadership training session with LLI Consulting Group" 
+                alt="Executive leadership training session with LLI Consulting Group LLC" 
                 className="w-full h-auto"
               />
             </div>
@@ -323,7 +323,7 @@ export const HomePage = () => {
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src={implementationMeetingImg} 
-              alt="LLI Consulting Group implementation planning session" 
+              alt="LLI Consulting Group LLC implementation planning session" 
               className="w-full h-auto"
             />
           </div>
@@ -386,7 +386,7 @@ export const HomePage = () => {
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src={workshopSessionImg} 
-              alt="LLI Consulting Group workshop and learning session" 
+              alt="LLI Consulting Group LLC workshop and learning session" 
               className="w-full h-auto"
             />
           </div>

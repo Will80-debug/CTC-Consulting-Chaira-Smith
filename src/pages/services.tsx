@@ -567,7 +567,7 @@ export const ServicesPage = () => {
               {/* Image Caption Below */}
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  LLI Consulting Group helps leaders move from intent to impact through collaborative strategic planning.
+                  LLI Consulting Group LLC helps leaders move from intent to impact through collaborative strategic planning.
                 </p>
               </div>
             </div>
@@ -1236,7 +1236,7 @@ export const ServicesPage = () => {
                 Your Leadership Journey Starts Here
               </h3>
               <p className="text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
-                Partner with LLI Consulting Group to unlock your full potential
+                Partner with LLI Consulting Group LLC to unlock your full potential
               </p>
             </div>
           </div>

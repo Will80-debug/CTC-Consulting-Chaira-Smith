@@ -10,12 +10,12 @@ export const Navigation = () => {
             <div className="bg-white rounded-full p-2">
               <img 
                 src={logoUrl} 
-                alt="LLI Consulting Group Logo" 
+                alt="LLI Consulting Group LLC Logo" 
                 className="h-20 w-20 object-contain"
               />
             </div>
             <div className="text-left">
-              <h1 className="text-2xl md:text-3xl font-bold text-white">LLI Consulting Group</h1>
+              <h1 className="text-2xl md:text-3xl font-bold text-white">LLI Consulting Group LLC</h1>
               <p className="text-sm text-gray-300">Leadership & Culture Transformation</p>
             </div>
           </a>

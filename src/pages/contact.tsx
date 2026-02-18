@@ -429,7 +429,7 @@ export const ContactPage = () => {
             <div className="relative">
               <img 
                 src={officeImg} 
-                alt="LLI Consulting Group Team" 
+                alt="LLI Consulting Group LLC Team" 
                 className="w-full rounded-2xl shadow-2xl"
                 loading="lazy"
               />

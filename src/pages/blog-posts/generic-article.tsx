@@ -62,7 +62,7 @@ export const GenericBlogPostPage = ({ slug }: { slug: string }) => {
     <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">The LLI Framework™ Approach</h2>
 
     <p class="mb-6">
-      At LLI Consulting Group, our three-phase framework provides a proven pathway for transformation:
+      At LLI Consulting Group LLC, our three-phase framework provides a proven pathway for transformation:
     </p>
 
     <div class="grid md:grid-cols-3 gap-6 my-8">
@@ -243,7 +243,7 @@ export const GenericBlogPostPage = ({ slug }: { slug: string }) => {
     </div>
 
     <p class="text-lg text-gray-700 leading-relaxed">
-      At LLI Consulting Group, we specialize in helping leaders navigate exactly these kinds of challenges. 
+      At LLI Consulting Group LLC, we specialize in helping leaders navigate exactly these kinds of challenges. 
       If you're ready to move from insight to action, we're here to support you.
     </p>
   `;

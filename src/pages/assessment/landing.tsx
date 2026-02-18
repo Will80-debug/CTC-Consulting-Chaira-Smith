@@ -68,7 +68,7 @@ export const AssessmentLandingPage = () => {
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src="/static/assessment-data-analysis.jpg" 
-              alt="LLI Consulting Group professional consultation and data analysis" 
+              alt="LLI Consulting Group LLC professional consultation and data analysis" 
               className="w-full h-auto"
             />
           </div>
@@ -124,7 +124,7 @@ export const AssessmentLandingPage = () => {
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src="/static/assessment-presentation.jpg" 
-              alt="LLI Consulting Group leadership presentation and strategic planning" 
+              alt="LLI Consulting Group LLC leadership presentation and strategic planning" 
               className="w-full h-auto"
             />
           </div>
@@ -179,7 +179,7 @@ export const AssessmentLandingPage = () => {
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src="/static/assessment-consultation.jpg" 
-              alt="LLI Consulting Group team consultation and facilitation" 
+              alt="LLI Consulting Group LLC team consultation and facilitation" 
               className="w-full h-auto"
             />
           </div>
@@ -241,7 +241,7 @@ export const AssessmentLandingPage = () => {
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src="/static/assessment-meeting.jpg" 
-              alt="LLI Consulting Group strategic meeting and collaboration" 
+              alt="LLI Consulting Group LLC strategic meeting and collaboration" 
               className="w-full h-auto"
             />
           </div>

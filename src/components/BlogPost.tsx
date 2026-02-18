@@ -56,7 +56,7 @@ export const BlogPost = ({ title, category, date, readTime, content, authorImage
             />
             <div>
               <p className="font-bold text-gray-900">Chiara Smith</p>
-              <p className="text-sm text-gray-600">Founder & CEO, LLI Consulting Group</p>
+              <p className="text-sm text-gray-600">Founder & CEO, LLI Consulting Group LLC</p>
               <p className="text-sm text-gray-500">{date}</p>
             </div>
           </div>
@@ -83,7 +83,7 @@ export const BlogPost = ({ title, category, date, readTime, content, authorImage
               Ready to Transform Your Leadership?
             </h3>
             <p className="text-gray-700 mb-6">
-              Let's discuss how LLI Consulting Group can help you implement these insights in your organization.
+              Let's discuss how LLI Consulting Group LLC can help you implement these insights in your organization.
             </p>
             <a 
               href="/contact"
