@@ -484,7 +484,7 @@ export const ServicesPage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* 1:1 Coaching Video Card */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
               <div className="bg-gradient-to-br from-lli-teal/10 to-white p-6 border-b-2 border-lli-teal/20">
@@ -603,6 +603,47 @@ export const ServicesPage = () => {
                   <li className="flex items-start">
                     <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
                     <span className="text-gray-700">Group dynamics and trust-building</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* LLI Workshop Video Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
+              <div className="bg-gradient-to-br from-lli-orange/10 to-white p-6 border-b-2 border-lli-orange/20">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="bg-lli-orange text-white w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-chalkboard-teacher text-xl"></i>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">LLI Workshop</h4>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Structured workshop sessions using the Listen™ Learn™ Implement™ framework for organizational transformation.
+                </p>
+              </div>
+              <div className="relative bg-black aspect-video">
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/eirnJ03wwrk"
+                  title="LLI Workshop"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">LLI Framework implementation</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Interactive learning sessions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Practical action planning</span>
                   </li>
                 </ul>
               </div>
