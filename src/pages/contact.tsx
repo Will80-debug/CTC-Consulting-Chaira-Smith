@@ -30,25 +30,8 @@ export const ContactPage = () => {
       {/* Contact Options */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {/* Option 1 - Schedule Call */}
-            <div className="bg-gradient-to-br from-lli-teal/10 to-white border-2 border-lli-teal rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="bg-lli-teal text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i className="fas fa-calendar-check text-2xl"></i>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Schedule a Call</h3>
-              <p className="text-gray-600 mb-6">
-                Book a 30-minute discovery call directly on our calendar
-              </p>
-              <button 
-                onclick="openCalendly()"
-                className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 w-full"
-              >
-                Book Now
-              </button>
-            </div>
-
-            {/* Option 2 - Send Message */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            {/* Option 1 - Send Message */}
             <div className="bg-gradient-to-br from-lli-orange/10 to-white border-2 border-lli-orange rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="bg-lli-orange text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <i className="fas fa-envelope text-2xl"></i>
@@ -81,37 +64,6 @@ export const ContactPage = () => {
                 Send Email
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Calendly Integration Section */}
-      <section id="calendly-section" className="py-20 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Schedule Your <span className="text-lli-teal">Discovery Call</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose a time that works for you. We'll discuss your challenges and explore how we can help.
-            </p>
-          </div>
-
-          {/* Calendly Embed */}
-          <div className="bg-white rounded-2xl shadow-xl p-6">
-            <div 
-              className="calendly-inline-widget" 
-              data-url="https://calendly.com/lliconsulting/discovery-call?hide_landing_page_details=1&hide_gdpr_banner=1"
-              style="min-width:320px;height:700px;"
-            ></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-gray-600">
-              <i className="fas fa-info-circle text-lli-teal mr-2"></i>
-              Can't find a time that works? <a href="#consultation-form" className="text-lli-teal hover:text-lli-teal-dark font-semibold">Fill out our consultation form</a> below.
-            </p>
           </div>
         </div>
       </section>
@@ -442,19 +394,8 @@ export const ContactPage = () => {
         </div>
       </section>
 
-      {/* JavaScript for form handling and Calendly */}
+      {/* JavaScript for form handling */}
       <script dangerouslySetInnerHTML={{__html: `
-        // Open Calendly popup
-        function openCalendly() {
-          if (typeof Calendly !== 'undefined') {
-            Calendly.initPopupWidget({url: 'https://calendly.com/lliconsulting/discovery-call'});
-          } else {
-            // Fallback to inline widget
-            document.getElementById('calendly-section').scrollIntoView({ behavior: 'smooth' });
-          }
-          return false;
-        }
-
         // Scroll to form
         function scrollToForm() {
           document.getElementById('consultation-form').scrollIntoView({ behavior: 'smooth' });

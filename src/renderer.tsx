@@ -146,10 +146,6 @@ export const renderer = jsxRenderer(({ children }) => {
             }
           `
         }}></script>
-        
-        {/* Calendly Integration */}
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
       </head>
       <body className="bg-gray-50">{children}</body>
     </html>
