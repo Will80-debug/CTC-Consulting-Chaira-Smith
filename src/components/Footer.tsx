@@ -28,8 +28,8 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li><a href="/" className="text-gray-300 hover:text-lli-teal transition-colors">Home</a></li>
               <li><a href="/services" className="text-gray-300 hover:text-lli-teal transition-colors">Services</a></li>
-              <li><a href="/case-studies" className="text-gray-300 hover:text-lli-teal transition-colors">Case Studies</a></li>
               <li><a href="/about" className="text-gray-300 hover:text-lli-teal transition-colors">About</a></li>
+              <li><a href="/resources" className="text-gray-300 hover:text-lli-teal transition-colors">Resources</a></li>
             </ul>
           </div>
           

@@ -5,7 +5,6 @@ import { ServicesPage } from './pages/services'
 import { AboutPage } from './pages/about'
 import { ResourcesPage } from './pages/resources'
 import { BlogPage } from './pages/blog'
-import { CaseStudiesPage } from './pages/case-studies'
 import { ContactPage } from './pages/contact'
 import { BeyondPerformativeActionsPage } from './pages/blog-posts/beyond-performative-actions'
 import { GenericBlogPostPage } from './pages/blog-posts/generic-article'
@@ -61,10 +60,6 @@ app.get('/blog/beyond-performative-actions', (c) => {
 app.get('/blog/:slug', (c) => {
   const slug = c.req.param('slug')
   return c.render(<GenericBlogPostPage slug={slug} />)
-})
-
-app.get('/case-studies', (c) => {
-  return c.render(<CaseStudiesPage />)
 })
 
 app.get('/contact', (c) => {
