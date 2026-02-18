@@ -238,8 +238,69 @@ export const AboutPage = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Education & Credentials Section */}
       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Education & <span className="text-lli-orange">Credentials</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Backed by advanced education and professional certifications in leadership development
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="bg-lli-teal w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i className="fas fa-graduation-cap text-white text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Master of Human Relations</h3>
+                    <p className="text-gray-600">Advanced graduate degree in organizational behavior and human resources</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="bg-lli-orange w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i className="fas fa-certificate text-white text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Certificate in Diversity and Inclusion</h3>
+                    <p className="text-gray-600">Cornell University - specialized training in DEI strategy</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="bg-lli-teal w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i className="fas fa-user-tie text-white text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Professional Coaching Certification</h3>
+                    <p className="text-gray-600">Executive coaching credentials for leadership development</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://sspark.genspark.ai/cfimages?u1=1rCfzaoAPmlC0sPFWcGPOIHKNkEpjeBERnuSQiiheILt%2FOgnuHbq5yLwJ3eDMecLLRnwGFDTdrd%2BftslU7XvzA0HEftOWrEwEsHbENpPJmkoKkoJuqXGMWad%2FRbXiiSqVZWFP0nx1kGasQ%3D%3D&u2=i3fc6naoI6WxvS7o&width=2560" 
+                  alt="Professional office training session - leadership development" 
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Organization?
