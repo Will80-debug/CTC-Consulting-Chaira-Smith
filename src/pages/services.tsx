@@ -581,24 +581,24 @@ export const ServicesPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Service 1 - Facilitated Strategy Sessions */}
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
-            <div className="h-48 overflow-hidden bg-gray-50 flex items-center justify-center">
+          <div className="bg-white rounded-xl shadow-md overflow-hidden mb-6">
+            <div className="h-32 overflow-hidden bg-gray-50 flex items-center justify-center">
               <img 
                 src="/static/assessment-presentation.jpg" 
                 alt="Facilitated Strategy Sessions with LLI Consulting Group LLC" 
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="p-6 md:p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            <div className="p-4 md:p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
                 Facilitated Strategy Sessions
               </h3>
-              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+              <p className="text-base text-gray-700 mb-3 leading-relaxed">
                 Designed for executive teams, boards, and cross-functional groups seeking alignment and direction.
               </p>
               
-              <h4 className="text-base font-semibold text-gray-900 mb-3">Focus areas may include:</h4>
-              <ul className="space-y-3 mb-6">
+              <h4 className="text-sm font-semibold text-gray-900 mb-2">Focus areas may include:</h4>
+              <ul className="space-y-2 mb-4">
                 <li className="flex items-start">
                   <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
                   <span className="text-gray-700">Priority clarification</span>
@@ -620,24 +620,24 @@ export const ServicesPage = () => {
           </div>
 
           {/* Service 2 - Workshops & Learning Sessions */}
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
-            <div className="h-48 overflow-hidden bg-gray-50 flex items-center justify-center">
+          <div className="bg-white rounded-xl shadow-md overflow-hidden mb-6">
+            <div className="h-32 overflow-hidden bg-gray-50 flex items-center justify-center">
               <img 
                 src="/static/assessment-workshop.jpg" 
                 alt="Workshops & Learning Sessions with LLI Consulting Group LLC" 
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="p-6 md:p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            <div className="p-4 md:p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
                 Workshops & Learning Sessions
               </h3>
-              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+              <p className="text-base text-gray-700 mb-3 leading-relaxed">
                 Interactive sessions that create structure around complex leadership conversations.
               </p>
               
-              <h4 className="text-base font-semibold text-gray-900 mb-3">Topics may include:</h4>
-              <ul className="space-y-3 mb-6">
+              <h4 className="text-sm font-semibold text-gray-900 mb-2">Topics may include:</h4>
+              <ul className="space-y-2 mb-4">
                 <li className="flex items-start">
                   <div className="bg-lli-orange/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
                   <span className="text-gray-700">Leadership alignment</span>
@@ -660,23 +660,23 @@ export const ServicesPage = () => {
           </div>
 
           {/* Service 3 - Advisory & Implementation Planning Support */}
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
-            <div className="h-48 overflow-hidden bg-gray-50 flex items-center justify-center">
+          <div className="bg-white rounded-xl shadow-md overflow-hidden mb-6">
+            <div className="h-32 overflow-hidden bg-gray-50 flex items-center justify-center">
               <img 
                 src="/static/assessment-meeting.jpg" 
                 alt="Advisory & Implementation Planning Support with LLI Consulting Group LLC" 
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="p-6 md:p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            <div className="p-4 md:p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
                 Advisory & Implementation Planning Support
               </h3>
-              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+              <p className="text-base text-gray-700 mb-3 leading-relaxed">
                 Short-term advisory support focused on:
               </p>
               
-              <ul className="space-y-3 mb-4">
+              <ul className="space-y-2 mb-4">
                 <li className="flex items-start">
                   <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
                   <span className="text-gray-700">Reviewing strategies in development</span>
