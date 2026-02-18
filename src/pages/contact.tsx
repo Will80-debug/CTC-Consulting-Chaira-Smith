@@ -75,7 +75,7 @@ export const ContactPage = () => {
                 Prefer email? Reach out directly to our team
               </p>
               <a 
-                href="mailto:contact@lliconsulting.com"
+                href="mailto:info@lliconsultinggroup.com"
                 className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 w-full inline-block"
               >
                 Send Email

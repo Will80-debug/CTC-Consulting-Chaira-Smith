@@ -51,6 +51,13 @@ export const Footer = () => {
               Ready to transform your organization?
             </p>
             <a 
+              href="mailto:info@lliconsultinggroup.com"
+              className="text-lli-teal hover:text-lli-teal-dark transition-colors flex items-center mb-4"
+            >
+              <i className="fas fa-envelope mr-2"></i>
+              info@lliconsultinggroup.com
+            </a>
+            <a 
               href="https://www.LLIConsulting.com" 
               target="_blank"
               rel="noopener noreferrer"
