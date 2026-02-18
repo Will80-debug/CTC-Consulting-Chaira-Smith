@@ -16,9 +16,9 @@ export const Modals = () => {
             {/* Progress Bar */}
             <div className="flex items-center space-x-4">
               <div className="flex-1 bg-gray-200 rounded-full h-2">
-                <div id="assessment-progress-bar" className="bg-gradient-to-r from-lli-teal to-lli-teal-dark h-2 rounded-full transition-all duration-500" style="width: 16.67%"></div>
+                <div id="assessment-progress-bar" className="bg-gradient-to-r from-lli-teal to-lli-teal-dark h-2 rounded-full transition-all duration-500" style="width: 20%"></div>
               </div>
-              <span id="assessment-progress-text" className="text-sm font-semibold text-gray-600 whitespace-nowrap">Step 1 of 6</span>
+              <span id="assessment-progress-text" className="text-sm font-semibold text-gray-600 whitespace-nowrap">Step 1 of 5</span>
             </div>
           </div>
           
@@ -146,29 +146,7 @@ export const Modals = () => {
               </div>
             </div>
             
-            {/* Step 6 */}
-            <div id="assessment-step-6" className="hidden">
-              <h4 className="text-xl font-bold text-gray-900 mb-6">What's your budget range?</h4>
-              <div className="grid gap-4">
-                <div className="assessment-card p-6 border-2 border-gray-200 rounded-xl hover:border-lli-teal hover:bg-teal-50 cursor-pointer transition-all" onclick="selectAssessmentAnswer(6, 'starter')">
-                  <h5 className="font-bold text-lg mb-2">Under $10K</h5>
-                  <p className="text-gray-600">Individual coaching or small workshops</p>
-                </div>
-                <div className="assessment-card p-6 border-2 border-gray-200 rounded-xl hover:border-lli-teal hover:bg-teal-50 cursor-pointer transition-all" onclick="selectAssessmentAnswer(6, 'growth')">
-                  <h5 className="font-bold text-lg mb-2">$10K - $50K</h5>
-                  <p className="text-gray-600">Team programs or multi-session engagements</p>
-                </div>
-                <div className="assessment-card p-6 border-2 border-gray-200 rounded-xl hover:border-lli-teal hover:bg-teal-50 cursor-pointer transition-all" onclick="selectAssessmentAnswer(6, 'scale')">
-                  <h5 className="font-bold text-lg mb-2">$50K - $100K</h5>
-                  <p className="text-gray-600">Organization-wide initiatives</p>
-                </div>
-                <div className="assessment-card p-6 border-2 border-gray-200 rounded-xl hover:border-lli-teal hover:bg-teal-50 cursor-pointer transition-all" onclick="selectAssessmentAnswer(6, 'enterprise')">
-                  <h5 className="font-bold text-lg mb-2">$100K+</h5>
-                  <p className="text-gray-600">Comprehensive transformation programs</p>
-                </div>
-              </div>
-            </div>
-            
+
             {/* Results */}
             <div id="assessment-results" className="hidden text-center">
               <div className="mb-8">

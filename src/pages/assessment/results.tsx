@@ -279,34 +279,14 @@ export const AssessmentResultsPage = () => {
               Your results reveal specific opportunities for growth. Let's discuss how to turn these insights into measurable improvement.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex justify-center mb-8">
               <a 
                 href="/contact" 
-                className="inline-block bg-white text-lli-orange px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl"
+                className="inline-block bg-white text-lli-orange px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-100 transition-all duration-300 shadow-xl"
               >
                 <i className="fas fa-calendar-check mr-2"></i>
-                Schedule Free Consultation
+                Schedule a Discovery Call
               </a>
-              <a 
-                href="/pricing" 
-                className="inline-block bg-white/20 backdrop-blur text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all duration-300"
-              >
-                <i className="fas fa-crown mr-2"></i>
-                Explore Membership Options
-              </a>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur rounded-xl p-6 max-w-2xl mx-auto">
-              <p className="text-lg font-semibold mb-2">
-                <i className="fas fa-gift mr-2"></i>
-                Professional Members Get:
-              </p>
-              <ul className="text-left text-base space-y-2 opacity-90">
-                <li>• Unlimited assessments with trend tracking</li>
-                <li>• Downloadable 15-page comprehensive reports</li>
-                <li>• Access to all 46 leadership resources</li>
-                <li>• Monthly group coaching calls</li>
-              </ul>
             </div>
           </div>
 
