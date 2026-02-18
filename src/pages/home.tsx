@@ -149,537 +149,96 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* Our Expertise in Action - Interactive Tabbed Layout */}
+      {/* How We Work - Services Preview Section */}
       <section className="bg-gradient-to-br from-white via-gray-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Expertise in Action
+              How We Work
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Real solutions, measurable results. See what we do and the transformations we create.
+              LLI Consulting Group™ offers focused engagements designed to support clarity and responsible implementation.
             </p>
           </div>
 
-          {/* Interactive Tabs */}
-          <div className="mb-8">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <button 
-                onclick="showExpertiseTab('coaching')"
-                className="expertise-tab px-6 py-3 rounded-lg font-bold transition-all duration-200 bg-lli-teal text-white"
-                data-tab="coaching"
-              >
-                <i className="fas fa-user-tie mr-2"></i>
-                Executive Coaching
-              </button>
-              <button 
-                onclick="showExpertiseTab('team')"
-                className="expertise-tab px-6 py-3 rounded-lg font-bold transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-gray-300"
-                data-tab="team"
-              >
-                <i className="fas fa-users mr-2"></i>
-                Team Development
-              </button>
-              <button 
-                onclick="showExpertiseTab('workshops')"
-                className="expertise-tab px-6 py-3 rounded-lg font-bold transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-gray-300"
-                data-tab="workshops"
-              >
-                <i className="fas fa-chalkboard-teacher mr-2"></i>
-                Workshops
-              </button>
-              <button 
-                onclick="showExpertiseTab('strategy')"
-                className="expertise-tab px-6 py-3 rounded-lg font-bold transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-gray-300"
-                data-tab="strategy"
-              >
-                <i className="fas fa-chess mr-2"></i>
-                Strategy
-              </button>
-              <button 
-                onclick="showExpertiseTab('culture')"
-                className="expertise-tab px-6 py-3 rounded-lg font-bold transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-gray-300"
-                data-tab="culture"
-              >
-                <i className="fas fa-building mr-2"></i>
-                Culture
-              </button>
+          {/* Service Cards */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Service 1 */}
+            <div className="bg-white rounded-2xl shadow-lg p-8 border-t-4 border-lli-teal hover:shadow-xl transition-all duration-300">
+              <div className="bg-lli-teal/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <i className="fas fa-comments text-lli-teal text-2xl"></i>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                Facilitated Strategy Sessions
+              </h3>
+              <p className="text-gray-700 text-center leading-relaxed">
+                Structured conversations to align leadership and define next steps.
+              </p>
             </div>
 
+            {/* Service 2 */}
+            <div className="bg-white rounded-2xl shadow-lg p-8 border-t-4 border-lli-orange hover:shadow-xl transition-all duration-300">
+              <div className="bg-lli-orange/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <i className="fas fa-chalkboard-teacher text-lli-orange text-2xl"></i>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                Workshops & Learning Sessions
+              </h3>
+              <p className="text-gray-700 text-center leading-relaxed">
+                Interactive sessions to strengthen shared understanding and planning.
+              </p>
+            </div>
+
+            {/* Service 3 */}
+            <div className="bg-white rounded-2xl shadow-lg p-8 border-t-4 border-lli-teal hover:shadow-xl transition-all duration-300">
+              <div className="bg-lli-teal/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <i className="fas fa-clipboard-check text-lli-teal text-2xl"></i>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                Advisory & Implementation Planning Support
+              </h3>
+              <p className="text-gray-700 text-center leading-relaxed">
+                Short-term advisory support to review strategies and prepare for execution.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center">
+            <a 
+              href="/services" 
+              className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            >
+              Explore Services <i className="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          {/* Removed Tab Content - keeping section structure */}
+          <div style={{ display: 'none' }}>
             {/* Tab Content Panels */}
             {/* Executive Coaching Panel */}
             <div id="tab-coaching" className="expertise-content bg-white rounded-2xl shadow-xl p-8 md:p-12">
-              {/* Executive Coaching Video */}
-              <div className="mb-8">
-                <div className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-6 py-3 rounded-t-xl">
-                  <p className="text-lg font-semibold">
-                    <i className="fas fa-video mr-2"></i>
-                    Executive Coaching in Action - See How We Transform Leaders
-                  </p>
-                </div>
-                <div className="bg-black rounded-b-xl overflow-hidden shadow-xl">
-                  <div className="relative" style={{paddingBottom: '56.25%'}}>
-                    <iframe 
-                      className="absolute top-0 left-0 w-full h-full"
-                      src="https://www.youtube.com/embed/qtcbMBQxT2s?enablejsapi=1"
-                      title="Executive Coaching Video"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-bold text-lli-teal mb-6">
-                    <i className="fas fa-user-tie mr-3"></i>
-                    Executive Coaching
-                  </h3>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Best For:</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-teal mt-1 mr-3"></i>
-                        <span>C-suite and senior executives leading culture change</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-teal mt-1 mr-3"></i>
-                        <span>Leaders navigating organizational complexity and equity challenges</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-teal mt-1 mr-3"></i>
-                        <span>High-potential leaders preparing for next-level roles</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Outcomes:</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-orange mt-1 mr-3"></i>
-                        <span><strong>85% average improvement</strong> in leadership effectiveness scores</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-orange mt-1 mr-3"></i>
-                        <span><strong>Increased confidence</strong> in difficult conversations about equity and inclusion</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-orange mt-1 mr-3"></i>
-                        <span><strong>Measurable culture shifts</strong> reflected in engagement survey data</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-orange mt-1 mr-3"></i>
-                        <span><strong>Stronger executive presence</strong> and strategic decision-making</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div className="bg-gradient-to-br from-teal-50 to-white rounded-xl p-6 border-l-4 border-lli-teal">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4">
-                    <i className="fas fa-lightbulb text-lli-teal mr-2"></i>
-                    Mini Case Study
-                  </h4>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    A Fortune 500 VP inherited a team with low morale and high turnover. Through 6 months of 1:1 coaching using the LLI Framework™, they learned to <strong>listen deeply</strong> to employee concerns, <strong>learn courageously</strong> by confronting their own biases, and <strong>implement boldly</strong> by redesigning team workflows.
-                  </p>
-                  <div className="bg-white rounded-lg p-4 mb-4">
-                    <p className="text-sm text-gray-600 mb-2">Results after 6 months:</p>
-                    <ul className="space-y-1 text-sm">
-                      <li className="text-lli-teal font-semibold">✓ 40% reduction in turnover</li>
-                      <li className="text-lli-teal font-semibold">✓ 92% team engagement score (up from 61%)</li>
-                      <li className="text-lli-teal font-semibold">✓ Promoted to SVP within 12 months</li>
-                    </ul>
-                  </div>
-                  <a href="/case-studies" className="text-lli-teal font-semibold hover:text-lli-teal-dark transition-colors">
-                    View full case study <i className="fas fa-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
+              {/* Content removed for simplified services view */}
             </div>
 
             {/* Team Development Panel */}
             <div id="tab-team" className="expertise-content hidden bg-white rounded-2xl shadow-xl p-8 md:p-12">
-              {/* Team Development Video */}
-              <div className="mb-8">
-                <div className="bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-6 py-3 rounded-t-xl">
-                  <p className="text-lg font-semibold">
-                    <i className="fas fa-video mr-2"></i>
-                    Team Development Training Overview - Building High-Performance Teams
-                  </p>
-                </div>
-                <div className="bg-black rounded-b-xl overflow-hidden shadow-xl">
-                  <div className="relative" style={{paddingBottom: '56.25%'}}>
-                    <iframe 
-                      className="absolute top-0 left-0 w-full h-full"
-                      src="https://www.youtube.com/embed/w6z2Iv5B18E?enablejsapi=1"
-                      title="Team Development Training Video"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-bold text-lli-orange mb-6">
-                    <i className="fas fa-users mr-3"></i>
-                    Team Development
-                  </h3>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Best For:</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-orange mt-1 mr-3"></i>
-                        <span>Teams experiencing conflict or lack of trust</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-orange mt-1 mr-3"></i>
-                        <span>Cross-functional groups needing alignment</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-orange mt-1 mr-3"></i>
-                        <span>Newly formed teams building foundations</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Outcomes:</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-teal mt-1 mr-3"></i>
-                        <span><strong>68% improvement</strong> in psychological safety metrics</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-teal mt-1 mr-3"></i>
-                        <span><strong>Enhanced collaboration</strong> across departments and functions</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-teal mt-1 mr-3"></i>
-                        <span><strong>Reduced conflict</strong> and improved decision-making speed</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-teal mt-1 mr-3"></i>
-                        <span><strong>Clear team norms</strong> around equity and inclusion</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div className="bg-gradient-to-br from-orange-50 to-white rounded-xl p-6 border-l-4 border-lli-orange">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4">
-                    <i className="fas fa-lightbulb text-lli-orange mr-2"></i>
-                    Mini Case Study
-                  </h4>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    A regional hospital's leadership team was siloed and defensive after a failed merger attempt. LLI facilitated 8 group coaching sessions focused on rebuilding trust through the Listen → Learn → Implement process. Team members shared vulnerabilities, learned about implicit bias, and co-created new communication protocols.
-                  </p>
-                  <div className="bg-white rounded-lg p-4 mb-4">
-                    <p className="text-sm text-gray-600 mb-2">Results after 4 months:</p>
-                    <ul className="space-y-1 text-sm">
-                      <li className="text-lli-orange font-semibold">✓ 78% "high trust" score (up from 32%)</li>
-                      <li className="text-lli-orange font-semibold">✓ 3x faster decision-making on critical initiatives</li>
-                      <li className="text-lli-orange font-semibold">✓ Zero leadership turnover in following year</li>
-                    </ul>
-                  </div>
-                  <a href="/case-studies" className="text-lli-orange font-semibold hover:text-lli-orange-dark transition-colors">
-                    View full case study <i className="fas fa-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
+              {/* Content removed for simplified services view */}
             </div>
 
             {/* Workshops Panel */}
             <div id="tab-workshops" className="expertise-content hidden bg-white rounded-2xl shadow-xl p-8 md:p-12">
-              {/* Workshops Video */}
-              <div className="mb-8">
-                <div className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-6 py-3 rounded-t-xl">
-                  <p className="text-lg font-semibold">
-                    <i className="fas fa-video mr-2"></i>
-                    Workshops & Training in Action - Building Inclusive Teams
-                  </p>
-                </div>
-                <div className="bg-black rounded-b-xl overflow-hidden shadow-xl">
-                  <div className="relative" style={{paddingBottom: '56.25%'}}>
-                    <iframe 
-                      className="absolute top-0 left-0 w-full h-full"
-                      src="https://www.youtube.com/embed/eirnJ03wwrk?enablejsapi=1"
-                      title="Workshops and Training Video"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-bold text-lli-teal mb-6">
-                    <i className="fas fa-chalkboard-teacher mr-3"></i>
-                    Workshops & Training
-                  </h3>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Best For:</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-teal mt-1 mr-3"></i>
-                        <span>Organizations launching DEI initiatives</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-teal mt-1 mr-3"></i>
-                        <span>Teams needing skill-building in inclusive leadership</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-teal mt-1 mr-3"></i>
-                        <span>Leadership cohorts developing shared language</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Outcomes:</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-orange mt-1 mr-3"></i>
-                        <span><strong>91% participants</strong> apply new skills within 30 days</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-orange mt-1 mr-3"></i>
-                        <span><strong>Shared vocabulary</strong> around equity, belonging, and allyship</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-orange mt-1 mr-3"></i>
-                        <span><strong>Actionable toolkits</strong> participants use immediately</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-orange mt-1 mr-3"></i>
-                        <span><strong>Cultural momentum</strong> that extends beyond the session</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div className="bg-gradient-to-br from-teal-50 to-white rounded-xl p-6 border-l-4 border-lli-teal">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4">
-                    <i className="fas fa-lightbulb text-lli-teal mr-2"></i>
-                    Mini Case Study
-                  </h4>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    A mid-size tech company needed to upskill 120 managers on inclusive hiring and leading diverse teams. LLI designed a 3-workshop series combining interactive exercises, real scenarios, and peer learning. Each session built on the LLI Framework™ to move from awareness to implementation.
-                  </p>
-                  <div className="bg-white rounded-lg p-4 mb-4">
-                    <p className="text-sm text-gray-600 mb-2">Results after workshop series:</p>
-                    <ul className="space-y-1 text-sm">
-                      <li className="text-lli-teal font-semibold">✓ 34% increase in diverse candidate hires</li>
-                      <li className="text-lli-teal font-semibold">✓ 89% manager confidence in handling bias</li>
-                      <li className="text-lli-teal font-semibold">✓ 96% would recommend to peers</li>
-                    </ul>
-                  </div>
-                  <a href="/case-studies" className="text-lli-teal font-semibold hover:text-lli-teal-dark transition-colors">
-                    View full case study <i className="fas fa-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
+              {/* Content removed for simplified services view */}
             </div>
 
             {/* Strategy Panel */}
             <div id="tab-strategy" className="expertise-content hidden bg-white rounded-2xl shadow-xl p-8 md:p-12">
-              {/* Strategy Video */}
-              <div className="mb-8">
-                <div className="bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-6 py-3 rounded-t-xl">
-                  <p className="text-lg font-semibold">
-                    <i className="fas fa-video mr-2"></i>
-                    Strategic Consulting - Creating Transformational Change
-                  </p>
-                </div>
-                <div className="bg-black rounded-b-xl overflow-hidden shadow-xl">
-                  <div className="relative" style={{paddingBottom: '56.25%'}}>
-                    <iframe 
-                      className="absolute top-0 left-0 w-full h-full"
-                      src="https://www.youtube.com/embed/YSgPO_eoVyQ?enablejsapi=1"
-                      title="Strategic Consulting Video"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-bold text-lli-orange mb-6">
-                    <i className="fas fa-chess mr-3"></i>
-                    Strategic Consulting
-                  </h3>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Best For:</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-orange mt-1 mr-3"></i>
-                        <span>Organizations designing multi-year DEI strategies</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-orange mt-1 mr-3"></i>
-                        <span>Leaders needing board-level recommendations</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-orange mt-1 mr-3"></i>
-                        <span>Companies integrating equity into business operations</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Outcomes:</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-teal mt-1 mr-3"></i>
-                        <span><strong>Clear roadmaps</strong> with phased milestones and KPIs</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-teal mt-1 mr-3"></i>
-                        <span><strong>Executive buy-in</strong> through data-driven business case</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-teal mt-1 mr-3"></i>
-                        <span><strong>Customized frameworks</strong> aligned to organizational context</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-teal mt-1 mr-3"></i>
-                        <span><strong>Sustainable change</strong> beyond performative statements</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div className="bg-gradient-to-br from-orange-50 to-white rounded-xl p-6 border-l-4 border-lli-orange">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4">
-                    <i className="fas fa-lightbulb text-lli-orange mr-2"></i>
-                    Mini Case Study
-                  </h4>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    A urban school district with 15,000 students needed a 5-year equity transformation plan to address achievement gaps and teacher retention. LLI conducted stakeholder interviews, analyzed existing data, and co-created a phased strategy with the superintendent's cabinet using the Listen → Learn → Implement approach.
-                  </p>
-                  <div className="bg-white rounded-lg p-4 mb-4">
-                    <p className="text-sm text-gray-600 mb-2">Results in Year 1:</p>
-                    <ul className="space-y-1 text-sm">
-                      <li className="text-lli-orange font-semibold">✓ Board-approved 5-year plan with $2M budget</li>
-                      <li className="text-lli-orange font-semibold">✓ 12-point increase in teacher satisfaction</li>
-                      <li className="text-lli-orange font-semibold">✓ 3 pilot schools showing early wins</li>
-                    </ul>
-                  </div>
-                  <a href="/case-studies" className="text-lli-orange font-semibold hover:text-lli-orange-dark transition-colors">
-                    View full case study <i className="fas fa-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
+              {/* Content removed for simplified services view */}
             </div>
 
             {/* Culture Panel */}
             <div id="tab-culture" className="expertise-content hidden bg-white rounded-2xl shadow-xl p-8 md:p-12">
-              {/* Culture Transformation Video */}
-              <div className="mb-8">
-                <div className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-6 py-3 rounded-t-xl">
-                  <p className="text-lg font-semibold">
-                    <i className="fas fa-video mr-2"></i>
-                    Culture Transformation in Action - Building Inclusive Workplaces
-                  </p>
-                </div>
-                <div className="bg-black rounded-b-xl overflow-hidden shadow-xl">
-                  <div className="relative" style={{paddingBottom: '56.25%'}}>
-                    <iframe 
-                      className="absolute top-0 left-0 w-full h-full"
-                      src="https://www.youtube.com/embed/d5ESOlafejA?enablejsapi=1"
-                      title="Culture Transformation Video"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-bold text-lli-teal mb-6">
-                    <i className="fas fa-building mr-3"></i>
-                    Culture Transformation
-                  </h3>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Best For:</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-teal mt-1 mr-3"></i>
-                        <span>Organizations with toxic or misaligned culture</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-teal mt-1 mr-3"></i>
-                        <span>Companies post-merger needing cultural integration</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-check-circle text-lli-teal mt-1 mr-3"></i>
-                        <span>Leaders wanting to embed equity into organizational DNA</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Outcomes:</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-orange mt-1 mr-3"></i>
-                        <span><strong>Authentic values</strong> reflected in daily behaviors, not just posters</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-orange mt-1 mr-3"></i>
-                        <span><strong>72% average improvement</strong> in culture health scores</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-orange mt-1 mr-3"></i>
-                        <span><strong>Reduced turnover</strong> and improved talent attraction</span>
-                      </li>
-                      <li className="flex items-start">
-                        <i className="fas fa-arrow-right text-lli-orange mt-1 mr-3"></i>
-                        <span><strong>Measurable equity gains</strong> in promotions and compensation</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div className="bg-gradient-to-br from-teal-50 to-white rounded-xl p-6 border-l-4 border-lli-teal">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4">
-                    <i className="fas fa-lightbulb text-lli-teal mr-2"></i>
-                    Mini Case Study
-                  </h4>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    A financial services firm struggled with low employee engagement and a reputation for being "old boys' club." Over 18 months, LLI partnered with leadership to redesign hiring, promotion, and performance systems through an equity lens. Culture change required listening sessions, leadership training, and new accountability structures.
-                  </p>
-                  <div className="bg-white rounded-lg p-4 mb-4">
-                    <p className="text-sm text-gray-600 mb-2">Results after 18 months:</p>
-                    <ul className="space-y-1 text-sm">
-                      <li className="text-lli-teal font-semibold">✓ Engagement jumped from 54% to 81%</li>
-                      <li className="text-lli-teal font-semibold">✓ 45% women in senior leadership (from 18%)</li>
-                      <li className="text-lli-teal font-semibold">✓ Named "Best Place to Work" by local biz journal</li>
-                    </ul>
-                  </div>
-                  <a href="/case-studies" className="text-lli-teal font-semibold hover:text-lli-teal-dark transition-colors">
-                    View full case study <i className="fas fa-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
+              {/* Content removed for simplified services view */}
             </div>
           </div>
         </div>
