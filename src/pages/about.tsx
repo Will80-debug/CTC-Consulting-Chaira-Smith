@@ -21,10 +21,10 @@ export const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-orange to-lli-teal">LLI Consulting Group</span>
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-orange to-lli-teal">LLI Consulting Group™</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Transforming organizations through equity-centered leadership coaching and culture change that moves beyond performative statements to create lasting impact.
+              LLI Consulting Group™ is a principal-led advisory practice supporting foundations, public agencies, and mission-driven organizations navigating complex leadership and organizational work.
             </p>
           </div>
         </div>
@@ -40,16 +40,10 @@ export const AboutPage = () => {
               </h2>
               <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  LLI Consulting Group was founded on a simple but powerful belief: <strong>real change happens when leaders move from intent to impact.</strong>
+                  Founded by Chiara Smith, MHR, LLI Consulting Group™ was built on a simple premise: responsible leadership requires disciplined listening, careful learning, and intentional implementation.
                 </p>
                 <p>
-                  For over 15 years, we've partnered with organizations ready to do the real work—moving beyond diversity statements and quick fixes to create sustainable, equity-centered cultures where everyone can thrive.
-                </p>
-                <p>
-                  Our proven <strong>LLI Framework™</strong> (Listen → Learn → Implement) has transformed hundreds of organizations, coaching over 500+ leaders to create measurable culture shifts with an 85% average improvement in leadership effectiveness.
-                </p>
-                <p className="text-lli-orange font-semibold">
-                  We believe in courage, clarity, and commitment—and we bring that to every engagement.
+                  In high-accountability environments, decisions must balance urgency, capacity, and public trust. This practice exists to support that balance.
                 </p>
               </div>
             </div>
@@ -63,10 +57,6 @@ export const AboutPage = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-lli-black/50 to-transparent"></div>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-lli-teal text-white p-6 rounded-xl shadow-xl">
-                <div className="text-4xl font-bold">15+</div>
-                <div className="text-sm">Years of Impact</div>
-              </div>
             </div>
           </div>
         </div>
@@ -77,40 +67,28 @@ export const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Meet Our <span className="text-lli-orange">Founder</span>
+              About <span className="text-lli-orange">Chiara Smith, MHR</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Led by vision, powered by expertise, driven by impact
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center bg-white rounded-2xl shadow-xl p-8 md:p-12">
             <div className="order-2 md:order-1">
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">Chiara Smith</h3>
-              <p className="text-xl text-lli-teal font-semibold mb-6">Founder & Principal Consultant</p>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">Chiara Smith, MHR</h3>
+              <p className="text-xl text-lli-teal font-semibold mb-6">Founder and Principal of LLI Consulting Group™</p>
               
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Chiara Smith is a recognized expert in equity-centered leadership development and organizational culture transformation. With over 15 years of experience, she has coached hundreds of leaders across healthcare, education, technology, and nonprofit sectors.
+                  Chiara Smith, MHR is the Founder and Principal of LLI Consulting Group™.
                 </p>
                 <p>
-                  Her approach combines deep listening, courageous learning, and bold implementation—the foundation of the <strong>LLI Framework™</strong> that has become the gold standard for sustainable culture change.
+                  Her work is informed by professional experience across philanthropy, government, and nonprofit sectors, along with lived experience in community-centered leadership environments.
                 </p>
                 <p>
-                  Chiara holds certifications in executive coaching, diversity & inclusion strategy, and organizational development. She's known for her direct, compassionate approach that challenges leaders to move beyond performative actions to create real, measurable impact.
+                  She supports leaders navigating strategic inflection points, alignment challenges, and implementation uncertainty.
                 </p>
-                
-                <div className="flex flex-wrap gap-3 mt-6">
-                  <span className="px-4 py-2 bg-lli-teal/10 text-lli-teal rounded-full text-sm font-semibold">
-                    Executive Coach
-                  </span>
-                  <span className="px-4 py-2 bg-lli-orange/10 text-lli-orange rounded-full text-sm font-semibold">
-                    DEI Strategist
-                  </span>
-                  <span className="px-4 py-2 bg-lli-teal/10 text-lli-teal rounded-full text-sm font-semibold">
-                    Culture Architect
-                  </span>
-                </div>
+                <p>
+                  Chiara is known for structured facilitation, direct inquiry, and practical planning that translates complexity into clear next steps.
+                </p>
               </div>
             </div>
             
@@ -121,10 +99,6 @@ export const AboutPage = () => {
                   alt="Chiara Smith - Founder of LLI Consulting Group" 
                   className="w-full rounded-2xl shadow-2xl"
                 />
-                <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-lli-orange to-lli-teal text-white p-4 rounded-xl shadow-xl">
-                  <div className="text-2xl font-bold">500+</div>
-                  <div className="text-sm">Leaders Coached</div>
-                </div>
               </div>
             </div>
           </div>

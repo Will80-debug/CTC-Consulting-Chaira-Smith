@@ -300,6 +300,153 @@ export const ServicesPage = () => {
         </div>
       </section>
 
+      {/* Services Offerings */}
+      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Service 1 */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Facilitated Strategy Sessions
+            </h3>
+            <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+              Designed for executive teams, boards, and cross-functional groups seeking alignment and direction.
+            </p>
+            
+            <h4 className="text-lg font-semibold text-gray-900 mb-4">Focus areas may include:</h4>
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-start">
+                <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <span className="text-gray-700">Priority clarification</span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <span className="text-gray-700">Risk identification</span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <span className="text-gray-700">Stakeholder mapping</span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <span className="text-gray-700">Immediate next-step definition</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Service 2 */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Workshops & Learning Sessions
+            </h3>
+            <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+              Interactive sessions that create structure around complex leadership conversations.
+            </p>
+            
+            <h4 className="text-lg font-semibold text-gray-900 mb-4">Topics may include:</h4>
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-start">
+                <div className="bg-lli-orange/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <span className="text-gray-700">Leadership alignment</span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-lli-orange/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <span className="text-gray-700">Organizational trust</span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-lli-orange/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <span className="text-gray-700">Psychological safety</span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-lli-orange/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <span className="text-gray-700">Change navigation</span>
+              </li>
+            </ul>
+            <p className="text-gray-600 italic">Workshops are facilitative and educational in nature.</p>
+          </div>
+
+          {/* Service 3 */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Advisory & Implementation Planning Support
+            </h3>
+            <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+              Short-term advisory support focused on:
+            </p>
+            
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-start">
+                <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <span className="text-gray-700">Reviewing strategies in development</span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <span className="text-gray-700">Strengthening sequencing and ownership</span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <span className="text-gray-700">Preparing for implementation</span>
+              </li>
+            </ul>
+            <p className="text-gray-600 italic">Advisory support does not include operational execution.</p>
+          </div>
+
+          {/* Engagement Structure */}
+          <div className="bg-gradient-to-br from-lli-teal/10 to-white border-2 border-lli-teal/30 rounded-2xl p-8 md:p-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+              Engagement Structure
+            </h3>
+            <p className="text-xl text-gray-700 mb-6 text-center leading-relaxed">
+              Every engagement begins with a discovery call to determine:
+            </p>
+            
+            <div className="grid md:grid-cols-4 gap-6 mb-8">
+              <div className="text-center">
+                <div className="bg-lli-teal text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <i className="fas fa-list-check text-2xl"></i>
+                </div>
+                <p className="font-semibold text-gray-900">Scope</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-lli-orange text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <i className="fas fa-clock text-2xl"></i>
+                </div>
+                <p className="font-semibold text-gray-900">Timing</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-lli-teal text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <i className="fas fa-handshake text-2xl"></i>
+                </div>
+                <p className="font-semibold text-gray-900">Alignment</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-lli-orange text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <i className="fas fa-gauge-high text-2xl"></i>
+                </div>
+                <p className="font-semibold text-gray-900">Capacity</p>
+              </div>
+            </div>
+
+            <p className="text-center text-gray-600 mb-8 italic">
+              Long-term engagements are considered selectively.
+            </p>
+
+            <div className="flex justify-center">
+              <a 
+                href="/contact" 
+                className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-10 py-5 rounded-xl font-bold text-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                <i className="fas fa-phone mr-3"></i>
+                Schedule a Discovery Call
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Old content hidden */}
+      <div style={{ display: 'none' }}>
       {/* Interactive Hero Section - Above the Fold */}
       <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1095,6 +1242,9 @@ export const ServicesPage = () => {
           </div>
         </section>
       </main>
+
+      </div>
+      {/* End hidden old content */}
 
       <Footer />
       
