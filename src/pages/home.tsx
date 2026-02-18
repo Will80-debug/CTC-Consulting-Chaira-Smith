@@ -137,43 +137,70 @@ export const HomePage = () => {
 
           {/* Service Cards */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Service 1 */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border-t-4 border-lli-teal hover:shadow-xl transition-all duration-300">
-              <div className="bg-lli-teal/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <i className="fas fa-comments text-lli-teal text-2xl"></i>
+            {/* Service 1 - Facilitated Strategy Sessions */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden border-t-4 border-lli-teal hover:shadow-xl transition-all duration-300">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="/static/assessment-presentation.jpg" 
+                  alt="Facilitated Strategy Sessions" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                Facilitated Strategy Sessions
-              </h3>
-              <p className="text-gray-700 text-center leading-relaxed">
-                Structured conversations to align leadership and define next steps.
-              </p>
+              <div className="p-8">
+                <div className="bg-lli-teal/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                  <i className="fas fa-comments text-lli-teal text-2xl"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                  Facilitated Strategy Sessions
+                </h3>
+                <p className="text-gray-700 text-center leading-relaxed">
+                  Structured conversations to align leadership and define next steps.
+                </p>
+              </div>
             </div>
 
-            {/* Service 2 */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border-t-4 border-lli-orange hover:shadow-xl transition-all duration-300">
-              <div className="bg-lli-orange/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <i className="fas fa-chalkboard-teacher text-lli-orange text-2xl"></i>
+            {/* Service 2 - Workshops & Learning Sessions */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden border-t-4 border-lli-orange hover:shadow-xl transition-all duration-300">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="/static/assessment-workshop.jpg" 
+                  alt="Workshops & Learning Sessions" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                Workshops & Learning Sessions
-              </h3>
-              <p className="text-gray-700 text-center leading-relaxed">
-                Interactive sessions to strengthen shared understanding and planning.
-              </p>
+              <div className="p-8">
+                <div className="bg-lli-orange/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                  <i className="fas fa-chalkboard-teacher text-lli-orange text-2xl"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                  Workshops & Learning Sessions
+                </h3>
+                <p className="text-gray-700 text-center leading-relaxed">
+                  Interactive sessions to strengthen shared understanding and planning.
+                </p>
+              </div>
             </div>
 
-            {/* Service 3 */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border-t-4 border-lli-teal hover:shadow-xl transition-all duration-300">
-              <div className="bg-lli-teal/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <i className="fas fa-clipboard-check text-lli-teal text-2xl"></i>
+            {/* Service 3 - Advisory & Implementation Planning Support */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden border-t-4 border-lli-teal hover:shadow-xl transition-all duration-300">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="/static/assessment-meeting.jpg" 
+                  alt="Advisory & Implementation Planning Support" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                Advisory & Implementation Planning Support
-              </h3>
-              <p className="text-gray-700 text-center leading-relaxed">
-                Short-term advisory support to review strategies and prepare for execution.
-              </p>
+              <div className="p-8">
+                <div className="bg-lli-teal/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                  <i className="fas fa-clipboard-check text-lli-teal text-2xl"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                  Advisory & Implementation Planning Support
+                </h3>
+                <p className="text-gray-700 text-center leading-relaxed">
+                  Short-term advisory support to review strategies and prepare for execution.
+                </p>
+              </div>
             </div>
           </div>
 
