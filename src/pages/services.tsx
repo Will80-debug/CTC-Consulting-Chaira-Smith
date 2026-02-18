@@ -472,6 +472,159 @@ export const ServicesPage = () => {
         </div>
       </section>
 
+      {/* Video Showcase Section */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold text-gray-900 mb-4">
+              See Our Services in Action
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Watch how LLI Consulting Group LLC™ delivers transformative leadership experiences
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* 1:1 Coaching Video Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
+              <div className="bg-gradient-to-br from-lli-teal/10 to-white p-6 border-b-2 border-lli-teal/20">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="bg-lli-teal text-white w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-user-tie text-xl"></i>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">1:1 Coaching</h4>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Personalized executive coaching sessions designed to unlock individual leadership potential and drive measurable growth.
+                </p>
+              </div>
+              <div className="relative bg-black">
+                <video 
+                  controls 
+                  className="w-full aspect-video"
+                  poster="/static/assessment-consultation.jpg"
+                >
+                  <source src="/static/1-1-coaching.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Confidential one-on-one sessions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Customized leadership development</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Actionable strategies and tools</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Executive Coaching Video Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
+              <div className="bg-gradient-to-br from-lli-orange/10 to-white p-6 border-b-2 border-lli-orange/20">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="bg-lli-orange text-white w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-crown text-xl"></i>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">Executive Coaching</h4>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Strategic leadership coaching for C-suite executives navigating complex organizational challenges and transformation.
+                </p>
+              </div>
+              <div className="relative bg-black">
+                <video 
+                  controls 
+                  className="w-full aspect-video"
+                  poster="/static/assessment-presentation.jpg"
+                >
+                  <source src="/static/executive-coaching.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">C-suite leadership development</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Strategic decision-making support</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Organizational transformation guidance</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Team Development Training Video Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
+              <div className="bg-gradient-to-br from-lli-teal/10 to-white p-6 border-b-2 border-lli-teal/20">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="bg-lli-teal text-white w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-users text-xl"></i>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">Team Development</h4>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Interactive team training sessions that build cohesion, improve collaboration, and strengthen collective leadership capacity.
+                </p>
+              </div>
+              <div className="relative bg-black">
+                <video 
+                  controls 
+                  className="w-full aspect-video"
+                  poster="/static/assessment-workshop.jpg"
+                >
+                  <source src="/static/team-development.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Facilitated team workshops</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Collaborative learning experiences</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Group dynamics and trust-building</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Call-to-Action */}
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-700 mb-6">
+              Ready to experience these transformative services for yourself?
+            </p>
+            <a 
+              href="/contact" 
+              className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-10 py-5 rounded-xl font-bold text-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            >
+              <i className="fas fa-phone mr-3"></i>
+              Schedule Your Discovery Call
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Old content hidden */}
       <div style={{ display: 'none' }}>
       {/* Interactive Hero Section - Above the Fold */}
