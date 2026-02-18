@@ -14,10 +14,10 @@ export const HomePage = () => {
   const coachingSessionImg = "https://sspark.genspark.ai/cfimages?u1=kl8PzsxZyCGgKkLv85O%2FuF%2F5Hgj%2FXXJGsGYv2JVCvyEhGPBGOxmyNlxgBp0%2FRGekZdGZJ5OEhQx9VB%2BPLiJGPQ%3D%3D&u2=RQPXYdBbHghGxL7h&width=2560"
   const workshopImg = "https://sspark.genspark.ai/cfimages?u1=8Yz7K5BfKMmsj9MYV%2FHkiBH49T0R4yNOqSxCVx3lBN7J7vU3lU35Ew9gFBVPcM3SowRzqhG8kp%2F7P0%2FsNP9xUg%3D%3D&u2=8dQ4ySE1xRh2BQN8&width=2560"
   
-  // New professional images
-  const strategyPresentationImg = "https://www.genspark.ai/api/files/s/awc6Ldqd"
-  const implementationMeetingImg = "https://www.genspark.ai/api/files/s/19Z0iBmj"
-  const workshopSessionImg = "https://www.genspark.ai/api/files/s/fRKMu4EB"
+  // New professional images - now using local static files
+  const strategyPresentationImg = "/static/strategy-presentation.jpg"
+  const implementationMeetingImg = "/static/implementation-meeting.jpg"
+  const workshopSessionImg = "/static/workshop-session.jpg"
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
