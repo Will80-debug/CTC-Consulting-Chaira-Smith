@@ -203,70 +203,14 @@ export const AssessmentLandingPage = () => {
           </div>
         </section>
 
-        {/* Social Proof */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Trusted by <span className="text-lli-orange">Leaders</span> Like You
-            </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-lli-teal rounded-full flex items-center justify-center text-white font-bold mr-4">
-                  JM
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">Jennifer Martinez</p>
-                  <p className="text-sm text-gray-600">VP of HR, Tech Company</p>
-                </div>
-              </div>
-              <p className="text-gray-700 italic leading-relaxed">
-                "This assessment revealed blind spots we didn't know existed. The results gave us a clear roadmap for improving our culture."
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-lli-orange rounded-full flex items-center justify-center text-white font-bold mr-4">
-                  DW
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">David Williams</p>
-                  <p className="text-sm text-gray-600">CEO, Healthcare System</p>
-                </div>
-              </div>
-              <p className="text-gray-700 italic leading-relaxed">
-                "Accurate, actionable, and eye-opening. We used the results to prioritize our leadership development investments."
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-lli-teal rounded-full flex items-center justify-center text-white font-bold mr-4">
-                  SP
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">Sarah Patel</p>
-                  <p className="text-sm text-gray-600">Director, Nonprofit</p>
-                </div>
-              </div>
-              <p className="text-gray-700 italic leading-relaxed">
-                "The assessment helped us see patterns we'd been missing. Best decision we made was following up with a consultation."
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-lli-orange to-lli-orange-dark rounded-2xl p-16 shadow-2xl text-white">
             <h2 className="text-5xl font-bold mb-6">
-              Ready to Discover Your Leadership Readiness?
+              Ready to Begin Your Reflection Intake?
             </h2>
             <p className="text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of leaders who've gained clarity on their strengths and opportunities.
+              Take a structured approach to clarifying your leadership context and challenges.
             </p>
             <a 
               href="/assessment/start" 
