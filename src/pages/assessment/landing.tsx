@@ -63,6 +63,17 @@ export const AssessmentLandingPage = () => {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         
+        {/* Professional Image 1 - Data Analysis */}
+        <section className="mb-20">
+          <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src="/static/assessment-data-analysis.jpg" 
+              alt="LLI Consulting Group professional consultation and data analysis" 
+              className="w-full h-auto"
+            />
+          </div>
+        </section>
+
         {/* 5 Dimensions */}
         <section className="mb-20">
           <div className="text-center mb-12">
@@ -108,6 +119,17 @@ export const AssessmentLandingPage = () => {
           </div>
         </section>
 
+        {/* Professional Image 2 - Presentation */}
+        <section className="mb-20">
+          <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src="/static/assessment-presentation.jpg" 
+              alt="LLI Consulting Group leadership presentation and strategic planning" 
+              className="w-full h-auto"
+            />
+          </div>
+        </section>
+
         {/* How It Works */}
         <section id="how-it-works" className="mb-20 bg-white rounded-2xl shadow-xl p-12">
           <div className="text-center mb-12">
@@ -149,6 +171,17 @@ export const AssessmentLandingPage = () => {
                 Your summary themes become discussion prompts for our discovery conversation about next steps.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Professional Image 3 - Consultation */}
+        <section className="mb-20">
+          <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src="/static/assessment-consultation.jpg" 
+              alt="LLI Consulting Group team consultation and facilitation" 
+              className="w-full h-auto"
+            />
           </div>
         </section>
 
@@ -200,6 +233,17 @@ export const AssessmentLandingPage = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Professional Image 4 - Meeting */}
+        <section className="mb-20">
+          <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src="/static/assessment-meeting.jpg" 
+              alt="LLI Consulting Group strategic meeting and collaboration" 
+              className="w-full h-auto"
+            />
           </div>
         </section>
 
