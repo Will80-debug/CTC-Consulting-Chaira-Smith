@@ -484,7 +484,7 @@ export const ServicesPage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* 1:1 Coaching Video Card */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
               <div className="bg-gradient-to-br from-lli-teal/10 to-white p-6 border-b-2 border-lli-teal/20">
@@ -644,6 +644,88 @@ export const ServicesPage = () => {
                   <li className="flex items-start">
                     <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
                     <span className="text-gray-700">Practical action planning</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Organization Coaching and Culture Change Video Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
+              <div className="bg-gradient-to-br from-lli-teal/10 to-white p-6 border-b-2 border-lli-teal/20">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="bg-lli-teal text-white w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-building text-xl"></i>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">Organization Coaching</h4>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Comprehensive organizational coaching and culture change initiatives for sustainable transformation.
+                </p>
+              </div>
+              <div className="relative bg-black aspect-video">
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/DiAg8cbdV6I"
+                  title="Organization Coaching and Culture Change"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Organizational culture assessment</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Strategic change management</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Leadership alignment coaching</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* LLI Culture Reset Training Video Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100">
+              <div className="bg-gradient-to-br from-lli-orange/10 to-white p-6 border-b-2 border-lli-orange/20">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="bg-lli-orange text-white w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-sync-alt text-xl"></i>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900">Culture Reset Training</h4>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Intensive culture reset training designed to rebuild organizational foundations and establish new norms.
+                </p>
+              </div>
+              <div className="relative bg-black aspect-video">
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/d5ESOlafejA"
+                  title="LLI Culture Reset Training"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Cultural foundation rebuilding</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">New behavioral norms establishment</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-check-circle text-lli-orange text-lg mt-1 mr-3"></i>
+                    <span className="text-gray-700">Organizational reset strategies</span>
                   </li>
                 </ul>
               </div>
