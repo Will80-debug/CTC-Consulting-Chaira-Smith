@@ -243,6 +243,17 @@ export const HomePage = () => {
             </p>
           </div>
 
+          {/* Executive Leadership Training Image */}
+          <div className="max-w-5xl mx-auto mb-12">
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="/static/executive-leadership-training.jpg" 
+                alt="Executive leadership training session with LLI Consulting Group" 
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+
           {/* Context List */}
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
