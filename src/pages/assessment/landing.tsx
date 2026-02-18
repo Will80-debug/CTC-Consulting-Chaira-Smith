@@ -21,15 +21,15 @@ export const AssessmentLandingPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-3xl">
               <div className="inline-block bg-lli-orange text-white px-4 py-2 rounded-lg font-semibold mb-6">
-                <i className="fas fa-clipboard-check mr-2"></i>
-                Free Leadership Assessment
+                <i className="fas fa-pen mr-2"></i>
+                Leadership & Culture Reflection Intake
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                How Ready Is Your<br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-orange to-lli-teal">Leadership & Culture?</span>
+                Leadership & Culture<br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-orange to-lli-teal">Reflection Intake</span>
               </h1>
               <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                Take our research-backed 5-minute assessment and get your personalized Leadership Readiness Score across 5 critical dimensions. Discover your strengths, identify gaps, and get actionable recommendations.
+                A short reflection tool to help clarify what you are navigating before our discovery conversation. No scoring. No ranking. Just structured questions.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -37,29 +37,23 @@ export const AssessmentLandingPage = () => {
                   href="/assessment/start" 
                   className="inline-block bg-lli-orange text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-lli-orange-dark transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 text-center"
                 >
-                  Start Your Free Assessment
+                  Begin Intake
                   <i className="fas fa-arrow-right ml-3"></i>
-                </a>
-                <a 
-                  href="#how-it-works" 
-                  className="inline-block bg-white/10 backdrop-blur text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300 text-center"
-                >
-                  How It Works
                 </a>
               </div>
               
               <div className="flex items-center space-x-6 text-white">
                 <div className="flex items-center">
                   <i className="fas fa-clock text-lli-orange mr-2"></i>
-                  <span>5 minutes</span>
+                  <span>5-minute completion</span>
                 </div>
                 <div className="flex items-center">
-                  <i className="fas fa-chart-line text-lli-teal mr-2"></i>
-                  <span>Instant results</span>
+                  <i className="fas fa-users text-lli-teal mr-2"></i>
+                  <span>For leaders & teams</span>
                 </div>
                 <div className="flex items-center">
-                  <i className="fas fa-lock text-lli-orange mr-2"></i>
-                  <span>100% confidential</span>
+                  <i className="fas fa-comments text-lli-orange mr-2"></i>
+                  <span>Informs discovery call</span>
                 </div>
               </div>
             </div>
@@ -73,10 +67,10 @@ export const AssessmentLandingPage = () => {
         <section className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              What We <span className="text-lli-teal">Measure</span>
+              What We <span className="text-lli-teal">Explore</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get your score across 5 critical dimensions of organizational effectiveness
+              Reflection areas to help clarify your leadership context
             </p>
           </div>
           
@@ -121,7 +115,7 @@ export const AssessmentLandingPage = () => {
               How It <span className="text-lli-orange">Works</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Three simple steps to understand your leadership readiness
+              Simple reflection process to prepare for our conversation
             </p>
           </div>
           
@@ -130,9 +124,9 @@ export const AssessmentLandingPage = () => {
               <div className="w-20 h-20 bg-gradient-to-br from-lli-teal to-lli-teal-dark text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">
                 1
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Answer 25 Questions</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Complete Reflection</h3>
               <p className="text-gray-700 leading-relaxed">
-                Thoughtfully answer questions about your leadership, culture, DEI, change capability, and team performance. Takes just 5 minutes.
+                Thoughtfully respond to structured questions about your leadership context and challenges. Takes just 5 minutes.
               </p>
             </div>
             
@@ -140,9 +134,9 @@ export const AssessmentLandingPage = () => {
               <div className="w-20 h-20 bg-gradient-to-br from-lli-orange to-lli-orange-dark text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">
                 2
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Get Your Score</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Review Summary Themes</h3>
               <p className="text-gray-700 leading-relaxed">
-                Receive your instant Leadership Readiness Score (0-100) plus individual scores for each of the 5 dimensions.
+                Receive a summary of key themes identified from your responses. No scoring or ranking.
               </p>
             </div>
             
@@ -150,9 +144,9 @@ export const AssessmentLandingPage = () => {
               <div className="w-20 h-20 bg-gradient-to-br from-lli-teal to-lli-teal-dark text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">
                 3
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Take Action</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Use for Discovery Call</h3>
               <p className="text-gray-700 leading-relaxed">
-                Get personalized recommendations based on your results. Schedule a consultation to discuss how to improve your scores.
+                Your summary themes become discussion prompts for our discovery conversation about next steps.
               </p>
             </div>
           </div>
@@ -162,66 +156,46 @@ export const AssessmentLandingPage = () => {
         <section className="mb-20">
           <div className="bg-gradient-to-br from-lli-teal to-lli-teal-dark rounded-2xl p-12 text-white shadow-2xl">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl font-bold mb-8 text-center">What You'll Discover</h2>
+              <h2 className="text-4xl font-bold mb-8 text-center">What You'll Receive</h2>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-chart-bar text-2xl"></i>
+                    <i className="fas fa-list text-2xl"></i>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Your Overall Score</h3>
-                    <p className="text-gray-100">See where you rank from 0-100 and what level you're operating at</p>
+                    <h3 className="text-xl font-bold mb-2">Summary Themes</h3>
+                    <p className="text-gray-100">Key themes identified from your reflection responses</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-bullseye text-2xl"></i>
+                    <i className="fas fa-comments text-2xl"></i>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Dimension Breakdown</h3>
-                    <p className="text-gray-100">Individual scores for leadership, culture, DEI, change, and team performance</p>
+                    <h3 className="text-xl font-bold mb-2">Discussion Prompts</h3>
+                    <p className="text-gray-100">Structured prompts to inform your discovery call conversation</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-arrow-up text-2xl"></i>
+                    <i className="fas fa-lightbulb text-2xl"></i>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Your Top Strengths</h3>
-                    <p className="text-gray-100">What you're doing well and should continue building on</p>
+                    <h3 className="text-xl font-bold mb-2">Clarity on Context</h3>
+                    <p className="text-gray-100">Better understanding of your current leadership situation and challenges</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-exclamation-triangle text-2xl"></i>
+                    <i className="fas fa-map text-2xl"></i>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Your Biggest Gaps</h3>
-                    <p className="text-gray-100">Critical areas that need attention and improvement</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-tasks text-2xl"></i>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">Action Recommendations</h3>
-                    <p className="text-gray-100">Specific, prioritized next steps to improve your results</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-download text-2xl"></i>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">Downloadable Report</h3>
-                    <p className="text-gray-100">Share your results or save for future reference (Professional members)</p>
+                    <h3 className="text-xl font-bold mb-2">Foundation for Next Steps</h3>
+                    <p className="text-gray-100">A clear starting point for exploring potential engagement and support</p>
                   </div>
                 </div>
               </div>

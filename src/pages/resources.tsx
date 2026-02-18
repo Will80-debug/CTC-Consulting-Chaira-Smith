@@ -126,84 +126,29 @@ export const ResourcesPage = () => {
         </div>
       </section>
 
-      {/* Webinars & Workshops */}
+      {/* Webinar Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              <span className="text-lli-orange">Webinars</span> & Events
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join our live learning sessions and recorded webinars
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Upcoming Webinar */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-lli-teal">
-              <div className="flex items-start mb-4">
-                <div className="bg-lli-teal text-white rounded-lg p-3 mr-4">
-                  <i className="fas fa-calendar text-2xl"></i>
-                </div>
-                <div>
-                  <p className="text-sm text-lli-teal font-semibold mb-1">UPCOMING WEBINAR</p>
-                  <h3 className="text-2xl font-bold text-gray-900">Leading with Equity: A Practical Framework</h3>
-                </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border-2 border-lli-orange">
+            <div className="flex items-start mb-6">
+              <div className="bg-lli-orange text-white rounded-lg p-4 mr-4">
+                <i className="fas fa-video text-3xl"></i>
               </div>
-              <p className="text-gray-600 mb-4">
-                Learn practical strategies for embedding equity into your daily leadership practice. No theory—just actionable tools you can use immediately.
-              </p>
-              <div className="space-y-2 mb-6">
-                <div className="flex items-center text-gray-700">
-                  <i className="fas fa-clock text-lli-teal mr-3"></i>
-                  <span>Thursday, January 23, 2025 • 2:00 PM ET</span>
-                </div>
-                <div className="flex items-center text-gray-700">
-                  <i className="fas fa-user text-lli-teal mr-3"></i>
-                  <span>Led by Chiara Smith, Founder</span>
-                </div>
-                <div className="flex items-center text-gray-700">
-                  <i className="fas fa-video text-lli-teal mr-3"></i>
-                  <span>60 minutes + Q&A</span>
-                </div>
+              <div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-2">LLI Framework™ in Practice</h3>
+                <p className="text-lg text-gray-600">
+                  Recorded overview with planning worksheet.
+                </p>
               </div>
-              <button className="w-full bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105">
-                Register Free
-              </button>
             </div>
-
-            {/* On-Demand Webinar */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-lli-orange">
-              <div className="flex items-start mb-4">
-                <div className="bg-lli-orange text-white rounded-lg p-3 mr-4">
-                  <i className="fas fa-play-circle text-2xl"></i>
-                </div>
-                <div>
-                  <p className="text-sm text-lli-orange font-semibold mb-1">ON-DEMAND RECORDING</p>
-                  <h3 className="text-2xl font-bold text-gray-900">The LLI Framework™ in Action</h3>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Watch our most popular webinar showing how the Listen → Learn → Implement framework drives real culture change.
-              </p>
-              <div className="space-y-2 mb-6">
-                <div className="flex items-center text-gray-700">
-                  <i className="fas fa-clock text-lli-orange mr-3"></i>
-                  <span>45 minutes</span>
-                </div>
-                <div className="flex items-center text-gray-700">
-                  <i className="fas fa-download text-lli-orange mr-3"></i>
-                  <span>Includes worksheet & resources</span>
-                </div>
-                <div className="flex items-center text-gray-700">
-                  <i className="fas fa-chart-line text-lli-orange mr-3"></i>
-                  <span>Real case study examples</span>
-                </div>
-              </div>
-              <button className="w-full bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105">
-                Watch Now
-              </button>
-            </div>
+            
+            <a 
+              href="/contact" 
+              className="w-full bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 inline-block text-center text-lg"
+            >
+              <i className="fas fa-play-circle mr-3"></i>
+              Request Access
+            </a>
           </div>
         </div>
       </section>
