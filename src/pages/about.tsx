@@ -108,47 +108,74 @@ export const AboutPage = () => {
       {/* Our Values Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our <span className="text-lli-teal">Values</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide every engagement and shape our impact
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Value 1 */}
-            <div className="bg-gradient-to-br from-lli-orange/5 to-white border-2 border-lli-orange/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="bg-lli-orange text-white w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <i className="fas fa-heart text-3xl"></i>
+            {/* Value 1 - Clarity Before Action */}
+            <div className="bg-gradient-to-br from-lli-teal/5 to-white border-2 border-lli-teal/20 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="/static/strategy-presentation.jpg" 
+                  alt="Clarity Before Action" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-lli-teal/80 to-transparent"></div>
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-white text-lli-teal w-16 h-16 rounded-full flex items-center justify-center shadow-xl">
+                    <i className="fas fa-lightbulb text-3xl"></i>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Courage</h3>
-              <p className="text-gray-700 leading-relaxed text-center">
-                We believe in having difficult conversations and challenging the status quo. Real change requires bravery—from both leaders and consultants.
-              </p>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Clarity Before Action</h3>
+                <p className="text-gray-700 leading-relaxed text-center">
+                  Structured thinking reduces avoidable misalignment.
+                </p>
+              </div>
             </div>
 
-            {/* Value 2 */}
-            <div className="bg-gradient-to-br from-lli-teal/5 to-white border-2 border-lli-teal/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="bg-lli-teal text-white w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <i className="fas fa-lightbulb text-3xl"></i>
+            {/* Value 2 - Courage in Conversation */}
+            <div className="bg-gradient-to-br from-lli-orange/5 to-white border-2 border-lli-orange/20 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="/static/implementation-meeting.jpg" 
+                  alt="Courage in Conversation" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-lli-orange/80 to-transparent"></div>
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-white text-lli-orange w-16 h-16 rounded-full flex items-center justify-center shadow-xl">
+                    <i className="fas fa-comments text-3xl"></i>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Clarity</h3>
-              <p className="text-gray-700 leading-relaxed text-center">
-                We cut through buzzwords and jargon to provide direct, actionable guidance. You'll always know exactly what we mean and what to do next.
-              </p>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Courage in Conversation</h3>
+                <p className="text-gray-700 leading-relaxed text-center">
+                  Difficult discussions require facilitation, not avoidance.
+                </p>
+              </div>
             </div>
 
-            {/* Value 3 */}
-            <div className="bg-gradient-to-br from-lli-orange/5 to-white border-2 border-lli-orange/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="bg-lli-orange text-white w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <i className="fas fa-handshake text-3xl"></i>
+            {/* Value 3 - Responsible Scope */}
+            <div className="bg-gradient-to-br from-lli-teal/5 to-white border-2 border-lli-teal/20 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="/static/workshop-session.jpg" 
+                  alt="Responsible Scope" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-lli-teal/80 to-transparent"></div>
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-white text-lli-teal w-16 h-16 rounded-full flex items-center justify-center shadow-xl">
+                    <i className="fas fa-balance-scale text-3xl"></i>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Commitment</h3>
-              <p className="text-gray-700 leading-relaxed text-center">
-                We're in it for the long haul. Sustainable change takes time, and we partner with you through every phase of your transformation journey.
-              </p>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Responsible Scope</h3>
+                <p className="text-gray-700 leading-relaxed text-center">
+                  Engagements are intentionally designed to match capacity and context.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -210,82 +237,43 @@ export const AboutPage = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Education & <span className="text-lli-orange">Credentials</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Backed by advanced education and professional certifications in leadership development
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-lli-teal w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                    <i className="fas fa-graduation-cap text-white text-xl"></i>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Master of Human Relations</h3>
-                    <p className="text-gray-600">Advanced graduate degree in organizational behavior and human resources</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-lli-orange w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                    <i className="fas fa-certificate text-white text-xl"></i>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Certificate in Diversity and Inclusion</h3>
-                    <p className="text-gray-600">Cornell University - specialized training in DEI strategy</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-lli-teal w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                    <i className="fas fa-user-tie text-white text-xl"></i>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Professional Coaching Certification</h3>
-                    <p className="text-gray-600">Executive coaching credentials for leadership development</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://sspark.genspark.ai/cfimages?u1=1rCfzaoAPmlC0sPFWcGPOIHKNkEpjeBERnuSQiiheILt%2FOgnuHbq5yLwJ3eDMecLLRnwGFDTdrd%2BftslU7XvzA0HEftOWrEwEsHbENpPJmkoKkoJuqXGMWad%2FRbXiiSqVZWFP0nx1kGasQ%3D%3D&u2=i3fc6naoI6WxvS7o&width=2560" 
-                  alt="Professional office training session - leadership development" 
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </div>
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <span className="text-lg text-gray-800">Master of Human Relations</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="bg-lli-orange/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <span className="text-lg text-gray-800">Certificate in Diversity and Inclusion, Cornell University</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <span className="text-lg text-gray-800">Professional Coaching Certification</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Ready to Transform Your Organization?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's have a conversation about where you are and where you want to go. No pressure, just real talk about real change.
+          <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+            If your organization requires structured support rather than surface solutions, begin with a discovery conversation.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <a 
-              href="/services#assessment-modal" 
-              className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              href="/contact" 
+              className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-10 py-5 rounded-xl font-bold text-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
             >
-              Take the 3-Minute Culture Check
-            </a>
-            <a 
-              href="/services#fit-check-modal" 
-              className="inline-block bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-            >
-              Book a Strategy Call
+              <i className="fas fa-phone mr-3"></i>
+              Schedule a Discovery Call
             </a>
           </div>
         </div>

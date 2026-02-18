@@ -7,11 +7,11 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo and Brand */}
           <a href="/" className="flex items-center space-x-4 hover:opacity-90 transition-opacity">
-            <div className="bg-lli-teal rounded-full p-2">
+            <div className="bg-lli-teal-dark rounded-full p-3">
               <img 
                 src={logoUrl} 
                 alt="LLI Consulting Group Logo" 
-                className="h-12 w-12 object-contain"
+                className="h-20 w-20 object-contain"
               />
             </div>
             <div className="text-left">
