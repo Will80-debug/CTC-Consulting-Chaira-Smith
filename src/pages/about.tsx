@@ -76,7 +76,7 @@ export const AboutPage = () => {
               <h3 className="text-3xl font-bold text-gray-900 mb-2">Chiara Smith, MHR</h3>
               <p className="text-xl text-lli-teal font-semibold mb-6">Founder and Principal of LLI Consulting Group™</p>
               
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-700 leading-relaxed mb-8">
                 <p>
                   Chiara Smith, MHR is the Founder and Principal of LLI Consulting Group™.
                 </p>
@@ -89,6 +89,25 @@ export const AboutPage = () => {
                 <p>
                   Chiara is known for structured facilitation, direct inquiry, and practical planning that translates complexity into clear next steps.
                 </p>
+              </div>
+
+              {/* Education & Credentials */}
+              <div className="border-t border-gray-200 pt-6">
+                <h4 className="text-xl font-bold text-gray-900 mb-4">Education & Credentials</h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-base text-gray-700">Master of Human Relations</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="bg-lli-orange/10 w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-base text-gray-700">Certificate in Diversity and Inclusion, Cornell University</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-base text-gray-700">Professional Coaching Certification</span>
+                  </li>
+                </ul>
               </div>
             </div>
             
@@ -226,36 +245,6 @@ export const AboutPage = () => {
             <p className="text-xl text-gray-300 italic">
               No inflated metrics. No guarantees. Just disciplined advisory work.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Education & Credentials Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Education & <span className="text-lli-orange">Credentials</span>
-            </h2>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-lg text-gray-800">Master of Human Relations</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="bg-lli-orange/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-lg text-gray-800">Certificate in Diversity and Inclusion, Cornell University</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="bg-lli-teal/10 w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-lg text-gray-800">Professional Coaching Certification</span>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
