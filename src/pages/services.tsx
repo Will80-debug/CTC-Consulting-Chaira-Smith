@@ -1509,7 +1509,37 @@ export const ServicesPage = () => {
                 </h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                Strategic guidance to help organizations move from planning to execution with clear timelines, ownership structures, and accountability measures.
+                Consulting support designed to help organizations translate insights into actionable culture and leadership strategies.
+              </p>
+            </div>
+
+            {/* Service 5 - Strengthening Equity-Centered Grantmaking */}
+            <div className="bg-gradient-to-br from-lli-teal/5 to-white border-2 border-lli-teal/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start mb-4">
+                <div className="bg-lli-teal text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <i className="fas fa-hand-holding-heart text-xl"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Strengthening Equity-Centered Grantmaking
+                </h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Strategic consulting services to help philanthropic organizations embed equity principles throughout their grantmaking processes and decision-making frameworks.
+              </p>
+            </div>
+
+            {/* Service 6 - Applying the LLI Framework for Health Philanthropy */}
+            <div className="bg-gradient-to-br from-lli-orange/5 to-white border-2 border-lli-orange/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start mb-4">
+                <div className="bg-lli-orange text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <i className="fas fa-heartbeat text-xl"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Applying the LLI Framework™ for Health Philanthropy
+                </h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Specialized application of the Listen → Learn → Implement methodology to health-focused philanthropic initiatives and healthcare equity programs.
               </p>
             </div>
 
