@@ -38,7 +38,7 @@ export const HomePage = () => {
               </div>
               
               {/* Main Headline */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Helping Organizations Move From Conversation to Organizational Change
               </h1>
               
