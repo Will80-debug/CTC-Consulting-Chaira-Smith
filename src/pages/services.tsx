@@ -1545,15 +1545,6 @@ export const ServicesPage = () => {
 
           </div>
 
-          {/* CTA */}
-          <div className="text-center mt-12">
-            <a 
-              href="/contact" 
-              className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-            >
-              Schedule a Discovery Call <i className="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
         </div>
       </section>
 
