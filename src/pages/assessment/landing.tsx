@@ -570,18 +570,44 @@ export const AssessmentLandingPage = () => {
             </div>
 
             {/* Selected Tier Display */}
-            <div id="selectedTierInfo" className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 mb-6 border-2 border-gray-200">
-              <div className="flex items-center justify-between mb-4">
-                <div>
-                  <p className="text-sm text-gray-600 mb-1">Selected Assessment</p>
-                  <h3 id="tierName" className="text-2xl font-bold text-gray-900"></h3>
+            <div id="selectedTierInfo" className="bg-gradient-to-br from-lli-teal/5 to-white rounded-xl p-6 mb-6 border-2 border-lli-teal/20">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex-1">
+                  <p className="text-sm text-gray-600 mb-1 uppercase tracking-wider font-semibold">Selected Assessment</p>
+                  <h3 id="tierName" className="text-2xl md:text-3xl font-bold text-gray-900"></h3>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm text-gray-600 mb-1">Investment</p>
-                  <p id="tierPrice" className="text-3xl font-bold text-lli-teal"></p>
+                  <p className="text-sm text-gray-600 mb-1 uppercase tracking-wider font-semibold">Investment</p>
+                  <p id="tierPrice" className="text-3xl md:text-4xl font-bold text-lli-teal"></p>
                 </div>
               </div>
-              <p id="tierDescription" className="text-gray-700 leading-relaxed"></p>
+
+              {/* Purpose */}
+              <div className="mb-6">
+                <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                  <i className="fas fa-bullseye text-lli-teal mr-2"></i>
+                  Purpose
+                </h4>
+                <p id="tierPurpose" className="text-gray-700 leading-relaxed"></p>
+              </div>
+
+              {/* Includes */}
+              <div className="mb-6">
+                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                  <i className="fas fa-clipboard-list text-lli-teal mr-2"></i>
+                  What's Included
+                </h4>
+                <ul id="tierIncludes" className="space-y-2"></ul>
+              </div>
+
+              {/* Typical Buyers */}
+              <div className="bg-white rounded-lg p-4 border-l-4 border-lli-orange">
+                <h4 className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-wider flex items-center">
+                  <i className="fas fa-users text-lli-orange mr-2"></i>
+                  Ideal For
+                </h4>
+                <p id="tierBuyers" className="text-gray-700 text-sm"></p>
+              </div>
             </div>
 
             {/* Payment Form */}
@@ -848,19 +874,41 @@ export const AssessmentLandingPage = () => {
             name: 'Organizational Culture Diagnostic',
             price: '$2,500',
             priceValue: 2500,
-            description: 'A structured internal assessment designed to identify patterns affecting workplace culture, communication, and leadership dynamics.'
+            purpose: 'A structured diagnostic assessment that identifies patterns affecting workplace culture, communication, and leadership dynamics.',
+            includes: [
+              'Expanded survey questions (20–30 questions)',
+              'Leadership reflection questions',
+              'Basic data analysis',
+              'Short written insights summary'
+            ],
+            buyers: 'Small nonprofits, foundations testing culture work, and leadership teams exploring organizational change'
           },
           tier3: {
             name: 'Comprehensive Organizational Culture Assessment',
             price: '$12,500',
             priceValue: 12500,
-            description: 'A full organizational analysis designed to support long-term culture and leadership transformation.'
+            purpose: 'A deeper organizational analysis designed to identify structural culture challenges and leadership dynamics.',
+            includes: [
+              'Expanded survey instrument',
+              'Leadership interviews',
+              'Organizational culture analysis',
+              'Communication pattern review',
+              'Written strategic insights report'
+            ],
+            buyers: 'Mid-size nonprofits, philanthropic organizations, and government departments'
           },
           tier4: {
             name: 'Anonymous Staff Culture Assessment',
             price: '$22,500',
             priceValue: 22500,
-            description: 'This assessment allows staff members to participate independently and anonymously without leadership oversight.'
+            purpose: 'A confidential assessment allowing staff to participate independently and anonymously, surfacing issues leadership may not see.',
+            includes: [
+              'Anonymous staff survey',
+              'Optional anonymous written responses',
+              'Aggregated culture analysis',
+              'Insights report highlighting patterns affecting staff experience'
+            ],
+            buyers: 'Foundations, large nonprofits, government agencies, and universities'
           }
         };
 
@@ -873,7 +921,19 @@ export const AssessmentLandingPage = () => {
           
           document.getElementById('tierName').textContent = data.name;
           document.getElementById('tierPrice').textContent = data.price;
-          document.getElementById('tierDescription').textContent = data.description;
+          document.getElementById('tierPurpose').textContent = data.purpose;
+          
+          // Populate includes list
+          const includesList = document.getElementById('tierIncludes');
+          includesList.innerHTML = '';
+          data.includes.forEach(item => {
+            const li = document.createElement('li');
+            li.className = 'flex items-start';
+            li.innerHTML = '<i class="fas fa-check-circle text-lli-teal text-lg mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-700">' + item + '</span>';
+            includesList.appendChild(li);
+          });
+          
+          document.getElementById('tierBuyers').textContent = data.buyers;
           
           document.getElementById('paymentModal').classList.remove('hidden');
           document.body.style.overflow = 'hidden';
