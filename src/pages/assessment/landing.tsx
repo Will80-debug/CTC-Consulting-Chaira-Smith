@@ -385,7 +385,7 @@ export const AssessmentLandingPage = () => {
               </div>
               
               <button 
-                onclick="openDiscoveryModal()" 
+                onclick="openPaymentModal('tier2')" 
                 className="inline-block bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               >
                 Request Diagnostic Access <i className="fas fa-arrow-right ml-2"></i>
@@ -447,7 +447,7 @@ export const AssessmentLandingPage = () => {
               </p>
               
               <button 
-                onclick="openDiscoveryModal()" 
+                onclick="openPaymentModal('tier3')" 
                 className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               >
                 Schedule Consultation <i className="fas fa-arrow-right ml-2"></i>
@@ -508,7 +508,7 @@ export const AssessmentLandingPage = () => {
               </div>
               
               <button 
-                onclick="openDiscoveryModal()" 
+                onclick="openPaymentModal('tier4')" 
                 className="inline-block bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               >
                 Request Anonymous Assessment <i className="fas fa-arrow-right ml-2"></i>
@@ -538,6 +538,235 @@ export const AssessmentLandingPage = () => {
       </section>
 
       <Footer />
+
+      {/* Payment Modal */}
+      <div id="paymentModal" className="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="p-8 md:p-12">
+            {/* Close Button */}
+            <div className="flex justify-end mb-4">
+              <button 
+                onclick="closePaymentModal()" 
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <i className="fas fa-times text-2xl"></i>
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="text-center mb-8">
+              <div className="w-20 h-20 bg-gradient-to-br from-lli-orange to-lli-orange-dark rounded-full flex items-center justify-center mx-auto mb-6">
+                <i className="fas fa-credit-card text-white text-3xl"></i>
+              </div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Secure Your Assessment
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed max-w-xl mx-auto mb-2">
+                Complete payment to access your selected assessment tier.
+              </p>
+              <p className="text-sm text-gray-600">
+                <i className="fas fa-lock mr-1"></i> Secure payment processing · Instant access upon confirmation
+              </p>
+            </div>
+
+            {/* Selected Tier Display */}
+            <div id="selectedTierInfo" className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 mb-6 border-2 border-gray-200">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <p className="text-sm text-gray-600 mb-1">Selected Assessment</p>
+                  <h3 id="tierName" className="text-2xl font-bold text-gray-900"></h3>
+                </div>
+                <div className="text-right">
+                  <p className="text-sm text-gray-600 mb-1">Investment</p>
+                  <p id="tierPrice" className="text-3xl font-bold text-lli-teal"></p>
+                </div>
+              </div>
+              <p id="tierDescription" className="text-gray-700 leading-relaxed"></p>
+            </div>
+
+            {/* Payment Form */}
+            <div className="bg-white rounded-xl border-2 border-gray-200 p-6 mb-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-6">
+                <i className="fas fa-lock text-lli-teal mr-2"></i>
+                Payment Information
+              </h3>
+              
+              <form id="paymentForm" className="space-y-4">
+                {/* Organization Name */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Organization Name *
+                  </label>
+                  <input 
+                    type="text" 
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none transition-colors"
+                    placeholder="Your Organization"
+                  />
+                </div>
+
+                {/* Contact Name */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Contact Name *
+                  </label>
+                  <input 
+                    type="text" 
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none transition-colors"
+                    placeholder="Full Name"
+                  />
+                </div>
+
+                {/* Email */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Email Address *
+                  </label>
+                  <input 
+                    type="email" 
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none transition-colors"
+                    placeholder="email@organization.com"
+                  />
+                </div>
+
+                {/* Phone */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Phone Number *
+                  </label>
+                  <input 
+                    type="tel" 
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none transition-colors"
+                    placeholder="(555) 123-4567"
+                  />
+                </div>
+
+                {/* Card Number */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Card Number *
+                  </label>
+                  <input 
+                    type="text" 
+                    required
+                    maxLength="19"
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none transition-colors"
+                    placeholder="1234 5678 9012 3456"
+                  />
+                </div>
+
+                {/* Card Details Row */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      Expiry Date *
+                    </label>
+                    <input 
+                      type="text" 
+                      required
+                      maxLength="5"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none transition-colors"
+                      placeholder="MM/YY"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      CVV *
+                    </label>
+                    <input 
+                      type="text" 
+                      required
+                      maxLength="4"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none transition-colors"
+                      placeholder="123"
+                    />
+                  </div>
+                </div>
+
+                {/* Billing Address */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Billing Address *
+                  </label>
+                  <input 
+                    type="text" 
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none transition-colors mb-3"
+                    placeholder="Street Address"
+                  />
+                  <div className="grid grid-cols-2 gap-3">
+                    <input 
+                      type="text" 
+                      required
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none transition-colors"
+                      placeholder="City"
+                    />
+                    <input 
+                      type="text" 
+                      required
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none transition-colors"
+                      placeholder="State"
+                    />
+                  </div>
+                  <input 
+                    type="text" 
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none transition-colors mt-3"
+                    placeholder="ZIP Code"
+                  />
+                </div>
+
+                {/* Terms Checkbox */}
+                <div className="flex items-start space-x-3 p-4 bg-gray-50 rounded-lg">
+                  <input 
+                    type="checkbox" 
+                    required
+                    className="mt-1 w-5 h-5 text-lli-teal border-2 border-gray-300 rounded focus:ring-lli-teal"
+                  />
+                  <label className="text-sm text-gray-700">
+                    I agree to the terms and conditions and authorize LLI Consulting Group LLC to charge my payment method for the amount shown above. I understand that payment is required before assessment access is granted.
+                  </label>
+                </div>
+              </form>
+            </div>
+
+            {/* Security Notice */}
+            <div className="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
+              <div className="flex items-center">
+                <i className="fas fa-shield-alt text-green-600 text-xl mr-3"></i>
+                <div>
+                  <p className="text-sm font-semibold text-green-900">Secure Payment Processing</p>
+                  <p className="text-xs text-green-700">Your payment information is encrypted and securely processed.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button 
+                onclick="closePaymentModal()" 
+                className="flex-1 bg-gray-200 text-gray-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-300 transition-all duration-300"
+              >
+                Cancel
+              </button>
+              <button 
+                onclick="processPayment()" 
+                className="flex-1 bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                <i className="fas fa-lock mr-2"></i>
+                Complete Payment
+              </button>
+            </div>
+
+            <p className="text-center text-sm text-gray-500 mt-4">
+              After payment, you'll receive access credentials and can schedule your discovery call.
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* Discovery Call Modal */}
       <div id="discoveryModal" className="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
@@ -613,6 +842,76 @@ export const AssessmentLandingPage = () => {
 
       {/* Modal JavaScript */}
       <script dangerouslySetInnerHTML={{__html: `
+        // Tier data
+        const tierData = {
+          tier2: {
+            name: 'Organizational Culture Diagnostic',
+            price: '$2,500',
+            priceValue: 2500,
+            description: 'A structured internal assessment designed to identify patterns affecting workplace culture, communication, and leadership dynamics.'
+          },
+          tier3: {
+            name: 'Comprehensive Organizational Culture Assessment',
+            price: '$12,500',
+            priceValue: 12500,
+            description: 'A full organizational analysis designed to support long-term culture and leadership transformation.'
+          },
+          tier4: {
+            name: 'Anonymous Staff Culture Assessment',
+            price: '$22,500',
+            priceValue: 22500,
+            description: 'This assessment allows staff members to participate independently and anonymously without leadership oversight.'
+          }
+        };
+
+        let currentTier = null;
+
+        // Payment Modal Functions
+        function openPaymentModal(tier) {
+          currentTier = tier;
+          const data = tierData[tier];
+          
+          document.getElementById('tierName').textContent = data.name;
+          document.getElementById('tierPrice').textContent = data.price;
+          document.getElementById('tierDescription').textContent = data.description;
+          
+          document.getElementById('paymentModal').classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closePaymentModal() {
+          document.getElementById('paymentModal').classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+
+        function processPayment() {
+          const form = document.getElementById('paymentForm');
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+
+          // Simulate payment processing
+          const button = event.target;
+          const originalText = button.innerHTML;
+          button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Processing...';
+          button.disabled = true;
+
+          setTimeout(() => {
+            closePaymentModal();
+            
+            // Show success message
+            alert('Payment successful! You now have access to ' + tierData[currentTier].name + '. You can now schedule your discovery call.');
+            
+            // Open discovery modal
+            openDiscoveryModal();
+            
+            button.innerHTML = originalText;
+            button.disabled = false;
+          }, 2000);
+        }
+
+        // Discovery Modal Functions
         function openDiscoveryModal() {
           document.getElementById('discoveryModal').classList.remove('hidden');
           document.body.style.overflow = 'hidden';
@@ -623,16 +922,23 @@ export const AssessmentLandingPage = () => {
           document.body.style.overflow = 'auto';
         }
 
-        // Close modal when clicking outside
+        // Close modals when clicking outside
+        document.getElementById('paymentModal')?.addEventListener('click', function(e) {
+          if (e.target === this) {
+            closePaymentModal();
+          }
+        });
+
         document.getElementById('discoveryModal')?.addEventListener('click', function(e) {
           if (e.target === this) {
             closeDiscoveryModal();
           }
         });
 
-        // Close modal on Escape key
+        // Close modals on Escape key
         document.addEventListener('keydown', function(e) {
           if (e.key === 'Escape') {
+            closePaymentModal();
             closeDiscoveryModal();
           }
         });
