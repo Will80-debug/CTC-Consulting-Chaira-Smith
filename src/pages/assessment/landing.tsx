@@ -384,12 +384,12 @@ export const AssessmentLandingPage = () => {
                 </ul>
               </div>
               
-              <a 
-                href="/contact" 
-                className="inline-block bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              <button 
+                onclick="openDiscoveryModal()" 
+                className="inline-block bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               >
                 Request Diagnostic Access <i className="fas fa-arrow-right ml-2"></i>
-              </a>
+              </button>
             </div>
 
             {/* Tier 3 - Comprehensive (Consulting) */}
@@ -446,12 +446,12 @@ export const AssessmentLandingPage = () => {
                 Deliverables include a written report outlining findings and recommended strategic priorities.
               </p>
               
-              <a 
-                href="/contact" 
-                className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              <button 
+                onclick="openDiscoveryModal()" 
+                className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               >
                 Schedule Consultation <i className="fas fa-arrow-right ml-2"></i>
-              </a>
+              </button>
             </div>
 
             {/* Tier 4 - Anonymous Staff Assessment (Paid) */}
@@ -507,12 +507,12 @@ export const AssessmentLandingPage = () => {
                 </p>
               </div>
               
-              <a 
-                href="/contact" 
-                className="inline-block bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              <button 
+                onclick="openDiscoveryModal()" 
+                className="inline-block bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               >
                 Request Anonymous Assessment <i className="fas fa-arrow-right ml-2"></i>
-              </a>
+              </button>
             </div>
 
           </div>
@@ -538,6 +538,105 @@ export const AssessmentLandingPage = () => {
       </section>
 
       <Footer />
+
+      {/* Discovery Call Modal */}
+      <div id="discoveryModal" className="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="p-8 md:p-12">
+            {/* Close Button */}
+            <div className="flex justify-end mb-4">
+              <button 
+                onclick="closeDiscoveryModal()" 
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <i className="fas fa-times text-2xl"></i>
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="text-center mb-8">
+              <div className="w-20 h-20 bg-gradient-to-br from-lli-teal to-lli-teal-dark rounded-full flex items-center justify-center mx-auto mb-6">
+                <i className="fas fa-calendar-alt text-white text-3xl"></i>
+              </div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Start With a Discovery Conversation
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed max-w-xl mx-auto">
+                Organizations interested in the <strong>Organizational Culture Diagnostic</strong>, <strong>Comprehensive Culture Assessment</strong>, or <strong>Anonymous Staff Culture Assessment</strong> are invited to schedule a discovery conversation to discuss goals, organizational context, and the most appropriate level of engagement.
+              </p>
+            </div>
+
+            {/* Benefits */}
+            <div className="bg-gradient-to-br from-lli-teal/5 to-white rounded-xl p-6 mb-8">
+              <h3 className="font-bold text-gray-900 mb-4 text-lg">
+                <i className="fas fa-check-circle text-lli-teal mr-2"></i>
+                What We'll Discuss:
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <i className="fas fa-circle text-lli-teal text-xs mt-2 mr-3"></i>
+                  <span className="text-gray-700">Your organizational goals and culture challenges</span>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-circle text-lli-teal text-xs mt-2 mr-3"></i>
+                  <span className="text-gray-700">Current organizational context and readiness</span>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-circle text-lli-teal text-xs mt-2 mr-3"></i>
+                  <span className="text-gray-700">Which assessment tier best fits your needs</span>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-circle text-lli-teal text-xs mt-2 mr-3"></i>
+                  <span className="text-gray-700">Timeline, pricing, and next steps</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* CTA Button */}
+            <div className="text-center">
+              <a 
+                href="https://www.LLIConsulting.com" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-10 py-5 rounded-xl font-bold text-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                <i className="fas fa-calendar-check mr-3"></i>
+                Schedule a Discovery Call
+              </a>
+              <p className="mt-4 text-gray-600 text-sm">
+                No obligation · 30-minute conversation · Complimentary
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Modal JavaScript */}
+      <script dangerouslySetInnerHTML={{__html: `
+        function openDiscoveryModal() {
+          document.getElementById('discoveryModal').classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeDiscoveryModal() {
+          document.getElementById('discoveryModal').classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('discoveryModal')?.addEventListener('click', function(e) {
+          if (e.target === this) {
+            closeDiscoveryModal();
+          }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeDiscoveryModal();
+          }
+        });
+      `}} />
     </div>
   )
 }
