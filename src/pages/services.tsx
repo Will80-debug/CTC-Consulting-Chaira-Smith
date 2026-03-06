@@ -1548,6 +1548,97 @@ export const ServicesPage = () => {
         </div>
       </section>
 
+      {/* NEW SERVICE: Strengthening Equity-Centered Grantmaking */}
+      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-2 border-lli-teal/20">
+            
+            {/* NEW SERVICE Badge */}
+            <div className="flex justify-center mb-6">
+              <span className="inline-block bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-6 py-2 rounded-full font-bold text-sm uppercase tracking-wider shadow-lg">
+                <i className="fas fa-star mr-2"></i>
+                New Service
+              </span>
+            </div>
+
+            {/* Title */}
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+              Strengthening Equity-Centered Grantmaking
+            </h2>
+            
+            {/* Subtitle */}
+            <h3 className="text-xl md:text-2xl font-semibold text-lli-teal mb-8 text-center">
+              Applying the LLI Framework™ for Health Philanthropy
+            </h3>
+
+            {/* Divider */}
+            <div className="w-24 h-1 bg-gradient-to-r from-lli-teal to-lli-orange mx-auto mb-8"></div>
+
+            {/* Content */}
+            <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+              <p>
+                Philanthropic institutions play a critical role in shaping the health ecosystems of the communities they serve. Yet many foundations are working to understand how their funding structures can better align with the realities of communities experiencing the greatest health disparities.
+              </p>
+
+              <p>
+                This session introduces a structured approach for examining philanthropic funding practices and identifying opportunities to strengthen equity-centered grantmaking.
+              </p>
+
+              <p>
+                Using the <span className="font-semibold text-lli-teal">LLI Framework™ (Listen → Learn → Implement)</span>, participants explore how foundations can move from intent to implementation by aligning funding strategies with community health priorities while strengthening the organizations working closest to the challenges.
+              </p>
+
+              <p className="font-semibold text-gray-900">
+                The goal of this engagement is to provide practical strategies for funders seeking to build stronger, more responsive health philanthropy systems.
+              </p>
+            </div>
+
+            {/* Key Features */}
+            <div className="mt-10 bg-gradient-to-br from-lli-teal/5 to-white rounded-xl p-8 border-2 border-lli-teal/20">
+              <h4 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                <i className="fas fa-lightbulb text-lli-teal mr-3"></i>
+                What This Engagement Offers
+              </h4>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="bg-lli-teal text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-ear-listen text-2xl"></i>
+                  </div>
+                  <h5 className="font-bold text-gray-900 mb-2">Listen</h5>
+                  <p className="text-sm text-gray-600">Understanding community health priorities and disparities</p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-lli-orange text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-search text-2xl"></i>
+                  </div>
+                  <h5 className="font-bold text-gray-900 mb-2">Learn</h5>
+                  <p className="text-sm text-gray-600">Examining funding structures and alignment opportunities</p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-lli-teal text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-hand-holding-heart text-2xl"></i>
+                  </div>
+                  <h5 className="font-bold text-gray-900 mb-2">Implement</h5>
+                  <p className="text-sm text-gray-600">Building responsive health philanthropy systems</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="text-center mt-10">
+              <a 
+                href="/contact" 
+                className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-10 py-5 rounded-xl font-bold text-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                <i className="fas fa-calendar-alt mr-3"></i>
+                Learn More About This Service
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       <Footer />
       
       <script src="/static/interactive-hero.js"></script>
