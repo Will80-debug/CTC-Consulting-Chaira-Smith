@@ -52,19 +52,10 @@ export const Footer = () => {
             </p>
             <a 
               href="mailto:info@lliconsultinggroup.com"
-              className="text-lli-teal hover:text-lli-teal-dark transition-colors flex items-center mb-4"
+              className="text-lli-teal hover:text-lli-teal-dark transition-colors flex items-center"
             >
               <i className="fas fa-envelope mr-2"></i>
               info@lliconsultinggroup.com
-            </a>
-            <a 
-              href="https://www.LLIConsulting.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark hover:from-lli-teal-dark hover:to-lli-teal text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition-all duration-200 hover:scale-105"
-            >
-              <i className="fas fa-calendar-check mr-2"></i>
-              Schedule a Call
             </a>
           </div>
         </div>
