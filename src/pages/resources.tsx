@@ -309,6 +309,164 @@ export const ResourcesPage = () => {
         </div>
       </section>
 
+      {/* Case Studies Section */}
+      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Selected Experience
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Real-world examples of LLI Consulting Group's strategic advisory work with foundations, community organizations, and mission-driven institutions.
+            </p>
+          </div>
+
+          {/* Case Studies Grid */}
+          <div className="space-y-12">
+            
+            {/* Case Study 1 - Racial Health Equity */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+              <div className="grid md:grid-cols-2 gap-0">
+                {/* Image */}
+                <div className="relative h-64 md:h-auto">
+                  <img 
+                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop" 
+                    alt="Health equity strategy development with community partners" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-lli-teal/20 to-transparent"></div>
+                </div>
+                
+                {/* Content */}
+                <div className="p-8 md:p-10 flex flex-col justify-center">
+                  <div className="inline-block bg-lli-teal text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider mb-4 self-start">
+                    Case Study 1
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                    Racial Health Equity Strategy Development
+                  </h3>
+                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                    Co-designed a multi-year racial health equity strategy within a regional health foundation, guiding the development of an approximately <strong>$8 million investment strategy</strong> supporting community-based organizations addressing structural drivers of health disparities.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-lli-teal/10 text-lli-teal px-4 py-2 rounded-lg text-sm font-semibold">
+                      <i className="fas fa-heart-pulse mr-2"></i>Health Equity
+                    </span>
+                    <span className="bg-lli-teal/10 text-lli-teal px-4 py-2 rounded-lg text-sm font-semibold">
+                      <i className="fas fa-hand-holding-usd mr-2"></i>$8M Strategy
+                    </span>
+                    <span className="bg-lli-teal/10 text-lli-teal px-4 py-2 rounded-lg text-sm font-semibold">
+                      <i className="fas fa-users mr-2"></i>Community-Based
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Case Study 2 - Violence Prevention */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+              <div className="grid md:grid-cols-2 gap-0">
+                {/* Content (Left on desktop) */}
+                <div className="p-8 md:p-10 flex flex-col justify-center order-2 md:order-1">
+                  <div className="inline-block bg-lli-orange text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider mb-4 self-start">
+                    Case Study 2
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                    Community Engagement and Violence Prevention
+                  </h3>
+                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                    Led community engagement strategies within a historically high-violence neighborhood, strengthening trust between community leaders, residents, and service providers. The engagement contributed to a year in which the neighborhood experienced <strong>zero homicides</strong>.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-lli-orange/10 text-lli-orange px-4 py-2 rounded-lg text-sm font-semibold">
+                      <i className="fas fa-handshake mr-2"></i>Community Trust
+                    </span>
+                    <span className="bg-lli-orange/10 text-lli-orange px-4 py-2 rounded-lg text-sm font-semibold">
+                      <i className="fas fa-shield-alt mr-2"></i>Violence Prevention
+                    </span>
+                    <span className="bg-lli-orange/10 text-lli-orange px-4 py-2 rounded-lg text-sm font-semibold">
+                      <i className="fas fa-chart-line mr-2"></i>Zero Homicides
+                    </span>
+                  </div>
+                </div>
+                
+                {/* Image (Right on desktop) */}
+                <div className="relative h-64 md:h-auto order-1 md:order-2">
+                  <img 
+                    src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=600&fit=crop" 
+                    alt="Community engagement and violence prevention collaboration" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-l from-lli-orange/20 to-transparent"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Case Study 3 - Organizational Culture */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+              <div className="grid md:grid-cols-2 gap-0">
+                {/* Image */}
+                <div className="relative h-64 md:h-auto">
+                  <img 
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop" 
+                    alt="Organizational culture and leadership advisory services" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-lli-teal/20 to-transparent"></div>
+                </div>
+                
+                {/* Content */}
+                <div className="p-8 md:p-10 flex flex-col justify-center">
+                  <div className="inline-block bg-lli-teal text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider mb-4 self-start">
+                    Case Study 3
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                    Organizational Culture and Leadership Advisory
+                  </h3>
+                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                    Provided advisory support to organizations navigating workplace culture challenges, helping leadership teams examine <strong>communication dynamics</strong>, <strong>psychological safety</strong>, and structural barriers affecting staff experience.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-lli-teal/10 text-lli-teal px-4 py-2 rounded-lg text-sm font-semibold">
+                      <i className="fas fa-building mr-2"></i>Culture Change
+                    </span>
+                    <span className="bg-lli-teal/10 text-lli-teal px-4 py-2 rounded-lg text-sm font-semibold">
+                      <i className="fas fa-comments mr-2"></i>Communication
+                    </span>
+                    <span className="bg-lli-teal/10 text-lli-teal px-4 py-2 rounded-lg text-sm font-semibold">
+                      <i className="fas fa-shield-heart mr-2"></i>Psychological Safety
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-lli-black to-gray-800 rounded-2xl p-12 shadow-2xl">
+              <h3 className="text-3xl font-bold text-white mb-4">
+                Interested in Similar Support?
+              </h3>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                LLI Consulting Group works with foundations, government agencies, and mission-driven organizations on strategic culture and leadership challenges.
+              </p>
+              <a 
+                href="/contact" 
+                className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-10 py-5 rounded-xl font-bold text-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                <i className="fas fa-calendar-check mr-3"></i>
+                Schedule a Discovery Call
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       <Footer />
     </div>
   )
