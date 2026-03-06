@@ -39,17 +39,12 @@ export const HomePage = () => {
               
               {/* Main Headline */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-                Clarity Before Action.
+                Helping Organizations Move From Conversation to Organizational Change
               </h1>
               
               {/* Subheadline */}
-              <p className="text-xl md:text-2xl text-gray-700 mb-4 leading-relaxed">
-                LLI Consulting Group LLC™ provides structured advisory support for foundations, government agencies, and mission-driven organizations navigating complex leadership and organizational decisions.
-              </p>
-              
-              {/* Support Line */}
-              <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-                When alignment matters and accountability is real, clarity is not optional.
+              <p className="text-xl md:text-2xl text-gray-700 mb-10 leading-relaxed">
+                LLI Consulting Group™ works with foundations, government agencies, and mission-driven organizations to diagnose culture challenges, strengthen leadership alignment, and implement practical strategies that improve workplace trust, communication, and organizational performance.
               </p>
               
               {/* Interactive CTA Buttons */}
