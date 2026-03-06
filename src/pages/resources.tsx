@@ -282,33 +282,6 @@ export const ResourcesPage = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-gradient-to-br from-lli-black via-gray-800 to-lli-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Get New Resources Delivered to Your Inbox
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join 2,000+ leaders receiving monthly insights, tools, and exclusive content
-          </p>
-          
-          <div className="bg-white rounded-2xl p-8 shadow-2xl">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <input 
-                type="email" 
-                placeholder="Enter your email address" 
-                className="flex-1 px-6 py-4 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none text-lg"
-              />
-              <button className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 whitespace-nowrap">
-                Subscribe Free
-              </button>
-            </div>
-            <p className="text-sm text-gray-500 mt-4">
-              No spam. Unsubscribe anytime. We respect your privacy.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Case Studies Section */}
       <section className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -464,6 +437,34 @@ export const ResourcesPage = () => {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* Newsletter Section - Moved to Bottom */}
+      <section className="py-20 bg-gradient-to-br from-lli-black via-gray-800 to-lli-black">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Get New Resources Delivered to Your Inbox
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join 2,000+ leaders receiving monthly insights, tools, and exclusive content
+          </p>
+          
+          <div className="bg-white rounded-2xl p-8 shadow-2xl">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input 
+                type="email" 
+                placeholder="Enter your email address" 
+                className="flex-1 px-6 py-4 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none text-lg"
+              />
+              <button className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 whitespace-nowrap">
+                Subscribe Free
+              </button>
+            </div>
+            <p className="text-sm text-gray-500 mt-4">
+              No spam. Unsubscribe anytime. We respect your privacy.
+            </p>
+          </div>
         </div>
       </section>
 
