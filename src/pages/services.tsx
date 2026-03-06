@@ -1435,6 +1435,98 @@ export const ServicesPage = () => {
       </div>
       {/* End hidden old content */}
 
+      {/* Signature Services Section */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Signature Services
+            </h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto mb-4 leading-relaxed">
+              LLI Consulting Group™ provides strategic advisory services focused on organizational culture, leadership strategy, and institutional change. Our work is guided by the LLI Framework™ (Listen → Learn → Implement), a structured methodology designed to help organizations translate insight into measurable implementation.
+            </p>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+              Signature services include:
+            </p>
+          </div>
+
+          {/* Service Cards Grid */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            
+            {/* Service 1 - Organizational Culture Assessments */}
+            <div className="bg-gradient-to-br from-lli-teal/5 to-white border-2 border-lli-teal/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start mb-4">
+                <div className="bg-lli-teal text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <i className="fas fa-chart-bar text-xl"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Organizational Culture Assessments
+                </h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Structured diagnostic tools that help organizations understand how employees experience workplace culture, communication, and leadership dynamics.
+              </p>
+            </div>
+
+            {/* Service 2 - From Illusion to Inclusion */}
+            <div className="bg-gradient-to-br from-lli-orange/5 to-white border-2 border-lli-orange/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start mb-4">
+                <div className="bg-lli-orange text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <i className="fas fa-users text-xl"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  From Illusion to Inclusion™
+                </h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                A facilitated workplace culture and psychological safety engagement examining the gap between stated commitments to inclusion and employees' lived experiences.
+              </p>
+            </div>
+
+            {/* Service 3 - Strategy and Leadership Alignment Sessions */}
+            <div className="bg-gradient-to-br from-lli-teal/5 to-white border-2 border-lli-teal/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start mb-4">
+                <div className="bg-lli-teal text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <i className="fas fa-bullseye text-xl"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Strategy and Leadership Alignment Sessions
+                </h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Facilitated sessions that help leadership teams clarify priorities, align decision-making structures, and develop clear implementation pathways.
+              </p>
+            </div>
+
+            {/* Service 4 - Implementation Strategy and Advisory Support */}
+            <div className="bg-gradient-to-br from-lli-orange/5 to-white border-2 border-lli-orange/20 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start mb-4">
+                <div className="bg-lli-orange text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <i className="fas fa-tasks text-xl"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Implementation Strategy and Advisory Support
+                </h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Strategic guidance to help organizations move from planning to execution with clear timelines, ownership structures, and accountability measures.
+              </p>
+            </div>
+
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-12">
+            <a 
+              href="/contact" 
+              className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            >
+              Schedule a Discovery Call <i className="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <Footer />
       
       <script src="/static/interactive-hero.js"></script>
