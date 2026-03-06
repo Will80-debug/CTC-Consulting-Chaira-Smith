@@ -271,6 +271,272 @@ export const AssessmentLandingPage = () => {
 
       </main>
 
+      {/* Organizational Culture Assessments Section */}
+      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Organizational Culture Assessments
+            </h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              Understanding workplace culture requires structured analysis. LLI Consulting Group™ offers assessment tools designed to help organizations diagnose culture challenges, identify leadership blind spots, and prioritize implementation strategies.
+            </p>
+          </div>
+
+          {/* Four-Tier Assessment Structure */}
+          <div className="space-y-8">
+            
+            {/* Tier 1 - Free Snapshot */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border-l-8 border-lli-teal hover:shadow-2xl transition-all duration-300">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                <div className="flex-1">
+                  <div className="flex items-center mb-4">
+                    <span className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-4 py-2 rounded-full font-bold text-sm uppercase tracking-wider mr-4">
+                      Tier 1
+                    </span>
+                    <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold text-sm uppercase tracking-wider">
+                      Free
+                    </span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-3">
+                    Organizational Culture Snapshot
+                  </h3>
+                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                    A short introductory assessment designed to help organizations reflect on key culture and leadership indicators.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-lli-teal/5 to-white rounded-xl p-6 mb-6">
+                <h4 className="font-bold text-gray-900 mb-4 text-lg">
+                  <i className="fas fa-check-circle text-lli-teal mr-2"></i>
+                  Includes:
+                </h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-teal text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">5–7 diagnostic questions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-teal text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">Immediate reflection insights</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-teal text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">Identification of potential organizational culture gaps</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <p className="text-gray-600 italic mb-6">
+                This tool provides an entry point for organizations exploring culture and leadership strategy.
+              </p>
+              
+              <a 
+                href="/assessment/start" 
+                className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                Start Free Snapshot <i className="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+
+            {/* Tier 2 - Diagnostic (Paid) */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border-l-8 border-lli-orange hover:shadow-2xl transition-all duration-300">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                <div className="flex-1">
+                  <div className="flex items-center mb-4">
+                    <span className="bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-4 py-2 rounded-full font-bold text-sm uppercase tracking-wider mr-4">
+                      Tier 2
+                    </span>
+                    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-bold text-sm uppercase tracking-wider">
+                      <i className="fas fa-lock mr-1"></i> Paid
+                    </span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-3">
+                    Organizational Culture Diagnostic
+                  </h3>
+                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                    A structured internal assessment designed to identify patterns affecting workplace culture, communication, and leadership dynamics.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-lli-orange/5 to-white rounded-xl p-6 mb-6">
+                <h4 className="font-bold text-gray-900 mb-4 text-lg">
+                  <i className="fas fa-check-circle text-lli-orange mr-2"></i>
+                  Includes:
+                </h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-orange text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">Expanded leadership and staff survey questions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-orange text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">Analysis of organizational culture indicators</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-orange text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">Written summary of key insights and strategic considerations</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <a 
+                href="/contact" 
+                className="inline-block bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                Request Diagnostic Access <i className="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+
+            {/* Tier 3 - Comprehensive (Consulting) */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border-l-8 border-lli-teal hover:shadow-2xl transition-all duration-300">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                <div className="flex-1">
+                  <div className="flex items-center mb-4">
+                    <span className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-4 py-2 rounded-full font-bold text-sm uppercase tracking-wider mr-4">
+                      Tier 3
+                    </span>
+                    <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-bold text-sm uppercase tracking-wider">
+                      <i className="fas fa-briefcase mr-1"></i> Consulting
+                    </span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-3">
+                    Comprehensive Organizational Culture Assessment
+                  </h3>
+                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                    A full organizational analysis designed to support long-term culture and leadership transformation.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-lli-teal/5 to-white rounded-xl p-6 mb-6">
+                <h4 className="font-bold text-gray-900 mb-4 text-lg">
+                  <i className="fas fa-check-circle text-lli-teal mr-2"></i>
+                  May Include:
+                </h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-teal text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">Staff listening sessions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-teal text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">Organizational climate surveys</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-teal text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">Communication pattern analysis</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-teal text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">Organizational policy review</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-teal text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">Leadership structure evaluation</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <p className="text-gray-600 italic mb-6">
+                Deliverables include a written report outlining findings and recommended strategic priorities.
+              </p>
+              
+              <a 
+                href="/contact" 
+                className="inline-block bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                Schedule Consultation <i className="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+
+            {/* Tier 4 - Anonymous Staff Assessment (Paid) */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border-l-8 border-lli-orange hover:shadow-2xl transition-all duration-300">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                <div className="flex-1">
+                  <div className="flex items-center mb-4">
+                    <span className="bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-4 py-2 rounded-full font-bold text-sm uppercase tracking-wider mr-4">
+                      Tier 4
+                    </span>
+                    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-bold text-sm uppercase tracking-wider">
+                      <i className="fas fa-lock mr-1"></i> Paid
+                    </span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-3">
+                    Anonymous Staff Culture Assessment
+                  </h3>
+                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                    This assessment allows staff members to participate independently and anonymously without leadership oversight. This model helps organizations understand workplace experiences that may not surface in traditional leadership assessments.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-lli-orange/5 to-white rounded-xl p-6 mb-6">
+                <h4 className="font-bold text-gray-900 mb-4 text-lg">
+                  <i className="fas fa-check-circle text-lli-orange mr-2"></i>
+                  Includes:
+                </h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-orange text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">Confidential staff survey</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-orange text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">Optional anonymous written responses</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-orange text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">Analysis of communication patterns and staff experience</span>
+                  </li>
+                  <li className="flex items-start">
+                    <i className="fas fa-circle text-lli-orange text-xs mt-2 mr-3"></i>
+                    <span className="text-gray-700">Summary insights identifying culture dynamics and implementation considerations</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                <p className="text-gray-700">
+                  <i className="fas fa-shield-alt text-yellow-600 mr-2"></i>
+                  <strong>Confidentiality Protected:</strong> Results are shared in aggregated form to protect confidentiality while helping leadership better understand staff experience.
+                </p>
+              </div>
+              
+              <a 
+                href="/contact" 
+                className="inline-block bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                Request Anonymous Assessment <i className="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+
+          </div>
+
+          {/* Note about Paid Access */}
+          <div className="mt-12 bg-gradient-to-r from-lli-black to-gray-800 rounded-2xl p-8 text-white text-center">
+            <i className="fas fa-info-circle text-3xl text-lli-teal mb-4"></i>
+            <h3 className="text-2xl font-bold mb-3">Access & Fees</h3>
+            <p className="text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed">
+              All paid assessment tiers (Tier 2, Tier 3, and Tier 4) require fee payment before access is granted. Once payment is processed, you will receive secure access credentials to your selected assessment tier.
+            </p>
+            <div className="mt-6">
+              <a 
+                href="/contact" 
+                className="inline-block bg-lli-teal text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-lli-teal-dark transition-all duration-300"
+              >
+                Contact Us for Pricing <i className="fas fa-envelope ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       <Footer />
     </div>
   )
