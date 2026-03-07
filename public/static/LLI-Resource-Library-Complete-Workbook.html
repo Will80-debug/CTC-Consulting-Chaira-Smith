@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLI Consulting Group - Complete Resource Library Workbook</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0.75in;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+        }
+
+        .cover-page {
+            text-align: center;
+            padding: 3in 1in;
+            page-break-after: always;
+            border: 4px solid #1B7F8E;
+            margin-bottom: 2in;
+        }
+
+        .logo {
+            font-size: 48pt;
+            font-weight: bold;
+            color: #1B7F8E;
+            margin-bottom: 0.5in;
+            letter-spacing: 8px;
+        }
+
+        .company-name {
+            font-size: 24pt;
+            color: #F07D00;
+            margin-bottom: 0.25in;
+            font-weight: 600;
+        }
+
+        .cover-title {
+            font-size: 36pt;
+            color: #003D4C;
+            margin: 1in 0 0.5in 0;
+            font-weight: bold;
+        }
+
+        .cover-subtitle {
+            font-size: 18pt;
+            color: #666;
+            margin-bottom: 1in;
+        }
+
+        .cover-date {
+            font-size: 14pt;
+            color: #999;
+        }
+
+        h1 {
+            color: #003D4C;
+            font-size: 28pt;
+            margin: 0.5in 0 0.25in 0;
+            padding-bottom: 0.1in;
+            border-bottom: 3px solid #1B7F8E;
+            page-break-before: always;
+        }
+
+        h2 {
+            color: #1B7F8E;
+            font-size: 20pt;
+            margin: 0.3in 0 0.15in 0;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            color: #F07D00;
+            font-size: 16pt;
+            margin: 0.25in 0 0.1in 0;
+            page-break-after: avoid;
+        }
+
+        .table-of-contents {
+            page-break-after: always;
+            margin-bottom: 0.5in;
+        }
+
+        .toc-section {
+            margin: 0.2in 0;
+        }
+
+        .toc-item {
+            margin-left: 0.25in;
+            padding: 0.05in 0;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        .resource-card {
+            border: 2px solid #1B7F8E;
+            border-radius: 8px;
+            padding: 0.25in;
+            margin: 0.25in 0;
+            background: #f9f9f9;
+            page-break-inside: avoid;
+        }
+
+        .resource-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.15in;
+            border-bottom: 2px solid #F07D00;
+            padding-bottom: 0.1in;
+        }
+
+        .resource-title {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #003D4C;
+            flex: 1;
+        }
+
+        .resource-meta {
+            font-size: 10pt;
+            color: #666;
+            text-align: right;
+        }
+
+        .resource-type {
+            display: inline-block;
+            background: #1B7F8E;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 9pt;
+            margin-right: 8px;
+        }
+
+        .resource-description {
+            font-size: 11pt;
+            color: #333;
+            margin: 0.1in 0;
+            line-height: 1.5;
+        }
+
+        .workbook-section {
+            margin: 0.3in 0 0.5in 0;
+            padding: 0.2in;
+            border-left: 4px solid #F07D00;
+            background: #fffef8;
+            page-break-inside: avoid;
+        }
+
+        .notes-section {
+            margin-top: 0.15in;
+            padding: 0.15in;
+            background: white;
+            border: 1px solid #ddd;
+            min-height: 1in;
+        }
+
+        .notes-label {
+            font-weight: bold;
+            color: #1B7F8E;
+            font-size: 10pt;
+            margin-bottom: 0.05in;
+        }
+
+        .notes-lines {
+            border-top: 1px solid #ddd;
+            padding-top: 0.1in;
+        }
+
+        .notes-line {
+            border-bottom: 1px solid #e0e0e0;
+            min-height: 0.25in;
+            margin: 0.05in 0;
+        }
+
+        .category-intro {
+            background: linear-gradient(135deg, #1B7F8E 0%, #003D4C 100%);
+            color: white;
+            padding: 0.25in;
+            margin: 0.25in 0;
+            border-radius: 8px;
+            page-break-inside: avoid;
+        }
+
+        .category-count {
+            font-size: 10pt;
+            color: #F07D00;
+            font-weight: bold;
+            background: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 0.1in;
+        }
+
+        footer {
+            text-align: center;
+            color: #999;
+            font-size: 9pt;
+            margin-top: 0.5in;
+            padding-top: 0.2in;
+            border-top: 1px solid #ddd;
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+            }
+            
+            .no-print {
+                display: none;
+            }
+
+            .resource-card {
+                page-break-inside: avoid;
+            }
+
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+        }
+
+        @media screen {
+            body {
+                background: #f5f5f5;
+                padding: 1in;
+            }
+
+            .print-button {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #1B7F8E;
+                color: white;
+                padding: 12px 24px;
+                border: none;
+                border-radius: 6px;
+                font-size: 14pt;
+                cursor: pointer;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+
+            .print-button:hover {
+                background: #003D4C;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Print Button (hidden when printing) -->
+    <button class="print-button no-print" onclick="window.print()">🖨️ Print Workbook</button>
+
+    <!-- Cover Page -->
+    <div class="cover-page">
+        <div class="logo">LLI</div>
+        <div class="company-name">CONSULTING GROUP™</div>
+        <div class="cover-title">Complete Resource Library Workbook</div>
+        <div class="cover-subtitle">A Comprehensive Collection of Leadership, DEI, Change Management, and Strategic Planning Tools</div>
+        <div class="cover-date">© 2024 LLI Consulting Group. All Rights Reserved.</div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="table-of-contents">
+        <h1>Table of Contents</h1>
+        
+        <div class="toc-section">
+            <h2>Section 1: Leadership Development Resources</h2>
+            <div class="toc-item">1.1 Emotional Intelligence for Leaders (8 pages)</div>
+            <div class="toc-item">1.2 Feedback Framework (6 pages)</div>
+            <div class="toc-item">1.3 Decision-Making Under Pressure (10 pages)</div>
+            <div class="toc-item">1.4 Authentic Leadership Series (18 pages)</div>
+            <div class="toc-item">1.5 Delegation Mastery Workbook (12 pages)</div>
+            <div class="toc-item">1.6 Coaching Conversation Guide (7 pages)</div>
+            <div class="toc-item">1.7 Executive Presence Blueprint (9 pages)</div>
+            <div class="toc-item">1.8 Team Dynamics Assessment (11 pages)</div>
+            <div class="toc-item">1.9 Strategic Thinking Toolkit (14 pages)</div>
+            <div class="toc-item">1.10 Conflict Resolution Playbook (13 pages)</div>
+            <div class="toc-item">1.11 Leadership Communication Essentials (10 pages)</div>
+            <div class="toc-item">1.12 Innovation Leadership Workshop (16 pages)</div>
+        </div>
+
+        <div class="toc-section">
+            <h2>Section 2: DEI & Culture Resources</h2>
+            <div class="toc-item">2.1 Unconscious Bias Training Module (24 pages)</div>
+            <div class="toc-item">2.2 Inclusive Language Handbook (15 pages)</div>
+            <div class="toc-item">2.3 Microaggression Awareness Guide (9 pages)</div>
+            <div class="toc-item">2.4 Allyship Action Plan (12 pages)</div>
+            <div class="toc-item">2.5 Psychological Safety Assessment (8 pages)</div>
+            <div class="toc-item">2.6 DEI Metrics Dashboard (11 pages)</div>
+            <div class="toc-item">2.7 Equity Audit Framework (18 pages)</div>
+            <div class="toc-item">2.8 Intersectionality Workshop Series (28 pages)</div>
+            <div class="toc-item">2.9 Disability Inclusion Toolkit (16 pages)</div>
+            <div class="toc-item">2.10 LGBTQ+ Workplace Inclusion Guide (13 pages)</div>
+            <div class="toc-item">2.11 Cultural Competency Training (22 pages)</div>
+            <div class="toc-item">2.12 Racial Equity Framework (20 pages)</div>
+            <div class="toc-item">2.13 Gender Equity in the Workplace (14 pages)</div>
+            <div class="toc-item">2.14 Inclusive Recruitment Strategies (17 pages)</div>
+            <div class="toc-item">2.15 Religious Diversity & Accommodation (10 pages)</div>
+            <div class="toc-item">2.16 Generational Diversity Workshop (19 pages)</div>
+            <div class="toc-item">2.17 Neurodiversity Inclusion Guide (12 pages)</div>
+            <div class="toc-item">2.18 DEI Storytelling Workshop (15 pages)</div>
+        </div>
+
+        <div class="toc-section">
+            <h2>Section 3: Change Management Resources</h2>
+            <div class="toc-item">3.1 Change Readiness Assessment (10 pages)</div>
+            <div class="toc-item">3.2 Stakeholder Mapping Template (7 pages)</div>
+            <div class="toc-item">3.3 Communication Plan Builder (13 pages)</div>
+            <div class="toc-item">3.4 Resistance Management Strategies (15 pages)</div>
+            <div class="toc-item">3.5 Change Impact Analysis (11 pages)</div>
+            <div class="toc-item">3.6 Pilot Program Framework (9 pages)</div>
+            <div class="toc-item">3.7 Change Champion Training (23 pages)</div>
+            <div class="toc-item">3.8 Organizational Culture Shift Guide (22 pages)</div>
+            <div class="toc-item">3.9 Transition Management Toolkit (14 pages)</div>
+        </div>
+
+        <div class="toc-section">
+            <h2>Section 4: Strategic Planning Resources</h2>
+            <div class="toc-item">4.1 Strategic Planning Canvas (6 pages)</div>
+            <div class="toc-item">4.2 Vision & Mission Workbook (8 pages)</div>
+            <div class="toc-item">4.3 SWOT Analysis Template (5 pages)</div>
+            <div class="toc-item">4.4 Goal Setting Framework (12 pages)</div>
+            <div class="toc-item">4.5 Scenario Planning Workshop (26 pages)</div>
+            <div class="toc-item">4.6 Competitive Analysis Framework (14 pages)</div>
+            <div class="toc-item">4.7 Resource Allocation Model (10 pages)</div>
+        </div>
+    </div>
+
+    <!-- Section 1: Leadership Development -->
+    <h1>Section 1: Leadership Development Resources</h1>
+    
+    <div class="category-intro">
+        <h2 style="color: white; margin: 0;">Leadership Development</h2>
+        <p style="margin-top: 0.1in;">Build essential leadership capabilities through comprehensive frameworks, assessments, and practical tools designed for modern organizational leaders.</p>
+        <span class="category-count">12 Resources</span>
+    </div>
+
+    <!-- Resource 1.1 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">1.1 Emotional Intelligence for Leaders</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                8 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Guide to developing EQ competencies for effective leadership
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Self-awareness and emotional regulation</li>
+                <li>Empathy and social awareness development</li>
+                <li>Relationship management strategies</li>
+                <li>EQ assessment tools and benchmarks</li>
+                <li>Practical exercises for daily EQ practice</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 1.2 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">1.2 Feedback Framework</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                6 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Master the art of giving and receiving constructive feedback
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>SBI (Situation-Behavior-Impact) model</li>
+                <li>Creating psychological safety for feedback</li>
+                <li>Receiving feedback with growth mindset</li>
+                <li>Feedback conversation templates</li>
+                <li>360-degree feedback implementation</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 1.3 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">1.3 Decision-Making Under Pressure</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                10 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Strategic frameworks for critical decisions in high-stakes situations
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Cognitive biases in decision-making</li>
+                <li>Rapid decision-making frameworks</li>
+                <li>Risk assessment and mitigation strategies</li>
+                <li>Crisis decision protocols</li>
+                <li>Post-decision review processes</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 1.4 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">1.4 Authentic Leadership Series</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                18 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            4-part guide on leading with authenticity and vulnerability
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Part 1: Discovering your authentic leadership voice</li>
+                <li>Part 2: Vulnerability as a leadership strength</li>
+                <li>Part 3: Building trust through authenticity</li>
+                <li>Part 4: Sustaining authentic leadership practices</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 1.5 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">1.5 Delegation Mastery Workbook</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                12 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Learn to delegate effectively and empower your team members
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Identifying tasks for delegation</li>
+                <li>Matching tasks to team member strengths</li>
+                <li>Setting clear expectations and accountability</li>
+                <li>Providing support without micromanaging</li>
+                <li>Delegation tracking templates</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 1.6 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">1.6 Coaching Conversation Guide</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                7 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Proven templates for powerful, transformative coaching conversations
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>GROW model for coaching</li>
+                <li>Powerful questioning techniques</li>
+                <li>Active listening skills development</li>
+                <li>Goal-setting and accountability frameworks</li>
+                <li>Sample coaching conversation scripts</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 1.7 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">1.7 Executive Presence Blueprint</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                9 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Build commanding presence and influential communication skills
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Components of executive presence</li>
+                <li>Body language and nonverbal communication</li>
+                <li>Voice and presentation skills</li>
+                <li>Managing difficult conversations</li>
+                <li>Building gravitas and credibility</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 1.8 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">1.8 Team Dynamics Assessment</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                11 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Evaluate and improve your team's collaboration patterns
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Team health diagnostic tools</li>
+                <li>Communication pattern analysis</li>
+                <li>Identifying team dysfunction</li>
+                <li>Building high-performing teams</li>
+                <li>Team development action plans</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 1.9 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">1.9 Strategic Thinking Toolkit</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                14 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Develop long-term strategic thinking capabilities
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Systems thinking fundamentals</li>
+                <li>Pattern recognition and trend analysis</li>
+                <li>Future-focused thinking exercises</li>
+                <li>Strategic problem-solving frameworks</li>
+                <li>Balancing short-term and long-term priorities</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 1.10 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">1.10 Conflict Resolution Playbook</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                13 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Navigate workplace conflicts with confidence and skill
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Conflict styles assessment (Thomas-Kilmann)</li>
+                <li>De-escalation techniques</li>
+                <li>Mediation and facilitation skills</li>
+                <li>Interest-based negotiation</li>
+                <li>Building agreements that last</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 1.11 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">1.11 Leadership Communication Essentials</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                10 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Master the core communication skills every leader needs
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Clear and concise messaging</li>
+                <li>Storytelling for leadership impact</li>
+                <li>Adapting communication styles</li>
+                <li>Virtual communication best practices</li>
+                <li>Leading through transparent communication</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 1.12 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">1.12 Innovation Leadership Workshop</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                16 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Foster innovation and creative problem-solving in your team
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Creating a culture of innovation</li>
+                <li>Design thinking methodologies</li>
+                <li>Encouraging experimentation and learning from failure</li>
+                <li>Innovation process frameworks</li>
+                <li>Leading creative brainstorming sessions</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2: DEI & Culture -->
+    <h1>Section 2: DEI & Culture Resources</h1>
+    
+    <div class="category-intro">
+        <h2 style="color: white; margin: 0;">Diversity, Equity, Inclusion & Culture</h2>
+        <p style="margin-top: 0.1in;">Comprehensive frameworks and practical tools for building inclusive, equitable workplaces where everyone can thrive and contribute their best work.</p>
+        <span class="category-count">18 Resources</span>
+    </div>
+
+    <!-- Resource 2.1 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.1 Unconscious Bias Training Module</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                24 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Recognize and mitigate unconscious biases in decision-making
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Types of cognitive biases (confirmation, affinity, halo effect)</li>
+                <li>Implicit Association Tests and self-assessment</li>
+                <li>Bias in hiring, promotion, and performance reviews</li>
+                <li>Structured decision-making processes</li>
+                <li>Creating accountability for bias interruption</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.2 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.2 Inclusive Language Handbook</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                15 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Comprehensive guide to inclusive and respectful communication
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Gender-inclusive language and pronouns</li>
+                <li>Disability language etiquette</li>
+                <li>Race and ethnicity terminology</li>
+                <li>Age-inclusive communication</li>
+                <li>Avoiding coded language and microaggressions</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.3 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.3 Microaggression Awareness Guide</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                9 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Identify and address subtle forms of discrimination
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>What are microaggressions and why they matter</li>
+                <li>Common microaggression examples across identities</li>
+                <li>Impact on individuals and organizational culture</li>
+                <li>How to respond when witnessing microaggressions</li>
+                <li>Creating accountability and repair processes</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.4 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.4 Allyship Action Plan</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                12 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Move from awareness to meaningful allyship actions
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>The spectrum from awareness to accomplice</li>
+                <li>Listening, learning, and amplifying marginalized voices</li>
+                <li>Using privilege for advocacy</li>
+                <li>Accountability and continuous learning</li>
+                <li>Creating a personal allyship action plan</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.5 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.5 Psychological Safety Assessment</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                8 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Measure and improve team psychological safety
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Amy Edmondson's psychological safety framework</li>
+                <li>Team psychological safety assessment survey</li>
+                <li>Indicators of high vs. low psychological safety</li>
+                <li>Building trust and reducing fear</li>
+                <li>Action planning for improvement</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.6 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.6 DEI Metrics Dashboard</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                11 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Track meaningful diversity and inclusion indicators
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Representation metrics across levels</li>
+                <li>Pay equity analysis frameworks</li>
+                <li>Retention and attrition by demographic</li>
+                <li>Promotion and advancement tracking</li>
+                <li>Engagement and belonging surveys</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.7 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.7 Equity Audit Framework</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                18 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Conduct comprehensive equity assessments in your organization
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Designing an equity audit process</li>
+                <li>Policy and practice review</li>
+                <li>Compensation and benefits equity analysis</li>
+                <li>Access and opportunity assessment</li>
+                <li>Creating action plans from audit findings</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.8 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.8 Intersectionality Workshop Series</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                28 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Understanding overlapping identities and experiences
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Kimberlé Crenshaw's intersectionality framework</li>
+                <li>How multiple identities create unique experiences</li>
+                <li>Intersectionality in workplace policies</li>
+                <li>Avoiding single-axis thinking in DEI work</li>
+                <li>Creating intersectional equity strategies</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.9 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.9 Disability Inclusion Toolkit</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                16 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Create accessible and inclusive workplaces
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>ADA compliance and reasonable accommodations</li>
+                <li>Physical and digital accessibility standards</li>
+                <li>Inclusive hiring practices for disabled candidates</li>
+                <li>Disability etiquette and language</li>
+                <li>Creating disability-inclusive cultures</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.10 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.10 LGBTQ+ Workplace Inclusion Guide</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                13 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Foster belonging for LGBTQ+ employees year-round
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>LGBTQ+ inclusive policies and benefits</li>
+                <li>Pronoun usage and name changes</li>
+                <li>Creating gender-neutral spaces</li>
+                <li>Supporting transgender and non-binary employees</li>
+                <li>LGBTQ+ allyship and ERG support</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.11 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.11 Cultural Competency Training</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                22 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Develop cross-cultural awareness and sensitivity
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Understanding cultural dimensions and values</li>
+                <li>Communication styles across cultures</li>
+                <li>Navigating cultural differences in teams</li>
+                <li>Avoiding cultural stereotypes</li>
+                <li>Building multicultural collaboration</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.12 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.12 Racial Equity Framework</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                20 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Address systemic racism in organizational practices
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Understanding systemic and structural racism</li>
+                <li>Racial equity vs. equality</li>
+                <li>Antiracist organizational practices</li>
+                <li>Addressing racial disparities in outcomes</li>
+                <li>Accountability and sustainability in racial equity work</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.13 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.13 Gender Equity in the Workplace</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                14 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Strategies to close gender gaps and promote equity
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Gender pay gap analysis and remediation</li>
+                <li>Addressing bias in hiring and promotion</li>
+                <li>Work-life balance and caregiving policies</li>
+                <li>Women in leadership development</li>
+                <li>Creating gender-equitable cultures</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.14 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.14 Inclusive Recruitment Strategies</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                17 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Build diverse talent pipelines and reduce hiring bias
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Writing inclusive job descriptions</li>
+                <li>Expanding sourcing strategies</li>
+                <li>Structured interviews and blind resume reviews</li>
+                <li>Diverse interview panels</li>
+                <li>Equitable candidate evaluation</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.15 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.15 Religious Diversity & Accommodation</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                10 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Respect and support diverse faith practices at work
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Legal requirements for religious accommodations</li>
+                <li>Creating multi-faith inclusive spaces</li>
+                <li>Holiday calendar diversity</li>
+                <li>Dress code and religious expression</li>
+                <li>Respectful interfaith dialogue</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.16 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.16 Generational Diversity Workshop</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                19 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Bridge generational gaps and leverage diverse perspectives
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Understanding generational cohorts and values</li>
+                <li>Communication preferences across generations</li>
+                <li>Avoiding ageism and stereotypes</li>
+                <li>Mentorship and reverse mentorship</li>
+                <li>Creating age-inclusive cultures</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.17 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.17 Neurodiversity Inclusion Guide</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                12 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Support neurodivergent employees and create inclusive environments
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Understanding neurodiversity (ADHD, autism, dyslexia, etc.)</li>
+                <li>Workplace accommodations for neurodivergent employees</li>
+                <li>Sensory-friendly workspace design</li>
+                <li>Communication and collaboration strategies</li>
+                <li>Strengths-based approach to neurodiversity</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 2.18 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">2.18 DEI Storytelling Workshop</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                15 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Share authentic stories to drive cultural transformation
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>The power of narrative in DEI work</li>
+                <li>Creating safe spaces for story sharing</li>
+                <li>Storytelling ethics and consent</li>
+                <li>Using stories to build empathy and understanding</li>
+                <li>Amplifying marginalized voices</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Change Management -->
+    <h1>Section 3: Change Management Resources</h1>
+    
+    <div class="category-intro">
+        <h2 style="color: white; margin: 0;">Change Management</h2>
+        <p style="margin-top: 0.1in;">Navigate organizational transformation effectively with proven frameworks and tools for managing change, stakeholder engagement, and cultural shifts.</p>
+        <span class="category-count">9 Resources</span>
+    </div>
+
+    <!-- Resource 3.1 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">3.1 Change Readiness Assessment</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                10 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Evaluate organizational readiness for transformation
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Organizational change readiness diagnostic</li>
+                <li>Leadership commitment and capacity</li>
+                <li>Culture and history of change</li>
+                <li>Resource availability assessment</li>
+                <li>Risk identification and mitigation</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 3.2 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">3.2 Stakeholder Mapping Template</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                7 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Identify and analyze key stakeholders for change initiatives
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Power/interest stakeholder matrix</li>
+                <li>Stakeholder influence and impact analysis</li>
+                <li>Engagement strategies by stakeholder type</li>
+                <li>Building stakeholder coalitions</li>
+                <li>Managing resistance and opposition</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 3.3 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">3.3 Communication Plan Builder</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                13 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Create effective change communication strategies
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Communication planning framework</li>
+                <li>Key messages and timing strategies</li>
+                <li>Channel selection and audience segmentation</li>
+                <li>Two-way communication mechanisms</li>
+                <li>Measuring communication effectiveness</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 3.4 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">3.4 Resistance Management Strategies</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                15 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Address and overcome resistance to organizational change
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Understanding sources of resistance</li>
+                <li>Types of resistance (active, passive, overt, covert)</li>
+                <li>Listening to legitimate concerns</li>
+                <li>Strategies for reducing resistance</li>
+                <li>Building buy-in and commitment</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 3.5 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">3.5 Change Impact Analysis</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                11 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Assess and plan for the ripple effects of organizational change
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Impact assessment frameworks</li>
+                <li>Identifying affected groups and processes</li>
+                <li>Quantifying change magnitude</li>
+                <li>Sequencing and phasing strategies</li>
+                <li>Support and training needs analysis</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 3.6 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">3.6 Pilot Program Framework</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                9 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Test changes on a small scale before full implementation
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Designing effective pilot programs</li>
+                <li>Selecting pilot groups and locations</li>
+                <li>Success criteria and metrics</li>
+                <li>Learning and iteration processes</li>
+                <li>Scaling from pilot to full rollout</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 3.7 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">3.7 Change Champion Training</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                23 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Develop internal advocates to support change initiatives
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Selecting and recruiting change champions</li>
+                <li>Change champion roles and responsibilities</li>
+                <li>Building champion networks</li>
+                <li>Equipping champions with tools and resources</li>
+                <li>Sustaining champion engagement</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 3.8 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">3.8 Organizational Culture Shift Guide</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                22 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Navigate deep cultural transformation systematically
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Assessing current vs. desired culture</li>
+                <li>The iceberg model of organizational culture</li>
+                <li>Shifting behaviors, systems, and mindsets</li>
+                <li>Leadership's role in culture change</li>
+                <li>Sustaining culture shifts over time</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 3.9 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">3.9 Transition Management Toolkit</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                14 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Support individuals through organizational transitions
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>William Bridges' transition model</li>
+                <li>Supporting employees through endings and neutral zones</li>
+                <li>Creating new beginnings</li>
+                <li>Addressing the emotional aspects of change</li>
+                <li>Coaching individuals through transition</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 4: Strategic Planning -->
+    <h1>Section 4: Strategic Planning Resources</h1>
+    
+    <div class="category-intro">
+        <h2 style="color: white; margin: 0;">Strategic Planning</h2>
+        <p style="margin-top: 0.1in;">Essential frameworks and tools for developing organizational strategy, setting goals, and creating actionable plans for sustainable success.</p>
+        <span class="category-count">7 Resources</span>
+    </div>
+
+    <!-- Resource 4.1 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">4.1 Strategic Planning Canvas</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                6 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Visual framework for developing organizational strategy
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>One-page strategic planning template</li>
+                <li>Aligning mission, vision, and values</li>
+                <li>Strategic priorities and initiatives</li>
+                <li>Success measures and KPIs</li>
+                <li>Resource allocation planning</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 4.2 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">4.2 Vision & Mission Workbook</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                8 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Craft compelling vision and mission statements
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Elements of effective vision statements</li>
+                <li>Mission statement development process</li>
+                <li>Values clarification exercises</li>
+                <li>Testing and refining statements</li>
+                <li>Bringing vision and mission to life</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 4.3 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">4.3 SWOT Analysis Template</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                5 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Comprehensive strengths, weaknesses, opportunities, threats analysis
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Conducting internal strengths/weaknesses assessment</li>
+                <li>Identifying external opportunities and threats</li>
+                <li>Strategic implications of SWOT findings</li>
+                <li>Converting analysis into action strategies</li>
+                <li>SWOT facilitation guidelines</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 4.4 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">4.4 Goal Setting Framework</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                12 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            SMART goals and OKR implementation guide
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>SMART goal methodology</li>
+                <li>Objectives and Key Results (OKRs)</li>
+                <li>Cascading goals through the organization</li>
+                <li>Progress tracking and accountability</li>
+                <li>Goal review and adjustment processes</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 4.5 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">4.5 Scenario Planning Workshop</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                26 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Prepare for multiple possible futures through scenario analysis
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Scenario planning methodology</li>
+                <li>Identifying critical uncertainties</li>
+                <li>Building multiple future scenarios</li>
+                <li>Testing strategies across scenarios</li>
+                <li>Developing adaptive strategies</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 4.6 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">4.6 Competitive Analysis Framework</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                14 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Analyze market position and competitive advantages
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Competitive landscape mapping</li>
+                <li>Porter's Five Forces analysis</li>
+                <li>Competitive positioning strategies</li>
+                <li>Differentiation and advantage identification</li>
+                <li>Competitive intelligence gathering</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource 4.7 -->
+    <div class="resource-card">
+        <div class="resource-header">
+            <div class="resource-title">4.7 Resource Allocation Model</div>
+            <div class="resource-meta">
+                <span class="resource-type">PDF</span>
+                10 pages
+            </div>
+        </div>
+        <div class="resource-description">
+            Optimize allocation of financial and human resources
+        </div>
+        <div class="workbook-section">
+            <h3>Key Topics Covered:</h3>
+            <ul style="margin-left: 0.3in; line-height: 1.8;">
+                <li>Strategic resource allocation principles</li>
+                <li>Portfolio management and prioritization</li>
+                <li>Cost-benefit analysis frameworks</li>
+                <li>Capacity planning and utilization</li>
+                <li>Monitoring and adjusting resource allocation</li>
+            </ul>
+        </div>
+        <div class="notes-section">
+            <div class="notes-label">📝 Your Notes & Action Items:</div>
+            <div class="notes-lines">
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+                <div class="notes-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>LLI Consulting Group™</strong></p>
+        <p>Listen → Learn → Implement</p>
+        <p>For more resources and consulting services, visit: <strong>www.lliconsultinggroup.com</strong></p>
+        <p style="margin-top: 0.2in;">© 2024 LLI Consulting Group. All Rights Reserved.</p>
+        <p style="font-size: 8pt; margin-top: 0.1in;">This workbook is intended for educational and planning purposes. All frameworks and tools are proprietary to LLI Consulting Group.</p>
+    </footer>
+
+</body>
+</html>
