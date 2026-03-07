@@ -519,18 +519,29 @@ export const ResourcesPage = () => {
               </div>
             </div>
 
-            <a 
-              href="/static/LLI-Resource-Library-Complete-Workbook.html" 
-              target="_blank"
-              download="LLI-Complete-Resource-Library-Workbook.html"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-lli-orange to-orange-600 text-white font-bold px-10 py-5 rounded-lg shadow-xl hover:shadow-2xl transform transition-all duration-200 hover:scale-105 text-lg"
-            >
-              <i className="fas fa-download text-2xl"></i>
-              <span>Download Complete Workbook</span>
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a 
+                href="/static/LLI-Resource-Library-Complete-Workbook.html" 
+                target="_blank"
+                download="LLI-Complete-Resource-Library-Workbook.html"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-lli-orange to-orange-600 text-white font-bold px-10 py-5 rounded-lg shadow-xl hover:shadow-2xl transform transition-all duration-200 hover:scale-105 text-lg"
+              >
+                <i className="fas fa-file-code text-2xl"></i>
+                <span>Download HTML</span>
+              </a>
+              
+              <a 
+                href="/static/LLI-Resource-Library-Complete-Workbook.zip" 
+                download="LLI-Resource-Library-Complete-Workbook.zip"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold px-10 py-5 rounded-lg shadow-xl hover:shadow-2xl transform transition-all duration-200 hover:scale-105 text-lg"
+              >
+                <i className="fas fa-file-archive text-2xl"></i>
+                <span>Download ZIP</span>
+              </a>
+            </div>
             
             <p className="text-sm text-gray-500 mt-6">
-              Free download • HTML format • Open in browser and print • 46 comprehensive resources
+              Free download • HTML format (open in browser) or ZIP format (save to computer) • 46 comprehensive resources
             </p>
           </div>
         </div>
