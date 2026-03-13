@@ -26,7 +26,7 @@ const dimensionInfo = {
     ]
   },
   dei: {
-    name: 'DEI Readiness',
+    name: 'Inclusion & Equity',
     icon: 'fa-users',
     description: 'Your commitment to diversity, equity, and inclusion',
     recommendations: [

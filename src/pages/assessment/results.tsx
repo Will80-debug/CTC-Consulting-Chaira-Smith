@@ -192,12 +192,12 @@ export const AssessmentResultsPage = () => {
                 </div>
               </div>
 
-              {/* DEI */}
+              {/* Inclusion & Equity */}
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center">
                     <i className="fas fa-users text-2xl text-lli-orange mr-3"></i>
-                    <span className="font-bold text-lg text-gray-900">DEI Readiness</span>
+                    <span className="font-bold text-lg text-gray-900">Inclusion & Equity</span>
                   </div>
                   <span id="dei-score" className="text-2xl font-bold text-lli-orange">0</span>
                 </div>

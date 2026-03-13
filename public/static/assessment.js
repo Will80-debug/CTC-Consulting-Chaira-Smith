@@ -126,6 +126,9 @@ function renderQuestion(index) {
       </div>
     </div>
   `;
+  
+  // Update navigation buttons after rendering
+  updateNavigationButtons();
 }
 
 // Select Answer
@@ -211,9 +214,13 @@ function submitAssessment() {
   // Calculate results
   const results = calculateResults();
   
+  // Add timestamp
+  const timestamp = new Date().toISOString();
+  
   // Save results to localStorage
   localStorage.setItem('lli_assessment_results', JSON.stringify(results));
   localStorage.setItem('lli_assessment_answers', JSON.stringify(answers));
+  localStorage.setItem('lli_assessment_timestamp', timestamp);
   
   // Redirect to results page
   window.location.href = '/assessment/results';
