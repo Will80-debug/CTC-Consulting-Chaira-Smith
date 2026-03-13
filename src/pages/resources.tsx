@@ -303,6 +303,172 @@ export const ResourcesPage = () => {
         </div>
       </section>
 
+      {/* Payment Form Modal */}
+      <div id="payment-modal" className="hidden fixed inset-0 bg-black bg-opacity-60 z-[60] flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="p-8">
+            {/* Close Button */}
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-3xl font-bold text-gray-900">Complete Your Purchase</h2>
+              <button onclick="closePaymentModal()" className="text-gray-400 hover:text-gray-600 transition-colors">
+                <i className="fas fa-times text-2xl"></i>
+              </button>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Left Column - Order Summary */}
+              <div className="bg-gradient-to-br from-lli-teal/5 to-white rounded-xl p-6 border-2 border-lli-teal/20">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <i className="fas fa-shopping-bag text-lli-orange mr-3"></i>
+                  Order Summary
+                </h3>
+                
+                <div className="mb-4 pb-4 border-b border-gray-200">
+                  <p id="payment-resource-name" className="font-bold text-lg text-gray-900 mb-2">Resource Name</p>
+                  <ul id="order-summary-list" className="space-y-2">
+                    {/* Populated by JavaScript */}
+                  </ul>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex justify-between text-gray-700">
+                    <span>Subtotal:</span>
+                    <span className="font-semibold">$39.00</span>
+                  </div>
+                  <div className="flex justify-between text-gray-700">
+                    <span>Tax:</span>
+                    <span className="font-semibold">$0.00</span>
+                  </div>
+                  <div className="flex justify-between text-xl font-bold text-gray-900 pt-3 border-t-2 border-gray-300">
+                    <span>Total:</span>
+                    <span className="text-lli-orange">$39.00</span>
+                  </div>
+                </div>
+
+                <div className="mt-6 bg-green-50 border-l-4 border-green-500 rounded p-3">
+                  <p className="text-sm text-green-800 flex items-start">
+                    <i className="fas fa-download text-green-600 mr-2 mt-1"></i>
+                    <span><strong>Instant Access:</strong> Download link sent to your email immediately after payment.</span>
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Column - Payment Form */}
+              <div>
+                <form id="payment-form" onsubmit="submitPayment(event); return false;">
+                  <div className="space-y-4">
+                    {/* Email */}
+                    <div>
+                      <label className="block text-sm font-bold text-gray-700 mb-2">
+                        <i className="fas fa-envelope text-lli-teal mr-2"></i>
+                        Email Address
+                      </label>
+                      <input 
+                        type="email" 
+                        id="payment-email"
+                        required
+                        placeholder="your@email.com"
+                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none"
+                      />
+                      <p className="text-xs text-gray-500 mt-1">Download link will be sent here</p>
+                    </div>
+
+                    {/* Card Name */}
+                    <div>
+                      <label className="block text-sm font-bold text-gray-700 mb-2">
+                        <i className="fas fa-user text-lli-teal mr-2"></i>
+                        Cardholder Name
+                      </label>
+                      <input 
+                        type="text" 
+                        id="card-name"
+                        required
+                        placeholder="John Doe"
+                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none"
+                      />
+                    </div>
+
+                    {/* Card Number */}
+                    <div>
+                      <label className="block text-sm font-bold text-gray-700 mb-2">
+                        <i className="fas fa-credit-card text-lli-teal mr-2"></i>
+                        Card Number
+                      </label>
+                      <input 
+                        type="text" 
+                        id="card-number"
+                        required
+                        placeholder="1234 5678 9012 3456"
+                        maxlength="19"
+                        pattern="[0-9\s]+"
+                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none"
+                      />
+                    </div>
+
+                    {/* Expiry and CVV */}
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-bold text-gray-700 mb-2">
+                          <i className="fas fa-calendar text-lli-teal mr-2"></i>
+                          Expiry Date
+                        </label>
+                        <input 
+                          type="text" 
+                          id="expiry"
+                          required
+                          placeholder="MM/YY"
+                          maxlength="5"
+                          pattern="[0-9\/]+"
+                          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-bold text-gray-700 mb-2">
+                          <i className="fas fa-lock text-lli-teal mr-2"></i>
+                          CVV
+                        </label>
+                        <input 
+                          type="text" 
+                          id="cvv"
+                          required
+                          placeholder="123"
+                          maxlength="4"
+                          pattern="[0-9]+"
+                          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Security Badge */}
+                    <div className="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-3 mt-4">
+                      <div className="flex items-center text-sm text-blue-800">
+                        <i className="fas fa-shield-alt text-blue-600 text-lg mr-2"></i>
+                        <span><strong>256-bit SSL Encryption</strong> - Your payment is secure</span>
+                      </div>
+                    </div>
+
+                    {/* Submit Button */}
+                    <button 
+                      type="submit"
+                      id="submit-payment-btn"
+                      className="w-full bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white font-bold py-4 px-8 rounded-xl text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 mt-6"
+                    >
+                      <i className="fas fa-lock mr-2"></i>
+                      Pay $39.00 Now
+                    </button>
+
+                    <p className="text-center text-xs text-gray-500 mt-3">
+                      <i className="fas fa-check-circle text-green-500 mr-1"></i>
+                      100% Money-Back Guarantee • Secure Payment • Instant Access
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Resource Payment Modal */}
       <div id="resource-modal" className="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
@@ -471,18 +637,62 @@ export const ResourcesPage = () => {
         }
 
         function processPurchase() {
-          // Simulate payment processing
-          const button = event.target;
-          const originalText = button.innerHTML;
-          button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Processing...';
-          button.disabled = true;
+          // Show payment form modal
+          document.getElementById('payment-modal').classList.remove('hidden');
+          document.getElementById('payment-resource-name').textContent = resourceData[currentResource].title;
+          
+          // Populate order summary
+          const summaryList = document.getElementById('order-summary-list');
+          summaryList.innerHTML = '';
+          resourceData[currentResource].features.forEach((feature, index) => {
+            if (index < 5) { // Show first 5 features in summary
+              const li = document.createElement('li');
+              li.className = 'flex items-start text-sm';
+              li.innerHTML = '<i class="fas fa-check text-lli-teal mr-2 mt-1"></i><span class="text-gray-700">' + feature + '</span>';
+              summaryList.appendChild(li);
+            }
+          });
+        }
 
+        function closePaymentModal() {
+          document.getElementById('payment-modal').classList.add('hidden');
+        }
+
+        function submitPayment(event) {
+          event.preventDefault();
+          
+          // Get form values
+          const cardNumber = document.getElementById('card-number').value;
+          const cardName = document.getElementById('card-name').value;
+          const expiry = document.getElementById('expiry').value;
+          const cvv = document.getElementById('cvv').value;
+          const email = document.getElementById('payment-email').value;
+          
+          // Validate
+          if (!cardNumber || !cardName || !expiry || !cvv || !email) {
+            alert('Please fill in all payment fields');
+            return;
+          }
+          
+          // Show processing
+          const button = document.getElementById('submit-payment-btn');
+          const originalText = button.innerHTML;
+          button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Processing Payment...';
+          button.disabled = true;
+          
+          // Simulate payment processing
           setTimeout(() => {
-            alert('Payment processing feature coming soon! For now, please contact us at info@lliconsultinggroup.com to purchase this resource.');
             button.innerHTML = originalText;
             button.disabled = false;
+            closePaymentModal();
             closeResourceModal();
-          }, 1500);
+            
+            // Show success message
+            alert('Payment processing feature coming soon! For now, please contact us at info@lliconsultinggroup.com to purchase this resource. We will send the download link to: ' + email);
+            
+            // Reset form
+            document.getElementById('payment-form').reset();
+          }, 2000);
         }
 
         // Close modal when clicking outside
