@@ -334,20 +334,8 @@ export const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Email</h3>
-                    <a href="mailto:contact@lliconsulting.com" className="text-lli-teal hover:text-lli-teal-dark">
-                      contact@lliconsulting.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-lli-orange text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                    <i className="fas fa-phone text-xl"></i>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Phone</h3>
-                    <a href="tel:+1234567890" className="text-lli-orange hover:text-lli-orange-dark">
-                      (123) 456-7890
+                    <a href="mailto:info@lliconsultinggroup.com" className="text-lli-teal hover:text-lli-teal-dark">
+                      info@lliconsultinggroup.com
                     </a>
                   </div>
                 </div>
@@ -370,8 +358,8 @@ export const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Website</h3>
-                    <a href="https://www.LLIConsulting.com" target="_blank" rel="noopener noreferrer" className="text-lli-orange hover:text-lli-orange-dark">
-                      www.LLIConsulting.com
+                    <a href="https://www.lliconsultinggroup.com" target="_blank" rel="noopener noreferrer" className="text-lli-orange hover:text-lli-orange-dark">
+                      www.lliconsultinggroup.com
                     </a>
                   </div>
                 </div>
@@ -385,10 +373,6 @@ export const ContactPage = () => {
                 className="w-full rounded-2xl shadow-2xl"
                 loading="lazy"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-lli-teal to-lli-orange text-white p-6 rounded-xl shadow-xl">
-                <div className="text-3xl font-bold">24h</div>
-                <div className="text-sm">Response Time</div>
-              </div>
             </div>
           </div>
         </div>

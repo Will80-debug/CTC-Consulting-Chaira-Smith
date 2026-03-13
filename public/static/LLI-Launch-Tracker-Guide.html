@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LLI Launch Tracker Guide - LLI Consulting Group</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 1in;
+        }
+        
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+        }
+        
+        .cover-page {
+            text-align: center;
+            padding-top: 2.5in;
+            page-break-after: always;
+        }
+        
+        .logo {
+            font-size: 54pt;
+            font-weight: bold;
+            color: #1B7F8E;
+            margin-bottom: 0.25in;
+            letter-spacing: 8px;
+        }
+        
+        .company {
+            font-size: 20pt;
+            color: #F07D00;
+            margin-bottom: 1.5in;
+            font-weight: 600;
+        }
+        
+        .title {
+            font-size: 40pt;
+            font-weight: bold;
+            color: #003D4C;
+            margin-bottom: 0.3in;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 18pt;
+            color: #666;
+            margin-bottom: 0.25in;
+        }
+        
+        .launch-date {
+            font-size: 16pt;
+            color: #F07D00;
+            font-weight: bold;
+            margin-top: 1in;
+        }
+        
+        h1 {
+            color: #003D4C;
+            font-size: 28pt;
+            margin-top: 0.5in;
+            margin-bottom: 0.25in;
+            border-bottom: 4px solid #1B7F8E;
+            padding-bottom: 0.15in;
+            page-break-before: always;
+        }
+        
+        h2 {
+            color: #1B7F8E;
+            font-size: 20pt;
+            margin-top: 0.4in;
+            margin-bottom: 0.2in;
+            border-left: 5px solid #F07D00;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #F07D00;
+            font-size: 16pt;
+            margin-top: 0.25in;
+            margin-bottom: 0.15in;
+        }
+        
+        .info-box {
+            background: #E8F4F8;
+            border-left: 5px solid #1B7F8E;
+            padding: 20px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+            border-radius: 5px;
+        }
+        
+        .warning-box {
+            background: #FFF5E6;
+            border-left: 5px solid #F07D00;
+            padding: 20px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+            border-radius: 5px;
+        }
+        
+        .example-box {
+            background: #F5F5F5;
+            border: 2px solid #1B7F8E;
+            padding: 20px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+            border-radius: 8px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        
+        th {
+            background: #1B7F8E;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            vertical-align: top;
+        }
+        
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        ul, ol {
+            margin-left: 0.4in;
+            line-height: 1.9;
+        }
+        
+        ul li, ol li {
+            margin-bottom: 8px;
+        }
+        
+        .number-badge {
+            display: inline-block;
+            background: #1B7F8E;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            font-size: 16pt;
+            margin-right: 10px;
+        }
+        
+        .icon {
+            font-size: 24pt;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .workflow-step {
+            background: white;
+            border: 2px solid #1B7F8E;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            page-break-inside: avoid;
+        }
+        
+        .workflow-arrow {
+            text-align: center;
+            color: #F07D00;
+            font-size: 24pt;
+            margin: 10px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #666;
+            font-size: 10pt;
+            margin-top: 0.5in;
+            padding-top: 0.25in;
+            border-top: 1px solid #ddd;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            .page-break {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover-page">
+    <div class="logo">LLI</div>
+    <div class="company">CONSULTING GROUP™</div>
+    <div class="title">Launch Tracker<br>System Guide</div>
+    <div class="subtitle">Your Complete Roadmap to Business Launch Success</div>
+    <div class="launch-date">Target Launch: April 1, 2026</div>
+    <p style="margin-top: 1.5in; color: #666; font-size: 12pt;">© 2024 LLI Consulting Group. All Rights Reserved.</p>
+</div>
+
+<!-- PAGE 1: OVERVIEW -->
+<h1>📋 What is the Launch Tracker System?</h1>
+
+<p style="font-size: 14pt; line-height: 1.8;">The <strong>LLI Launch Tracker System</strong> is your complete business launch management tool. It's a set of four connected spreadsheets that help you plan, execute, and track every step needed to successfully launch LLI Consulting Group on <strong>April 1, 2026</strong>.</p>
+
+<div class="info-box">
+    <h3 style="margin-top: 0; color: #1B7F8E;">🎯 System Purpose</h3>
+    <p><strong>Think of it as your launch command center.</strong> Instead of scattered to-do lists, notes, and reminders, everything you need is organized in one place with clear deadlines, priorities, and accountability.</p>
+</div>
+
+<h2>The Four Components</h2>
+
+<table>
+    <tr>
+        <th style="width: 30%;">Component</th>
+        <th style="width: 30%;">What It Does</th>
+        <th>When You Use It</th>
+    </tr>
+    <tr>
+        <td><strong>1. Launch Tracker</strong></td>
+        <td>Your master task list (39 tasks)</td>
+        <td>Daily - check what needs to be done</td>
+    </tr>
+    <tr>
+        <td><strong>2. Friday Review</strong></td>
+        <td>Weekly progress check-in</td>
+        <td>Every Friday - review the week</td>
+    </tr>
+    <tr>
+        <td><strong>3. Prospect Tracker</strong></td>
+        <td>Your client pipeline (10 prospects)</td>
+        <td>Daily - manage outreach and follow-ups</td>
+    </tr>
+    <tr>
+        <td><strong>4. Message Templates</strong></td>
+        <td>Pre-written outreach emails</td>
+        <td>When contacting prospects</td>
+    </tr>
+</table>
+
+<h2>How Long Until Launch?</h2>
+
+<div class="warning-box">
+    <p style="font-size: 13pt; margin: 0;"><strong>⏰ Timeline:</strong> From March 13 to April 1, 2026 = <strong>19 days</strong></p>
+    <p style="font-size: 13pt; margin: 10px 0 0 0;"><strong>📅 Weekly Reviews:</strong> 3 Friday check-ins (March 13, 20, 27)</p>
+</div>
+
+<h2>Who Does What?</h2>
+
+<p>Tasks are assigned to three owners:</p>
+
+<ul>
+    <li><strong>CEO (You):</strong> Strategic decisions, messaging, leadership tasks</li>
+    <li><strong>You (Operations):</strong> Research, prospect building, website updates</li>
+    <li><strong>Shared:</strong> Decisions requiring collaboration</li>
+</ul>
+
+<div class="info-box">
+    <h3 style="margin-top: 0; color: #1B7F8E;">💡 Key Success Factor</h3>
+    <p>These trackers work together as an integrated system. The Launch Tracker tells you WHAT to do, the Prospect Tracker tells you WHO to contact, the Message Templates give you HOW to reach them, and the Friday Review keeps you ON TRACK.</p>
+</div>
+
+<!-- PAGE 2: LAUNCH TRACKER DEEP DIVE -->
+<h1>1️⃣ Launch Tracker (Master Task List)</h1>
+
+<h2>What It Is</h2>
+
+<p>Your complete to-do list with <strong>39 tasks</strong> organized across <strong>19 work areas</strong> (workstreams). Every task has a deadline, owner, priority, and status.</p>
+
+<h2>The 19 Workstreams</h2>
+
+<table>
+    <tr>
+        <th>Workstream</th>
+        <th style="text-align: center;">Tasks</th>
+        <th>Focus Area</th>
+    </tr>
+    <tr>
+        <td><strong>Leadership</strong></td>
+        <td style="text-align: center;">4</td>
+        <td>Strategic decisions (service offerings, pricing, positioning)</td>
+    </tr>
+    <tr>
+        <td><strong>Sales Ops</strong></td>
+        <td style="text-align: center;">2</td>
+        <td>Target market definition, prospect categories</td>
+    </tr>
+    <tr>
+        <td><strong>Prospecting</strong></td>
+        <td style="text-align: center;">2</td>
+        <td>Building prospect lists (HQ and local organizations)</td>
+    </tr>
+    <tr>
+        <td><strong>Messaging</strong></td>
+        <td style="text-align: center;">2</td>
+        <td>Creating outreach email templates</td>
+    </tr>
+    <tr>
+        <td><strong>Brand Assets</strong></td>
+        <td style="text-align: center;">1</td>
+        <td>Logo, colors, visual identity</td>
+    </tr>
+    <tr>
+        <td><strong>Website</strong></td>
+        <td style="text-align: center;">3</td>
+        <td>Site structure, content, testing</td>
+    </tr>
+    <tr>
+        <td><strong>Program Dev</strong></td>
+        <td style="text-align: center;">4</td>
+        <td>Creating service packages and workshops</td>
+    </tr>
+    <tr>
+        <td><strong>Outreach</strong></td>
+        <td style="text-align: center;">5</td>
+        <td>Sending emails, making connections</td>
+    </tr>
+    <tr>
+        <td><strong>Social + Follow-up</strong></td>
+        <td style="text-align: center;">1</td>
+        <td>LinkedIn presence, follow-up system</td>
+    </tr>
+    <tr>
+        <td><strong>Review</strong></td>
+        <td style="text-align: center;">2</td>
+        <td>Weekly check-ins and adjustments</td>
+    </tr>
+    <tr>
+        <td><strong>Pipeline</strong></td>
+        <td style="text-align: center;">4</td>
+        <td>Managing interested prospects</td>
+    </tr>
+    <tr>
+        <td><strong>Proposals</strong></td>
+        <td style="text-align: center;">1</td>
+        <td>Creating proposal templates</td>
+    </tr>
+    <tr>
+        <td><strong>Launch Prep</strong></td>
+        <td style="text-align: center;">2</td>
+        <td>Final preparations before launch day</td>
+    </tr>
+    <tr>
+        <td><strong>Final QA</strong></td>
+        <td style="text-align: center;">1</td>
+        <td>Testing everything works</td>
+    </tr>
+    <tr>
+        <td><strong>Launch Day</strong></td>
+        <td style="text-align: center;">1</td>
+        <td>Go-live activities</td>
+    </tr>
+    <tr>
+        <td><strong>Others</strong></td>
+        <td style="text-align: center;">5</td>
+        <td>Credibility assets, sales, marketing, operations</td>
+    </tr>
+</table>
+
+<h2>Task Information Fields</h2>
+
+<p>Every task in the Launch Tracker includes:</p>
+
+<div class="example-box">
+    <h3 style="margin-top: 0; color: #003D4C;">Example Task: LT-001</h3>
+    
+    <table style="margin-top: 15px;">
+        <tr>
+            <td style="width: 35%; background: #f0f0f0;"><strong>Task ID:</strong></td>
+            <td>LT-001</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Date:</strong></td>
+            <td>Friday, March 13, 2026</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Workstream:</strong></td>
+            <td>Leadership</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Assignment:</strong></td>
+            <td>Finalize the top 3 launch offers and lock the wording used in outreach and on the site</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Owner:</strong></td>
+            <td>CEO</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Priority:</strong></td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Status:</strong></td>
+            <td>In Progress</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Dependencies:</strong></td>
+            <td>None (this comes first)</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Deliverable:</strong></td>
+            <td>Final service language document</td>
+        </tr>
+    </table>
+</div>
+
+<h2>Priority Levels</h2>
+
+<table>
+    <tr>
+        <th style="width: 25%;">Priority</th>
+        <th>Meaning</th>
+    </tr>
+    <tr>
+        <td style="background: #ffcccc;"><strong>🔴 High</strong></td>
+        <td>Must be done by the deadline - launch depends on it</td>
+    </tr>
+    <tr>
+        <td style="background: #fff3cd;"><strong>🟡 Medium</strong></td>
+        <td>Important but has some flexibility</td>
+    </tr>
+    <tr>
+        <td style="background: #d4edda;"><strong>🟢 Low</strong></td>
+        <td>Nice to have but not critical for launch</td>
+    </tr>
+</table>
+
+<h2>Status Options</h2>
+
+<ul>
+    <li><strong>Not Started:</strong> Haven't begun yet</li>
+    <li><strong>In Progress:</strong> Currently working on it</li>
+    <li><strong>Blocked:</strong> Stuck - waiting on something/someone</li>
+    <li><strong>Complete:</strong> Done and checked off</li>
+</ul>
+
+<h2>How to Use the Launch Tracker</h2>
+
+<div class="workflow-step">
+    <h3 style="margin-top: 0;"><span class="number-badge">1</span> Start Your Day</h3>
+    <p>Open the Launch Tracker and filter by "Today's Date" to see what's due.</p>
+</div>
+
+<div class="workflow-arrow">↓</div>
+
+<div class="workflow-step">
+    <h3 style="margin-top: 0;"><span class="number-badge">2</span> Check Dependencies</h3>
+    <p>Look at the "Dependencies" column. Can you start this task, or are you waiting on something else to finish first?</p>
+</div>
+
+<div class="workflow-arrow">↓</div>
+
+<div class="workflow-step">
+    <h3 style="margin-top: 0;"><span class="number-badge">3</span> Work on High Priorities</h3>
+    <p>Focus on "High" priority tasks first. These are launch-critical.</p>
+</div>
+
+<div class="workflow-arrow">↓</div>
+
+<div class="workflow-step">
+    <h3 style="margin-top: 0;"><span class="number-badge">4</span> Update Status</h3>
+    <p>As you work, change status from "Not Started" to "In Progress" to "Complete".</p>
+</div>
+
+<div class="workflow-arrow">↓</div>
+
+<div class="workflow-step">
+    <h3 style="margin-top: 0;"><span class="number-badge">5</span> Track Blockers</h3>
+    <p>If you get stuck, change status to "Blocked" and note what you're waiting for in the Notes column.</p>
+</div>
+
+<!-- PAGE 3: FRIDAY REVIEW -->
+<h1>2️⃣ Friday Review (Weekly Check-In)</h1>
+
+<h2>What It Is</h2>
+
+<p>A structured template you fill out every Friday afternoon to review the week's progress and plan for next week.</p>
+
+<h2>The Review Categories</h2>
+
+<div class="example-box">
+    <h3 style="margin-top: 0; color: #003D4C;">Friday Review Template Structure</h3>
+    
+    <table style="margin-top: 15px;">
+        <tr>
+            <th style="width: 40%;">Section</th>
+            <th>What You Track</th>
+        </tr>
+        <tr>
+            <td><strong>📊 Dashboard</strong></td>
+            <td>Quick numbers: X tasks complete, Y in progress, Z overdue</td>
+        </tr>
+        <tr>
+            <td><strong>✅ Tasks Complete</strong></td>
+            <td>List everything you finished this week</td>
+        </tr>
+        <tr>
+            <td><strong>⚙️ Tasks In Progress</strong></td>
+            <td>What you're still working on</td>
+        </tr>
+        <tr>
+            <td><strong>⚠️ Tasks Overdue</strong></td>
+            <td>Anything past its deadline (red flags)</td>
+        </tr>
+        <tr>
+            <td><strong>🎉 Wins This Week</strong></td>
+            <td>What went well - celebrate progress!</td>
+        </tr>
+        <tr>
+            <td><strong>🚧 Blockers / Risks</strong></td>
+            <td>What's stuck or concerning you</td>
+        </tr>
+        <tr>
+            <td><strong>🤔 Decisions Needed</strong></td>
+            <td>Questions that need answers to move forward</td>
+        </tr>
+        <tr>
+            <td><strong>🎯 Top 5 Priorities<br>Before Next Friday</strong></td>
+            <td>Your focus for the coming week</td>
+        </tr>
+    </table>
+</div>
+
+<h2>When to Use It</h2>
+
+<p><strong>Every Friday at the same time</strong> (suggested: 3pm-4pm). Block this time on your calendar as sacred "review time."</p>
+
+<h2>Why It Matters</h2>
+
+<div class="info-box">
+    <p style="margin: 0;"><strong>Without weekly reviews, you'll drift.</strong> The Friday Review forces you to:</p>
+    <ul style="margin-top: 10px;">
+        <li>Acknowledge what you accomplished (motivation boost)</li>
+        <li>Catch problems early before they derail the launch</li>
+        <li>Make course corrections while there's still time</li>
+        <li>Stay focused on what actually matters</li>
+    </ul>
+</div>
+
+<h2>Sample Completed Review</h2>
+
+<div class="example-box">
+    <h3 style="margin-top: 0; color: #003D4C;">Friday Review - March 20, 2026</h3>
+    
+    <p><strong>📊 Dashboard:</strong></p>
+    <ul>
+        <li>Tasks Complete: 8</li>
+        <li>Tasks In Progress: 5</li>
+        <li>Tasks Overdue: 1</li>
+    </ul>
+    
+    <p><strong>🎉 Wins This Week:</strong></p>
+    <ul>
+        <li>Finalized all three service offerings</li>
+        <li>Built HQ prospect list (10 companies)</li>
+        <li>Sent 5 outreach emails</li>
+    </ul>
+    
+    <p><strong>🚧 Blockers:</strong></p>
+    <ul>
+        <li>Website designer hasn't delivered homepage mockup</li>
+        <li>Need CEO approval on pricing before we can send proposals</li>
+    </ul>
+    
+    <p><strong>🤔 Decisions Needed:</strong></p>
+    <ul>
+        <li>Should we offer payment plans or upfront payment only?</li>
+    </ul>
+    
+    <p><strong>🎯 Top 5 Priorities Next Week:</strong></p>
+    <ol>
+        <li>Follow up on the 5 outreach emails</li>
+        <li>Send 10 more emails to local organizations</li>
+        <li>Finalize website homepage</li>
+        <li>Get pricing approval from CEO</li>
+        <li>Create proposal template</li>
+    </ol>
+</div>
+
+<!-- PAGE 4: PROSPECT TRACKER -->
+<h1>3️⃣ Prospect Tracker (Your Sales Pipeline)</h1>
+
+<h2>What It Is</h2>
+
+<p>Your database of <strong>potential clients</strong> with all the information you need to reach out effectively and track their progress through your sales process.</p>
+
+<h2>Current Prospects: 10 Organizations</h2>
+
+<div class="info-box">
+    <h3 style="margin-top: 0; color: #1B7F8E;">Target Industries</h3>
+    <ul style="margin: 10px 0 0 0;">
+        <li>Healthcare (2 prospects)</li>
+        <li>Financial Services (2 prospects)</li>
+        <li>Philanthropy (1 prospect)</li>
+        <li>Government (1 prospect)</li>
+        <li>Higher Education (1 prospect)</li>
+        <li>Nonprofit (1 prospect)</li>
+        <li>Human Services (1 prospect)</li>
+        <li>Education (1 prospect)</li>
+    </ul>
+</div>
+
+<h2>What You Track for Each Prospect</h2>
+
+<table>
+    <tr>
+        <th style="width: 30%;">Field</th>
+        <th>Purpose / Example</th>
+    </tr>
+    <tr>
+        <td><strong>Priority</strong></td>
+        <td>1 = highest priority (go after first)</td>
+    </tr>
+    <tr>
+        <td><strong>Company / Prospect</strong></td>
+        <td>"Major healthcare system HQ" or "Kaiser Permanente"</td>
+    </tr>
+    <tr>
+        <td><strong>Target Type</strong></td>
+        <td>"Named company" (you know exactly who) or "Category" (research needed)</td>
+    </tr>
+    <tr>
+        <td><strong>HQ or Local</strong></td>
+        <td>Headquarters (big deal) or Local branch (smaller, faster)</td>
+    </tr>
+    <tr>
+        <td><strong>Industry</strong></td>
+        <td>Healthcare, Financial Services, etc.</td>
+    </tr>
+    <tr>
+        <td><strong>Ideal Buyer Titles</strong></td>
+        <td>Who you want to reach: "CEO, CHRO, COO, Chief Nursing Officer"</td>
+    </tr>
+    <tr>
+        <td><strong>Primary Pain Point</strong></td>
+        <td>Their biggest problem: "Leadership alignment, burnout, culture consistency across sites"</td>
+    </tr>
+    <tr>
+        <td><strong>Entry Offer</strong></td>
+        <td>What you'll pitch first: "Discovery call + leadership diagnostic"</td>
+    </tr>
+    <tr>
+        <td><strong>Outreach Angle</strong></td>
+        <td>How you'll position yourself: "Lead with culture alignment, retention pressure, implementation clarity"</td>
+    </tr>
+    <tr>
+        <td><strong>Branch / Smaller Org Angle</strong></td>
+        <td>After HQ: "Pursue hospitals, clinics, regional departments in same network"</td>
+    </tr>
+    <tr>
+        <td><strong>Owner</strong></td>
+        <td>Who's responsible for this prospect (usually "You")</td>
+    </tr>
+    <tr>
+        <td><strong>Status</strong></td>
+        <td>Not Started → Researching → Email Sent → Meeting Scheduled → Proposal Sent → Won/Lost</td>
+    </tr>
+    <tr>
+        <td><strong>Next Step</strong></td>
+        <td>Specific action: "Research CEO name and email" or "Follow up on email"</td>
+    </tr>
+    <tr>
+        <td><strong>Deadline</strong></td>
+        <td>When the next step needs to happen</td>
+    </tr>
+</table>
+
+<h2>The "HQ to Branch" Strategy</h2>
+
+<div class="warning-box">
+    <h3 style="margin-top: 0; color: #F07D00;">🎯 Strategic Approach</h3>
+    <p><strong>Step 1:</strong> Target headquarters (HQ) of large organizations</p>
+    <ul>
+        <li>Example: Kaiser Permanente headquarters</li>
+        <li>Decision-makers have authority across entire organization</li>
+        <li>Bigger contracts, more impact</li>
+    </ul>
+    
+    <p style="margin-top: 15px;"><strong>Step 2:</strong> After winning HQ, expand to branches</p>
+    <ul>
+        <li>Example: Individual Kaiser hospitals, clinics, regional offices</li>
+        <li>Easier sell because HQ already uses your services</li>
+        <li>Creates multiple revenue streams from one relationship</li>
+    </ul>
+</div>
+
+<h2>Sample Prospect Entry</h2>
+
+<div class="example-box">
+    <h3 style="margin-top: 0; color: #003D4C;">Priority #1 Prospect</h3>
+    
+    <table style="margin-top: 15px;">
+        <tr>
+            <td style="width: 35%; background: #f0f0f0;"><strong>Company:</strong></td>
+            <td>Major healthcare system HQ</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Type:</strong></td>
+            <td>Named company (HQ)</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Industry:</strong></td>
+            <td>Healthcare</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Target Buyer:</strong></td>
+            <td>CEO, COO, CHRO, Chief Nursing Officer</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Pain Point:</strong></td>
+            <td>Leadership alignment, burnout, culture consistency across 500+ sites</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Entry Offer:</strong></td>
+            <td>Discovery call + leadership diagnostic</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Outreach Angle:</strong></td>
+            <td>Lead with culture alignment, retention pressure, and implementation clarity</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Branch Strategy:</strong></td>
+            <td>After HQ deal, pursue individual hospitals, clinics, and regional departments</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Status:</strong></td>
+            <td>Not Started</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Next Step:</strong></td>
+            <td>Research CEO name, get email address, check LinkedIn</td>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;"><strong>Deadline:</strong></td>
+            <td>March 14, 2026</td>
+        </tr>
+    </table>
+</div>
+
+<h2>How to Use the Prospect Tracker</h2>
+
+<ol>
+    <li><strong>Start with Priority 1:</strong> Always work on your highest-priority prospects first</li>
+    <li><strong>Do your research:</strong> Find the decision-maker's name, email, LinkedIn profile</li>
+    <li><strong>Understand their pain:</strong> What keeps them up at night? This goes in "Primary Pain Point"</li>
+    <li><strong>Choose your angle:</strong> How will you position your services to solve their specific problem?</li>
+    <li><strong>Pick a template:</strong> Go to Message Templates and customize for this prospect</li>
+    <li><strong>Update status:</strong> As you move through the sales process, update the status field</li>
+    <li><strong>Set next steps:</strong> Always know what the next action is and when it's due</li>
+</ol>
+
+<!-- PAGE 5: MESSAGE TEMPLATES -->
+<h1>4️⃣ Message Templates (Outreach Scripts)</h1>
+
+<h2>What They Are</h2>
+
+<p>Pre-written email and LinkedIn messages that you can <strong>customize and send quickly</strong>. No need to write from scratch every time.</p>
+
+<h2>Available Templates</h2>
+
+<div class="example-box">
+    <h3 style="margin-top: 0; color: #003D4C;">📧 Template 1: Email - HQ Intro</h3>
+    <p><strong>When to use:</strong> First email to large organization headquarters</p>
+    
+    <div style="background: white; padding: 15px; border: 1px solid #ddd; margin-top: 15px; font-family: 'Courier New', monospace; font-size: 11pt;">
+        <p><strong>Subject:</strong> Supporting leadership and culture alignment at [Company]</p>
+        
+        <p style="margin-top: 15px;">Hi [Name],</p>
+        
+        <p>I'm reaching out on behalf of LLI Consulting Group. We help organizations strengthen leadership alignment, workplace culture, and implementation planning through coaching, workshops, and structured advisory support.</p>
+        
+        <p>Given [Company]'s scale and visibility, I thought a short conversation could be valuable - especially if your team is navigating leadership consistency, employee engagement, cross-department collaboration, or culture execution.</p>
+        
+        <p>Would you be open to a 20-minute discovery call next week?</p>
+        
+        <p>Best,<br>
+        [Your Name]</p>
+    </div>
+</div>
+
+<div class="example-box" style="margin-top: 20px;">
+    <h3 style="margin-top: 0; color: #003D4C;">📧 Template 2: Email - Local / Smaller Org Intro</h3>
+    <p><strong>When to use:</strong> First email to smaller organizations or local branches</p>
+    
+    <div style="background: white; padding: 15px; border: 1px solid #ddd; margin-top: 15px; font-family: 'Courier New', monospace; font-size: 11pt;">
+        <p><strong>Subject:</strong> A practical leadership and culture support option for [Organization]</p>
+        
+        <p style="margin-top: 15px;">Hi [Name],</p>
+        
+        <p>I'm reaching out because LLI Consulting Group is beginning to work with organizations like [Organization] on practical leadership and culture challenges.</p>
+        
+        <p>We focus on accessible support - coaching, workshops, and advisory sessions designed for teams working with real budget and capacity constraints.</p>
+        
+        <p>If you're interested in exploring how we might support [specific area: leadership alignment, manager development, culture planning], I'd be happy to schedule a brief conversation.</p>
+        
+        <p>Best regards,<br>
+        [Your Name]</p>
+    </div>
+</div>
+
+<div class="example-box" style="margin-top: 20px;">
+    <h3 style="margin-top: 0; color: #003D4C;">💼 Template 3: LinkedIn Connection Request</h3>
+    <p><strong>When to use:</strong> Connecting with prospects on LinkedIn (300 character limit)</p>
+    
+    <div style="background: white; padding: 15px; border: 1px solid #ddd; margin-top: 15px; font-family: 'Courier New', monospace; font-size: 11pt;">
+        <p>Hi [Name] - I work with LLI Consulting Group on leadership and culture transformation for organizations navigating alignment, accountability, and implementation. Would value connecting.</p>
+    </div>
+</div>
+
+<div class="example-box" style="margin-top: 20px;">
+    <h3 style="margin-top: 0; color: #003D4C;">💼 Template 4: LinkedIn Follow-Up</h3>
+    <p><strong>When to use:</strong> After they accept your LinkedIn connection</p>
+    
+    <div style="background: white; padding: 15px; border: 1px solid #ddd; margin-top: 15px; font-family: 'Courier New', monospace; font-size: 11pt;">
+        <p>Thanks for connecting, [Name]. We're reaching out to organizations that may benefit from structured support around leadership alignment, culture, and implementation planning.</p>
+        
+        <p>If that's relevant for [Company], I'd be glad to share how we approach this work. Let me know if a brief call makes sense.</p>
+        
+        <p>Best,<br>
+        [Your Name]</p>
+    </div>
+</div>
+
+<h2>How to Customize Templates</h2>
+
+<div class="workflow-step">
+    <h3 style="margin-top: 0;"><span class="number-badge">1</span> Choose the Right Template</h3>
+    <p>HQ email for large organizations, Local email for smaller ones, LinkedIn for social outreach.</p>
+</div>
+
+<div class="workflow-arrow">↓</div>
+
+<div class="workflow-step">
+    <h3 style="margin-top: 0;"><span class="number-badge">2</span> Fill in Brackets</h3>
+    <p>Replace [Company], [Name], [specific area] with info from your Prospect Tracker.</p>
+</div>
+
+<div class="workflow-arrow">↓</div>
+
+<div class="workflow-step">
+    <h3 style="margin-top: 0;"><span class="number-badge">3</span> Add Specific Pain Point</h3>
+    <p>Reference their specific challenge: "especially if your team is dealing with [their pain point from tracker]"</p>
+</div>
+
+<div class="workflow-arrow">↓</div>
+
+<div class="workflow-step">
+    <h3 style="margin-top: 0;"><span class="number-badge">4</span> Keep It Brief</h3>
+    <p>Don't add too much. Short emails get more responses.</p>
+</div>
+
+<div class="workflow-arrow">↓</div>
+
+<div class="workflow-step">
+    <h3 style="margin-top: 0;"><span class="number-badge">5</span> Send & Track</h3>
+    <p>Send the email, then update Prospect Tracker: Status = "Email Sent", Next Step = "Follow up in 3 days"</p>
+</div>
+
+<!-- PAGE 6: HOW THEY ALL WORK TOGETHER -->
+<h1>🔄 How the Four Trackers Work Together</h1>
+
+<h2>The Complete Weekly Workflow</h2>
+
+<div class="info-box">
+    <h3 style="margin-top: 0; color: #1B7F8E;">⏰ Monday - Thursday: Execute</h3>
+    <ol style="margin: 10px 0 0 0;">
+        <li><strong>Check Launch Tracker:</strong> What tasks are due this week?</li>
+        <li><strong>Work on tasks:</strong> Complete assignments, update statuses</li>
+        <li><strong>Use Message Templates:</strong> Send emails to prospects</li>
+        <li><strong>Update Prospect Tracker:</strong> Track who you contacted and responses</li>
+    </ol>
+</div>
+
+<div class="warning-box" style="margin-top: 20px;">
+    <h3 style="margin-top: 0; color: #F07D00;">📅 Friday Afternoon: Review</h3>
+    <ol style="margin: 10px 0 0 0;">
+        <li><strong>Open Friday Review template</strong></li>
+        <li><strong>Look at Launch Tracker:</strong> Count completed/in-progress/overdue tasks</li>
+        <li><strong>Fill out review sections:</strong> Wins, blockers, decisions needed</li>
+        <li><strong>Set next week's priorities:</strong> Top 5 things to focus on</li>
+        <li><strong>Check Prospect Tracker:</strong> Who needs follow-up next week?</li>
+    </ol>
+</div>
+
+<h2>Real-World Example: One Week in Your Launch</h2>
+
+<div class="example-box">
+    <h3 style="margin-top: 0; color: #003D4C;">Week of March 13-19, 2026</h3>
+    
+    <p><strong>Monday, March 17:</strong></p>
+    <ol>
+        <li><strong>Launch Tracker</strong> shows Task LT-003 due today: "Build first 10 HQ prospect list"</li>
+        <li>Research 10 large healthcare systems and banks</li>
+        <li>Add all 10 to <strong>Prospect Tracker</strong> with buyer names, pain points, outreach angles</li>
+        <li>Update Launch Tracker: Task LT-003 status = "Complete" ✅</li>
+    </ol>
+    
+    <p style="margin-top: 20px;"><strong>Tuesday, March 18:</strong></p>
+    <ol>
+        <li><strong>Prospect Tracker</strong> shows Priority #1: Major healthcare system</li>
+        <li>Open <strong>Message Templates</strong> → Choose "Email - HQ Intro"</li>
+        <li>Customize: Replace [Company] with "Cleveland Clinic", [Name] with "Dr. Sarah Johnson, CHRO"</li>
+        <li>Add their pain point: "leadership alignment across 500+ locations"</li>
+        <li>Send email</li>
+        <li>Update <strong>Prospect Tracker</strong>: Status = "Email Sent", Next Step = "Follow up March 21"</li>
+    </ol>
+    
+    <p style="margin-top: 20px;"><strong>Wednesday-Thursday, March 19-20:</strong></p>
+    <ol>
+        <li>Send 4 more emails to Priority #2-5 prospects</li>
+        <li>Update all statuses in <strong>Prospect Tracker</strong></li>
+        <li>Continue working through other tasks in <strong>Launch Tracker</strong></li>
+    </ol>
+    
+    <p style="margin-top: 20px;"><strong>Friday, March 20 (3pm):</strong></p>
+    <ol>
+        <li>Open <strong>Friday Review</strong> template</li>
+        <li>Check <strong>Launch Tracker</strong>:
+            <ul>
+                <li>8 tasks completed this week</li>
+                <li>5 tasks in progress</li>
+                <li>1 task overdue (website mockup - designer delayed)</li>
+            </ul>
+        </li>
+        <li>Fill out Friday Review:
+            <ul>
+                <li>Wins: Built prospect list, sent 5 emails</li>
+                <li>Blocker: Designer delay</li>
+                <li>Decision needed: Payment plan policy</li>
+                <li>Next week priorities: Follow up on 5 emails, send 10 more</li>
+            </ul>
+        </li>
+        <li>Done - weekend starts! 🎉</li>
+    </ol>
+</div>
+
+<h2>Integration Flow Chart</h2>
+
+<div style="text-align: center; margin: 30px 0;">
+    <div style="background: #1B7F8E; color: white; padding: 15px; border-radius: 8px; margin: 10px auto; max-width: 500px;">
+        <strong style="font-size: 14pt;">LAUNCH TRACKER</strong><br>
+        <span style="font-size: 11pt;">Tells you WHAT to do</span>
+    </div>
+    
+    <div style="font-size: 24pt; color: #F07D00; margin: 15px 0;">↓</div>
+    
+    <div style="background: #F07D00; color: white; padding: 15px; border-radius: 8px; margin: 10px auto; max-width: 500px;">
+        <strong style="font-size: 14pt;">PROSPECT TRACKER</strong><br>
+        <span style="font-size: 11pt;">Tells you WHO to contact</span>
+    </div>
+    
+    <div style="font-size: 24pt; color: #1B7F8E; margin: 15px 0;">↓</div>
+    
+    <div style="background: #003D4C; color: white; padding: 15px; border-radius: 8px; margin: 10px auto; max-width: 500px;">
+        <strong style="font-size: 14pt;">MESSAGE TEMPLATES</strong><br>
+        <span style="font-size: 11pt;">Shows you HOW to reach them</span>
+    </div>
+    
+    <div style="font-size: 24pt; color: #F07D00; margin: 15px 0;">↓</div>
+    
+    <div style="background: #1B7F8E; color: white; padding: 15px; border-radius: 8px; margin: 10px auto; max-width: 500px;">
+        <strong style="font-size: 14pt;">FRIDAY REVIEW</strong><br>
+        <span style="font-size: 11pt;">Keeps you ON TRACK</span>
+    </div>
+</div>
+
+<!-- PAGE 7: TIPS & BEST PRACTICES -->
+<h1>💡 Tips & Best Practices</h1>
+
+<h2>Time Management</h2>
+
+<div class="info-box">
+    <h3 style="margin-top: 0; color: #1B7F8E;">⏰ Recommended Daily Schedule</h3>
+    <ul style="margin: 10px 0 0 0;">
+        <li><strong>8:00-8:15am:</strong> Review Launch Tracker - what's due today?</li>
+        <li><strong>8:15-10:00am:</strong> Work on high-priority tasks</li>
+        <li><strong>10:00-11:30am:</strong> Prospect research and outreach</li>
+        <li><strong>1:00-3:00pm:</strong> Continue task work</li>
+        <li><strong>3:00-4:00pm:</strong> Follow-ups, update trackers</li>
+        <li><strong>Friday 3:00-4:00pm:</strong> Weekly review instead of updates</li>
+    </ul>
+</div>
+
+<h2>Common Mistakes to Avoid</h2>
+
+<table>
+    <tr>
+        <th style="width: 50%;">❌ Don't Do This</th>
+        <th>✅ Do This Instead</th>
+    </tr>
+    <tr>
+        <td>Work on whatever feels urgent</td>
+        <td>Follow the Launch Tracker priorities</td>
+    </tr>
+    <tr>
+        <td>Forget to update statuses</td>
+        <td>Update in real-time as you complete tasks</td>
+    </tr>
+    <tr>
+        <td>Skip Friday reviews when busy</td>
+        <td>Protect Friday review time - non-negotiable</td>
+    </tr>
+    <tr>
+        <td>Send generic emails to prospects</td>
+        <td>Customize templates with specific pain points</td>
+    </tr>
+    <tr>
+        <td>Let blockers sit without addressing them</td>
+        <td>Escalate blockers immediately in Friday review</td>
+    </tr>
+    <tr>
+        <td>Work on low-priority tasks first</td>
+        <td>Always start with high-priority launch-critical items</td>
+    </tr>
+</table>
+
+<h2>Warning Signs You're Off Track</h2>
+
+<div class="warning-box">
+    <h3 style="margin-top: 0; color: #F07D00;">🚨 Red Flags</h3>
+    <ul style="margin: 10px 0 0 0;">
+        <li><strong>3+ overdue tasks:</strong> You're falling behind - need to reprioritize</li>
+        <li><strong>Skipped 2 Friday reviews:</strong> You've lost visibility - get back on track now</li>
+        <li><strong>No prospect emails sent in 3 days:</strong> Pipeline will dry up - send 3 today</li>
+        <li><strong>Multiple "Blocked" statuses with no action:</strong> Escalate blockers to CEO</li>
+        <li><strong>No wins in Friday review:</strong> Something's wrong - adjust approach</li>
+    </ul>
+</div>
+
+<h2>Success Metrics</h2>
+
+<p><strong>By March 31, you should have:</strong></p>
+
+<ul>
+    <li>✅ All 39 tasks in Launch Tracker marked "Complete"</li>
+    <li>✅ 3 completed Friday reviews documenting your progress</li>
+    <li>✅ 10 prospects in Prospect Tracker with emails sent</li>
+    <li>✅ At least 2-3 scheduled discovery calls</li>
+    <li>✅ Website live and tested</li>
+    <li>✅ All service packages finalized</li>
+</ul>
+
+<h2>When Things Go Wrong</h2>
+
+<div class="example-box">
+    <h3 style="margin-top: 0; color: #003D4C;">Problem-Solving Framework</h3>
+    
+    <p><strong>If a task is blocked:</strong></p>
+    <ol>
+        <li>Change status to "Blocked" immediately</li>
+        <li>Note what you're waiting for in the Notes column</li>
+        <li>Set a deadline for resolving the blocker</li>
+        <li>Escalate in Friday review if not resolved in 48 hours</li>
+    </ol>
+    
+    <p style="margin-top: 20px;"><strong>If you're behind schedule:</strong></p>
+    <ol>
+        <li>Review all tasks - which are absolutely launch-critical?</li>
+        <li>Consider moving medium/low priority tasks post-launch</li>
+        <li>Ask: Can I get help? Can I simplify this task?</li>
+        <li>Document decision in Friday review</li>
+    </ol>
+    
+    <p style="margin-top: 20px;"><strong>If prospects aren't responding:</strong></p>
+    <ol>
+        <li>Check: Did you customize the template with their pain point?</li>
+        <li>Try different subject lines</li>
+        <li>Follow up 3 business days later</li>
+        <li>Try LinkedIn instead of email</li>
+    </ol>
+</div>
+
+<h2>Keyboard Shortcuts & Tips</h2>
+
+<ul>
+    <li><strong>Excel filtering:</strong> Use AutoFilter to show only "High" priority or "Not Started" tasks</li>
+    <li><strong>Sort by deadline:</strong> Click "Deadline" column header to see what's due soonest</li>
+    <li><strong>Color coding:</strong> Highlight overdue tasks in red, completed in green</li>
+    <li><strong>Set reminders:</strong> Put critical deadlines in your phone calendar with alerts</li>
+</ul>
+
+<!-- PAGE 8: QUICK REFERENCE -->
+<h1>📚 Quick Reference Guide</h1>
+
+<h2>Launch Tracker At-a-Glance</h2>
+
+<table>
+    <tr>
+        <th>What</th>
+        <th>When</th>
+        <th>Why</th>
+    </tr>
+    <tr>
+        <td><strong>Check daily</strong></td>
+        <td>Every morning (8am)</td>
+        <td>Know what's due today</td>
+    </tr>
+    <tr>
+        <td><strong>Update statuses</strong></td>
+        <td>As you complete tasks</td>
+        <td>Keep tracker accurate</td>
+    </tr>
+    <tr>
+        <td><strong>Flag blockers</strong></td>
+        <td>As soon as you get stuck</td>
+        <td>Catch problems early</td>
+    </tr>
+    <tr>
+        <td><strong>Review dependencies</strong></td>
+        <td>Before starting new task</td>
+        <td>Don't start what can't be finished</td>
+    </tr>
+</table>
+
+<h2>Friday Review Checklist</h2>
+
+<div style="background: #E8F4F8; padding: 20px; border-radius: 8px;">
+    <p style="margin: 0 0 15px 0; font-size: 14pt;"><strong>Every Friday at 3pm:</strong></p>
+    
+    <table style="background: white;">
+        <tr>
+            <td style="width: 50px; text-align: center;">☐</td>
+            <td>Count tasks complete / in progress / overdue</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">☐</td>
+            <td>List this week's wins (minimum 3)</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">☐</td>
+            <td>Identify blockers and risks</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">☐</td>
+            <td>Note decisions that need to be made</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">☐</td>
+            <td>Set top 5 priorities for next week</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">☐</td>
+            <td>Check prospect follow-up deadlines</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">☐</td>
+            <td>Celebrate progress! 🎉</td>
+        </tr>
+    </table>
+</div>
+
+<h2>Prospect Tracker Status Flow</h2>
+
+<div style="text-align: center; margin: 30px 0;">
+    <div style="display: inline-block; background: #f0f0f0; padding: 10px 20px; border-radius: 20px; margin: 5px;">
+        Not Started
+    </div>
+    <span style="font-size: 18pt; color: #1B7F8E;"> → </span>
+    <div style="display: inline-block; background: #fff5e6; padding: 10px 20px; border-radius: 20px; margin: 5px;">
+        Researching
+    </div>
+    <span style="font-size: 18pt; color: #1B7F8E;"> → </span>
+    <div style="display: inline-block; background: #e8f4f8; padding: 10px 20px; border-radius: 20px; margin: 5px;">
+        Email Sent
+    </div>
+    <span style="font-size: 18pt; color: #1B7F8E;"> → </span>
+    <div style="display: inline-block; background: #d4edda; padding: 10px 20px; border-radius: 20px; margin: 5px;">
+        Meeting Scheduled
+    </div>
+    <span style="font-size: 18pt; color: #1B7F8E;"> → </span>
+    <div style="display: inline-block; background: #cce5ff; padding: 10px 20px; border-radius: 20px; margin: 5px;">
+        Proposal Sent
+    </div>
+    <span style="font-size: 18pt; color: #1B7F8E;"> → </span>
+    <div style="display: inline-block; background: #d4edda; padding: 10px 20px; border-radius: 20px; margin: 5px; font-weight: bold;">
+        Won! 🎉
+    </div>
+</div>
+
+<h2>Email Template Selection Guide</h2>
+
+<table>
+    <tr>
+        <th style="width: 40%;">Situation</th>
+        <th>Use This Template</th>
+    </tr>
+    <tr>
+        <td>First contact with large HQ organization</td>
+        <td><strong>Email - HQ Intro</strong></td>
+    </tr>
+    <tr>
+        <td>First contact with small local organization</td>
+        <td><strong>Email - Local / Smaller Org Intro</strong></td>
+    </tr>
+    <tr>
+        <td>Connecting on LinkedIn with prospect</td>
+        <td><strong>LinkedIn Connection Request</strong></td>
+    </tr>
+    <tr>
+        <td>They accepted your LinkedIn connection</td>
+        <td><strong>LinkedIn Follow-Up</strong></td>
+    </tr>
+    <tr>
+        <td>Following up 3 days after no email response</td>
+        <td>Shorten HQ/Local email, reference original</td>
+    </tr>
+</table>
+
+<h2>Contact Information</h2>
+
+<div class="info-box">
+    <p style="margin: 0; font-size: 12pt;"><strong>Questions about the Launch Tracker System?</strong></p>
+    <p style="margin: 10px 0 0 0;">
+        <strong>LLI Consulting Group™</strong><br>
+        Email: info@lliconsultinggroup.com<br>
+        Website: www.lliconsultinggroup.com
+    </p>
+</div>
+
+<hr style="margin: 40px 0; border: 2px solid #1B7F8E;">
+
+<div class="footer">
+    <p><strong>LLI Consulting Group™</strong></p>
+    <p>Leadership & Culture Transformation</p>
+    <p style="margin-top: 15px;">© 2024 LLI Consulting Group. All Rights Reserved.</p>
+    <p style="font-size: 9pt; margin-top: 10px;">This guide is for internal use. Confidential and proprietary information.</p>
+</div>
+
+</body>
+</html>
