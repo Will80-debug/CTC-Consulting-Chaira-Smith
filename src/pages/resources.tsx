@@ -180,7 +180,7 @@ export const ResourcesPage = () => {
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               {/* Resource 1 */}
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onClick={() => (window as any).openResourceModal('leadership')}>
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onclick="openResourceModal('leadership')">
                 <div className="relative h-48">
                   <img 
                     src={downloadableGuideImg} 
@@ -204,7 +204,7 @@ export const ResourcesPage = () => {
               </div>
 
               {/* Resource 2 */}
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onClick={() => (window as any).openResourceModal('culture')}>
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onclick="openResourceModal('culture')">
                 <div className="relative h-48">
                   <img 
                     src={toolkitImg} 
@@ -228,7 +228,7 @@ export const ResourcesPage = () => {
               </div>
 
               {/* Resource 3 */}
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onClick={() => (window as any).openResourceModal('implementation')}>
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onclick="openResourceModal('implementation')">
                 <div className="relative h-48">
                   <img 
                     src={webinarImg} 
