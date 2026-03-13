@@ -52,12 +52,12 @@ export const AssessmentLandingPage = () => {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         
-        {/* Professional Image 1 - Data Analysis */}
+        {/* Professional Image 2 - Presentation */}
         <section className="mb-20">
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img 
-              src="/static/assessment-data-analysis.jpg" 
-              alt="LLI Consulting Group LLC professional consultation and data analysis" 
+              src="/static/assessment-presentation.jpg" 
+              alt="LLI Consulting Group LLC leadership presentation and strategic planning" 
               className="w-full h-auto"
             />
           </div>
