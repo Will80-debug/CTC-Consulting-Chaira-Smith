@@ -724,7 +724,7 @@ export const ResourcesPage = () => {
           implementation: {
             title: 'Implementation Planning Playbook',
             price: 99,
-            valueProposition: 'Turn strategy into reality with the proven playbook used by top-tier consultants! Built from 15+ years of organizational change experience, this isn\'t theory—it\'s battle-tested methodology. Get the exact sequencing, accountability systems, and ownership frameworks that separate successful transformations from failed attempts.',
+            valueProposition: 'Turn strategy into reality with the proven playbook used by top-tier consultants! Built from 15+ years of organizational change experience, this is not theory—it is battle-tested methodology. Get the exact sequencing, accountability systems, and ownership frameworks that separate successful transformations from failed attempts.',
             description: \`
               <p class="text-lg text-gray-800 mb-4 leading-relaxed">
                 <strong class="text-lli-orange">Turn strategy into reality with the playbook used by top-tier consultants!</strong> Most culture initiatives fail because of poor implementation—not bad ideas. This playbook gives you the <em>step-by-step roadmap</em> to execute change that sticks.
