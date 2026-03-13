@@ -188,7 +188,7 @@ export const ResourcesPage = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4 bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg">
-                    $25
+                    $39
                   </div>
                 </div>
                 <div className="p-6">
@@ -212,7 +212,7 @@ export const ResourcesPage = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4 bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg">
-                    $39
+                    $59
                   </div>
                 </div>
                 <div className="p-6">
@@ -236,7 +236,7 @@ export const ResourcesPage = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4 bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg">
-                    $59
+                    $99
                   </div>
                 </div>
                 <div className="p-6">
@@ -546,7 +546,7 @@ export const ResourcesPage = () => {
         const resourceData = {
           leadership: {
             title: 'Leadership Self-Reflection Guide',
-            price: 25,
+            price: 39,
             description: \`
               <p class="text-lg text-gray-800 mb-4 leading-relaxed">
                 <strong class="text-lli-orange">Transform your leadership in just 20 powerful questions!</strong> This isn't another generic leadership book—it's a <em>battle-tested framework</em> used by executives at Fortune 500 companies and mission-driven nonprofits alike.
@@ -567,7 +567,7 @@ export const ResourcesPage = () => {
           },
           culture: {
             title: 'Culture & Leadership Conversation Toolkit',
-            price: 39,
+            price: 59,
             description: \`
               <p class="text-lg text-gray-800 mb-4 leading-relaxed">
                 <strong class="text-lli-orange">Facilitate breakthrough conversations that actually change culture!</strong> Stop wasting time on surface-level discussions. This toolkit gives you the <em>exact questions and frameworks</em> used by top consultants charging $10,000+ per session.
@@ -588,7 +588,7 @@ export const ResourcesPage = () => {
           },
           implementation: {
             title: 'Implementation Planning Playbook',
-            price: 59,
+            price: 99,
             description: \`
               <p class="text-lg text-gray-800 mb-4 leading-relaxed">
                 <strong class="text-lli-orange">Turn strategy into reality with the playbook used by top-tier consultants!</strong> Most culture initiatives fail because of poor implementation—not bad ideas. This playbook gives you the <em>step-by-step roadmap</em> to execute change that sticks.
