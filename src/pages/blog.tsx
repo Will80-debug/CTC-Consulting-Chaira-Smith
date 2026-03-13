@@ -252,7 +252,7 @@ export const BlogPage = () => {
           </p>
           
           <div className="bg-white rounded-2xl p-8 shadow-2xl">
-            <form id="newsletter-form" onSubmit={(e) => (window as any).handleNewsletterSubmit(e)}>
+            <form id="newsletter-form">
               <div className="flex flex-col gap-4 mb-4">
                 <input 
                   type="text"
@@ -296,49 +296,57 @@ export const BlogPage = () => {
 
       {/* Newsletter Form Handler Script */}
       <script dangerouslySetInnerHTML={{__html: `
-        window.handleNewsletterSubmit = async function(event) {
-          event.preventDefault();
+        document.addEventListener('DOMContentLoaded', function() {
+          const newsletterForm = document.getElementById('newsletter-form');
           
-          const form = event.target;
-          const submitButton = form.querySelector('button[type="submit"]');
-          const originalText = submitButton.innerHTML;
-          
-          // Get form data
-          const name = form.querySelector('#newsletter-name').value;
-          const email = form.querySelector('#newsletter-email').value;
-          
-          // Show loading state
-          submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Subscribing...';
-          submitButton.disabled = true;
-          
-          try {
-            // Send to backend API
-            const response = await fetch('/api/newsletter-subscribe', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({ 
-                name, 
-                email,
-                timestamp: new Date().toISOString()
-              })
+          if (newsletterForm) {
+            newsletterForm.addEventListener('submit', async function(event) {
+              event.preventDefault();
+              
+              const form = event.target;
+              const submitButton = form.querySelector('button[type="submit"]');
+              const originalText = submitButton.innerHTML;
+              
+              // Get form data
+              const name = form.querySelector('#newsletter-name').value;
+              const email = form.querySelector('#newsletter-email').value;
+              
+              // Show loading state
+              submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Subscribing...';
+              submitButton.disabled = true;
+              
+              try {
+                // Send to backend API
+                const response = await fetch('/api/newsletter-subscribe', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify({ 
+                    name: name, 
+                    email: email,
+                    timestamp: new Date().toISOString()
+                  })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                  // Hide form, show success message
+                  form.style.display = 'none';
+                  document.getElementById('newsletter-success').classList.remove('hidden');
+                } else {
+                  throw new Error(data.error || 'Subscription failed');
+                }
+              } catch (error) {
+                console.error('Newsletter subscription error:', error);
+                alert('There was an error subscribing. Please try again or contact us directly at info@lliconsultinggroup.com');
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+              }
             });
-            
-            if (response.ok) {
-              // Hide form, show success message
-              form.style.display = 'none';
-              document.getElementById('newsletter-success').classList.remove('hidden');
-            } else {
-              throw new Error('Subscription failed');
-            }
-          } catch (error) {
-            console.error('Newsletter subscription error:', error);
-            alert('There was an error subscribing. Please try again or contact us directly at info@lliconsultinggroup.com');
-            submitButton.innerHTML = originalText;
-            submitButton.disabled = false;
           }
-        }
+        });
       `}}>
       </script>
 
