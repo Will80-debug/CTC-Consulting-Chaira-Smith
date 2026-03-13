@@ -63,17 +63,6 @@ export const AssessmentLandingPage = () => {
           </div>
         </section>
 
-        {/* Professional Image 2 - Presentation */}
-        <section className="mb-20">
-          <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <img 
-              src="/static/assessment-presentation.jpg" 
-              alt="LLI Consulting Group LLC leadership presentation and strategic planning" 
-              className="w-full h-auto"
-            />
-          </div>
-        </section>
-
         {/* How It Works */}
         <section id="how-it-works" className="mb-20 bg-white rounded-2xl shadow-xl p-12">
           <div className="text-center mb-12">
