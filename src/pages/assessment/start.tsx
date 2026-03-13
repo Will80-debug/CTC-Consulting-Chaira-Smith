@@ -14,18 +14,18 @@ export const AssessmentStartPage = () => {
             Leadership Readiness Assessment
           </h1>
           <p className="text-xl text-gray-600">
-            Answer 25 questions honestly. There are no right or wrong answers—only insights.
+            Answer 7 questions honestly. There are no right or wrong answers—only insights.
           </p>
         </div>
 
         {/* Progress Bar */}
         <div className="mb-8">
           <div className="flex justify-between items-center mb-2">
-            <span id="progress-text" className="text-sm font-semibold text-gray-700">Question 1 of 25</span>
-            <span id="progress-percent" className="text-sm font-semibold text-lli-teal">4%</span>
+            <span id="progress-text" className="text-sm font-semibold text-gray-700">Question 1 of 7</span>
+            <span id="progress-percent" className="text-sm font-semibold text-lli-teal">14%</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-3">
-            <div id="progress-bar" className="bg-gradient-to-r from-lli-teal to-lli-orange h-3 rounded-full transition-all duration-500" style={{ width: '4%' }}></div>
+            <div id="progress-bar" className="bg-gradient-to-r from-lli-teal to-lli-orange h-3 rounded-full transition-all duration-500" style={{ width: '14%' }}></div>
           </div>
         </div>
 

@@ -57,7 +57,7 @@ export const dimensions: AssessmentDimension[] = [
 ];
 
 export const assessmentQuestions: AssessmentQuestion[] = [
-  // Leadership Effectiveness (5 questions)
+  // Leadership Effectiveness (2 questions)
   {
     id: 'L1',
     dimension: 'leadership',
@@ -82,44 +82,8 @@ export const assessmentQuestions: AssessmentQuestion[] = [
       { text: 'Avoid difficult feedback conversations', score: 0 }
     ]
   },
-  {
-    id: 'L3',
-    dimension: 'leadership',
-    question: 'My team members would describe my leadership style as:',
-    options: [
-      { text: 'Empowering and developmental - I help them grow', score: 20 },
-      { text: 'Supportive but sometimes I micromanage', score: 15 },
-      { text: 'Directive - I tell them what needs to be done', score: 10 },
-      { text: 'Hands-off - They figure things out on their own', score: 5 },
-      { text: 'Inconsistent - It depends on the day', score: 0 }
-    ]
-  },
-  {
-    id: 'L4',
-    dimension: 'leadership',
-    question: 'When making decisions, I:',
-    options: [
-      { text: 'Seek input from diverse perspectives and explain my reasoning', score: 20 },
-      { text: 'Consult a few trusted advisors', score: 15 },
-      { text: 'Make decisions independently then communicate them', score: 10 },
-      { text: 'Struggle with decision-making and often second-guess myself', score: 5 },
-      { text: 'Avoid making difficult decisions when possible', score: 0 }
-    ]
-  },
-  {
-    id: 'L5',
-    dimension: 'leadership',
-    question: 'How do you develop leadership skills in others?',
-    options: [
-      { text: 'Active mentorship, coaching, and creating growth opportunities', score: 20 },
-      { text: 'Provide occasional guidance when asked', score: 15 },
-      { text: 'Send them to training programs', score: 10 },
-      { text: 'Hope they learn by observing', score: 5 },
-      { text: 'I don\'t focus on developing others', score: 0 }
-    ]
-  },
 
-  // Culture Health (5 questions)
+  // Culture Health (2 questions)
   {
     id: 'C1',
     dimension: 'culture',
@@ -144,44 +108,8 @@ export const assessmentQuestions: AssessmentQuestion[] = [
       { text: 'No - significant disconnect between stated and actual culture', score: 0 }
     ]
   },
-  {
-    id: 'C3',
-    dimension: 'culture',
-    question: 'How would you rate employee engagement in your organization?',
-    options: [
-      { text: 'Exceptional - people are passionate and committed', score: 20 },
-      { text: 'Good - most people are engaged and motivated', score: 15 },
-      { text: 'Average - about half are engaged, half are just getting by', score: 10 },
-      { text: 'Low - many people seem disengaged or unhappy', score: 5 },
-      { text: 'Critical - high turnover and low morale', score: 0 }
-    ]
-  },
-  {
-    id: 'C4',
-    dimension: 'culture',
-    question: 'Conflict in our organization is:',
-    options: [
-      { text: 'Productive - we address issues directly and constructively', score: 20 },
-      { text: 'Manageable - we work through disagreements eventually', score: 15 },
-      { text: 'Avoided - we don\'t like confrontation', score: 10 },
-      { text: 'Toxic - disagreements turn personal or political', score: 5 },
-      { text: 'Destructive - conflict damages relationships and performance', score: 0 }
-    ]
-  },
-  {
-    id: 'C5',
-    dimension: 'culture',
-    question: 'Recognition and appreciation in our culture:',
-    options: [
-      { text: 'Is frequent, specific, and meaningful', score: 20 },
-      { text: 'Happens regularly but could be more meaningful', score: 15 },
-      { text: 'Is inconsistent - some get recognized, others don\'t', score: 10 },
-      { text: 'Is rare - people don\'t feel valued', score: 5 },
-      { text: 'Doesn\'t happen - contributions go unnoticed', score: 0 }
-    ]
-  },
 
-  // DEI Readiness (5 questions)
+  // DEI Readiness (1 question)
   {
     id: 'D1',
     dimension: 'dei',
@@ -194,56 +122,8 @@ export const assessmentQuestions: AssessmentQuestion[] = [
       { text: 'We haven\'t measured or prioritized this', score: 0 }
     ]
   },
-  {
-    id: 'D2',
-    dimension: 'dei',
-    question: 'We actively work to identify and reduce bias in our systems and processes:',
-    options: [
-      { text: 'Yes - we regularly audit hiring, promotion, and other key processes', score: 20 },
-      { text: 'Sometimes - we\'ve made some changes but not systematically', score: 15 },
-      { text: 'Minimally - we\'ve done training but haven\'t changed systems', score: 10 },
-      { text: 'Rarely - we talk about bias but don\'t address it structurally', score: 5 },
-      { text: 'No - we haven\'t examined our processes through an equity lens', score: 0 }
-    ]
-  },
-  {
-    id: 'D3',
-    dimension: 'dei',
-    question: 'People from underrepresented groups in our organization:',
-    options: [
-      { text: 'Feel valued, heard, and have equal opportunities to advance', score: 20 },
-      { text: 'Generally feel included but face some barriers', score: 15 },
-      { text: 'Experience mixed inclusion - depends on their team/manager', score: 10 },
-      { text: 'Often feel like outsiders or face microaggressions', score: 5 },
-      { text: 'Report feeling excluded or facing discrimination', score: 0 }
-    ]
-  },
-  {
-    id: 'D4',
-    dimension: 'dei',
-    question: 'Our DEI strategy:',
-    options: [
-      { text: 'Is integrated into all business functions with clear goals and accountability', score: 20 },
-      { text: 'Exists with some initiatives and progress tracking', score: 15 },
-      { text: 'Is mostly training and awareness events', score: 10 },
-      { text: 'Is limited to statements and good intentions', score: 5 },
-      { text: 'We don\'t have a formal DEI strategy', score: 0 }
-    ]
-  },
-  {
-    id: 'D5',
-    dimension: 'dei',
-    question: 'When someone raises a concern about bias or exclusion:',
-    options: [
-      { text: 'We investigate thoroughly and take meaningful action', score: 20 },
-      { text: 'We address it but action is inconsistent', score: 15 },
-      { text: 'We listen but often dismiss or minimize concerns', score: 10 },
-      { text: 'People are afraid to raise concerns', score: 5 },
-      { text: 'Concerns are ignored or the person faces retaliation', score: 0 }
-    ]
-  },
 
-  // Change Capability (5 questions)
+  // Change Capability (1 question)
   {
     id: 'CH1',
     dimension: 'change',
@@ -256,56 +136,8 @@ export const assessmentQuestions: AssessmentQuestion[] = [
       { text: 'Change is poorly communicated and met with resistance', score: 0 }
     ]
   },
-  {
-    id: 'CH2',
-    dimension: 'change',
-    question: 'Our track record with change initiatives:',
-    options: [
-      { text: 'Most initiatives succeed and create lasting improvement', score: 20 },
-      { text: 'Some succeed, others fizzle out', score: 15 },
-      { text: 'We start strong but struggle to sustain momentum', score: 10 },
-      { text: 'Most initiatives fail or are abandoned', score: 5 },
-      { text: 'People are cynical - "this too shall pass"', score: 0 }
-    ]
-  },
-  {
-    id: 'CH3',
-    dimension: 'change',
-    question: 'Our approach to resistance:',
-    options: [
-      { text: 'We treat it as valuable feedback and address underlying concerns', score: 20 },
-      { text: 'We acknowledge it and try to bring resisters along', score: 15 },
-      { text: 'We try to convince people but get frustrated', score: 10 },
-      { text: 'We view resistance as obstruction and push through', score: 5 },
-      { text: 'Resistance derails our change efforts', score: 0 }
-    ]
-  },
-  {
-    id: 'CH4',
-    dimension: 'change',
-    question: 'During times of uncertainty or ambiguity:',
-    options: [
-      { text: 'Leaders communicate transparently and maintain trust', score: 20 },
-      { text: 'We manage reasonably well but people get anxious', score: 15 },
-      { text: 'Communication breaks down and rumors spread', score: 10 },
-      { text: 'Leaders disappear or only share good news', score: 5 },
-      { text: 'Uncertainty creates panic and paralysis', score: 0 }
-    ]
-  },
-  {
-    id: 'CH5',
-    dimension: 'change',
-    question: 'We build change capability by:',
-    options: [
-      { text: 'Developing change leadership skills at all levels', score: 20 },
-      { text: 'Having some change champions or project managers', score: 15 },
-      { text: 'Relying on consultants to manage change for us', score: 10 },
-      { text: 'Assuming people will adapt on their own', score: 5 },
-      { text: 'We don\'t invest in change capability', score: 0 }
-    ]
-  },
 
-  // Team Performance (5 questions)
+  // Team Performance (1 question)
   {
     id: 'T1',
     dimension: 'team',
@@ -316,54 +148,6 @@ export const assessmentQuestions: AssessmentQuestion[] = [
       { text: 'Sometimes - collaboration is inconsistent', score: 10 },
       { text: 'Poorly - silos and turf protection are common', score: 5 },
       { text: 'Rarely - we operate in complete silos', score: 0 }
-    ]
-  },
-  {
-    id: 'T2',
-    dimension: 'team',
-    question: 'Accountability on our team:',
-    options: [
-      { text: 'Is clear, shared, and people follow through consistently', score: 20 },
-      { text: 'Is defined but follow-through varies', score: 15 },
-      { text: 'Is unclear - people aren\'t sure who\'s responsible', score: 10 },
-      { text: 'Is avoided - no one holds anyone accountable', score: 5 },
-      { text: 'Is a problem - missed commitments and finger-pointing', score: 0 }
-    ]
-  },
-  {
-    id: 'T3',
-    dimension: 'team',
-    question: 'Trust among team members:',
-    options: [
-      { text: 'Is strong - people rely on each other completely', score: 20 },
-      { text: 'Is good - most people trust each other', score: 15 },
-      { text: 'Is limited - trust exists within subgroups but not team-wide', score: 10 },
-      { text: 'Is low - people are guarded and don\'t share openly', score: 5 },
-      { text: 'Is broken - distrust impacts everything we do', score: 0 }
-    ]
-  },
-  {
-    id: 'T4',
-    dimension: 'team',
-    question: 'Our team\'s approach to innovation and risk-taking:',
-    options: [
-      { text: 'We experiment, learn from failure, and continuously improve', score: 20 },
-      { text: 'We try new things but are cautious', score: 15 },
-      { text: 'We talk about innovation but rarely act on it', score: 10 },
-      { text: 'We avoid risk and stick to what\'s safe', score: 5 },
-      { text: 'Failure is punished - people don\'t take risks', score: 0 }
-    ]
-  },
-  {
-    id: 'T5',
-    dimension: 'team',
-    question: 'Meeting effectiveness:',
-    options: [
-      { text: 'Meetings are focused, productive, and lead to clear decisions', score: 20 },
-      { text: 'Most meetings are useful but could be better', score: 15 },
-      { text: 'Half our meetings feel like a waste of time', score: 10 },
-      { text: 'Meetings are poorly run and rarely productive', score: 5 },
-      { text: 'People dread meetings and multitask through them', score: 0 }
     ]
   }
 ];

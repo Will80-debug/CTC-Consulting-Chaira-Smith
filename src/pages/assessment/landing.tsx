@@ -1,6 +1,5 @@
 import { Navigation } from '../../components/Navigation'
 import { Footer } from '../../components/Footer'
-import { dimensions } from '../../data/assessment-questions'
 
 export const AssessmentLandingPage = () => {
   const heroImg = "https://images.unsplash.com/photo-1552664730-d307ca884978?w=2000&h=1200&fit=crop";
@@ -71,51 +70,6 @@ export const AssessmentLandingPage = () => {
               alt="LLI Consulting Group LLC professional consultation and data analysis" 
               className="w-full h-auto"
             />
-          </div>
-        </section>
-
-        {/* 5 Dimensions */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              What We <span className="text-lli-teal">Explore</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Reflection areas to help clarify your leadership context
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {dimensions.map((dimension, index) => (
-              <a
-                href="/assessment/start"
-                key={dimension.id}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-lli-teal cursor-pointer"
-                style={{ borderTopColor: dimension.color === 'lli-orange' ? '#E86D3A' : '#2D9FA5' }}
-              >
-                <div className={`w-16 h-16 bg-gradient-to-br from-${dimension.color} to-${dimension.color}-dark text-white rounded-full flex items-center justify-center text-2xl mb-4`}>
-                  <i className={`fas ${dimension.icon}`}></i>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">{dimension.name}</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {dimension.description}
-                </p>
-              </a>
-            ))}
-            
-            {/* Overall Score Card */}
-            <a
-              href="/assessment/start"
-              className="bg-gradient-to-br from-lli-black to-gray-800 rounded-2xl p-8 shadow-xl border-t-4 border-lli-orange text-white cursor-pointer hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-            >
-              <div className="w-16 h-16 bg-lli-orange text-white rounded-full flex items-center justify-center text-2xl mb-4">
-                <i className="fas fa-trophy"></i>
-              </div>
-              <h3 className="text-2xl font-bold mb-3">Overall Readiness</h3>
-              <p className="text-gray-200 leading-relaxed">
-                Your comprehensive Leadership Readiness Score from 0-100, showing where you stand and what to focus on next.
-              </p>
-            </a>
           </div>
         </section>
 
