@@ -217,12 +217,24 @@ function submitAssessment() {
   // Add timestamp
   const timestamp = new Date().toISOString();
   
+  // Debug logging
+  console.log('Assessment submitted - Results:', results);
+  console.log('Timestamp:', timestamp);
+  
   // Save results to localStorage
-  localStorage.setItem('lli_assessment_results', JSON.stringify(results));
-  localStorage.setItem('lli_assessment_answers', JSON.stringify(answers));
-  localStorage.setItem('lli_assessment_timestamp', timestamp);
+  try {
+    localStorage.setItem('lli_assessment_results', JSON.stringify(results));
+    localStorage.setItem('lli_assessment_answers', JSON.stringify(answers));
+    localStorage.setItem('lli_assessment_timestamp', timestamp);
+    console.log('Data saved to localStorage successfully');
+  } catch (error) {
+    console.error('Error saving to localStorage:', error);
+    alert('Error saving your results. Please try again.');
+    return;
+  }
   
   // Redirect to results page
+  console.log('Redirecting to results page...');
   window.location.href = '/assessment/results';
 }
 

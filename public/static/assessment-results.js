@@ -90,26 +90,36 @@ const levelDescriptions = {
 
 // Initialize results page
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('Results page loaded - DOMContentLoaded fired');
+  
   // Load results from localStorage
   const resultsJSON = localStorage.getItem('lli_assessment_results');
   const timestamp = localStorage.getItem('lli_assessment_timestamp');
   
+  console.log('Results from localStorage:', resultsJSON);
+  console.log('Timestamp from localStorage:', timestamp);
+  
   if (!resultsJSON) {
     // No results found, redirect to assessment start
+    console.log('No results found, redirecting to /assessment');
     window.location.href = '/assessment';
     return;
   }
   
   const results = JSON.parse(resultsJSON);
+  console.log('Parsed results:', results);
   
   // Check if email was already captured
   const emailCaptured = localStorage.getItem('lli_assessment_email_captured');
+  console.log('Email captured status:', emailCaptured);
   
   if (emailCaptured) {
     // Email already captured, show results immediately
+    console.log('Email already captured, showing results');
     showResults(results, timestamp);
   } else {
     // Show email modal first
+    console.log('Email not captured, showing email modal');
     showEmailModal(results, timestamp);
   }
 });
