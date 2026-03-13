@@ -482,9 +482,9 @@ export const ResourcesPage = () => {
         </div>
       </div>
 
-      {/* Resource Payment Modal */}
+      {/* Resource Payment Modal - Combined Description + Payment */}
       <div id="resource-modal" className="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="bg-white rounded-2xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto">
           <div className="p-8">
             {/* Close Button */}
             <div className="flex justify-end mb-4">
@@ -493,63 +493,183 @@ export const ResourcesPage = () => {
               </button>
             </div>
 
-            {/* Modal Content */}
-            <div className="text-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-lli-orange to-lli-teal rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-star text-3xl text-white"></i>
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Left Column - Resource Description */}
+              <div>
+                {/* Modal Header */}
+                <div className="text-center mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-lli-orange to-lli-teal rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-star text-3xl text-white"></i>
+                  </div>
+                  <h2 id="modal-title" className="text-3xl font-bold text-gray-900 mb-4">Premium Leadership Resource</h2>
+                  <div className="flex items-center justify-center gap-4 mb-4">
+                    <span id="modal-price" className="text-5xl font-bold text-lli-orange">$39</span>
+                    <div className="text-left">
+                      <p id="modal-old-price" className="text-sm text-gray-500 line-through">Was $99</p>
+                      <p id="modal-savings" className="text-sm font-semibold text-green-600">Save 61%!</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Resource Description */}
+                <div id="modal-description" className="bg-gradient-to-br from-lli-teal/5 to-white rounded-xl p-6 mb-6 border-2 border-lli-teal/20">
+                  {/* Content populated by JavaScript */}
+                </div>
+
+                {/* What's Included */}
+                <div className="bg-white rounded-xl border-2 border-gray-200 p-6 mb-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                    <i className="fas fa-gift text-lli-orange text-2xl mr-3"></i>
+                    What You'll Get
+                  </h3>
+                  <ul id="modal-features" className="space-y-3">
+                    {/* Content populated by JavaScript */}
+                  </ul>
+                </div>
+
+                {/* Guarantee Badge */}
+                <div className="bg-green-50 border-l-4 border-green-500 rounded-lg p-4">
+                  <div className="flex items-start">
+                    <i className="fas fa-shield-alt text-green-600 text-2xl mr-3 mt-1"></i>
+                    <div>
+                      <p className="font-bold text-green-900 mb-1">100% Satisfaction Guarantee</p>
+                      <p className="text-sm text-green-700">If you don't find this resource valuable, contact us within 30 days for a full refund.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h2 id="modal-title" className="text-4xl font-bold text-gray-900 mb-4">Premium Leadership Resource</h2>
-              <div className="flex items-center justify-center gap-4 mb-6">
-                <span id="modal-price" className="text-5xl font-bold text-lli-orange">$39</span>
-                <div className="text-left">
-                  <p id="modal-old-price" className="text-sm text-gray-500 line-through">Was $99</p>
-                  <p id="modal-savings" className="text-sm font-semibold text-green-600">Save 61%!</p>
+
+              {/* Right Column - Payment Form */}
+              <div>
+                <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border-2 border-gray-200">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                    <i className="fas fa-lock text-lli-orange mr-2"></i>
+                    Complete Your Purchase
+                  </h3>
+
+                  <form id="resource-payment-form" onsubmit="submitResourcePayment(event); return false;">
+                    <div className="space-y-4">
+                      {/* Email */}
+                      <div>
+                        <label className="block text-sm font-bold text-gray-700 mb-2">
+                          <i className="fas fa-envelope text-lli-teal mr-2"></i>
+                          Email Address
+                        </label>
+                        <input 
+                          type="email" 
+                          id="resource-payment-email"
+                          required
+                          placeholder="your@email.com"
+                          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none"
+                        />
+                        <p className="text-xs text-gray-500 mt-1">Download link will be sent here</p>
+                      </div>
+
+                      {/* Card Name */}
+                      <div>
+                        <label className="block text-sm font-bold text-gray-700 mb-2">
+                          <i className="fas fa-user text-lli-teal mr-2"></i>
+                          Cardholder Name
+                        </label>
+                        <input 
+                          type="text" 
+                          id="resource-card-name"
+                          required
+                          placeholder="John Doe"
+                          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none"
+                        />
+                      </div>
+
+                      {/* Card Number */}
+                      <div>
+                        <label className="block text-sm font-bold text-gray-700 mb-2">
+                          <i className="fas fa-credit-card text-lli-teal mr-2"></i>
+                          Card Number
+                        </label>
+                        <input 
+                          type="text" 
+                          id="resource-card-number"
+                          required
+                          placeholder="1234 5678 9012 3456"
+                          maxlength="19"
+                          pattern="[0-9\s]+"
+                          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none"
+                        />
+                      </div>
+
+                      {/* Expiry and CVV */}
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-bold text-gray-700 mb-2">
+                            <i className="fas fa-calendar text-lli-teal mr-2"></i>
+                            Expiry
+                          </label>
+                          <input 
+                            type="text" 
+                            id="resource-expiry"
+                            required
+                            placeholder="MM/YY"
+                            maxlength="5"
+                            pattern="[0-9\/]+"
+                            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm font-bold text-gray-700 mb-2">
+                            <i className="fas fa-lock text-lli-teal mr-2"></i>
+                            CVV
+                          </label>
+                          <input 
+                            type="text" 
+                            id="resource-cvv"
+                            required
+                            placeholder="123"
+                            maxlength="4"
+                            pattern="[0-9]+"
+                            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Price Summary */}
+                      <div className="bg-gradient-to-br from-lli-teal/5 to-white rounded-lg p-4 border-2 border-lli-teal/20">
+                        <div className="flex justify-between text-gray-700 mb-2">
+                          <span className="font-semibold">Total:</span>
+                          <span id="modal-total-price" className="text-2xl font-bold text-lli-orange">$39.00</span>
+                        </div>
+                        <p className="text-xs text-gray-600 text-center">
+                          <i className="fas fa-download text-lli-teal mr-1"></i>
+                          Instant download after payment
+                        </p>
+                      </div>
+
+                      {/* Security Badge */}
+                      <div className="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-3">
+                        <div className="flex items-center text-sm text-blue-800">
+                          <i className="fas fa-shield-alt text-blue-600 text-lg mr-2"></i>
+                          <span><strong>256-bit SSL Encryption</strong> - Secure payment</span>
+                        </div>
+                      </div>
+
+                      {/* Submit Button */}
+                      <button 
+                        type="submit"
+                        id="resource-submit-payment-btn"
+                        className="w-full bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white font-bold py-4 px-8 rounded-xl text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                      >
+                        <i className="fas fa-lock mr-2"></i>
+                        <span id="resource-payment-button-text">Pay $39.00 Now</span>
+                      </button>
+
+                      <p className="text-center text-xs text-gray-500">
+                        <i className="fas fa-check-circle text-green-500 mr-1"></i>
+                        100% Money-Back Guarantee • Instant Access
+                      </p>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-
-            {/* Resource Description */}
-            <div id="modal-description" className="bg-gradient-to-br from-lli-teal/5 to-white rounded-xl p-6 mb-6 border-2 border-lli-teal/20">
-              {/* Content populated by JavaScript */}
-            </div>
-
-            {/* What's Included */}
-            <div className="bg-white rounded-xl border-2 border-gray-200 p-6 mb-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                <i className="fas fa-gift text-lli-orange text-2xl mr-3"></i>
-                What You'll Get
-              </h3>
-              <ul id="modal-features" className="space-y-3">
-                {/* Content populated by JavaScript */}
-              </ul>
-            </div>
-
-            {/* Guarantee Badge */}
-            <div className="bg-green-50 border-l-4 border-green-500 rounded-lg p-4 mb-6">
-              <div className="flex items-start">
-                <i className="fas fa-shield-alt text-green-600 text-2xl mr-3 mt-1"></i>
-                <div>
-                  <p className="font-bold text-green-900 mb-1">100% Satisfaction Guarantee</p>
-                  <p className="text-sm text-green-700">If you don't find this resource valuable, contact us within 30 days for a full refund.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col gap-3">
-              <button id="checkout-button" onclick="processPurchase()" className="w-full bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white font-bold py-4 px-8 rounded-xl text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                <i className="fas fa-lock mr-2"></i>
-                Secure Checkout - $39
-              </button>
-              <button onclick="closeResourceModal()" className="w-full bg-gray-200 text-gray-700 font-bold py-3 px-8 rounded-xl hover:bg-gray-300 transition-all">
-                Maybe Later
-              </button>
-            </div>
-
-            <p className="text-center text-xs text-gray-500 mt-4">
-              <i className="fas fa-lock mr-1"></i>
-              Secure payment processing • Instant download access
-            </p>
           </div>
         </div>
       </div>
@@ -633,6 +753,7 @@ export const ResourcesPage = () => {
           const price = data.price;
           const oldPrice = Math.round(price * 2.5); // Calculate "was" price
           const savings = Math.round(((oldPrice - price) / oldPrice) * 100);
+          const priceFormatted = price.toFixed(2);
           
           // Update modal content
           document.getElementById('modal-title').textContent = data.title;
@@ -640,7 +761,8 @@ export const ResourcesPage = () => {
           document.getElementById('modal-price').textContent = '$' + price;
           document.getElementById('modal-old-price').textContent = 'Was $' + oldPrice;
           document.getElementById('modal-savings').textContent = 'Save ' + savings + '%!';
-          document.getElementById('checkout-button').innerHTML = '<i class="fas fa-lock mr-2"></i>Secure Checkout - $' + price;
+          document.getElementById('modal-total-price').textContent = '$' + priceFormatted;
+          document.getElementById('resource-payment-button-text').textContent = 'Pay $' + priceFormatted + ' Now';
           
           // Populate features list
           const featuresList = document.getElementById('modal-features');
@@ -660,6 +782,44 @@ export const ResourcesPage = () => {
         function closeResourceModal() {
           document.getElementById('resource-modal').classList.add('hidden');
           document.body.style.overflow = 'auto';
+          // Reset form
+          document.getElementById('resource-payment-form').reset();
+        }
+
+        function submitResourcePayment(event) {
+          event.preventDefault();
+          
+          // Get form values
+          const cardNumber = document.getElementById('resource-card-number').value;
+          const cardName = document.getElementById('resource-card-name').value;
+          const expiry = document.getElementById('resource-expiry').value;
+          const cvv = document.getElementById('resource-cvv').value;
+          const email = document.getElementById('resource-payment-email').value;
+          
+          // Validate
+          if (!cardNumber || !cardName || !expiry || !cvv || !email) {
+            alert('Please fill in all payment fields');
+            return;
+          }
+          
+          // Show processing
+          const button = document.getElementById('resource-submit-payment-btn');
+          const originalText = button.innerHTML;
+          button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Processing Payment...';
+          button.disabled = true;
+          
+          const price = resourceData[currentResource].price.toFixed(2);
+          const resourceName = resourceData[currentResource].title;
+          
+          // Simulate payment processing
+          setTimeout(() => {
+            button.innerHTML = originalText;
+            button.disabled = false;
+            closeResourceModal();
+            
+            // Show success message
+            alert('Payment processing feature coming soon! For now, please contact us at info@lliconsultinggroup.com to purchase "' + resourceName + '" for $' + price + '. We will send the download link to: ' + email);
+          }, 2000);
         }
 
         function processPurchase() {
