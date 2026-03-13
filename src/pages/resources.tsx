@@ -188,7 +188,7 @@ export const ResourcesPage = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4 bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg">
-                    $39
+                    $25
                   </div>
                 </div>
                 <div className="p-6">
@@ -236,7 +236,7 @@ export const ResourcesPage = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4 bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg">
-                    $39
+                    $59
                   </div>
                 </div>
                 <div className="p-6">
@@ -333,7 +333,7 @@ export const ResourcesPage = () => {
                 <div className="space-y-3">
                   <div className="flex justify-between text-gray-700">
                     <span>Subtotal:</span>
-                    <span className="font-semibold">$39.00</span>
+                    <span id="payment-subtotal" className="font-semibold">$39.00</span>
                   </div>
                   <div className="flex justify-between text-gray-700">
                     <span>Tax:</span>
@@ -341,7 +341,7 @@ export const ResourcesPage = () => {
                   </div>
                   <div className="flex justify-between text-xl font-bold text-gray-900 pt-3 border-t-2 border-gray-300">
                     <span>Total:</span>
-                    <span className="text-lli-orange">$39.00</span>
+                    <span id="payment-total" className="text-lli-orange">$39.00</span>
                   </div>
                 </div>
 
@@ -454,7 +454,7 @@ export const ResourcesPage = () => {
                       className="w-full bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white font-bold py-4 px-8 rounded-xl text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 mt-6"
                     >
                       <i className="fas fa-lock mr-2"></i>
-                      Pay $39.00 Now
+                      <span id="payment-button-text">Pay $39.00 Now</span>
                     </button>
 
                     <p className="text-center text-xs text-gray-500 mt-3">
@@ -487,10 +487,10 @@ export const ResourcesPage = () => {
               </div>
               <h2 id="modal-title" className="text-4xl font-bold text-gray-900 mb-4">Premium Leadership Resource</h2>
               <div className="flex items-center justify-center gap-4 mb-6">
-                <span className="text-5xl font-bold text-lli-orange">$39</span>
+                <span id="modal-price" className="text-5xl font-bold text-lli-orange">$39</span>
                 <div className="text-left">
-                  <p className="text-sm text-gray-500 line-through">Was $99</p>
-                  <p className="text-sm font-semibold text-green-600">Save 61%!</p>
+                  <p id="modal-old-price" className="text-sm text-gray-500 line-through">Was $99</p>
+                  <p id="modal-savings" className="text-sm font-semibold text-green-600">Save 61%!</p>
                 </div>
               </div>
             </div>
@@ -524,7 +524,7 @@ export const ResourcesPage = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col gap-3">
-              <button onclick="processPurchase()" className="w-full bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white font-bold py-4 px-8 rounded-xl text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+              <button id="checkout-button" onclick="processPurchase()" className="w-full bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white font-bold py-4 px-8 rounded-xl text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 <i className="fas fa-lock mr-2"></i>
                 Secure Checkout - $39
               </button>
@@ -546,6 +546,7 @@ export const ResourcesPage = () => {
         const resourceData = {
           leadership: {
             title: 'Leadership Self-Reflection Guide',
+            price: 25,
             description: \`
               <p class="text-lg text-gray-800 mb-4 leading-relaxed">
                 <strong class="text-lli-orange">Transform your leadership in just 20 powerful questions!</strong> This isn't another generic leadership book—it's a <em>battle-tested framework</em> used by executives at Fortune 500 companies and mission-driven nonprofits alike.
@@ -566,6 +567,7 @@ export const ResourcesPage = () => {
           },
           culture: {
             title: 'Culture & Leadership Conversation Toolkit',
+            price: 39,
             description: \`
               <p class="text-lg text-gray-800 mb-4 leading-relaxed">
                 <strong class="text-lli-orange">Facilitate breakthrough conversations that actually change culture!</strong> Stop wasting time on surface-level discussions. This toolkit gives you the <em>exact questions and frameworks</em> used by top consultants charging $10,000+ per session.
@@ -586,6 +588,7 @@ export const ResourcesPage = () => {
           },
           implementation: {
             title: 'Implementation Planning Playbook',
+            price: 59,
             description: \`
               <p class="text-lg text-gray-800 mb-4 leading-relaxed">
                 <strong class="text-lli-orange">Turn strategy into reality with the playbook used by top-tier consultants!</strong> Most culture initiatives fail because of poor implementation—not bad ideas. This playbook gives you the <em>step-by-step roadmap</em> to execute change that sticks.
@@ -611,10 +614,17 @@ export const ResourcesPage = () => {
         function openResourceModal(resourceType) {
           currentResource = resourceType;
           const data = resourceData[resourceType];
+          const price = data.price;
+          const oldPrice = Math.round(price * 2.5); // Calculate "was" price
+          const savings = Math.round(((oldPrice - price) / oldPrice) * 100);
           
           // Update modal content
           document.getElementById('modal-title').textContent = data.title;
           document.getElementById('modal-description').innerHTML = data.description;
+          document.getElementById('modal-price').textContent = '$' + price;
+          document.getElementById('modal-old-price').textContent = 'Was $' + oldPrice;
+          document.getElementById('modal-savings').textContent = 'Save ' + savings + '%!';
+          document.getElementById('checkout-button').innerHTML = '<i class="fas fa-lock mr-2"></i>Secure Checkout - $' + price;
           
           // Populate features list
           const featuresList = document.getElementById('modal-features');
@@ -637,9 +647,15 @@ export const ResourcesPage = () => {
         }
 
         function processPurchase() {
+          const price = resourceData[currentResource].price;
+          const priceFormatted = price.toFixed(2);
+          
           // Show payment form modal
           document.getElementById('payment-modal').classList.remove('hidden');
           document.getElementById('payment-resource-name').textContent = resourceData[currentResource].title;
+          document.getElementById('payment-subtotal').textContent = '$' + priceFormatted;
+          document.getElementById('payment-total').textContent = '$' + priceFormatted;
+          document.getElementById('payment-button-text').textContent = 'Pay $' + priceFormatted + ' Now';
           
           // Populate order summary
           const summaryList = document.getElementById('order-summary-list');
