@@ -31,16 +31,6 @@ export const AssessmentLandingPage = () => {
                 A short reflection tool to help clarify what you are navigating before our discovery conversation. No scoring. No ranking. Just structured questions.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <a 
-                  href="/assessment/start" 
-                  className="inline-block bg-lli-orange text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-lli-orange-dark transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 text-center"
-                >
-                  Begin Intake
-                  <i className="fas fa-arrow-right ml-3"></i>
-                </a>
-              </div>
-              
               <div className="flex items-center space-x-6 text-white">
                 <div className="flex items-center">
                   <i className="fas fa-clock text-lli-orange mr-2"></i>
