@@ -393,14 +393,49 @@ When a visitor subscribes, an email is sent to `info@lliconsultinggroup.com` wit
 
 **Current Status**: ✅ API endpoint deployed and functional (logging mode until RESEND_API_KEY is configured)
 
+## Leadership Readiness Assessment Email (NEW!)
+**Location**: Assessment page (`/assessment`)
+- **Assessment**: 7-question Leadership Readiness Assessment
+- **API Endpoint**: `/api/send-assessment-report`
+- **Email Recipient**: `info@lliconsultinggroup.com`
+- **Email Service**: Resend API
+- **Features**:
+  - Automatic email on assessment completion
+  - Comprehensive results summary
+  - Client contact information
+  - Reply-to set to client's email
+
+### Assessment Email Format
+When a client completes the assessment, an email is sent to `info@lliconsultinggroup.com` with:
+- Client name, email, and organization
+- Completion timestamp
+- Overall score (0-100) and performance level
+- Individual dimension scores:
+  - Leadership Effectiveness
+  - Culture Health
+  - Inclusion & Equity
+  - Change Capability
+  - Team Performance
+- Top strengths and priority focus areas
+- Link to full results
+- Reply-to set to client's email for easy follow-up
+
+**Current Status**: ✅ API endpoint deployed and functional (logging mode until RESEND_API_KEY is configured)
+
+## Email Integration Summary
+Both newsletter subscriptions and assessment completions use the same Resend API configuration:
+- **Newsletter**: `info@lliconsultinggroup.com`
+- **Assessment**: `info@lliconsultinggroup.com`
+- **Status**: ✅ Both deployed and ready (awaiting RESEND_API_KEY)
+
 ## Recommended Next Steps
-1. **Newsletter Email Integration**: 
+1. **Email Integration (Priority)**: 
    - Configure RESEND_API_KEY environment variable
    - Verify domain in Resend dashboard
-   - Test email delivery to info@lliconsultinggroup.com
+   - Test email delivery to info@lliconsultinggroup.com for both newsletter and assessment
 2. **Backend Integration**: 
-   - Create `/api/consultation` endpoint for form submissions
-   - Set up email notifications for new form submissions
+   - Create `/api/consultation` endpoint for contact form submissions
+   - Set up email notifications for consultation form submissions
    - Store form data in database or CRM
 2. **Calendly Configuration**: 
    - Update placeholder URL with actual Calendly link
