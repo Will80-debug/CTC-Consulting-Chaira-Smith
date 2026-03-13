@@ -325,6 +325,19 @@ export const ResourcesPage = () => {
                 
                 <div className="mb-4 pb-4 border-b border-gray-200">
                   <p id="payment-resource-name" className="font-bold text-lg text-gray-900 mb-2">Resource Name</p>
+                  
+                  {/* Value Proposition */}
+                  <div id="payment-value-prop" className="bg-gradient-to-r from-lli-orange/10 to-lli-teal/10 rounded-lg p-3 mb-3 border border-lli-orange/20">
+                    <p className="text-sm font-semibold text-gray-800 mb-2 flex items-center">
+                      <i className="fas fa-star text-lli-orange mr-2"></i>
+                      What You're Getting:
+                    </p>
+                    <p id="payment-value-text" className="text-xs text-gray-700 leading-relaxed">
+                      {/* Populated by JavaScript */}
+                    </p>
+                  </div>
+                  
+                  <p className="text-xs font-bold text-lli-teal mb-2">Key Features Included:</p>
                   <ul id="order-summary-list" className="space-y-2">
                     {/* Populated by JavaScript */}
                   </ul>
@@ -547,6 +560,7 @@ export const ResourcesPage = () => {
           leadership: {
             title: 'Leadership Self-Reflection Guide',
             price: 39,
+            valueProposition: 'A battle-tested framework with 20 powerful reflection questions used by Fortune 500 executives. Uncover blind spots, clarify your vision, and develop actionable strategies in just 30 minutes. This is the breakthrough tool you wish you had years ago!',
             description: \`
               <p class="text-lg text-gray-800 mb-4 leading-relaxed">
                 <strong class="text-lli-orange">Transform your leadership in just 20 powerful questions!</strong> This isn't another generic leadership book—it's a <em>battle-tested framework</em> used by executives at Fortune 500 companies and mission-driven nonprofits alike.
@@ -568,6 +582,7 @@ export const ResourcesPage = () => {
           culture: {
             title: 'Culture & Leadership Conversation Toolkit',
             price: 59,
+            valueProposition: 'Stop wasting time on surface-level discussions! Get the exact questions and frameworks used by top consultants charging $10,000+ per session. Navigate difficult topics, build psychological safety, and drive measurable culture change. Your team will thank you!',
             description: \`
               <p class="text-lg text-gray-800 mb-4 leading-relaxed">
                 <strong class="text-lli-orange">Facilitate breakthrough conversations that actually change culture!</strong> Stop wasting time on surface-level discussions. This toolkit gives you the <em>exact questions and frameworks</em> used by top consultants charging $10,000+ per session.
@@ -589,6 +604,7 @@ export const ResourcesPage = () => {
           implementation: {
             title: 'Implementation Planning Playbook',
             price: 99,
+            valueProposition: 'Turn strategy into reality with the proven playbook used by top-tier consultants! Built from 15+ years of organizational change experience, this isn\'t theory—it\'s battle-tested methodology. Get the exact sequencing, accountability systems, and ownership frameworks that separate successful transformations from failed attempts.',
             description: \`
               <p class="text-lg text-gray-800 mb-4 leading-relaxed">
                 <strong class="text-lli-orange">Turn strategy into reality with the playbook used by top-tier consultants!</strong> Most culture initiatives fail because of poor implementation—not bad ideas. This playbook gives you the <em>step-by-step roadmap</em> to execute change that sticks.
@@ -653,6 +669,7 @@ export const ResourcesPage = () => {
           // Show payment form modal
           document.getElementById('payment-modal').classList.remove('hidden');
           document.getElementById('payment-resource-name').textContent = resourceData[currentResource].title;
+          document.getElementById('payment-value-text').textContent = resourceData[currentResource].valueProposition;
           document.getElementById('payment-subtotal').textContent = '$' + priceFormatted;
           document.getElementById('payment-total').textContent = '$' + priceFormatted;
           document.getElementById('payment-button-text').textContent = 'Pay $' + priceFormatted + ' Now';
