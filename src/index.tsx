@@ -114,7 +114,7 @@ Contact: ${email}
     
     // Log for debugging
     console.log('Assessment Report Email:', emailContent)
-    console.log('Send to: Smithchiara@gmail.com')
+    console.log('Send to: info@lliconsultinggroup.com')
     console.log('User Email:', email)
     
     // Check if Resend API key is configured
@@ -131,7 +131,7 @@ Contact: ${email}
           },
           body: JSON.stringify({
             from: 'LLI Assessment <noreply@lliconsulting.com>',
-            to: ['Smithchiara@gmail.com'],
+            to: ['info@lliconsultinggroup.com'],
             reply_to: email, // User's email for easy reply
             subject: `New Assessment: ${name} - Score: ${overallScore}/100`,
             text: emailContent
