@@ -35,7 +35,7 @@ export const dimensions: AssessmentDimension[] = [
   },
   {
     id: 'dei',
-    name: 'DEI Readiness',
+    name: 'Inclusion & Equity',
     description: 'Your commitment to diversity, equity, and inclusion',
     icon: 'fa-users',
     color: 'lli-orange'

@@ -6,7 +6,7 @@ const assessmentData = {
   dimensions: [
     { id: 'leadership', name: 'Leadership Effectiveness', icon: 'fa-user-tie', color: 'lli-orange' },
     { id: 'culture', name: 'Culture Health', icon: 'fa-heart-pulse', color: 'lli-teal' },
-    { id: 'dei', name: 'DEI Readiness', icon: 'fa-users', color: 'lli-orange' },
+    { id: 'dei', name: 'Inclusion & Equity', icon: 'fa-users', color: 'lli-orange' },
     { id: 'change', name: 'Change Capability', icon: 'fa-arrows-rotate', color: 'lli-teal' },
     { id: 'team', name: 'Team Performance', icon: 'fa-people-group', color: 'lli-orange' }
   ],
