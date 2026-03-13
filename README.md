@@ -352,8 +352,53 @@ curl http://localhost:3000/contact
 - [x] **Blog content (69 articles across 4 categories with dynamic routing)**
 - [x] **Deployed to Cloudflare Pages**
 
+## Newsletter Subscription (NEW!)
+**Location**: Blog page (`/blog`)
+- **Form Fields**: Name and Email
+- **API Endpoint**: `/api/newsletter-subscribe`
+- **Email Recipient**: `info@lliconsultinggroup.com`
+- **Email Service**: Resend API
+- **Features**:
+  - Loading state during submission
+  - Success message after subscription
+  - Form hides on success
+  - Subscriber info sent via email
+
+### Email Integration Setup
+To enable automatic email notifications for newsletter subscriptions:
+
+1. **Get Resend API Key**: 
+   - Sign up at [resend.com](https://resend.com)
+   - Create API key in dashboard
+   
+2. **Add Environment Variable**:
+   ```bash
+   # For local development (.dev.vars file)
+   RESEND_API_KEY=re_your_api_key_here
+   
+   # For production (Cloudflare Pages)
+   npx wrangler pages secret put RESEND_API_KEY --project-name lli-consulting
+   ```
+
+3. **Verify Domain** (optional for production):
+   - Add DNS records in Resend dashboard
+   - Use `lliconsulting.com` domain for emails
+
+### Newsletter Email Format
+When a visitor subscribes, an email is sent to `info@lliconsultinggroup.com` with:
+- Subscriber name and email
+- Subscription timestamp
+- Source (LLI Consulting Blog Page)
+- Reply-to set to subscriber's email for easy follow-up
+
+**Current Status**: ✅ API endpoint deployed and functional (logging mode until RESEND_API_KEY is configured)
+
 ## Recommended Next Steps
-1. **Backend Integration**: 
+1. **Newsletter Email Integration**: 
+   - Configure RESEND_API_KEY environment variable
+   - Verify domain in Resend dashboard
+   - Test email delivery to info@lliconsultinggroup.com
+2. **Backend Integration**: 
    - Create `/api/consultation` endpoint for form submissions
    - Set up email notifications for new form submissions
    - Store form data in database or CRM
