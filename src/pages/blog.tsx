@@ -252,22 +252,95 @@ export const BlogPage = () => {
           </p>
           
           <div className="bg-white rounded-2xl p-8 shadow-2xl">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <input 
-                type="email" 
-                placeholder="Enter your email address" 
-                className="flex-1 px-6 py-4 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none text-lg"
-              />
-              <button className="bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white font-bold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 whitespace-nowrap">
-                Subscribe Free
-              </button>
+            <form id="newsletter-form" onSubmit={(e) => (window as any).handleNewsletterSubmit(e)}>
+              <div className="flex flex-col gap-4 mb-4">
+                <input 
+                  type="text"
+                  id="newsletter-name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                  className="w-full px-6 py-4 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none text-lg"
+                />
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <input 
+                    type="email"
+                    id="newsletter-email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                    className="flex-1 px-6 py-4 border-2 border-gray-300 rounded-lg focus:border-lli-teal focus:outline-none text-lg"
+                  />
+                  <button type="submit" className="bg-gradient-to-r from-lli-orange to-lli-orange-dark text-white font-bold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:scale-105 whitespace-nowrap">
+                    Subscribe Free
+                  </button>
+                </div>
+              </div>
+            </form>
+            
+            {/* Success Message */}
+            <div id="newsletter-success" className="hidden">
+              <div className="bg-green-50 border-2 border-green-500 rounded-lg p-6">
+                <i className="fas fa-check-circle text-green-500 text-3xl mb-2"></i>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Successfully Subscribed!</h3>
+                <p className="text-gray-700">Thank you for subscribing. Check your inbox for our next article.</p>
+              </div>
             </div>
+            
             <p className="text-sm text-gray-500 mt-4">
               Join 2,000+ leaders. No spam. Unsubscribe anytime.
             </p>
           </div>
         </div>
       </section>
+
+      {/* Newsletter Form Handler Script */}
+      <script dangerouslySetInnerHTML={{__html: `
+        window.handleNewsletterSubmit = async function(event) {
+          event.preventDefault();
+          
+          const form = event.target;
+          const submitButton = form.querySelector('button[type="submit"]');
+          const originalText = submitButton.innerHTML;
+          
+          // Get form data
+          const name = form.querySelector('#newsletter-name').value;
+          const email = form.querySelector('#newsletter-email').value;
+          
+          // Show loading state
+          submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Subscribing...';
+          submitButton.disabled = true;
+          
+          try {
+            // Send to backend API
+            const response = await fetch('/api/newsletter-subscribe', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ 
+                name, 
+                email,
+                timestamp: new Date().toISOString()
+              })
+            });
+            
+            if (response.ok) {
+              // Hide form, show success message
+              form.style.display = 'none';
+              document.getElementById('newsletter-success').classList.remove('hidden');
+            } else {
+              throw new Error('Subscription failed');
+            }
+          } catch (error) {
+            console.error('Newsletter subscription error:', error);
+            alert('There was an error subscribing. Please try again or contact us directly at info@lliconsultinggroup.com');
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+          }
+        }
+      `}}>
+      </script>
 
       <Footer />
     </div>

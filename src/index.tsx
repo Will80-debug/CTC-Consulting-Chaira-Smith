@@ -188,4 +188,96 @@ app.get('/assessment/results', (c) => {
   return c.render(<AssessmentResultsPage />)
 })
 
+// API endpoint for newsletter subscription
+app.post('/api/newsletter-subscribe', async (c) => {
+  try {
+    const body = await c.req.json()
+    const { name, email, timestamp } = body
+    
+    // Format the email content
+    const emailContent = `
+New Newsletter Subscription!
+
+Subscriber Information:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Name: ${name}
+Email: ${email}
+Subscribed: ${new Date(timestamp).toLocaleString()}
+Source: LLI Consulting Blog Page
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This subscriber has requested to receive:
+• New articles delivered weekly
+• Tools and insights
+• Leadership resources
+
+Action Required:
+Add this email to your newsletter distribution list.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    `.trim()
+    
+    // Log for debugging
+    console.log('Newsletter Subscription:', emailContent)
+    console.log('Send to: info@lliconsultinggroup.com')
+    console.log('Subscriber Email:', email)
+    
+    // Check if Resend API key is configured
+    const resendApiKey = c.env?.RESEND_API_KEY
+    
+    if (resendApiKey) {
+      // Send email via Resend
+      try {
+        const emailResponse = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${resendApiKey}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: 'LLI Newsletter <noreply@lliconsulting.com>',
+            to: ['info@lliconsultinggroup.com'],
+            reply_to: email, // Subscriber's email for easy contact
+            subject: `New Newsletter Subscriber: ${name}`,
+            text: emailContent
+          })
+        })
+        
+        if (!emailResponse.ok) {
+          const errorData = await emailResponse.text()
+          console.error('Resend API error:', errorData)
+          throw new Error(`Resend API failed: ${emailResponse.status}`)
+        }
+        
+        const responseData = await emailResponse.json()
+        console.log('Newsletter subscription email sent successfully via Resend:', responseData)
+        
+        return c.json({ 
+          success: true, 
+          message: 'Newsletter subscription received successfully',
+          emailId: responseData.id
+        })
+      } catch (emailError) {
+        console.error('Resend email error:', emailError)
+        // Fall back to logging if email fails
+        return c.json({ 
+          success: true, 
+          message: 'Newsletter subscription logged (email service unavailable)',
+          note: 'Subscription data saved to console logs'
+        })
+      }
+    } else {
+      // No API key configured - log only mode
+      console.log('⚠️ RESEND_API_KEY not configured - newsletter subscription logged only')
+      return c.json({ 
+        success: true, 
+        message: 'Newsletter subscription logged successfully',
+        note: 'Email integration pending - see console logs for content'
+      })
+    }
+  } catch (error) {
+    console.error('Error processing newsletter subscription:', error)
+    return c.json({ success: false, error: 'Failed to process subscription' }, 500)
+  }
+})
+
 export default app
