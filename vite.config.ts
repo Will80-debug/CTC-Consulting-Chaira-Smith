@@ -5,7 +5,16 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [
-    build(),
+    build({
+      minify: true,
+      emptyOutDir: true,
+      external: [],
+      outputDir: 'dist',
+      serverEntry: 'src/index.tsx',
+      routes: {
+        exclude: ['/static/*', '/videos/*', '/downloads/*']
+      }
+    }),
     devServer({
       adapter,
       entry: 'src/index.tsx'
