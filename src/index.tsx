@@ -14,6 +14,7 @@ import { LeadershipWorkshopsPage } from './pages/services/leadership-workshops'
 import { AssessmentLandingPage } from './pages/assessment/landing'
 import { AssessmentStartPage } from './pages/assessment/start'
 import { AssessmentResultsPage } from './pages/assessment/results'
+import { WorkbookDownloadPage } from './pages/workbook-download'
 
 const app = new Hono()
 
@@ -186,6 +187,10 @@ app.get('/assessment/start', (c) => {
 
 app.get('/assessment/results', (c) => {
   return c.render(<AssessmentResultsPage />)
+})
+
+app.get('/workbook-download', (c) => {
+  return c.render(<WorkbookDownloadPage />)
 })
 
 // API endpoint for newsletter subscription
