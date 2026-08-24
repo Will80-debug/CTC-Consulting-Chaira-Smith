@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "webapp",
+  "name": "lli-consulting",
   "compatibility_date": "2025-10-17",
   "pages_build_output_dir": "./dist",
   "compatibility_flags": [
