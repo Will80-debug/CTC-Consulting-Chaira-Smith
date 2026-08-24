@@ -1,6 +1,10 @@
 import { BRAND } from '../lib/brand'
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
+import { TM } from '../components/TM'
+
+// Helper function to strip trademark symbols for attributes
+const tm = (text: string): string => text.replace(/™️?/g, '')
 
 export function ServicesPageNew() {
   return (
@@ -100,10 +104,62 @@ export function ServicesPageNew() {
                 Implementation is where most organizational initiatives stall. Not from lack of intent, 
                 but from unclear ownership, competing priorities, insufficient structure, or inadequate follow-through.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 This advisory service provides leaders with structured guidance, accountability frameworks, 
                 and ongoing support throughout the implementation process.
               </p>
+
+              {/* One-on-One Coaching Video */}
+              <div className="mb-10">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Individual Leadership Advisory
+                </h3>
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div className="relative rounded-xl overflow-hidden shadow-xl bg-gray-900">
+                    <video controls className="w-full" poster="/static/workshop-session.jpg">
+                      <source src="/static/videos/1-1-coaching.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      One-on-one advisory sessions provide personalized support for leaders navigating 
+                      organizational change, implementation challenges, and strategic decision-making.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      These sessions focus on translating organizational priorities into actionable 
+                      steps, building accountability systems, and developing leadership capacity to 
+                      drive meaningful change.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Executive Coaching Video */}
+              <div className="pt-8 border-t border-teal-200">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Executive Leadership Development
+                </h3>
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div className="order-2 md:order-1">
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Executive advisory engagements address the unique challenges senior leaders face 
+                      in driving culture change, building organizational trust, and maintaining 
+                      accountability at scale.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      We work with executives to align leadership behavior with organizational values, 
+                      strengthen decision-making frameworks, and create sustainable implementation strategies.
+                    </p>
+                  </div>
+                  <div className="relative rounded-xl overflow-hidden shadow-xl bg-gray-900 order-1 md:order-2">
+                    <video controls className="w-full" poster="/static/workshop-session.jpg">
+                      <source src="/static/videos/executive-coaching.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -127,10 +183,40 @@ export function ServicesPageNew() {
                 improving decision-making, strengthening accountability—facilitated sessions can provide 
                 structured space to work through issues using the {BRAND.names.framework}.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 These engagements are customized to organizational context and designed to produce 
                 actionable outcomes, not generic workshops.
               </p>
+
+              {/* Team Development Video */}
+              <div className="bg-white rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Team Development & Facilitation
+                </h3>
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div className="relative rounded-xl overflow-hidden shadow-xl bg-gray-900">
+                    <video controls className="w-full" poster="/static/workshop-session.jpg">
+                      <source src="/static/videos/team-development.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Team development sessions bring the LISTEN<TM /> → LEARN<TM /> → IMPLEMENT<TM /> 
+                      framework directly to teams facing specific challenges or navigating organizational change.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      These facilitated sessions create structured space for teams to surface concerns, 
+                      build shared understanding, develop actionable strategies, and establish accountability systems.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      We work with teams at all levels—leadership teams, cross-functional groups, 
+                      department teams—to strengthen trust, improve communication, and build capacity 
+                      for sustainable change.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -140,6 +140,40 @@ export const HomePageWow = () => {
         </div>
       </section>
 
+      {/* Video Introduction Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Video */}
+            <div className="order-2 md:order-1" data-animate="fade-up">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900">
+                <video 
+                  controls 
+                  className="w-full"
+                  poster="/static/workshop-session.jpg"
+                >
+                  <source src="/static/videos/lli-intro.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="order-1 md:order-2" data-animate="fade-up">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Welcome to {tm(BRAND.names.company)}
+              </h2>
+              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+                We help organizations move from assumption to insight, from feedback to action, and from intention to accountability.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Watch this introduction to understand how our structured approach to organizational listening, learning, and implementation creates measurable culture change.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Interactive Trust Audit Dashboard Preview */}
       <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
         {/* Subtle texture */}
@@ -218,13 +252,28 @@ export const HomePageWow = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-20">
+          <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
               The {tm(BRAND.names.framework)}
             </h2>
-            <p className="text-xl md:text-2xl text-teal-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-teal-100 max-w-3xl mx-auto mb-12">
               A structured pathway from organizational listening to accountable implementation
             </p>
+            
+            {/* Framework Overview Video */}
+            <div className="max-w-4xl mx-auto" data-animate="fade-up">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-black/50 backdrop-blur-sm border border-white/20">
+                <video 
+                  controls 
+                  className="w-full"
+                  poster="/static/workshop-session.jpg"
+                >
+                  <source src="/static/videos/listen-learn-implement.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <p className="text-teal-200 mt-4 text-sm">Watch: How the LISTEN → LEARN → IMPLEMENT framework transforms organizational culture</p>
+            </div>
           </div>
 
           {/* Vertical pathway with animated progress line */}
