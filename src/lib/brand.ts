@@ -139,3 +139,60 @@ export const tw = {
     outline: 'border-2 border-teal-600 text-teal-700 hover:bg-teal-50 font-semibold px-8 py-4 rounded-lg transition-all',
   }
 } as const
+
+/**
+ * Trademark Helper - Ensures consistent superscript formatting
+ * Strips ™️ symbols from text so they can be added separately with proper formatting
+ */
+export const tm = (text: string): string => {
+  return text.replace(/™️?/g, '')
+}
+
+/**
+ * Visual Depth System
+ * Layered elements, subtle textures, and depth indicators
+ */
+export const VISUAL = {
+  // Glass morphism effect
+  glass: 'backdrop-blur-lg bg-white/30 border border-white/20',
+  
+  // Subtle texture overlays
+  texture: {
+    grain: 'bg-[url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=")]',
+    subtle: 'bg-gradient-to-br from-transparent via-white/5 to-transparent',
+  },
+  
+  // Network lines (organizational connections)
+  network: {
+    svg: `<svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="network" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+          <circle cx="20" cy="20" r="1" fill="currentColor" opacity="0.3"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#network)"/>
+    </svg>`,
+  },
+  
+  // Trust dimension circles
+  trustCircles: ['Trust', 'Voice', 'Leadership', 'Accountability'],
+  
+  // Shadow system
+  shadow: {
+    sm: 'shadow-sm',
+    md: 'shadow-md',
+    lg: 'shadow-lg',
+    xl: 'shadow-xl',
+    '2xl': 'shadow-2xl',
+    orange: 'shadow-lg shadow-orange-500/20',
+    teal: 'shadow-lg shadow-teal-500/20',
+  },
+  
+  // Gradient overlays
+  gradient: {
+    darkTeal: 'bg-gradient-to-br from-teal-900 via-teal-800 to-teal-900',
+    tealOrange: 'bg-gradient-to-r from-teal-600 to-orange-600',
+    subtle: 'bg-gradient-to-br from-gray-50 via-white to-gray-50',
+    overlay: 'bg-gradient-to-t from-black/60 via-black/30 to-transparent',
+  }
+} as const

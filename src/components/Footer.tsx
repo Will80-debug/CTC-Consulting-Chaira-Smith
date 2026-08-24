@@ -11,6 +11,15 @@ export function Footer() {
               src="/static/lli-logo-new.png" 
               alt={BRAND.names.company} 
               className="h-12 mb-6 brightness-0 invert"
+              onError={(e) => {
+                // Fallback to text if image fails
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                const fallback = document.createElement('div');
+                fallback.className = 'text-3xl font-bold text-white mb-6';
+                fallback.textContent = 'LLI';
+                target.parentElement?.insertBefore(fallback, target);
+              }}
             />
             <p className="text-gray-400 leading-relaxed mb-4">
               {BRAND.positioning}

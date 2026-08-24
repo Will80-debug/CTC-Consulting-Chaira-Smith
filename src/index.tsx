@@ -1,7 +1,7 @@
 import { Hono } from 'hono'
 import { renderer } from './renderer'
 // New redesigned pages
-import { HomePageNew } from './pages/home-new'
+import { HomePageWow } from './pages/home-wow'
 import { TrustAuditPage } from './pages/trust-audit'
 import { FrameworkPage } from './pages/framework'
 import { ServicesPageNew } from './pages/services-new'
@@ -21,9 +21,9 @@ const app = new Hono()
 
 app.use(renderer)
 
-// Primary pages - redesigned
+// Primary pages - redesigned with "WOW" animations
 app.get('/', (c) => {
-  return c.render(<HomePageNew />)
+  return c.render(<HomePageWow />)
 })
 
 app.get('/trust-audit', (c) => {
