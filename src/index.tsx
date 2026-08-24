@@ -1,16 +1,17 @@
 import { Hono } from 'hono'
 import { renderer } from './renderer'
-import { HomePage } from './pages/home'
-import { ServicesPage } from './pages/services'
+// New redesigned pages
+import { HomePageNew } from './pages/home-new'
+import { TrustAuditPage } from './pages/trust-audit'
+import { FrameworkPage } from './pages/framework'
+import { ServicesPageNew } from './pages/services-new'
+import { ResourcesPageNew } from './pages/resources-new'
+// Keep existing pages
 import { AboutPage } from './pages/about'
-import { ResourcesPage } from './pages/resources'
 import { BlogPage } from './pages/blog'
 import { ContactPage } from './pages/contact'
 import { BeyondPerformativeActionsPage } from './pages/blog-posts/beyond-performative-actions'
 import { GenericBlogPostPage } from './pages/blog-posts/generic-article'
-import { TeamCoachingPage } from './pages/services/team-coaching'
-import { OrganizationalDevelopmentPage } from './pages/services/organizational-development'
-import { LeadershipWorkshopsPage } from './pages/services/leadership-workshops'
 import { AssessmentLandingPage } from './pages/assessment/landing'
 import { AssessmentStartPage } from './pages/assessment/start'
 import { AssessmentResultsPage } from './pages/assessment/results'
@@ -20,32 +21,29 @@ const app = new Hono()
 
 app.use(renderer)
 
+// Primary pages - redesigned
 app.get('/', (c) => {
-  return c.render(<HomePage />)
+  return c.render(<HomePageNew />)
+})
+
+app.get('/trust-audit', (c) => {
+  return c.render(<TrustAuditPage />)
+})
+
+app.get('/framework', (c) => {
+  return c.render(<FrameworkPage />)
 })
 
 app.get('/services', (c) => {
-  return c.render(<ServicesPage />)
+  return c.render(<ServicesPageNew />)
 })
 
-app.get('/services/team-coaching', (c) => {
-  return c.render(<TeamCoachingPage />)
-})
-
-app.get('/services/organizational-development', (c) => {
-  return c.render(<OrganizationalDevelopmentPage />)
-})
-
-app.get('/services/leadership-workshops', (c) => {
-  return c.render(<LeadershipWorkshopsPage />)
+app.get('/resources', (c) => {
+  return c.render(<ResourcesPageNew />)
 })
 
 app.get('/about', (c) => {
   return c.render(<AboutPage />)
-})
-
-app.get('/resources', (c) => {
-  return c.render(<ResourcesPage />)
 })
 
 app.get('/blog', (c) => {

@@ -1,72 +1,53 @@
-export const Footer = () => {
+import { BRAND } from '../lib/brand'
+
+export function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-lli-black to-gray-800 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+    <footer className="bg-gray-900 text-gray-300">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
-          <div>
-            <h3 className="text-xl font-bold text-lli-teal mb-4">LLI Consulting Group LLC</h3>
-            <p className="text-gray-300 mb-4">
-              Transforming leadership and culture through equity-centered coaching and strategic consulting.
+          <div className="md:col-span-2">
+            <img 
+              src="/static/lli-logo-new.png" 
+              alt={BRAND.names.company} 
+              className="h-12 mb-6 brightness-0 invert"
+            />
+            <p className="text-gray-400 leading-relaxed mb-4">
+              {BRAND.positioning}
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-lli-teal transition-colors">
-                <i className="fab fa-linkedin text-2xl"></i>
-              </a>
-              <a href="#" className="text-gray-300 hover:text-lli-teal transition-colors">
-                <i className="fab fa-twitter text-2xl"></i>
-              </a>
-              <a href="#" className="text-gray-300 hover:text-lli-teal transition-colors">
-                <i className="fab fa-facebook text-2xl"></i>
-              </a>
-            </div>
+            <p className="text-sm text-teal-400 italic">
+              {BRAND.tagline}
+            </p>
           </div>
-          
+
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="/" className="text-gray-300 hover:text-lli-teal transition-colors">Home</a></li>
-              <li><a href="/services" className="text-gray-300 hover:text-lli-teal transition-colors">Services</a></li>
-              <li><a href="/about" className="text-gray-300 hover:text-lli-teal transition-colors">About</a></li>
-              <li><a href="/resources" className="text-gray-300 hover:text-lli-teal transition-colors">Resources</a></li>
+            <h3 className="text-white font-bold mb-4">Quick Links</h3>
+            <ul className="space-y-3">
+              <li><a href="/trust-audit" className="hover:text-teal-400 transition-colors">Trust Audit™️</a></li>
+              <li><a href="/framework" className="hover:text-teal-400 transition-colors">LLI Framework™️</a></li>
+              <li><a href="/services" className="hover:text-teal-400 transition-colors">Services</a></li>
+              <li><a href="/resources" className="hover:text-teal-400 transition-colors">Resources</a></li>
+              <li><a href="/about" className="hover:text-teal-400 transition-colors">About</a></li>
             </ul>
           </div>
-          
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-bold mb-4">Our Services</h4>
-            <ul className="space-y-2">
-              <li><a href="/services#leadership-coaching" className="text-gray-300 hover:text-lli-orange transition-colors">Leadership Coaching</a></li>
-              <li><a href="/services#team-development" className="text-gray-300 hover:text-lli-orange transition-colors">Team Development</a></li>
-              <li><a href="/services#workshops" className="text-gray-300 hover:text-lli-orange transition-colors">Workshops</a></li>
-              <li><a href="/services#strategy" className="text-gray-300 hover:text-lli-orange transition-colors">Strategic Consulting</a></li>
-            </ul>
-          </div>
-          
+
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Get Started</h4>
-            <p className="text-gray-300 mb-4">
-              Ready to transform your organization?
-            </p>
-            <a 
-              href="mailto:info@lliconsultinggroup.com"
-              className="text-lli-teal hover:text-lli-teal-dark transition-colors flex items-center"
-            >
-              <i className="fas fa-envelope mr-2"></i>
-              info@lliconsultinggroup.com
-            </a>
+            <h3 className="text-white font-bold mb-4">Get Started</h3>
+            <ul className="space-y-3">
+              <li><a href="/contact" className="hover:text-teal-400 transition-colors">Book a Conversation</a></li>
+              <li><a href="mailto:info@lliconsultinggroup.com" className="hover:text-teal-400 transition-colors">info@lliconsultinggroup.com</a></li>
+            </ul>
           </div>
         </div>
-        
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} LLI Consulting Group LLC. All rights reserved.</p>
-          <p className="mt-2 text-sm">
-            <a href="#" className="hover:text-lli-teal transition-colors">Privacy Policy</a>
-            {' • '}
-            <a href="#" className="hover:text-lli-teal transition-colors">Terms of Service</a>
+
+        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-gray-400">
+            © {new Date().getFullYear()} {BRAND.names.company}. All rights reserved.
+          </p>
+          <p className="text-sm text-gray-400 mt-4 md:mt-0">
+            Chiara Smith, MHR | Founder & Principal
           </p>
         </div>
       </div>

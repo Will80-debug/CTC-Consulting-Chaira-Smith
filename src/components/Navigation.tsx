@@ -1,153 +1,87 @@
-export const Navigation = () => {
-  const logoUrl = "/static/lli-logo-new.png"
-  
+import { BRAND } from '../lib/brand'
+
+export function Navigation() {
   return (
-    <header className="bg-gradient-to-r from-lli-orange to-lli-orange-dark shadow-2xl sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex items-center justify-between">
-          {/* Logo and Brand */}
-          <a href="/" className="flex items-center space-x-4 hover:opacity-90 transition-opacity">
-            <div className="bg-white rounded-full p-2">
+    <nav className="bg-white shadow-sm sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <a href="/" className="flex items-center">
               <img 
-                src={logoUrl} 
-                alt="LLI Consulting Group LLC Logo" 
-                className="h-20 w-20 object-contain"
+                src="/static/lli-logo-new.png" 
+                alt={BRAND.names.company} 
+                className="h-12"
               />
-            </div>
-            <div className="text-left">
-              <h1 className="text-2xl md:text-3xl font-bold text-white">LLI Consulting Group LLC</h1>
-              <p className="text-sm text-gray-300">Leadership & Culture Transformation</p>
-            </div>
-          </a>
-          
-          {/* Navigation Menu */}
-          <nav className="hidden md:flex items-center space-x-6">
-            <a 
-              href="/" 
-              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-teal pb-1"
-            >
+            </a>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="/" className="text-gray-700 hover:text-teal-700 font-medium transition-colors">
               Home
             </a>
-            <a 
-              href="/services" 
-              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-teal pb-1"
-            >
+            <a href="/trust-audit" className="text-gray-700 hover:text-teal-700 font-medium transition-colors">
+              Trust Audit™️
+            </a>
+            <a href="/framework" className="text-gray-700 hover:text-teal-700 font-medium transition-colors">
+              LLI Framework™️
+            </a>
+            <a href="/services" className="text-gray-700 hover:text-teal-700 font-medium transition-colors">
               Services
             </a>
-            <a 
-              href="/about" 
-              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-teal pb-1"
-            >
-              About
-            </a>
-            <a 
-              href="/resources" 
-              className="text-white hover:text-lli-orange font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-orange pb-1"
-            >
+            <a href="/resources" className="text-gray-700 hover:text-teal-700 font-medium transition-colors">
               Resources
             </a>
-            <a 
-              href="/assessment" 
-              className="text-white hover:text-lli-orange font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-orange pb-1"
-            >
-              Assessment
+            <a href="/about" className="text-gray-700 hover:text-teal-700 font-medium transition-colors">
+              About
             </a>
-            <a 
-              href="/blog" 
-              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-teal pb-1"
-            >
-              Blog
+            <a href="/contact" className="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-all">
+              Book a Conversation
             </a>
-            <a 
-              href="/contact" 
-              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-lli-teal pb-1"
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onclick="toggleMobileMenu()"
+              className="text-gray-700 hover:text-teal-700 focus:outline-none"
+              aria-label="Toggle mobile menu"
             >
-              Contact
-            </a>
-            <a 
-              href="https://www.LLIConsulting.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-lli-teal to-lli-teal-dark hover:from-lli-teal-dark hover:to-lli-teal text-white font-bold py-2 px-6 rounded-lg shadow-lg transform transition-all duration-200 hover:scale-105"
-            >
-              <i className="fas fa-calendar-check mr-2"></i>
-              Book a Call
-            </a>
-          </nav>
-          
-          {/* Mobile Menu Button */}
-          <button 
-            onclick="toggleMobileMenu()"
-            className="md:hidden text-white hover:text-lli-teal transition-colors"
-          >
-            <i className="fas fa-bars text-2xl"></i>
-          </button>
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
         </div>
-        
-        {/* Mobile Menu */}
-        <div id="mobile-menu" className="hidden md:hidden mt-6 pb-4 border-t border-gray-700 pt-4">
-          <nav className="flex flex-col space-y-4">
-            <a 
-              href="/" 
-              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 py-2"
-            >
-              <i className="fas fa-home mr-3"></i>
+
+        {/* Mobile Navigation */}
+        <div id="mobile-menu" className="hidden md:hidden pb-4">
+          <div className="flex flex-col space-y-3">
+            <a href="/" className="text-gray-700 hover:text-teal-700 font-medium py-2">
               Home
             </a>
-            <a 
-              href="/services" 
-              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 py-2"
-            >
-              <i className="fas fa-briefcase mr-3"></i>
+            <a href="/trust-audit" className="text-gray-700 hover:text-teal-700 font-medium py-2">
+              Trust Audit™️
+            </a>
+            <a href="/framework" className="text-gray-700 hover:text-teal-700 font-medium py-2">
+              LLI Framework™️
+            </a>
+            <a href="/services" className="text-gray-700 hover:text-teal-700 font-medium py-2">
               Services
             </a>
-            <a 
-              href="/about" 
-              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 py-2"
-            >
-              <i className="fas fa-info-circle mr-3"></i>
-              About
-            </a>
-            <a 
-              href="/resources" 
-              className="text-white hover:text-lli-orange font-semibold transition-colors duration-200 py-2"
-            >
-              <i className="fas fa-book mr-3"></i>
+            <a href="/resources" className="text-gray-700 hover:text-teal-700 font-medium py-2">
               Resources
             </a>
-            <a 
-              href="/assessment" 
-              className="text-white hover:text-lli-orange font-semibold transition-colors duration-200 py-2"
-            >
-              <i className="fas fa-clipboard-check mr-3"></i>
-              Assessment
+            <a href="/about" className="text-gray-700 hover:text-teal-700 font-medium py-2">
+              About
             </a>
-            <a 
-              href="/blog" 
-              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 py-2"
-            >
-              <i className="fas fa-newspaper mr-3"></i>
-              Blog
+            <a href="/contact" className="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-all text-center mt-2">
+              Book a Conversation
             </a>
-            <a 
-              href="/contact" 
-              className="text-white hover:text-lli-teal font-semibold transition-colors duration-200 py-2"
-            >
-              <i className="fas fa-envelope mr-3"></i>
-              Contact
-            </a>
-            <a 
-              href="https://www.LLIConsulting.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-lli-teal to-lli-teal-dark text-white font-bold py-3 px-6 rounded-lg shadow-lg text-center"
-            >
-              <i className="fas fa-calendar-check mr-2"></i>
-              Book a Call
-            </a>
-          </nav>
+          </div>
         </div>
       </div>
-    </header>
+    </nav>
   )
 }
