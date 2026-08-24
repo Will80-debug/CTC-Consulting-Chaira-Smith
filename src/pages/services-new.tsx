@@ -117,7 +117,7 @@ export function ServicesPageNew() {
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div className="relative rounded-xl overflow-hidden shadow-xl bg-gray-900">
                     <video controls className="w-full" poster="/static/workshop-session.jpg">
-                      <source src="/static/videos/1-1-coaching-updated.mp4" type="video/mp4" />
+                      <source src="/static/videos/1-1-coaching-new.mp4" type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   </div>
