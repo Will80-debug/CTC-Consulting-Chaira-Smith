@@ -32,3 +32,4 @@ lerna-debug.log*
 # misc
 .DS_Store
 dist-with-videos.tar.gz
+dist-template-design.tar.gz

@@ -35,6 +35,26 @@ export function FrameworkPage() {
         </div>
       </section>
 
+      {/* Framework Video */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              See the {BRAND.names.framework} in Action
+            </h2>
+            <p className="text-xl text-gray-600">
+              Real people. Honest conversations. Lasting change.
+            </p>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900">
+            <video controls className="w-full" poster="/static/workshop-session.jpg">
+              <source src="/static/videos/listen-learn-implement-updated.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
       {/* Core Brand Statement */}
       <section className="py-16 bg-orange-600 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">

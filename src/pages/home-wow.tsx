@@ -152,7 +152,7 @@ export const HomePageWow = () => {
                   className="w-full"
                   poster="/static/workshop-session.jpg"
                 >
-                  <source src="/static/videos/lli-intro.mp4" type="video/mp4" />
+                  <source src="/static/videos/lli-intro-updated.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -268,7 +268,7 @@ export const HomePageWow = () => {
                   className="w-full"
                   poster="/static/workshop-session.jpg"
                 >
-                  <source src="/static/videos/listen-learn-implement.mp4" type="video/mp4" />
+                  <source src="/static/videos/listen-learn-implement-updated.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
