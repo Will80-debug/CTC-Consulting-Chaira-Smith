@@ -145,7 +145,14 @@ export function ServicesPageNew() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-8">
-              <div className="text-4xl font-bold text-teal-600 mb-4">01</div>
+              <div className="flex items-center mb-4">
+                <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mr-4">
+                  <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <div className="text-4xl font-bold text-teal-600">01</div>
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Discovery</h3>
               <p className="text-gray-700">
                 We begin by understanding your organization's needs, challenges, and whether our approach is the right fit.
@@ -153,7 +160,14 @@ export function ServicesPageNew() {
             </div>
             
             <div className="bg-white rounded-xl p-8">
-              <div className="text-4xl font-bold text-orange-600 mb-4">02</div>
+              <div className="flex items-center mb-4">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                  <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div className="text-4xl font-bold text-orange-600">02</div>
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Engagement</h3>
               <p className="text-gray-700">
                 We structure engagements around organizational priorities, capacity, and desired outcomes—not generic programs.
@@ -161,7 +175,14 @@ export function ServicesPageNew() {
             </div>
             
             <div className="bg-white rounded-xl p-8">
-              <div className="text-4xl font-bold text-teal-700 mb-4">03</div>
+              <div className="flex items-center mb-4">
+                <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mr-4">
+                  <svg className="w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div className="text-4xl font-bold text-teal-700">03</div>
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
               <p className="text-gray-700">
                 We support organizations through the complete {BRAND.names.framework}, from listening to accountable action.
