@@ -17,8 +17,8 @@ export const renderer = jsxRenderer(({ children }) => {
                   colors: {
                     'lli-orange': '#EA580C',
                     'lli-orange-dark': '#C2410C',
-                    'lli-teal': '#14B8A6',
-                    'lli-teal-dark': '#0F766E',
+                    'lli-teal': '#0D4A4E',
+                    'lli-teal-dark': '#0A3D40',
                     'lli-black': '#000000',
                     'lli-white': '#FFFFFF'
                   }

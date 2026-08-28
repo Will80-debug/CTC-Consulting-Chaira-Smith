@@ -14,7 +14,7 @@ export function HomePageTemplate() {
       <Navigation />
 
       {/* Hero Section - Matching Template Design */}
-      <section className="relative bg-gradient-to-br from-teal-800 to-teal-900 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-lli-teal to-lli-teal-dark text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white to-transparent"></div>
         </div>
@@ -95,13 +95,13 @@ export function HomePageTemplate() {
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               {/* LISTEN */}
               <div className="text-center">
-                <div className="w-32 h-32 mx-auto mb-6 bg-teal-800 rounded-full flex items-center justify-center">
+                <div className="w-32 h-32 mx-auto mb-6 bg-lli-teal-dark rounded-full flex items-center justify-center">
                   <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
                     <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
                   </svg>
                 </div>
-                <h3 className="text-3xl font-bold text-teal-800 mb-2">LISTEN™</h3>
+                <h3 className="text-3xl font-bold text-lli-teal-dark mb-2">LISTEN™</h3>
                 <p className="text-orange-600 font-semibold text-lg mb-4">WITH INTENTION</p>
                 <p className="text-gray-700 text-sm leading-relaxed">
                   Create the conditions for people to speak openly, honestly and without fear.
@@ -115,7 +115,7 @@ export function HomePageTemplate() {
                     <path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"/>
                   </svg>
                 </div>
-                <h3 className="text-3xl font-bold text-teal-800 mb-2">LEARN™</h3>
+                <h3 className="text-3xl font-bold text-lli-teal-dark mb-2">LEARN™</h3>
                 <p className="text-orange-600 font-semibold text-lg mb-4">AUTHENTICALLY</p>
                 <p className="text-gray-700 text-sm leading-relaxed">
                   Look beyond individual comments to understand patterns, barriers, experiences and what the information is really telling you.
@@ -124,12 +124,12 @@ export function HomePageTemplate() {
 
               {/* IMPLEMENT */}
               <div className="text-center">
-                <div className="w-32 h-32 mx-auto mb-6 bg-teal-800 rounded-full flex items-center justify-center">
+                <div className="w-32 h-32 mx-auto mb-6 bg-lli-teal-dark rounded-full flex items-center justify-center">
                   <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
                   </svg>
                 </div>
-                <h3 className="text-3xl font-bold text-teal-800 mb-2">IMPLEMENT™</h3>
+                <h3 className="text-3xl font-bold text-lli-teal-dark mb-2">IMPLEMENT™</h3>
                 <p className="text-orange-600 font-semibold text-lg mb-4">WITH ACCOUNTABILITY</p>
                 <p className="text-gray-700 text-sm leading-relaxed">
                   Turn what you've learned into decisions, action, communication and ownership. Because trust grows when people see what happens next.
@@ -164,7 +164,7 @@ export function HomePageTemplate() {
             </div>
 
             {/* Bottom Tagline */}
-            <div className="bg-teal-800 rounded-2xl px-8 py-6">
+            <div className="bg-lli-teal-dark rounded-2xl px-8 py-6">
               <div className="flex flex-wrap justify-center items-center gap-4 text-white text-center">
                 <span className="text-lg font-semibold">LISTEN <span className="text-orange-500">WITH INTENTION.</span></span>
                 <span className="text-2xl text-orange-500">|</span>
@@ -281,7 +281,7 @@ export function HomePageTemplate() {
             {/* Bio Content */}
             <div className="order-1 md:order-2">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Led by Chiara Smith, <span className="text-teal-700">MHR</span>
+                Led by Chiara Smith, <span className="text-lli-teal">MHR</span>
               </h2>
               
               <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
