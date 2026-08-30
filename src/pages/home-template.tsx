@@ -64,6 +64,31 @@ export function HomePageTemplate() {
         </div>
       </section>
 
+      {/* LLI Consulting Introduction Video */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Welcome to {BRAND.names.company}
+            </h2>
+            <p className="text-xl text-gray-600">
+              Learn how we help organizations build trust and drive accountable action.
+            </p>
+          </div>
+          
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900 max-w-4xl mx-auto">
+            <video 
+              controls 
+              className="w-full" 
+              poster="/static/template-images/chiara-teal-blazer.jpg"
+            >
+              <source src="/static/videos/lli-intro-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
       {/* Clarity Before Action Section */}
       <section className="py-20 bg-neutral-50">
         <div className="max-w-5xl mx-auto px-6 text-center">
