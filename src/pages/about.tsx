@@ -4,7 +4,7 @@ import { Footer } from '../components/Footer'
 export const AboutPage = () => {
   // Image URLs
   const chiaraFounderImg = "https://page.gensparksite.com/v1/base64_upload/e6822a23cff671668f780475724b62e7"
-  const teamCollaborationImg = "https://sspark.genspark.ai/cfimages?u1=LRbsh8vZi8%2FZUWGtNTYI038CGh3kjBZkpg%2FVIaBmhyH4SGd97OSgl48FLUmOYqrWUpLHCGqKj1mmDfKPsAI8vCh893Wturp2Qgi%2BFmjInL3yAw%3D%3D&u2=8bVaSjrlGjJy%2BEN8&width=2560"
+  const teamCollaborationImg = "https://www.genspark.ai/api/files/s/wVJdKh91"
   const diversityTeamImg = "https://sspark.genspark.ai/cfimages?u1=mBzrm%2FITxbifSCnl6VSi0VBL8jW7BYLARSnPGIKDFLwD%2FztAX0QY59OB%2BpFGhr3%2BB1QFUtKFUdxUJ2YiK3N1k8HIw6w9q6rfDEPoTVb9HCSRcZUqllhE5XVLSQUkJnzqsl%2BDhdoCuljW&u2=AJs5ASJIXhyWd%2FHw&width=2560"
   const workshopActionImg = "https://sspark.genspark.ai/cfimages?u1=6eR48FOnWy%2FbYJjtnEJVBOpcv11YMrnxH7d4zW99a6gLlLEf2Ah2uKJO%2FSXoOcR9aaTOVuvWP9khJsGH8TUnz8%2F7KEw6qQXhGqGEXs%2FsCqj%2F%2FqkRJpZPq4DCDa3c%2FmRgPm3hUfv%2BLGMGyPJTYdxuYkroGpm58g%3D%3D&u2=mH9PYfmWbET2TG9z&width=2560"
 
