@@ -128,6 +128,7 @@ export function ServicesPageNew() {
                 <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-900 mt-6">
                   <video 
                     controls 
+                    preload="metadata"
                     className="w-full" 
                     poster="/static/template-images/chiara-teal-blazer.jpg"
                   >
@@ -156,6 +157,7 @@ export function ServicesPageNew() {
                 <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-900 mt-6">
                   <video 
                     controls 
+                    preload="metadata"
                     className="w-full" 
                     poster="/static/template-images/chiara-white-blazer.jpg"
                   >
@@ -215,6 +217,7 @@ export function ServicesPageNew() {
                 <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-900 mt-6">
                   <video 
                     controls 
+                    preload="metadata"
                     className="w-full" 
                     poster="/static/template-images/chiara-teal-blazer.jpg"
                   >

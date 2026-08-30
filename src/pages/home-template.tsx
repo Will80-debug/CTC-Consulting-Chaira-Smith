@@ -79,6 +79,7 @@ export function HomePageTemplate() {
           <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900 max-w-4xl mx-auto">
             <video 
               controls 
+              preload="metadata"
               className="w-full" 
               poster="/static/template-images/chiara-teal-blazer.jpg"
             >
