@@ -118,11 +118,23 @@ export function ServicesPageNew() {
                   One-on-one advisory sessions provide personalized support for leaders navigating 
                   organizational change, implementation challenges, and strategic decision-making.
                 </p>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed mb-6">
                   These sessions focus on translating organizational priorities into actionable 
                   steps, building accountability systems, and developing leadership capacity to 
                   drive meaningful change.
                 </p>
+                
+                {/* 1-1 Coaching Video */}
+                <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-900 mt-6">
+                  <video 
+                    controls 
+                    className="w-full" 
+                    poster="/static/template-images/chiara-teal-blazer.jpg"
+                  >
+                    <source src="/static/videos/1-1-coaching.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </div>
 
               {/* Executive Leadership Development */}
@@ -135,10 +147,22 @@ export function ServicesPageNew() {
                   in driving culture change, building organizational trust, and maintaining 
                   accountability at scale.
                 </p>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed mb-6">
                   We work with executives to align leadership behavior with organizational values, 
                   strengthen decision-making frameworks, and create sustainable implementation strategies.
                 </p>
+                
+                {/* Executive Coaching Video */}
+                <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-900 mt-6">
+                  <video 
+                    controls 
+                    className="w-full" 
+                    poster="/static/template-images/chiara-white-blazer.jpg"
+                  >
+                    <source src="/static/videos/executive-coaching.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </div>
             </div>
           </div>
@@ -181,11 +205,23 @@ export function ServicesPageNew() {
                   These facilitated sessions create structured space for teams to surface concerns, 
                   build shared understanding, develop actionable strategies, and establish accountability systems.
                 </p>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed mb-6">
                   We work with teams at all levels—leadership teams, cross-functional groups, 
                   department teams—to strengthen trust, improve communication, and build capacity 
                   for sustainable change.
                 </p>
+                
+                {/* Team Development Training Video */}
+                <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-900 mt-6">
+                  <video 
+                    controls 
+                    className="w-full" 
+                    poster="/static/template-images/chiara-teal-blazer.jpg"
+                  >
+                    <source src="/static/videos/team-development.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </div>
             </div>
           </div>
