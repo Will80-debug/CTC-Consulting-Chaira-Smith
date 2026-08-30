@@ -81,7 +81,7 @@ export function HomePageTemplate() {
               controls 
               preload="metadata"
               className="w-full" 
-              poster="/static/template-images/chiara-teal-blazer.jpg"
+              poster="/static/posters/lli-intro-poster.jpg"
             >
               <source src="/static/videos/lli-intro-video.mp4" type="video/mp4" />
               Your browser does not support the video tag.

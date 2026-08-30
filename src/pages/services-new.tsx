@@ -130,7 +130,7 @@ export function ServicesPageNew() {
                     controls 
                     preload="metadata"
                     className="w-full" 
-                    poster="/static/template-images/chiara-teal-blazer.jpg"
+                    poster="/static/posters/1-1-coaching-poster.jpg"
                   >
                     <source src="/static/videos/1-1-coaching.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -159,7 +159,7 @@ export function ServicesPageNew() {
                     controls 
                     preload="metadata"
                     className="w-full" 
-                    poster="/static/template-images/chiara-white-blazer.jpg"
+                    poster="/static/posters/executive-coaching-poster.jpg"
                   >
                     <source src="/static/videos/executive-coaching.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -219,7 +219,7 @@ export function ServicesPageNew() {
                     controls 
                     preload="metadata"
                     className="w-full" 
-                    poster="/static/template-images/chiara-teal-blazer.jpg"
+                    poster="/static/posters/team-development-poster.jpg"
                   >
                     <source src="/static/videos/team-development.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
