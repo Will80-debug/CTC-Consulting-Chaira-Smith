@@ -1,6 +1,7 @@
 import { BRAND } from '../lib/brand'
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
+import { TM } from '../components/TM'
 
 export function TrustAuditPage() {
   return (
@@ -9,138 +10,146 @@ export function TrustAuditPage() {
       
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-700 to-teal-900 text-white py-24">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="mb-6">
-            <span className="inline-block bg-orange-600 text-white text-sm font-semibold px-4 py-2 rounded-full mb-4">
-              Flagship Organizational Diagnostic
-            </span>
-          </div>
-          <h1 className="text-5xl font-bold mb-6 leading-tight">
-            Understand How Trust Is Actually Experienced Across Your Organization.
+      {/* HERO - Section #14 */}
+      <section className="bg-gradient-to-br from-lli-teal to-lli-teal-dark text-white py-20 md:py-32">
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Understand How Trust Is Actually<br />
+            Experienced Across Your Organization.
           </h1>
-          <p className="text-xl text-teal-50 mb-8 leading-relaxed max-w-3xl">
-            Trust influences whether employees speak openly, raise concerns, share ideas, challenge decisions, 
-            collaborate across differences, and believe leadership will follow through.
+          <p className="text-xl text-teal-50 mb-6 leading-relaxed">
+            Trust influences whether employees speak openly, raise concerns, share ideas, 
+            challenge decisions, collaborate across differences, and believe leadership will 
+            follow through.
           </p>
-          <p className="text-xl text-teal-50 leading-relaxed max-w-3xl">
-            {BRAND.names.trustAudit} provides organizations with a structured process for understanding those 
-            experiences before determining what needs to change.
+          <p className="text-xl text-teal-50 leading-relaxed">
+            The {BRAND.names.trustAudit} provides organizations with a structured process for 
+            understanding those experiences before determining what needs to change.
           </p>
         </div>
       </section>
 
-      {/* What It Examines */}
+      {/* WHAT IT EXAMINES - Section #15 */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
-            What the Trust Audit™️ Examines
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            What the Trust Audit<TM /> Examines
           </h2>
-          <p className="text-lg text-gray-600 mb-16 text-center max-w-3xl mx-auto">
-            Understanding the organizational conditions that shape workplace trust.
-          </p>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'Workplace Trust', description: 'How employees experience trust in day-to-day interactions and organizational relationships.' },
-              { title: 'Psychological Safety', description: 'The degree to which people feel safe to speak up, take risks, and be authentic at work.' },
-              { title: 'Leadership Credibility', description: 'Whether leadership\'s words align with actions and decisions over time.' },
-              { title: 'Employee Voice', description: 'The extent to which employees believe their perspectives matter and are heard.' },
-              { title: 'Communication', description: 'Clarity, consistency, and transparency in organizational communication.' },
-              { title: 'Consistency', description: 'Whether policies, standards, and consequences are applied fairly and predictably.' },
-              { title: 'Accountability', description: 'How accountability is demonstrated across all levels of the organization.' },
-              { title: 'Organizational Follow-Through', description: 'Confidence that the organization will act on what employees share and what leaders commit to.' },
-            ].map((item, index) => (
-              <div key={index} className="border-l-4 border-teal-600 pl-6 py-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
+              'Workplace trust',
+              'Psychological safety',
+              'Leadership credibility',
+              'Employee voice',
+              'Communication',
+              'Consistency',
+              'Accountability',
+              'Confidence in organizational follow-through'
+            ].map((area, index) => (
+              <div key={index} className="bg-neutral-50 rounded-lg p-6">
+                <div className="w-12 h-12 bg-lli-teal rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-gray-900">{area}</h3>
               </div>
             ))}
           </div>
+
+          <p className="text-center text-gray-600 mt-12 italic">
+            Proprietary scoring and methodology details are not publicly disclosed.
+          </p>
         </div>
       </section>
 
-      {/* LLI Process */}
-      <section className="py-20 bg-teal-50">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-16 text-center">
+      {/* LLI PROCESS - Section #16 */}
+      <section className="py-20 bg-neutral-50">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
             The {BRAND.names.framework} Process
           </h2>
-          
+          <p className="text-lg text-gray-600 mb-16 text-center">
+            How the Trust Audit<TM /> moves from assessment to organizational action.
+          </p>
+
           <div className="space-y-12">
             {/* LISTEN */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border-l-8 border-teal-600">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-6">
-                  L
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{BRAND.names.listen}</h3>
-                  <p className="text-lg text-gray-700">
-                    Gather confidential employee perspectives and relevant organizational context.
-                  </p>
-                </div>
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0 w-20 h-20 bg-lli-teal rounded-full flex items-center justify-center">
+                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">LISTEN<TM /></h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Gather confidential employee perspectives and relevant organizational context.
+                </p>
               </div>
             </div>
 
-            {/* Arrow */}
-            <div className="flex justify-center">
-              <div className="w-1 h-12 bg-teal-300"></div>
+            <div className="text-center">
+              <svg className="w-8 h-8 mx-auto text-lli-orange" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+              </svg>
             </div>
 
             {/* LEARN */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border-l-8 border-orange-600">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-6">
-                  L
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{BRAND.names.learn}</h3>
-                  <p className="text-lg text-gray-700">
-                    Analyze patterns, strengths, gaps, context, and areas requiring organizational attention.
-                  </p>
-                </div>
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0 w-20 h-20 bg-lli-orange rounded-full flex items-center justify-center">
+                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">LEARN<TM /></h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Analyze patterns, strengths, gaps, context, and areas requiring organizational attention.
+                </p>
               </div>
             </div>
 
-            {/* Arrow */}
-            <div className="flex justify-center">
-              <div className="w-1 h-12 bg-teal-300"></div>
+            <div className="text-center">
+              <svg className="w-8 h-8 mx-auto text-lli-orange" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+              </svg>
             </div>
 
             {/* IMPLEMENT */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border-l-8 border-teal-700">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-16 h-16 bg-teal-700 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-6">
-                  I
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{BRAND.names.implement}</h3>
-                  <p className="text-lg text-gray-700">
-                    Translate findings into priorities, ownership, and an accountable organizational culture strategy.
-                  </p>
-                </div>
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0 w-20 h-20 bg-lli-teal rounded-full flex items-center justify-center">
+                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">IMPLEMENT<TM /></h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Translate findings into priorities, ownership, and an accountable organizational 
+                  culture strategy.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What Organizations May Receive */}
+      {/* WHAT ORGANIZATIONS MAY RECEIVE - Section #17 */}
       <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
             What Organizations May Receive
           </h2>
-          <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 mb-12 text-center">
             Depending on engagement scope, organizations may receive:
           </p>
-          
-          <div className="bg-teal-50 rounded-2xl p-10">
+
+          <div className="bg-neutral-50 rounded-2xl p-8 md:p-10">
             <ul className="space-y-4">
               {[
-                'LLI Workplace Trust Audit™️ administration',
+                'LLI Workplace Trust Audit™ administration',
                 'Confidential employee data collection',
                 'Analysis and interpretation',
                 'Organizational Trust Findings Report',
@@ -148,115 +157,63 @@ export function TrustAuditPage() {
                 'Priority identification',
                 'Implementation recommendations',
                 'Organizational culture strategy development',
-                'Implementation planning and advisory support',
+                'Implementation planning and advisory support'
               ].map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <svg className="w-6 h-6 text-teal-600 mr-4 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                <li key={index} className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-lli-orange flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
                   </svg>
                   <span className="text-lg text-gray-700">{item}</span>
                 </li>
               ))}
             </ul>
-            <p className="text-sm text-gray-600 mt-8 italic">
-              Note: Deliverables vary by engagement scope and are defined contractually.
-            </p>
           </div>
+
+          <p className="text-center text-gray-600 mt-8 italic">
+            Specific deliverables are determined by engagement scope and organizational needs.
+          </p>
         </div>
       </section>
 
-      {/* Confidentiality */}
-      <section className="py-20 bg-gradient-to-br from-teal-700 to-teal-900 text-white">
+      {/* CONFIDENTIALITY - Section #18 */}
+      <section className="py-20 bg-lli-teal-dark text-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-8">
-            <svg className="w-16 h-16 mx-auto mb-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            <svg className="w-16 h-16 mx-auto mb-6 text-lli-orange" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
             </svg>
-            <h2 className="text-3xl font-bold mb-4">Confidentiality Matters.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Confidentiality Matters.
+            </h2>
           </div>
-          <p className="text-xl text-teal-50 mb-6 leading-relaxed">
+
+          <p className="text-xl text-teal-50 mb-6 leading-relaxed text-center max-w-3xl mx-auto">
             Trust cannot be meaningfully assessed without protecting the integrity of employee participation.
           </p>
-          <p className="text-lg text-teal-100 leading-relaxed">
-            {BRAND.names.company} uses defined confidentiality, reporting, and interpretation protocols designed 
-            to protect individual responses while providing organizations with useful organizational insight.
+          <p className="text-lg text-teal-50 leading-relaxed text-center max-w-3xl mx-auto">
+            {BRAND.names.company} uses defined confidentiality, reporting, and interpretation protocols 
+            designed to protect individual responses while providing organizations with useful organizational insight.
           </p>
         </div>
       </section>
 
-      {/* Sample Report Preview */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
-            Organizational Trust Findings Report
-          </h2>
-          <p className="text-lg text-gray-600 mb-12 text-center">
-            Sample visualization of findings organizations may receive.
-          </p>
-          
-          <div className="bg-white rounded-2xl shadow-2xl p-12 border-t-8 border-teal-600">
-            <div className="text-center mb-8">
-              <div className="inline-block bg-orange-100 border-2 border-orange-600 text-orange-800 font-bold px-6 py-3 rounded-lg mb-6">
-                ILLUSTRATIVE SAMPLE DATA
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Organizational Trust Profile</h3>
-              <p className="text-gray-600">Sample Organization | Q4 2025</p>
-            </div>
-            
-            <div className="space-y-6">
-              {[
-                { domain: 'Workplace Trust', score: 72, color: 'teal' },
-                { domain: 'Psychological Safety', score: 65, color: 'teal' },
-                { domain: 'Leadership Credibility', score: 58, color: 'orange' },
-                { domain: 'Employee Voice', score: 61, color: 'orange' },
-                { domain: 'Communication', score: 69, color: 'teal' },
-                { domain: 'Accountability', score: 54, color: 'orange' },
-              ].map((item, index) => (
-                <div key={index}>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="font-semibold text-gray-900">{item.domain}</span>
-                    <span className={`font-bold ${item.color === 'teal' ? 'text-teal-700' : 'text-orange-600'}`}>
-                      {item.score}%
-                    </span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-3">
-                    <div 
-                      className={`h-3 rounded-full ${item.color === 'teal' ? 'bg-teal-600' : 'bg-orange-600'}`}
-                      style={{ width: `${item.score}%` }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            <div className="mt-12 pt-8 border-t border-gray-200">
-              <p className="text-sm text-gray-500 italic text-center">
-                Sample visualization only. Actual reports include detailed analysis, context, patterns, 
-                priority findings, and {BRAND.names.listen} → {BRAND.names.learn} → {BRAND.names.implement} recommendations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
+      {/* FINAL CTA - Section #20 */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Ready to Understand What's Happening Beneath the Surface?
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+            Ready to Understand What's<br />
+            Happening Beneath the Surface?
           </h2>
-          <p className="text-xl text-gray-600 mb-10">
-            Every organizational engagement begins with a conversation about your needs, 
-            current challenges, and whether {BRAND.names.company} is the appropriate partner.
+          <p className="text-xl text-gray-700 mb-10 leading-relaxed max-w-3xl mx-auto">
+            Every Trust Audit<TM /> engagement begins with a conversation about your organization's 
+            needs, current challenges, and whether the assessment is the right approach.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-10 py-4 rounded-lg transition-all text-lg">
-              Discuss a Workplace Trust Audit™️
-            </a>
-            <a href="/framework" className="border-2 border-teal-600 text-teal-700 hover:bg-teal-50 font-semibold px-10 py-4 rounded-lg transition-all text-lg">
-              Explore the {BRAND.names.framework}
-            </a>
-          </div>
+          <a 
+            href="/contact" 
+            className="inline-block bg-lli-orange hover:bg-lli-orange-dark text-white font-bold px-10 py-5 rounded-lg transition-all text-lg shadow-lg"
+          >
+            Discuss a Workplace Trust Audit<TM />
+          </a>
         </div>
       </section>
 
