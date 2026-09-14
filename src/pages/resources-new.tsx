@@ -259,6 +259,329 @@ export function ResourcesPageNew() {
         </div>
       </section>
 
+      {/* Product Previews */}
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          
+          {/* Workbook Preview */}
+          <div id="preview-workbook" className="mb-32">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+              A Look Inside the {BRAND.names.workbook}
+            </h2>
+            <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+              Preview selected pages showing the structured methodology, worksheets, and planning tools.
+            </p>
+            
+            {/* Carousel placeholder */}
+            <div className="bg-gray-50 rounded-2xl p-12 border-2 border-dashed border-gray-300">
+              <div className="space-y-6">
+                {/* Cover */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-teal">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm font-bold text-lli-teal uppercase">Cover</span>
+                    <span className="text-xs text-gray-500">Not counted in interior samples</span>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gradient-to-br from-lli-teal to-lli-teal-dark rounded-lg flex items-center justify-center">
+                    <div className="text-center text-white p-8">
+                      <div className="text-6xl mb-4">📚</div>
+                      <p className="text-xl font-bold mb-2">{BRAND.names.workbook}</p>
+                      <p className="text-sm opacity-80">Professional cover image placeholder</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Sample 01: Framework Overview */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-teal">
+                  <div className="mb-4">
+                    <span className="text-sm font-bold text-lli-teal uppercase">Sample 01 of 5</span>
+                    <h3 className="text-lg font-bold text-gray-900 mt-2">{BRAND.names.framework} Overview</h3>
+                    <p className="text-sm text-gray-600 mt-1">Introduces the LISTEN™ → LEARN™ → IMPLEMENT™ methodology</p>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gray-100 rounded-lg flex items-center justify-center">
+                    <div className="text-center text-gray-500 p-8">
+                      <div className="text-5xl mb-4">📋</div>
+                      <p className="font-semibold mb-2">Framework Overview Page</p>
+                      <p className="text-sm">Actual product page image will be inserted here</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Sample 02: What We Heard Capture Sheet */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-teal">
+                  <div className="mb-4">
+                    <span className="text-sm font-bold text-lli-teal uppercase">Sample 02 of 5</span>
+                    <h3 className="text-lg font-bold text-gray-900 mt-2">What We Heard Capture Sheet</h3>
+                    <p className="text-sm text-gray-600 mt-1">{BRAND.names.listen} worksheet: captures what was said, who raised it, frequency, impact, themes</p>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gray-100 rounded-lg flex items-center justify-center">
+                    <div className="text-center text-gray-500 p-8">
+                      <div className="text-5xl mb-4">👂</div>
+                      <p className="font-semibold mb-2">LISTEN™ Worksheet</p>
+                      <p className="text-sm">Actual product page image will be inserted here</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Sample 03: Evidence vs. Assumption Grid */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-orange">
+                  <div className="mb-4">
+                    <span className="text-sm font-bold text-lli-orange uppercase">Sample 03 of 5</span>
+                    <h3 className="text-lg font-bold text-gray-900 mt-2">Evidence vs. Assumption Grid</h3>
+                    <p className="text-sm text-gray-600 mt-1">{BRAND.names.learn} worksheet: distinguishes claims, evidence, sources, confidence levels</p>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gray-100 rounded-lg flex items-center justify-center">
+                    <div className="text-center text-gray-500 p-8">
+                      <div className="text-5xl mb-4">🔍</div>
+                      <p className="font-semibold mb-2">LEARN™ Worksheet</p>
+                      <p className="text-sm">Actual product page image will be inserted here</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Sample 04: Insight-to-Action Matrix (PRIORITY SAMPLE) */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-orange">
+                  <div className="mb-4">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-bold text-lli-orange uppercase">Sample 04 of 5</span>
+                      <span className="text-xs bg-lli-orange text-white px-2 py-1 rounded-full font-bold">PRIORITY SAMPLE</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mt-2">Insight-to-Action Matrix</h3>
+                    <p className="text-sm text-gray-600 mt-1">{BRAND.names.implement} worksheet: What We Heard | What We Learned | Decision | Action | Owner | Due</p>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gray-100 rounded-lg flex items-center justify-center">
+                    <div className="text-center text-gray-500 p-8">
+                      <div className="text-5xl mb-4">⚡</div>
+                      <p className="font-semibold mb-2">IMPLEMENT™ Worksheet</p>
+                      <p className="text-sm">Actual product page image will be inserted here</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Sample 05: Action & Accountability Tracker */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-teal-dark">
+                  <div className="mb-4">
+                    <span className="text-sm font-bold text-lli-teal-dark uppercase">Sample 05 of 5</span>
+                    <h3 className="text-lg font-bold text-gray-900 mt-2">Action & Accountability Tracker</h3>
+                    <p className="text-sm text-gray-600 mt-1">Tracks commitments, owners, timelines, status, barriers, evidence of completion</p>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gray-100 rounded-lg flex items-center justify-center">
+                    <div className="text-center text-gray-500 p-8">
+                      <div className="text-5xl mb-4">✓</div>
+                      <p className="font-semibold mb-2">Accountability Tool</p>
+                      <p className="text-sm">Actual product page image will be inserted here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 text-center">
+                <p className="text-sm text-gray-600 mb-4">
+                  <span className="font-semibold">Note:</span> These previews establish value without substituting for the complete product.
+                </p>
+                <a href="/contact" className="inline-block bg-lli-orange hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg transition-all">
+                  Purchase {BRAND.names.workbook}
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          {/* Companion Guide Preview */}
+          <div id="preview-guide" className="mb-32">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+              A Look Inside the {BRAND.names.companionGuide}
+            </h2>
+            <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+              Preview selected pages showing instructional guidance and methodology behind the framework.
+            </p>
+            
+            {/* Carousel placeholder */}
+            <div className="bg-gray-50 rounded-2xl p-12 border-2 border-dashed border-gray-300">
+              <div className="space-y-6">
+                {/* Cover */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-orange">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm font-bold text-lli-orange uppercase">Cover</span>
+                    <span className="text-xs text-gray-500">Not counted in interior samples</span>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gradient-to-br from-lli-orange to-orange-700 rounded-lg flex items-center justify-center">
+                    <div className="text-center text-white p-8">
+                      <div className="text-6xl mb-4">📖</div>
+                      <p className="text-xl font-bold mb-2">{BRAND.names.companionGuide}</p>
+                      <p className="text-sm opacity-80">Professional cover image placeholder</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Sample 01: About the LLI Process */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-orange">
+                  <div className="mb-4">
+                    <span className="text-sm font-bold text-lli-orange uppercase">Sample 01 of 4</span>
+                    <h3 className="text-lg font-bold text-gray-900 mt-2">About the {BRAND.names.lli} Process</h3>
+                    <p className="text-sm text-gray-600 mt-1">Explains the complete relationship among LISTEN™, LEARN™, IMPLEMENT™, and accountability</p>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gray-100 rounded-lg flex items-center justify-center">
+                    <div className="text-center text-gray-500 p-8">
+                      <div className="text-5xl mb-4">💡</div>
+                      <p className="font-semibold mb-2">Philosophy & Process</p>
+                      <p className="text-sm">Actual product page image will be inserted here</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Sample 02: LISTEN Instructional Page */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-orange">
+                  <div className="mb-4">
+                    <span className="text-sm font-bold text-lli-orange uppercase">Sample 02 of 4</span>
+                    <h3 className="text-lg font-bold text-gray-900 mt-2">{BRAND.names.listen} Instructional Page</h3>
+                    <p className="text-sm text-gray-600 mt-1">Explains intentional listening, purpose, access, structure, accurate capture, separation from interpretation</p>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gray-100 rounded-lg flex items-center justify-center">
+                    <div className="text-center text-gray-500 p-8">
+                      <div className="text-5xl mb-4">👂</div>
+                      <p className="font-semibold mb-2">LISTEN™ Instruction</p>
+                      <p className="text-sm">Actual product page image will be inserted here</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Sample 03: LEARN Instructional Page */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-orange">
+                  <div className="mb-4">
+                    <span className="text-sm font-bold text-lli-orange uppercase">Sample 03 of 4</span>
+                    <h3 className="text-lg font-bold text-gray-900 mt-2">{BRAND.names.learn} Instructional Page</h3>
+                    <p className="text-sm text-gray-600 mt-1">Addresses patterns, evidence, root causes, barriers, assumptions, and uncertainty</p>
+                    <p className="text-sm italic text-gray-700 mt-2 font-medium">"Frequency is a signal, not a verdict."</p>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gray-100 rounded-lg flex items-center justify-center">
+                    <div className="text-center text-gray-500 p-8">
+                      <div className="text-5xl mb-4">🔍</div>
+                      <p className="font-semibold mb-2">LEARN™ Instruction</p>
+                      <p className="text-sm">Actual product page image will be inserted here</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Sample 04: LLI Quality Check + Standard */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-teal">
+                  <div className="mb-4">
+                    <span className="text-sm font-bold text-lli-teal uppercase">Sample 04 of 4</span>
+                    <h3 className="text-lg font-bold text-gray-900 mt-2">{BRAND.names.lli} Quality Check + Standard</h3>
+                    <p className="text-sm text-gray-600 mt-1">Defines the LLI™ process standard</p>
+                    <p className="text-sm font-semibold text-gray-800 mt-2">
+                      Intentional | Authentic | Transparent | Actionable | Accountable
+                    </p>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gray-100 rounded-lg flex items-center justify-center">
+                    <div className="text-center text-gray-500 p-8">
+                      <div className="text-5xl mb-4">⭐</div>
+                      <p className="font-semibold mb-2">Quality Standard</p>
+                      <p className="text-sm">Actual product page image will be inserted here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 text-center">
+                <p className="text-sm text-gray-600 mb-4">
+                  <span className="font-semibold">Note:</span> Guide preview emphasizes instruction and methodology, while Workbook emphasizes tools and application.
+                </p>
+                <a href="/contact" className="inline-block bg-lli-orange hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg transition-all">
+                  Purchase {BRAND.names.companionGuide}
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          {/* Planner Preview */}
+          <div id="preview-planner" className="mb-20">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+              A Look Inside the {BRAND.names.planner}
+            </h2>
+            <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+              Preview selected pages showing accountability and implementation tracking tools.
+            </p>
+            
+            {/* Carousel placeholder */}
+            <div className="bg-gray-50 rounded-2xl p-12 border-2 border-dashed border-gray-300">
+              <div className="space-y-6">
+                {/* Cover */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-teal-dark">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm font-bold text-lli-teal-dark uppercase">Cover</span>
+                    <span className="text-xs text-gray-500">Not counted in interior samples</span>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gradient-to-br from-lli-teal-dark to-lli-teal rounded-lg flex items-center justify-center">
+                    <div className="text-center text-white p-8">
+                      <div className="text-6xl mb-4">📅</div>
+                      <p className="text-xl font-bold mb-2">{BRAND.names.planner}</p>
+                      <p className="text-sm opacity-80">Professional cover image placeholder</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Sample 01: Priority Planning */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-teal-dark">
+                  <div className="mb-4">
+                    <span className="text-sm font-bold text-lli-teal-dark uppercase">Sample 01 of 3</span>
+                    <h3 className="text-lg font-bold text-gray-900 mt-2">Priority Planning</h3>
+                    <p className="text-sm text-gray-600 mt-1">Structured planning for organizational priorities and decision-making</p>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gray-100 rounded-lg flex items-center justify-center">
+                    <div className="text-center text-gray-500 p-8">
+                      <div className="text-5xl mb-4">🎯</div>
+                      <p className="font-semibold mb-2">Priority Planning Tool</p>
+                      <p className="text-sm">Actual product page image will be inserted here</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Sample 02: Ownership + Timeline */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-teal-dark">
+                  <div className="mb-4">
+                    <span className="text-sm font-bold text-lli-teal-dark uppercase">Sample 02 of 3</span>
+                    <h3 className="text-lg font-bold text-gray-900 mt-2">Ownership + Timeline</h3>
+                    <p className="text-sm text-gray-600 mt-1">Assigns clear ownership and realistic timelines for implementation</p>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gray-100 rounded-lg flex items-center justify-center">
+                    <div className="text-center text-gray-500 p-8">
+                      <div className="text-5xl mb-4">📋</div>
+                      <p className="font-semibold mb-2">Ownership Tool</p>
+                      <p className="text-sm">Actual product page image will be inserted here</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Sample 03: Accountability / Progress Check-In */}
+                <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-lli-teal-dark">
+                  <div className="mb-4">
+                    <span className="text-sm font-bold text-lli-teal-dark uppercase">Sample 03 of 3</span>
+                    <h3 className="text-lg font-bold text-gray-900 mt-2">Accountability / Progress Check-In</h3>
+                    <p className="text-sm text-gray-600 mt-1">Tracks progress, identifies barriers, maintains momentum through follow-through</p>
+                  </div>
+                  <div className="aspect-[8.5/11] bg-gray-100 rounded-lg flex items-center justify-center">
+                    <div className="text-center text-gray-500 p-8">
+                      <div className="text-5xl mb-4">✓</div>
+                      <p className="font-semibold mb-2">Progress Check-In Tool</p>
+                      <p className="text-sm">Actual product page image will be inserted here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 text-center">
+                <p className="text-sm text-gray-600 mb-4">
+                  <span className="font-semibold">Note:</span> Do not over-preview the Planner. These samples establish the accountability focus.
+                </p>
+                <a href="/contact" className="inline-block bg-lli-orange hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg transition-all">
+                  Purchase {BRAND.names.planner}
+                </a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-lli-teal to-lli-teal-dark text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
