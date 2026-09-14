@@ -391,12 +391,15 @@ export const ContactPage = () => {
         }
 
         // Handle consultation form submission
-        function handleConsultationSubmit(event) {
+        async function handleConsultationSubmit(event) {
           event.preventDefault();
           
           const form = event.target;
           const formData = new FormData(form);
           const data = Object.fromEntries(formData.entries());
+          
+          // Add timestamp
+          data.timestamp = new Date().toISOString();
           
           // Show loading state
           const submitButton = form.querySelector('button[type="submit"]');
@@ -404,25 +407,43 @@ export const ContactPage = () => {
           submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
           submitButton.disabled = true;
           
-          // Simulate API call (replace with actual endpoint)
-          setTimeout(() => {
-            // Hide form
-            form.style.display = 'none';
+          try {
+            // Send to backend API
+            const response = await fetch('/api/contact-form', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            });
             
-            // Show success message
-            document.getElementById('form-success').classList.remove('hidden');
+            const result = await response.json();
             
-            // Log form data (in production, send to your backend)
-            console.log('Consultation request:', data);
+            if (result.success) {
+              // Hide form
+              form.style.display = 'none';
+              
+              // Show success message
+              document.getElementById('form-success').classList.remove('hidden');
+              
+              console.log('✅ Form submitted successfully');
+            } else {
+              throw new Error(result.error || 'Failed to submit form');
+            }
             
-            // Optionally send to backend API
-            // fetch('/api/consultation', {
-            //   method: 'POST',
-            //   headers: { 'Content-Type': 'application/json' },
-            //   body: JSON.stringify(data)
-            // });
+          } catch (error) {
+            console.error('❌ Error submitting form:', error);
             
-          }, 1500);
+            // Show error state
+            submitButton.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i>Error - Please try again';
+            submitButton.disabled = false;
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+              submitButton.innerHTML = originalText;
+            }, 3000);
+            
+            // Alert user
+            alert('There was an error submitting your request. Please try again or email us directly at smithchiara@gmail.com');
+          }
         }
       `}}>
       </script>
