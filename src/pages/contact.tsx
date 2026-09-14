@@ -3,8 +3,9 @@ import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
 
 export const ContactPage = () => {
-  const chiaraPhotoUrl = "https://page.gensparksite.com/v1/base64_upload/e6822a23cff671668f780475724b62e7"
-  const officeImg = "https://sspark.genspark.ai/cfimages?u1=p3451G3ZEplqSVU1hpWslMBIRhknlX84CsLjYH3SkznuTIrlkxpyLAuCwkmtMFXbwhpEvre9YJ3e99PmcLuDRrpBMd2vgWUNT%2BvkZwb2HqDUbZe%2FfwNbySP593IfQLzHOX%2FP1WA3WLrjXpp%2FnLigzhI%2B5CHarzSTteaGCdJuAw7caVHr%2FR8IrzhY3HPD5eqAoLqHXC9oAtaaRBQ4DxSo3yzd1vrQGBSFuJKrYw%3D%3D&u2=r5lJXZBmG11V2fj%2B&width=2560"
+  // Professional headshots and branded imagery
+  const chiaraPhotoUrl = "https://www.genspark.ai/api/files/s/OJ0a6C0G"  // Teal blazer with glasses
+  const officeImg = "https://www.genspark.ai/api/files/s/yZ6dlPLy"  // LLI branded office scene
 
   return (
     <>
