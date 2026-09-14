@@ -81,9 +81,9 @@ export function ResourcesPageNew() {
                   <a href="#preview-workbook" className="inline-block border-2 border-lli-teal text-lli-teal-dark hover:bg-teal-50 font-semibold px-6 py-3 rounded-lg transition-all">
                     Preview Inside
                   </a>
-                  <a href="/contact" className="inline-block bg-lli-orange hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-all">
-                    Purchase
-                  </a>
+                  <button disabled className="inline-block bg-gray-300 text-gray-500 font-semibold px-6 py-3 rounded-lg cursor-not-allowed opacity-60">
+                    Coming Soon
+                  </button>
                 </div>
               </div>
             </div>
@@ -131,9 +131,9 @@ export function ResourcesPageNew() {
                   <a href="#preview-guide" className="inline-block border-2 border-lli-orange text-orange-700 hover:bg-orange-50 font-semibold px-6 py-3 rounded-lg transition-all">
                     Preview Inside
                   </a>
-                  <a href="/contact" className="inline-block bg-lli-orange hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-all">
-                    Purchase
-                  </a>
+                  <button disabled className="inline-block bg-gray-300 text-gray-500 font-semibold px-6 py-3 rounded-lg cursor-not-allowed opacity-60">
+                    Coming Soon
+                  </button>
                 </div>
               </div>
               
@@ -209,9 +209,9 @@ export function ResourcesPageNew() {
                   <a href="#preview-planner" className="inline-block border-2 border-lli-teal-dark text-lli-teal-dark hover:bg-teal-50 font-semibold px-6 py-3 rounded-lg transition-all">
                     Preview Inside
                   </a>
-                  <a href="/contact" className="inline-block bg-lli-orange hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-all">
-                    Purchase
-                  </a>
+                  <button disabled className="inline-block bg-gray-300 text-gray-500 font-semibold px-6 py-3 rounded-lg cursor-not-allowed opacity-60">
+                    Coming Soon
+                  </button>
                 </div>
               </div>
             </div>
@@ -378,9 +378,9 @@ export function ResourcesPageNew() {
                 <p className="text-sm text-gray-600 mb-4">
                   <span className="font-semibold">Note:</span> These previews establish value without substituting for the complete product.
                 </p>
-                <a href="/contact" className="inline-block bg-lli-orange hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg transition-all">
-                  Purchase {BRAND.names.workbook}
-                </a>
+                <button disabled className="inline-block bg-gray-300 text-gray-500 font-semibold px-8 py-3 rounded-lg cursor-not-allowed opacity-60">
+                  {BRAND.names.workbook} - Coming Soon
+                </button>
               </div>
             </div>
           </div>
@@ -485,9 +485,9 @@ export function ResourcesPageNew() {
                 <p className="text-sm text-gray-600 mb-4">
                   <span className="font-semibold">Note:</span> Guide preview emphasizes instruction and methodology, while Workbook emphasizes tools and application.
                 </p>
-                <a href="/contact" className="inline-block bg-lli-orange hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg transition-all">
-                  Purchase {BRAND.names.companionGuide}
-                </a>
+                <button disabled className="inline-block bg-gray-300 text-gray-500 font-semibold px-8 py-3 rounded-lg cursor-not-allowed opacity-60">
+                  {BRAND.names.companionGuide} - Coming Soon
+                </button>
               </div>
             </div>
           </div>
@@ -572,9 +572,9 @@ export function ResourcesPageNew() {
                 <p className="text-sm text-gray-600 mb-4">
                   <span className="font-semibold">Note:</span> Do not over-preview the Planner. These samples establish the accountability focus.
                 </p>
-                <a href="/contact" className="inline-block bg-lli-orange hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg transition-all">
-                  Purchase {BRAND.names.planner}
-                </a>
+                <button disabled className="inline-block bg-gray-300 text-gray-500 font-semibold px-8 py-3 rounded-lg cursor-not-allowed opacity-60">
+                  {BRAND.names.planner} - Coming Soon
+                </button>
               </div>
             </div>
           </div>
@@ -597,6 +597,214 @@ export function ResourcesPageNew() {
           </a>
         </div>
       </section>
+
+      {/* Preview Modal */}
+      <div id="preview-modal" className="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
+          <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex justify-between items-center z-10">
+            <h3 id="modal-title" className="text-xl font-bold text-gray-900"></h3>
+            <button 
+              onclick="closePreviewModal()" 
+              className="text-gray-500 hover:text-gray-700 text-3xl leading-none"
+              aria-label="Close preview"
+            >
+              ×
+            </button>
+          </div>
+          <div id="modal-content" className="p-8">
+            {/* Dynamic content loaded here */}
+          </div>
+          <div className="sticky bottom-0 bg-gray-50 border-t border-gray-200 p-4 flex justify-between items-center">
+            <button 
+              id="prev-btn"
+              onclick="navigatePreview('prev')" 
+              className="bg-lli-teal hover:bg-lli-teal-dark text-white font-semibold px-6 py-2 rounded-lg transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              ← Previous
+            </button>
+            <span id="page-indicator" className="text-sm text-gray-600 font-medium"></span>
+            <button 
+              id="next-btn"
+              onclick="navigatePreview('next')" 
+              className="bg-lli-teal hover:bg-lli-teal-dark text-white font-semibold px-6 py-2 rounded-lg transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              Next →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Preview Modal JavaScript */}
+      <script dangerouslySetInnerHTML={{__html: `
+        let currentPreviewIndex = 0;
+        let currentPreviewPages = [];
+        let currentProductName = '';
+
+        // Preview data structure
+        const previewData = {
+          workbook: [
+            { title: 'Cover', description: 'Not counted in interior samples', type: 'cover', color: 'teal' },
+            { title: 'LLI Framework™ Overview', description: 'Introduces the LISTEN™ → LEARN™ → IMPLEMENT™ methodology', type: 'sample', number: '01', icon: '📋' },
+            { title: 'What We Heard Capture Sheet', description: 'LISTEN™ worksheet: captures what was said, who raised it, frequency, impact, themes', type: 'sample', number: '02', icon: '👂' },
+            { title: 'Evidence vs. Assumption Grid', description: 'LEARN™ worksheet: distinguishes claims, evidence, sources, confidence levels', type: 'sample', number: '03', icon: '🔍' },
+            { title: 'Insight-to-Action Matrix', description: 'IMPLEMENT™ worksheet: What We Heard | What We Learned | Decision | Action | Owner | Due', type: 'sample', number: '04', icon: '⚡', priority: true },
+            { title: 'Action & Accountability Tracker', description: 'Tracks commitments, owners, timelines, status, barriers, evidence of completion', type: 'sample', number: '05', icon: '✓' }
+          ],
+          guide: [
+            { title: 'Cover', description: 'Not counted in interior samples', type: 'cover', color: 'orange' },
+            { title: 'About the LLI Process', description: 'Explains the complete relationship among LISTEN™, LEARN™, IMPLEMENT™, and accountability', type: 'sample', number: '01', icon: '💡' },
+            { title: 'LISTEN™ Instructional Page', description: 'Explains intentional listening, purpose, access, structure, accurate capture, separation from interpretation', type: 'sample', number: '02', icon: '👂' },
+            { title: 'LEARN™ Instructional Page', description: 'Addresses patterns, evidence, root causes, barriers, assumptions, and uncertainty. "Frequency is a signal, not a verdict."', type: 'sample', number: '03', icon: '🔍' },
+            { title: 'LLI Quality Check + Standard', description: 'Defines the LLI™ process standard: Intentional | Authentic | Transparent | Actionable | Accountable', type: 'sample', number: '04', icon: '⭐' }
+          ],
+          planner: [
+            { title: 'Cover', description: 'Not counted in interior samples', type: 'cover', color: 'teal-dark' },
+            { title: 'Priority Planning', description: 'Structured planning for organizational priorities and decision-making', type: 'sample', number: '01', icon: '🎯' },
+            { title: 'Ownership + Timeline', description: 'Assigns clear ownership and realistic timelines for implementation', type: 'sample', number: '02', icon: '📋' },
+            { title: 'Accountability / Progress Check-In', description: 'Tracks progress, identifies barriers, maintains momentum through follow-through', type: 'sample', number: '03', icon: '✓' }
+          ]
+        };
+
+        function openPreviewModal(productKey, startIndex = 0) {
+          currentProductName = productKey;
+          currentPreviewPages = previewData[productKey];
+          currentPreviewIndex = startIndex;
+          
+          const modal = document.getElementById('preview-modal');
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+          
+          renderPreviewPage();
+        }
+
+        function closePreviewModal() {
+          const modal = document.getElementById('preview-modal');
+          modal.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+
+        function navigatePreview(direction) {
+          if (direction === 'next' && currentPreviewIndex < currentPreviewPages.length - 1) {
+            currentPreviewIndex++;
+          } else if (direction === 'prev' && currentPreviewIndex > 0) {
+            currentPreviewIndex--;
+          }
+          renderPreviewPage();
+        }
+
+        function renderPreviewPage() {
+          const page = currentPreviewPages[currentPreviewIndex];
+          const productNames = {
+            workbook: 'LLI Framework™ Workbook',
+            guide: 'LLI Framework™ Companion Guide',
+            planner: 'LLI Framework™ Planner'
+          };
+          
+          document.getElementById('modal-title').textContent = productNames[currentProductName];
+          document.getElementById('page-indicator').textContent = \`Page \${currentPreviewIndex + 1} of \${currentPreviewPages.length}\`;
+          
+          // Update navigation buttons
+          document.getElementById('prev-btn').disabled = currentPreviewIndex === 0;
+          document.getElementById('next-btn').disabled = currentPreviewIndex === currentPreviewPages.length - 1;
+          
+          // Render page content
+          const content = document.getElementById('modal-content');
+          
+          if (page.type === 'cover') {
+            const colorMap = {
+              'teal': 'from-lli-teal to-lli-teal-dark',
+              'orange': 'from-lli-orange to-orange-700',
+              'teal-dark': 'from-lli-teal-dark to-lli-teal'
+            };
+            
+            content.innerHTML = \`
+              <div class="text-center">
+                <div class="inline-block bg-gray-200 text-gray-700 text-xs font-bold px-4 py-2 rounded-full mb-4">
+                  COVER - Not counted in interior samples
+                </div>
+                <div class="aspect-[8.5/11] bg-gradient-to-br \${colorMap[page.color]} rounded-2xl flex items-center justify-center max-w-md mx-auto shadow-2xl">
+                  <div class="text-center text-white p-12">
+                    <div class="text-7xl mb-6">\${page.icon || '📚'}</div>
+                    <p class="text-2xl font-bold mb-3">\${productNames[currentProductName]}</p>
+                    <p class="text-sm opacity-80">Professional cover image placeholder</p>
+                  </div>
+                </div>
+              </div>
+            \`;
+          } else {
+            const borderColors = {
+              '01': 'border-lli-teal',
+              '02': 'border-lli-teal',
+              '03': 'border-lli-orange',
+              '04': 'border-lli-orange',
+              '05': 'border-lli-teal-dark'
+            };
+            
+            content.innerHTML = \`
+              <div class="bg-white rounded-xl border-l-4 \${borderColors[page.number] || 'border-lli-teal'}">
+                <div class="mb-6">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-sm font-bold text-lli-teal uppercase">Sample \${page.number} of \${currentPreviewPages.length - 1}</span>
+                    \${page.priority ? '<span class="text-xs bg-lli-orange text-white px-2 py-1 rounded-full font-bold">PRIORITY SAMPLE</span>' : ''}
+                  </div>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-2">\${page.title}</h3>
+                  <p class="text-gray-600 leading-relaxed">\${page.description}</p>
+                </div>
+                <div class="aspect-[8.5/11] bg-gray-100 rounded-xl flex items-center justify-center border-2 border-gray-200">
+                  <div class="text-center text-gray-500 p-12">
+                    <div class="text-8xl mb-6">\${page.icon}</div>
+                    <p class="text-xl font-semibold mb-3">\${page.title}</p>
+                    <p class="text-gray-600">Actual product page image will be inserted here</p>
+                  </div>
+                </div>
+              </div>
+            \`;
+          }
+        }
+
+        // Update all "Preview Inside" links to open modal
+        document.addEventListener('DOMContentLoaded', function() {
+          const workbookLink = document.querySelector('a[href="#preview-workbook"]');
+          const guideLink = document.querySelector('a[href="#preview-guide"]');
+          const plannerLink = document.querySelector('a[href="#preview-planner"]');
+          
+          if (workbookLink) {
+            workbookLink.addEventListener('click', function(e) {
+              e.preventDefault();
+              openPreviewModal('workbook');
+            });
+          }
+          
+          if (guideLink) {
+            guideLink.addEventListener('click', function(e) {
+              e.preventDefault();
+              openPreviewModal('guide');
+            });
+          }
+          
+          if (plannerLink) {
+            plannerLink.addEventListener('click', function(e) {
+              e.preventDefault();
+              openPreviewModal('planner');
+            });
+          }
+
+          // Close modal on escape key
+          document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+              closePreviewModal();
+            }
+          });
+
+          // Close modal on backdrop click
+          document.getElementById('preview-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+              closePreviewModal();
+            }
+          });
+        });
+      `}}>
+      </script>
 
       <Footer />
     </>
