@@ -104,68 +104,10 @@ export function ServicesPageNew() {
                 Implementation is where most organizational initiatives stall. Not from lack of intent, 
                 but from unclear ownership, competing priorities, insufficient structure, or inadequate follow-through.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 This advisory service provides leaders with structured guidance, accountability frameworks, 
                 and ongoing support throughout the implementation process.
               </p>
-
-              {/* Individual Leadership Advisory */}
-              <div className="mb-10">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Individual Leadership Advisory
-                </h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  One-on-one advisory sessions provide personalized support for leaders navigating 
-                  organizational change, implementation challenges, and strategic decision-making.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  These sessions focus on translating organizational priorities into actionable 
-                  steps, building accountability systems, and developing leadership capacity to 
-                  drive meaningful change.
-                </p>
-                
-                {/* 1-1 Coaching Video */}
-                <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-900 mt-6">
-                  <video 
-                    controls 
-                    preload="metadata"
-                    className="w-full" 
-                    poster="/static/posters/1-1-coaching-poster.jpg"
-                  >
-                    <source src="/static/videos/1-1-coaching.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-
-              {/* Executive Leadership Development */}
-              <div className="pt-8 border-t border-teal-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Executive Leadership Development
-                </h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Executive advisory engagements address the unique challenges senior leaders face 
-                  in driving culture change, building organizational trust, and maintaining 
-                  accountability at scale.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  We work with executives to align leadership behavior with organizational values, 
-                  strengthen decision-making frameworks, and create sustainable implementation strategies.
-                </p>
-                
-                {/* Executive Coaching Video */}
-                <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-900 mt-6">
-                  <video 
-                    controls 
-                    preload="metadata"
-                    className="w-full" 
-                    poster="/static/posters/executive-coaching-poster.jpg"
-                  >
-                    <source src="/static/videos/executive-coaching.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -194,38 +136,7 @@ export function ServicesPageNew() {
                 actionable outcomes, not generic workshops.
               </p>
 
-              {/* Team Development & Facilitation */}
-              <div className="bg-white rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Team Development & Facilitation
-                </h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Team development sessions bring the LISTEN<TM /> → LEARN<TM /> → IMPLEMENT<TM /> 
-                  framework directly to teams facing specific challenges or navigating organizational change.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  These facilitated sessions create structured space for teams to surface concerns, 
-                  build shared understanding, develop actionable strategies, and establish accountability systems.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  We work with teams at all levels—leadership teams, cross-functional groups, 
-                  department teams—to strengthen trust, improve communication, and build capacity 
-                  for sustainable change.
-                </p>
-                
-                {/* Team Development Training Video */}
-                <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-900 mt-6">
-                  <video 
-                    controls 
-                    preload="metadata"
-                    className="w-full" 
-                    poster="/static/posters/team-development-poster.jpg"
-                  >
-                    <source src="/static/videos/team-development.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

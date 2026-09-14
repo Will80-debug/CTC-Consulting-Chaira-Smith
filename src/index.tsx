@@ -12,10 +12,8 @@ import { BlogPage } from './pages/blog'
 import { ContactPage } from './pages/contact'
 import { BeyondPerformativeActionsPage } from './pages/blog-posts/beyond-performative-actions'
 import { GenericBlogPostPage } from './pages/blog-posts/generic-article'
-import { AssessmentLandingPage } from './pages/assessment/landing'
-import { AssessmentStartPage } from './pages/assessment/start'
-import { AssessmentResultsPage } from './pages/assessment/results'
-import { WorkbookDownloadPage } from './pages/workbook-download'
+// Assessment pages removed - replaced by LLI Workplace Trust Audit
+// Workbook download removed - replaced by Resources page with product collection
 
 const app = new Hono()
 
@@ -175,21 +173,10 @@ Contact: ${email}
   }
 })
 
-app.get('/assessment', (c) => {
-  return c.render(<AssessmentLandingPage />)
-})
-
-app.get('/assessment/start', (c) => {
-  return c.render(<AssessmentStartPage />)
-})
-
-app.get('/assessment/results', (c) => {
-  return c.render(<AssessmentResultsPage />)
-})
-
-app.get('/workbook-download', (c) => {
-  return c.render(<WorkbookDownloadPage />)
-})
+// Old assessment and workbook routes removed
+// Replaced by:
+// - /trust-audit for LLI Workplace Trust Audit™
+// - /resources for LLI Framework™ Resource Collection
 
 // API endpoint for newsletter subscription
 app.post('/api/newsletter-subscribe', async (c) => {
