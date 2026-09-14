@@ -96,7 +96,7 @@ export const BlogPage = () => {
               Recent <span className="text-lli-orange">Articles</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Fresh perspectives on leadership, culture, and organizational transformation
+              Fresh perspectives on leadership, culture, and organizational change
             </p>
           </div>
 
@@ -216,7 +216,7 @@ export const BlogPage = () => {
                   </h3>
                   
                   <p className="text-gray-600 mb-4 line-clamp-3">
-                    Great plans don't guarantee great results. Learn the accountability systems that turn culture strategies into lasting transformation.
+                    Great plans don't guarantee great results. Learn the accountability systems that turn culture strategies into lasting change.
                   </p>
                   
                   <div className="flex items-center justify-between">
@@ -288,7 +288,7 @@ export const BlogPage = () => {
             </div>
             
             <p className="text-sm text-gray-500 mt-4">
-              Join 2,000+ leaders. No spam. Unsubscribe anytime.
+              No spam. Unsubscribe anytime.
             </p>
           </div>
         </div>

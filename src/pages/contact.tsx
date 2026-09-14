@@ -21,7 +21,7 @@ export const ContactPage = () => {
               Let's Start a <span className="text-transparent bg-clip-text bg-gradient-to-r from-lli-orange to-lli-teal">Conversation</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Ready to transform your leadership and culture? Schedule a call or send us a message
+              Ready to discuss your organizational needs? Schedule a call or send us a message
             </p>
           </div>
         </div>
