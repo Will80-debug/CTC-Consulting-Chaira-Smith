@@ -1,3 +1,4 @@
+import { BRAND } from '../lib/brand'
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
 
@@ -6,8 +7,11 @@ export const ContactPage = () => {
   const officeImg = "https://sspark.genspark.ai/cfimages?u1=p3451G3ZEplqSVU1hpWslMBIRhknlX84CsLjYH3SkznuTIrlkxpyLAuCwkmtMFXbwhpEvre9YJ3e99PmcLuDRrpBMd2vgWUNT%2BvkZwb2HqDUbZe%2FfwNbySP593IfQLzHOX%2FP1WA3WLrjXpp%2FnLigzhI%2B5CHarzSTteaGCdJuAw7caVHr%2FR8IrzhY3HPD5eqAoLqHXC9oAtaaRBQ4DxSo3yzd1vrQGBSFuJKrYw%3D%3D&u2=r5lJXZBmG11V2fj%2B&width=2560"
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
-      <Navigation />
+    <>
+      <title>Contact | {BRAND.names.company}</title>
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+        <Navigation />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-lli-black via-gray-800 to-lli-black py-20 overflow-hidden">
@@ -422,7 +426,8 @@ export const ContactPage = () => {
       `}}>
       </script>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   )
 }

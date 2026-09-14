@@ -1,3 +1,4 @@
+import { BRAND } from '../lib/brand'
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
 import { leadershipArticles, deiArticles, cultureArticles, implementationArticles } from '../data/blog-articles'
@@ -10,8 +11,11 @@ export const BlogPage = () => {
   const chiaraPhotoUrl = "https://page.gensparksite.com/v1/base64_upload/e6822a23cff671668f780475724b62e7"
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
-      <Navigation />
+    <>
+      <title>Blog | {BRAND.names.company}</title>
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+        <Navigation />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-lli-black via-gray-800 to-lli-black py-20 overflow-hidden">
@@ -350,7 +354,8 @@ export const BlogPage = () => {
       `}}>
       </script>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   )
 }
