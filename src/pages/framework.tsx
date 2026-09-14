@@ -1,6 +1,7 @@
 import { BRAND } from '../lib/brand'
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
+import { TM } from '../components/TM'
 
 export function FrameworkPage() {
   return (
@@ -9,253 +10,225 @@ export function FrameworkPage() {
       
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-700 to-teal-900 text-white py-24">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-8 leading-tight">
+      {/* HERO - Section #23 */}
+      <section className="bg-gradient-to-br from-lli-teal to-lli-teal-dark text-white py-20 md:py-32">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             Listen. Learn. Implement.
           </h1>
-          <p className="text-2xl text-teal-50 mb-4 leading-relaxed">
-            {BRAND.names.framework} is a structured methodology for moving organizations from conversation 
-            to understanding and from understanding to accountable action.
+          <p className="text-xl md:text-2xl text-teal-50 leading-relaxed">
+            The {BRAND.names.framework} is a structured methodology for moving organizations 
+            from conversation to understanding and from understanding to accountable action.
           </p>
-          <div className="mt-12">
-            <div className="inline-flex items-center bg-white bg-opacity-10 backdrop-blur rounded-2xl px-8 py-6">
-              <span className="text-2xl font-bold text-orange-400">{BRAND.names.listen}</span>
-              <svg className="w-8 h-8 mx-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-              <span className="text-2xl font-bold text-teal-200">{BRAND.names.learn}</span>
-              <svg className="w-8 h-8 mx-6 text-teal-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-              <span className="text-2xl font-bold">{BRAND.names.implement}</span>
+        </div>
+      </section>
+
+      {/* SIMPLE VISUAL - Section #24 */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="flex items-center justify-center gap-6 mb-20 flex-wrap">
+            <div className="text-center">
+              <div className="w-24 h-24 bg-lli-teal rounded-full flex items-center justify-center mb-4 mx-auto">
+                <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-lli-teal">LISTEN<TM /></h3>
+            </div>
+
+            <svg className="w-12 h-12 text-lli-orange flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+            </svg>
+
+            <div className="text-center">
+              <div className="w-24 h-24 bg-lli-orange rounded-full flex items-center justify-center mb-4 mx-auto">
+                <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"/>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-lli-teal">LEARN<TM /></h3>
+            </div>
+
+            <svg className="w-12 h-12 text-lli-orange flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+            </svg>
+
+            <div className="text-center">
+              <div className="w-24 h-24 bg-lli-teal rounded-full flex items-center justify-center mb-4 mx-auto">
+                <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-lli-teal">IMPLEMENT<TM /></h3>
             </div>
           </div>
-        </div>
-      </section>
 
-
-
-      {/* Core Brand Statement */}
-      <section className="py-16 bg-orange-600 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-3xl font-semibold italic">
-            {BRAND.tagline}
-          </p>
-        </div>
-      </section>
-
-      {/* LISTEN */}
-      <section className="py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="inline-block bg-teal-600 text-white text-sm font-bold px-6 py-2 rounded-full mb-6">
-                PHASE 01
+          {/* THREE FRAMEWORK SECTIONS - Section #23 */}
+          <div className="space-y-16">
+            {/* LISTEN */}
+            <div className="bg-neutral-50 rounded-2xl p-8 md:p-12">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-lli-teal rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/>
+                  </svg>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">LISTEN<TM /></h2>
               </div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">{BRAND.names.listen}</h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
                 Create the conditions for people to speak openly, honestly, and meaningfully.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Listening should be intentional, structured, and connected to a defined purpose. 
-                It is not passive collection. It is active engagement designed to understand what 
-                people are actually experiencing and what the organization needs to know.
+                Listening should be intentional, structured, and connected to a defined purpose.
               </p>
             </div>
-            <div className="bg-teal-50 rounded-2xl p-10 border-l-8 border-teal-600">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Listening With Intention™️</h3>
-              <ul className="space-y-4">
-                {[
-                  'Define the purpose of listening',
-                  'Create structured access points',
-                  'Protect confidentiality and psychological safety',
-                  'Capture what is said accurately',
-                  'Preserve direct language and context',
-                  'Separate listening from interpretation',
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <svg className="w-6 h-6 text-teal-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* LEARN */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="order-2 md:order-1 bg-orange-50 rounded-2xl p-10 border-l-8 border-orange-600">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Learning Authentically™️</h3>
-              <ul className="space-y-4">
-                {[
-                  'Identify patterns across responses',
-                  'Distinguish evidence from assumption',
-                  'Understand context and barriers',
-                  'Recognize strengths and opportunities',
-                  'Determine what the information is telling the organization',
-                  'Connect findings to organizational decisions',
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <svg className="w-6 h-6 text-orange-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="order-1 md:order-2">
-              <div className="inline-block bg-orange-600 text-white text-sm font-bold px-6 py-2 rounded-full mb-6">
-                PHASE 02
+            {/* LEARN */}
+            <div className="bg-neutral-50 rounded-2xl p-8 md:p-12">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-lli-orange rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"/>
+                  </svg>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">LEARN<TM /></h2>
               </div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">{BRAND.names.learn}</h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
                 Move beyond collecting feedback to identifying patterns, context, barriers, opportunities, 
                 evidence, and what the information is actually telling the organization.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Learning requires analytical rigor. It means distinguishing signal from noise, evidence from 
-                interpretation, and organizational patterns from individual experience. It is where insight emerges.
-              </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* IMPLEMENT */}
-      <section className="py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="inline-block bg-teal-700 text-white text-sm font-bold px-6 py-2 rounded-full mb-6">
-                PHASE 03
-              </div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">{BRAND.names.implement}</h2>
-              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                Translate learning into decisions, actions, ownership, timelines, communication, and accountability.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Implementation is not a task list. It is a structured process that moves priorities into 
-                decisions, decisions into ownership, and ownership into follow-through. Without accountability, 
-                insight becomes another document that does not change the organization.
-              </p>
-            </div>
-            <div className="bg-teal-50 rounded-2xl p-10 border-l-8 border-teal-700">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Implementing With Accountability™️</h3>
-              <ul className="space-y-4">
-                {[
-                  'Translate findings into organizational priorities',
-                  'Define decisions and actions clearly',
-                  'Assign ownership and timelines',
-                  'Establish accountability structures',
-                  'Communicate progress and changes',
-                  'Track follow-through and impact',
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <svg className="w-6 h-6 text-teal-700 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Organizational Pathway */}
-      <section className="py-24 bg-gradient-to-br from-teal-700 to-teal-900 text-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center">The Complete Organizational Pathway</h2>
-          
-          <div className="space-y-6">
-            {[
-              { title: BRAND.names.trustAudit, subtitle: 'Understand how trust is experienced' },
-              { title: BRAND.names.listen, subtitle: 'Create conditions for open, honest input' },
-              { title: BRAND.names.learn, subtitle: 'Identify patterns, barriers, and priorities' },
-              { title: BRAND.names.implement, subtitle: 'Translate into decisions, actions, and ownership' },
-              { title: 'Organizational Culture Strategy', subtitle: 'Connect priorities to strategic direction' },
-              { title: 'Accountability + Follow-Through', subtitle: 'Track, communicate, and demonstrate progress' },
-            ].map((step, index) => (
-              <div key={index}>
-                <div className="bg-white bg-opacity-10 backdrop-blur rounded-xl p-6">
-                  <h3 className="text-xl font-bold mb-1">{step.title}</h3>
-                  <p className="text-teal-100">{step.subtitle}</p>
+            {/* IMPLEMENT */}
+            <div className="bg-neutral-50 rounded-2xl p-8 md:p-12">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-lli-teal rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                  </svg>
                 </div>
-                {index < 5 && (
-                  <div className="flex justify-center py-3">
-                    <svg className="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                    </svg>
-                  </div>
-                )}
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">IMPLEMENT<TM /></h2>
               </div>
-            ))}
+              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+                Translate learning into decisions, actions, ownership, timelines, communication, 
+                and accountability.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Why It Works */}
-      <section className="py-24 bg-white">
+      {/* ORGANIZATIONAL PATHWAY - Section #24 */}
+      <section className="py-20 bg-neutral-50">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-            Why the {BRAND.names.framework} Works
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            The Complete Organizational Pathway
           </h2>
-          
-          <div className="space-y-8">
-            {[
-              {
-                title: 'It Connects Insight to Action',
-                description: 'The framework ensures that what organizations hear leads to what they learn, and what they learn leads to what they do.',
-              },
-              {
-                title: 'It Builds Accountability',
-                description: 'By making ownership, timelines, and follow-through explicit, the methodology prevents good intentions from becoming unfulfilled promises.',
-              },
-              {
-                title: 'It Protects Trust',
-                description: 'Employees see that their input matters when they observe decisions, actions, and progress stemming from what was shared.',
-              },
-              {
-                title: 'It Is Structured and Repeatable',
-                description: 'Organizations can apply the framework consistently across different challenges, teams, and contexts.',
-              },
-            ].map((item, index) => (
-              <div key={index} className="border-l-4 border-teal-600 pl-8 py-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-lg text-gray-600 leading-relaxed">{item.description}</p>
-              </div>
-            ))}
+
+          <div className="space-y-6">
+            {/* Step 1: Trust Audit */}
+            <div className="bg-white rounded-xl p-6 shadow-md">
+              <h3 className="text-xl font-bold text-lli-teal mb-2">
+                Workplace Trust Audit<TM />
+              </h3>
+              <p className="text-gray-700">
+                Understand how employees experience trust across the organization
+              </p>
+            </div>
+
+            <div className="text-center">
+              <svg className="w-8 h-8 mx-auto text-lli-orange" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+              </svg>
+            </div>
+
+            {/* Step 2: LISTEN */}
+            <div className="bg-white rounded-xl p-6 shadow-md">
+              <h3 className="text-xl font-bold text-lli-teal mb-2">LISTEN<TM /></h3>
+              <p className="text-gray-700">
+                Gather employee perspectives, experiences, and organizational context
+              </p>
+            </div>
+
+            <div className="text-center">
+              <svg className="w-8 h-8 mx-auto text-lli-orange" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+              </svg>
+            </div>
+
+            {/* Step 3: LEARN */}
+            <div className="bg-white rounded-xl p-6 shadow-md">
+              <h3 className="text-xl font-bold text-lli-teal mb-2">LEARN<TM /></h3>
+              <p className="text-gray-700">
+                Analyze patterns, identify priorities, understand what requires attention
+              </p>
+            </div>
+
+            <div className="text-center">
+              <svg className="w-8 h-8 mx-auto text-lli-orange" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+              </svg>
+            </div>
+
+            {/* Step 4: IMPLEMENT */}
+            <div className="bg-white rounded-xl p-6 shadow-md">
+              <h3 className="text-xl font-bold text-lli-teal mb-2">IMPLEMENT<TM /></h3>
+              <p className="text-gray-700">
+                Translate findings into decisions, priorities, and ownership
+              </p>
+            </div>
+
+            <div className="text-center">
+              <svg className="w-8 h-8 mx-auto text-lli-orange" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+              </svg>
+            </div>
+
+            {/* Step 5: Culture Strategy */}
+            <div className="bg-white rounded-xl p-6 shadow-md">
+              <h3 className="text-xl font-bold text-lli-teal mb-2">
+                Organizational Culture Strategy
+              </h3>
+              <p className="text-gray-700">
+                Develop structured strategy for organizational culture change
+              </p>
+            </div>
+
+            <div className="text-center">
+              <svg className="w-8 h-8 mx-auto text-lli-orange" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+              </svg>
+            </div>
+
+            {/* Step 6: Accountability & Follow-Through */}
+            <div className="bg-white rounded-xl p-6 shadow-md">
+              <h3 className="text-xl font-bold text-lli-teal mb-2">
+                Accountability + Follow-Through
+              </h3>
+              <p className="text-gray-700">
+                Move strategy into action, ownership, timelines, and measurable progress
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-teal-50">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Ready to Move From Listening to Accountable Action?
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            From Conversation to<br />Accountable Action
           </h2>
-          <p className="text-xl text-gray-600 mb-10">
-            Explore how {BRAND.names.company} can help your organization apply the {BRAND.names.framework}.
+          <p className="text-xl text-gray-700 mb-10 leading-relaxed max-w-3xl mx-auto">
+            The {BRAND.names.framework} provides the structure to move organizations from 
+            listening to understanding and from understanding to lasting change.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/trust-audit" className="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-10 py-4 rounded-lg transition-all text-lg">
-              Explore the Trust Audit™️
-            </a>
-            <a href="/contact" className="border-2 border-teal-600 text-teal-700 hover:bg-teal-50 font-semibold px-10 py-4 rounded-lg transition-all text-lg">
-              Book a Conversation
-            </a>
-          </div>
+          <a 
+            href="/services" 
+            className="inline-block bg-lli-orange hover:bg-lli-orange-dark text-white font-bold px-10 py-5 rounded-lg transition-all text-lg shadow-lg"
+          >
+            Explore How We Work
+          </a>
         </div>
       </section>
 
