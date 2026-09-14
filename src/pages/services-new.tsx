@@ -14,7 +14,7 @@ export function ServicesPageNew() {
       <Navigation />
       
       {/* Hero */}
-      <section className="bg-gradient-to-br from-teal-700 to-teal-900 text-white py-20">
+      <section className="bg-gradient-to-br from-lli-teal to-lli-teal-dark text-white py-20">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold mb-6">
             Organizational Advisory Services
@@ -32,7 +32,7 @@ export function ServicesPageNew() {
           {/* Service 01: Trust Audit */}
           <div className="mb-24">
             <div className="flex items-start mb-6">
-              <span className="text-6xl font-bold text-teal-600 mr-6">01</span>
+              <span className="text-6xl font-bold text-lli-teal mr-6">01</span>
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
                   {BRAND.names.trustAudit}
@@ -52,7 +52,7 @@ export function ServicesPageNew() {
                 The Trust Audit™️ combines confidential employee input with organizational context to identify 
                 patterns affecting culture and provide leadership with actionable insight.
               </p>
-              <a href="/trust-audit" className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg transition-all">
+              <a href="/trust-audit" className="inline-block bg-lli-orange hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg transition-all">
                 Explore the Trust Audit™️
               </a>
             </div>
@@ -88,7 +88,7 @@ export function ServicesPageNew() {
           {/* Service 03: Leadership & Implementation Advisory */}
           <div className="mb-24">
             <div className="flex items-start mb-6">
-              <span className="text-6xl font-bold text-teal-700 mr-6">03</span>
+              <span className="text-6xl font-bold text-lli-teal-dark mr-6">03</span>
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
                   Leadership & Implementation Advisory
@@ -114,7 +114,7 @@ export function ServicesPageNew() {
           {/* Service 04: LLI Framework Facilitation */}
           <div>
             <div className="flex items-start mb-6">
-              <span className="text-6xl font-bold text-teal-600 mr-6">04</span>
+              <span className="text-6xl font-bold text-lli-orange mr-6">04</span>
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
                   {BRAND.names.framework} Facilitation & Workshops
@@ -199,7 +199,7 @@ export function ServicesPageNew() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-br from-teal-700 to-teal-900 text-white">
+      <section className="py-24 bg-gradient-to-br from-lli-teal to-lli-teal-dark text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Let's Discuss Your Organizational Needs
@@ -208,7 +208,7 @@ export function ServicesPageNew() {
             Every engagement begins with a conversation about your challenges, priorities, and 
             whether {BRAND.names.company} is the right partner.
           </p>
-          <a href="/contact" className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-10 py-5 rounded-lg transition-all text-lg">
+          <a href="/contact" className="inline-block bg-lli-orange hover:bg-orange-700 text-white font-semibold px-10 py-5 rounded-lg transition-all text-lg">
             Book a Discovery Conversation
           </a>
         </div>
