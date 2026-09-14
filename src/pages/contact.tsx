@@ -3,9 +3,9 @@ import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
 
 export const ContactPage = () => {
-  // Professional headshots and branded imagery
-  const chiaraPhotoUrl = "https://www.genspark.ai/api/files/s/OJ0a6C0G"  // Teal blazer with glasses
-  const officeImg = "https://www.genspark.ai/api/files/s/yZ6dlPLy"  // LLI branded office scene
+  // Professional headshots and branded imagery (local static files)
+  const chiaraPhotoUrl = "/static/images/chiara-teal-blazer.jpg"
+  const officeImg = "/static/images/lli-branded-office.jpg"
 
   return (
     <>

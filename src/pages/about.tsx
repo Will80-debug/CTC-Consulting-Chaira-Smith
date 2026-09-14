@@ -3,8 +3,8 @@ import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
 
 export const AboutPage = () => {
-  // Image URLs - Professional headshots
-  const chiaraFounderImg = "https://www.genspark.ai/api/files/s/rk2cUuvU"  // White blazer with orange top
+  // Image URLs - Professional headshots (local static files)
+  const chiaraFounderImg = "/static/images/chiara-white-blazer.jpg"
 
   return (
     <>
