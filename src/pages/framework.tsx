@@ -213,6 +213,39 @@ export function FrameworkPage() {
         </div>
       </section>
 
+      {/* Framework in Practice - Video */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {BRAND.names.framework} in Practice
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              See how facilitated workshops apply the LISTEN → LEARN → IMPLEMENT methodology 
+              to address organizational challenges.
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe 
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/eirnJ03wwrk"
+                title="LLI Framework Workshop"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              ></iframe>
+            </div>
+            <div className="p-6 border-t border-gray-200">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">LLI Workshop</h3>
+              <p className="text-gray-600">
+                Example of facilitated organizational sessions using {BRAND.names.listen}, {BRAND.names.learn}, 
+                and {BRAND.names.implement} to address defined organizational challenges.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
